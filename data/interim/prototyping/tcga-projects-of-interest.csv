@@ -1,0 +1,4 @@
+project_id,project_primary_site,project_disease_type,project_name,project_case_count
+TCGA-PAAD,['Pancreas'],"['Cystic, Mucinous and Serous Neoplasms', 'Ductal and Lobular Neoplasms', 'Adenomas and Adenocarcinomas', 'Epithelial Neoplasms, NOS']",Pancreatic Adenocarcinoma,185
+TCGA-KIRP,['Kidney'],['Adenomas and Adenocarcinomas'],Kidney Renal Papillary Cell Carcinoma,291
+TCGA-COAD,"['Colon', 'Rectosigmoid junction']","['Cystic, Mucinous and Serous Neoplasms', 'Adenomas and Adenocarcinomas', 'Complex Epithelial Neoplasms', 'Epithelial Neoplasms, NOS']",Colon Adenocarcinoma,461

@@ -1,0 +1,929 @@
+case_id,case_primary_site,case_disease_type,project_id
+733d8b6a-ca9d-4a69-8c9c-1f88733e8b68,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+4f786107-3cf5-4ab3-bba4-f399dee23f0e,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+ad440651-a2de-4bb1-90da-1e5e8975ab59,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+13eff2e5-e33a-485f-9ba4-8a7ccb3c7528,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+e394e9ec-7288-4ede-9ef8-41b631d100dd,Colon,Complex Epithelial Neoplasms,TCGA-COAD
+401a37f3-6630-4400-a811-a262351e37de,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+c1e141af-bdd1-4176-8c0e-cf1ab0c1d9d3,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+d4e1472a-7b5f-46f4-acb7-b961f634e28e,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+93cd5d07-e0d3-40f8-ae7f-beadb1efb7c1,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+1ad0b9b9-7ded-4281-b114-9dcc6138c037,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+bce3ce45-4fb3-4d8e-9ec7-d24427c2ba4d,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+ac6a3df9-41b1-4e5a-a15e-f44481384c23,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+f38d49b7-6cad-4460-abd0-3685a3b2d941,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+269e8ca8-722d-449b-ace1-6545bd72bdd6,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+2c9996bb-af6e-4424-881a-e81b9c9aeb78,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+ab9cc98a-86ae-4913-bcb2-cc3aeff8abb1,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+f1e6ce83-b4a0-4643-8e8e-a1ef8a158a27,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+41f8c9fd-ae52-4458-886b-faf37de77dd0,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+912b61a1-6a5b-451c-b753-9c3dac03e8cb,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+d9d7f0d4-fa64-48f2-8037-52cbf0b34ad8,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+b107565b-7558-4745-952b-689178367e1c,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+5eed7e8a-c219-4497-a99f-bfc48faca4d8,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+abe658e0-33f9-4f57-849b-dec4d20964d6,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+93690a96-421c-4c59-85ba-fa6dd538c721,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+d976782c-90c1-421d-b83c-7fc2617e2709,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+77a44132-af22-4115-9fa2-78f2f74bf687,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+14c13b05-abfe-472e-83a9-b28f60e58ad8,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+d9fb85c3-ade1-47bf-8159-170f81eb130f,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+381cf7f3-cd7b-4660-8175-ff8062f7bf78,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+127f738d-afa1-42f6-a9a0-f33806667b84,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+af17788e-a562-43aa-bd36-fd3e031f483c,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+6fbc2b46-6762-4778-aa7e-782162c5397c,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+39b6ae01-c97b-4234-8a28-208fdf170432,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+c113808a-773f-4179-82d6-9083518404b5,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+03efbc94-a43d-4db0-9377-e397348430a6,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+28033279-cc74-4775-afdf-2497f6ddb55c,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+99c532b0-6b42-4925-a344-fc7262c415ee,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+e7dbfca1-9657-4952-8e0d-dec6373dda5b,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+14efca0c-882d-4fba-b15c-64af6e213b80,Rectosigmoid junction,Adenomas and Adenocarcinomas,TCGA-COAD
+5e7074a6-5011-4dc5-950c-41365dbc6d09,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+7ad0617e-bc4a-4869-8419-744f04d9b7a3,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+2c0a725a-e829-4d84-89d9-d0d47f6cfa37,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+639e1050-088a-48fe-a0ef-4a01a3468cac,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+95d4f0c4-5997-4ffb-b876-0ddfeee972bb,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+beb63625-d9bf-4ccd-bc53-635b53d24240,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+cc53bf9e-5e27-4305-a08b-552120c10aa5,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+57a2044d-20cc-4d02-b268-ce570a0fabe3,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+fd16b634-2e04-44a3-862d-fb03cd73c057,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+af3a0634-4292-45bd-b948-6b6bd2d58090,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+d7ba64d7-b4e5-488d-9f28-bcb7bf3c0f35,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+1fd75c4d-e74c-410c-a150-814722c6c1cc,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+dde411b2-5d2b-4638-8149-89bc1eb3c7ad,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+315ef7f6-ca21-4d87-8f19-40bd455885ec,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+cc1d6ad3-b60d-482e-8fa4-0af26823007d,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+d7ebd11a-1339-4b28-be90-a788d2cfa706,Colon,Complex Epithelial Neoplasms,TCGA-COAD
+05ff79c5-1127-4cac-8f4c-84089a3f2cde,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+c777a777-373a-4773-9566-6c373261f00a,Rectosigmoid junction,Adenomas and Adenocarcinomas,TCGA-COAD
+ba49b428-246d-46d2-b549-39a5fc8f7003,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+7570761b-c333-40df-ac8c-9b7f94c58ef9,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+41658cf8-0de1-4a97-bb60-0f0107c84e00,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+81555ac5-9cc2-49ae-9033-657f56243f20,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+568dbda7-88b5-4330-881f-dc5d6c7ce4ae,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+93edb105-5dc9-4a4a-9fca-c91f0161fcc7,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+80311cf5-7e18-4545-92ad-c4b7dd5c9677,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+01ad5016-f691-4bca-82a0-910429d8d25b,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+0dacc5ce-498f-4c60-9f78-7a013ffaa9ce,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+563d67a1-f1ba-4722-aa2d-9b35b1689468,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+44c2854e-3f8c-48e1-b4d5-1b5778d4fce4,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+89a6384e-1cea-440b-9f17-d57cb0805174,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+10881458-55b2-41d1-8358-4ee6ccb8ec85,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+cc22913d-2dda-48bb-82aa-9960b73f3e44,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+ff1407c6-9174-4bae-a19b-d34ca71b898c,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+b54865b6-824e-4163-b759-21a6eacc98ce,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+81a7184e-f9f5-4e3f-9603-5f5642386c1e,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+c6f6c032-5d4e-4028-aed0-24a587620354,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+2d3ce817-b269-4662-a92d-392bd3662399,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+9382987c-b5b3-48fe-8194-4d83fe340cd0,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+e703af88-c05f-4d7b-b225-d640e4d1a2a5,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+3e1886a8-2ed2-41ee-8b58-10f5321ade6f,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+d4da3298-3a02-44a6-bdcd-d260f38e520b,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+96ac1f4b-79b0-4517-8caf-fc05abcaaf4f,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+0c53b010-4243-4da3-a059-7f54c9a850ec,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+c8de215d-53a4-4e6c-be58-5887a8094815,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+de287a25-981d-49f8-81af-fe0300e4cd31,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+2b94070a-21ec-457b-88af-3d2a89b97ac6,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+e2edbf3f-25d8-49aa-b656-2a59c3b99aeb,Rectosigmoid junction,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+081a3dc7-45e1-457d-add0-c4686140a8d0,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+9b2c325c-1f03-43c7-ad5c-b49c6d205635,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+88e64f45-adc4-4223-9838-4d7d45b8f0c0,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+6fa41234-9077-4d05-a295-6820f3bedf5b,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+65056295-8fcd-4f82-a3c9-a5acd79521fe,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+19089ae0-b590-4649-9d94-a147fa506e32,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+a56d528b-238a-4556-92c8-7645304a2da0,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+56d5b0b9-9093-4286-a2c6-7faa9a1680f5,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+9c45eaec-d854-4f51-80a3-2d80d6b4aebc,Rectosigmoid junction,Adenomas and Adenocarcinomas,TCGA-COAD
+4138aca8-e085-45fb-b353-74852efe61bf,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+eeb42912-0c7a-46bb-bd95-369b2b425727,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+93ca8937-97c0-4f6e-bdec-66d32f2a7b3d,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+1a09207e-9184-4f32-bd07-a9f4dc6c825d,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+fb9e7684-a7f7-4f17-bc5d-1f359e1b0d42,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+955464c8-9c62-430c-87b8-107db5c980a8,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+bfb07784-693b-4c25-874e-4ad6e04a5d46,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+3eb37b12-b8b4-40a3-bd8b-f89fc39c05fa,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+96e013d9-8e89-46a7-8d07-bae95af36708,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+d259eeb2-d15e-436d-9d37-2d0b7658bc91,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+4ad9784e-1edc-4186-9b45-4dfe0003f74b,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+9d8c4693-8e36-473b-bb34-a7cdc04dd223,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+2e386e48-b99b-4806-a3e3-081d72a606e7,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+e8e80df9-e3ba-4dec-b8fc-a5e80d8c6798,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+aa85d9e8-caa6-422c-95ce-780e4ac2a5e4,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+091e3084-04ee-4497-893c-d46226dec78f,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+21ddbfaa-1b21-4a2b-be2c-237dd69b20ff,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+8e87ddca-f43e-4c6f-9d5b-430b666a7f6c,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+6a4031c6-ee88-48be-81a5-a522720edd02,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+df5ab6cc-6f68-4b6b-95e2-954c6b57ba9c,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+79d33c28-a7e2-4fca-8be1-a16fb6d68d49,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+20ccd267-74e5-4574-a8e1-028bcd74aaeb,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+4c6c8d3d-e4a3-490a-9211-cfbe7e6ee25b,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+e3ca9046-9634-4332-b19f-88b18110f941,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+a19cd9f8-482b-4b70-b7d7-06d6bb1b0260,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+d5a1f43e-25a7-47f5-b63e-43714f9f732a,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+c59d90a6-9cda-426d-b8ea-41f0a87033d5,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+9f45a227-1fd5-478c-a194-4a5c61b68cc3,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+567ddc8e-2b00-417d-a326-479cb02e08dd,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+b728e6e8-a0e4-496b-904c-6f07c12e901f,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+b16bb717-d1cf-4237-a554-43f3995b82f2,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+0f940ec0-eb0b-422a-a764-a26c8e5c216d,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+3a8ca50f-bc9f-4250-8c8d-22893763ea46,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+268c01b3-d2ce-44c0-a2fe-ea846a1253cc,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+bc42fe2d-1a33-428d-a601-b1871f4c8d9b,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+3aae5316-6a5d-4b83-9020-ad691d4edf99,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+4aadf2a2-ce1e-4f94-b146-59292e83e7fd,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+628408ce-0691-4e0b-b4c7-aca9a0d73bb0,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+3334201d-a3c0-45ec-a9ed-cf48cc8c38e8,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+b3c267aa-345d-40d8-a8da-f9f08c64f9c7,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+cbdabbcd-d8f1-4d7c-9e18-ebd83d888c51,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+b612d491-7442-4119-a53c-5ebcc35c31f4,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+131e0571-de86-415f-b3fb-dc9f971258d3,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+b079a153-62f9-4026-a2f8-a1390168bbb9,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+bc02f801-081b-489b-87cb-d275c70299d5,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+5c24435e-8e50-42c2-80c7-919b1cad0133,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+eed7405f-f8f3-41a4-a0e7-242f23087f59,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+d17a2ab0-faef-40de-a87d-1291868b200d,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+25c3201a-3dd5-4edf-ad09-104e5c10663e,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+32b77693-18e1-4692-8488-add1940c9e7c,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+f5c3bc61-1018-4351-bb23-aacc1459365f,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+98d45099-feae-4dad-aa38-ec03fed6d999,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+bf69a4ce-ec7e-4752-a86d-dcc80e3c9a57,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+15d1b0fb-5c5f-4689-94f5-b33120a2bfae,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+c6ed47f4-358b-4f06-b5cd-cdf1d5c47b43,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+64bd568d-0509-48fe-8d0a-aef2a85d5c57,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+4beee9d4-ee52-4fed-bcc4-d300f5ddd4d0,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+2db3c23d-c591-4ea0-b0a8-ed9c4343c80e,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+85e95dda-6198-464a-9187-fd0832bebb72,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+d761bc06-dee8-478a-be99-8af9c504e49c,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+1c111912-c664-42f5-9802-065b1994a2f4,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+f87c6dcc-1a9e-4df5-962c-1f946e2611f8,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+fb4cc403-694c-421f-b360-3108b6d57ad5,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+75c3004d-1ef4-49f9-86e0-1bb7b9553a3d,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+d651f9ba-8746-46c4-852c-6c2992c7d10e,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+a512701f-88bb-4b05-8c94-fd285b9dd13e,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+b4c3cf95-a27c-4bcf-9321-38723473e83b,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+ca5b878f-8bff-410a-8e6e-b1c133018c8d,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+e4be17c8-0855-432c-bb80-28bb24b62f32,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+2c30dc20-18a8-44f9-ab10-558c1e5634dc,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+c83d38fc-e011-4f75-a100-96513611f3e9,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+043a4745-566b-4106-b159-99cb8b394b81,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+01240896-3f3f-4bf9-9799-55c87bfacf36,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+01f493d4-229d-47a6-baa8-32a342c65d01,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+0687bea4-911a-4ef2-9fa2-531ef6ba7910,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+07dc5a1d-64b7-42ba-928e-9753bd533c1e,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+0a94eecf-4db2-4846-8383-c83ff02e4a9f,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+0cb0dac8-4ce2-444a-b1ae-1550e065b4d9,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+0f008098-d8aa-46dc-8445-cca59838c582,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+13ae9d83-a22f-451f-88bb-686051725cf3,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+143f2dd6-a280-41c5-9242-442ef91b73ec,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+1add38c2-df6f-47c9-9373-0bec0e40baf8,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+264c0d45-078a-4207-a101-71f99bcd237e,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+26a12266-c6d8-42f9-bd4e-5093d827ac9a,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+27e2438d-bd01-4c50-9102-563276ed9922,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+2900eadd-7e27-4371-94e5-7d58cdff0138,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+2dced66c-1f0d-4039-a5e5-54cca77c16e9,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+33e989b9-fac4-47d8-b429-269044ac772a,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+35620be9-3ba5-4be7-9e00-83103e6a92e6,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+35c9264f-34ec-4d75-ab80-aaac86108fc8,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+39aec099-a33e-47a4-a602-cbf65ddd3830,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+3e0c34cb-fca5-4bcf-a5c1-5a7d286dd072,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+47a8e514-904c-4867-8f43-7eb573be835b,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+490eabca-4575-4bd6-9604-6b6e23d069ce,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+4be66108-e72a-406b-bb4b-f58ff2877336,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+515a062e-f68e-4100-a923-bd2ce0bbe071,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+5498d5ef-ad24-4034-9750-7c996c5355e1,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+56c8b812-ca8e-4eb2-b0fe-f264316789bf,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+57b0f89f-1b75-453e-922c-01cd4d44ca49,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+5a195baa-2d05-4273-a7c4-64cc816b0406,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+5d66191d-da49-4d7e-89a4-a382db338340,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+5f1399ef-8100-49e7-806f-9f532e55c0ba,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+605baa86-79e3-484d-82d2-4de27d405ba1,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+60ad2c8a-6bbf-43fc-ae73-cc1f6d6c163c,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+64b0461f-038d-4712-948e-818dc2f10eef,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+64dcf1a5-c78c-4d3f-852c-15865b3b6189,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+67ba29e7-f294-4dcd-9630-ad768c22c588,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+6baf61b6-ae5b-42f0-adc9-0d26fda231f7,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+6cd8d2dd-5545-43b0-b796-ae0506d62eb8,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+6e9e0c2f-2ddb-40f1-8e8c-618119e62ec1,Rectosigmoid junction,Adenomas and Adenocarcinomas,TCGA-COAD
+6fc5e56a-1f5e-4ff1-948e-5ef636ebb48d,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+755d3bde-76c3-45c1-8427-8e4d5d686dc1,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+764c97c9-01d3-45cb-86bd-f8a52b5468da,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+7dfbc0ed-e684-4966-8b59-fb6b9e80c129,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+7f6898e2-a840-4ad1-80f7-783f8b766fcc,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+8368d745-c74d-4236-ba75-16ca7aaeb3ca,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+849442d3-eb82-416e-9d36-2fc15dfac67a,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+85bdc1ac-a1a4-46c2-bc2d-e5fabf5c89e9,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+88832340-46ad-449c-8f81-6a8e5b495510,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+8a84b03a-e37e-4827-98f0-4d480ec31037,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+92554413-9ebc-4354-8e1b-9682f3a031d9,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+9743d31a-ea8f-4847-87d2-ebf77cc5983d,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+9d68516e-7e5c-403e-8aca-ea1abe0d6014,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+9fd08502-355b-4f5a-a25c-73ec7184f6d3,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+a117ace8-ac5a-48d8-8aee-3024d6f0f873,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+a435fdf4-a89a-499e-9006-cbb5693eab26,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+a54b322b-80d3-435c-8d14-25841b741f6c,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+a56f6562-d2af-47b9-bf81-94b3b4893173,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+a6f98ee5-9638-4ebe-804b-fba54aea9f90,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+a782f174-241d-42c6-9bc4-61cc39f8b397,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+a8b4284d-cbbb-43e3-897b-d04af4bfba74,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+aa909ffb-03e1-4e3f-8888-2212b23d90b7,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+ae6b315f-3f78-4695-adfa-48b0bbab2c89,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+af06cde0-c69a-4bb1-a234-8023b95e4835,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+b3fea9bb-53f9-4ddb-922d-b570562d7a7d,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+b89267a4-0e6b-401e-85b0-e66775858aa6,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+bab21810-f51b-421e-a87f-1f1136cbc77a,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+be85f845-b281-467c-8b97-bed7b7fdff64,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+fbb69964-f962-4b89-b59b-dd05f8faf61a,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+c4d74653-d26b-4e51-aee0-82ee3d42f883,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+ce00896a-f7d2-4123-bb95-24cb6e53fc32,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+c46971a1-cbac-425d-bac2-f4142c92522e,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+265d7b06-65fe-42c5-ad21-e6b160e94718,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+d655bbf6-c710-411d-aff5-ceb0fb6e6680,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+4f601d7b-8db1-4c6d-9374-21dcd804980d,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+2d02bd7a-5beb-4e43-9ccb-18d89c9d5ca2,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+c085da47-d634-491a-80ea-514e5a231f70,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+04d7a52f-a89b-4114-a608-a6254b4d604f,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+db7d3240-9fbd-432e-83ee-7226a6dcb9ce,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+f590f15b-21f5-4d99-9021-e5e1e0cc3758,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+55b8d871-dbff-4c4a-8f73-82565588c23f,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+280d8569-0acb-47fa-a8f5-aa8540d89a94,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+b809c2f2-185c-496a-a1d4-589294443a1d,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+919e9d37-3c44-4d15-a246-b7af1c13c1b8,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+3b76c73f-f530-4a3a-91c4-31834747321e,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+52495119-a052-4749-bed4-d4c81a6c3fb2,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+10d3a64b-22d0-4846-8972-d78173deca2c,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+0d80fac4-f43e-4a67-b372-0af320966dbc,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+552e78bb-dc9e-4c73-82bd-93a4bbea3a3a,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+36182304-2db7-446a-929c-7e43a47d863a,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+6a6c1569-1045-4ed3-acdb-5c45e47614ca,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+93b05e07-fd17-44ce-8735-dcc28264b229,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+0843841b-afab-4831-9084-a850db85287c,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+072507cf-1249-4b28-86d4-3ab97822a74c,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+d4d1c1d8-efc3-4282-b986-d7343de7e78f,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+e70c561a-1640-49d6-9662-f49b08118f1e,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+e5641df6-0d4f-4613-a012-c953f8b2017e,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+2272c592-b9b6-4483-9f7f-6e185699b900,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+b11234b9-93d5-46df-bb67-110d6ed3e664,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+08a50ae7-179c-4241-8aed-79db6c218c90,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+e53893e7-cfaf-49bb-917f-6d549652b319,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+3cad2139-0bc5-4c8f-994a-018be7e2e6ea,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+7f677700-65c8-4d17-b6ae-520869ba1bbd,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+56ae2434-e84a-494b-a784-2c2009be8ae6,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+d8b73891-05e0-4ab5-ab2e-0acf8d03595c,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+44f39f41-cf63-421d-ad56-513beb72d9ca,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+5dfd6430-e602-415c-905a-a894076940e6,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+b06cdf61-61c9-4035-a55d-1ef21dc21069,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+cf059d8a-6c7a-48f4-a545-1160177d208d,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+925ae8ff-3200-4564-be76-94db0984b027,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+6a29783c-117b-479d-9910-18d629c00c51,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+cd54aff9-bee4-41aa-b347-48f8684dcece,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+4a9a3a6d-090a-4c26-b16c-d65055f05628,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+b5e873c1-1050-4c92-a26c-684aa26faa99,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+12560466-52ca-4114-8c9b-4853599628f1,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+69cec2e1-fa83-47e2-a75d-9c1432f1108d,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+847865ca-9cf4-414b-bf59-a55965f37ec6,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+9bb2a95c-42f2-4847-8b65-eafa2d833859,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+f8ac66a2-16a5-4230-986b-1da8d0a61361,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+8fc6b46b-1c60-40b1-8924-0c2c9307c6e0,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+cfc6f9ef-73b1-46af-b4c8-94fdd34f4584,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+25e4b9ff-2bdb-4ee1-8d6d-17cce7949db9,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+075d17f2-dd1a-4c12-9e6c-ded1b052d107,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+0c409bc3-1893-4203-9d84-6c016f1960c3,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+0300e3a3-c278-4c20-8739-6d8aa24588cb,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+03301d0d-efee-4087-9fff-d1d4f53a924c,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+04552448-4629-45c3-b2ab-0c1dec9c36cd,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+047c0040-6eb9-4a05-923d-ec485585baac,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+048ebea2-47ef-4359-9213-a1b7e4fdecf0,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+08269082-cd8d-413a-a606-aa140cccc9e6,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+0b83c47f-246c-4af1-b4c0-2b880edbf2d4,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+0b8956ec-f11b-4d74-b8b7-bfcb64ae974c,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+0c151271-2cf9-43f4-9e9b-fe927de43131,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+104604c8-2cb5-4538-b964-dbff3b6bc19f,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+13afbde8-e5b5-4f3c-8a9d-daef71560005,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+17846514-9a0a-40cd-8841-227e32a0c7db,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+1957fb63-be5a-4889-bbae-01dfbd286c4a,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+1bf54408-b5cb-45dc-ad03-ef2866a0ff59,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+1d9d253f-2de6-4eb6-8514-8ed3b041a83b,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+1f298bcc-c8d0-43bd-8ca6-5c160922b607,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+234a072c-f473-41bc-9d7a-39e0f949f7a5,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+284b4e63-ae72-476c-a28e-866c6b77ac00,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+295004c6-d52e-4971-82ff-84595850f548,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+2b7c7e88-a204-44a4-ab28-624b586dc238,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+2c084454-18e9-4837-9bba-7e91a73a48e0,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+2d813726-b8a6-4719-9323-a7496547e156,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+32bbf3d8-fd0e-45e2-b2a8-80192e86a13c,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+36b46540-472f-4a4d-a801-b8b6ae660dc9,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+3abd0691-f575-44ce-a13e-8f6bceb8cabf,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+3bd50bd2-c291-4362-9663-7b783a84ec43,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+3cba0f75-a95d-43e5-815b-a2582a80df05,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+3e5385f5-d4ff-4b96-8259-312602ec1196,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+3eafd07f-49f4-4e16-a4f5-8c43ff40fb90,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+42d044ae-1416-477d-ac80-779c49bc8d35,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+45da55a6-aa58-49af-9a28-95b8ca2d4614,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+49a756a9-7125-4b1d-bcfc-6cc44bdf26f6,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+4a540448-f106-4b0e-9038-9f7ccefc785b,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+4af65061-a15f-48d5-b4c0-30003386bf2e,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+4afab224-f65e-48a8-8802-01138e210e29,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+4d02010e-9e69-40d3-9bf0-3d4510aa0614,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+4e244c64-8fb6-4689-a306-3d5ed5c6cca5,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+4f81a5b5-b570-4331-a51b-4a65fc2e4e13,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+4f86dec5-34a7-4c11-9578-7e007a203cbf,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+50f914de-0410-4fe1-8e97-2fbd8be2efc0,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+5195c9ac-b649-49f8-8750-f9a4787e8e52,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+51de632d-e3ec-4995-90df-01b894cd68f6,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+53d40ba3-c33b-4139-967d-5110884237a3,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+5503f854-8eea-49b7-a196-bdc6c3c5815b,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+551cade6-32e8-4aac-9e92-d6b113d4ed7f,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+5570758c-1f07-4ff9-a570-b7ae39d15a89,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+568bfbc4-a4e8-4808-b458-5eaf56e83c45,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+5bad31ef-94b3-4765-a4de-6a0caf5d3154,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+5ee039ec-3414-4fb8-8299-0c8c5198a1eb,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+604b9fd9-93d4-40b8-b83b-f5381d8418a2,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+60df8616-8189-4d5c-8ebc-a05488cd9083,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+6264f0dd-cc82-45f3-bee0-64f52307d324,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+635fedd0-4daf-4d97-958a-3e0f49c1a708,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+6369a2b1-921b-4d35-a0c8-6edac508a702,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+646241fe-e202-4e72-ae61-84f577488968,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+69e6da3c-2a03-48bc-bc2a-019b21820149,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+6c15b31b-6942-43a9-b698-701a61430e30,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+6eb010c4-c906-42d4-894d-8b47de90e023,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+781c4776-7f82-4bc5-a490-291ebcebbca4,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+7bde24e1-8dc8-4359-827e-ffaef72898ef,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+7d0dbcb3-d024-4c20-a545-430c0d067fda,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+7f715b2e-fe7c-4a6e-95d1-fcab93b58f21,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+81bc5a6f-3584-486d-8a8f-d976dcb666ff,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+851a1157-e460-4794-8534-2eb6f0ae7468,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+85fcd432-abf4-4bb7-8039-2de41477cb44,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+87971996-94d7-4e88-8ed5-e059db838af7,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+87ae9d51-7397-4dca-87a4-7b0f20321729,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+87c5e2cb-0b2e-4f40-927b-5e1ad7de4824,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+886ce4a0-a78d-4976-9667-041385c9b6d5,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+91a605b2-929a-44ce-8522-2ff793ddf82f,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+92dec9c3-27c1-48c4-8184-5d8d12678992,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+94625198-6b3b-4cf2-bb22-4d247e498d28,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+9626e62f-f984-463a-8ef3-677489191864,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+98a639c2-d615-4dc1-98f0-298752b69b09,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+9d12d90a-4948-434a-8802-8e83fd5fe01d,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+9e4c8e1e-041c-4c95-9801-70c8dd0a7797,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+9ec1c41f-495b-4715-956c-9f1ed0b47e01,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+9fc40b03-0b56-4b1f-93ed-dbc455ae3fd9,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+a007b49b-297c-48c7-9f0a-12bdb470df4b,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+a121406a-30b2-4717-ae96-edcb17d911e2,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+a40beabe-496e-4324-a1d1-5a7d8b002aab,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+a4225cb2-7b4b-4122-b6b9-629c26e3ea56,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+a5b3de4c-f3fa-414c-b809-59c3c1438aa7,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+a614255d-9f1b-4e9a-8a50-435d4d123b3f,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+a7c1d88a-d3a2-4232-a0df-3bd48fc27cc0,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+a904ce56-42e6-4e61-ab62-cdf8192afbb4,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+ac20ec63-1615-4cd3-966f-1e786077af75,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+ac8cadda-c01e-4e8d-9557-38e0a36c3210,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+ae8bc8ea-29e6-4fe4-9095-d6d2655ee4f5,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+b02a2698-d4d3-4977-a251-989694d60f73,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+b87bc182-b1c7-4e8d-a34b-704431b1d8d0,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+bbb4578f-2df7-42fe-9e52-f923da05b4d0,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+beac52b4-ab6b-4f20-aeff-8c15990aa710,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+c0a632ca-3e72-4553-8670-4a83c3a81b42,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+c0ce18e0-89bd-469d-8ca7-292f815cd34f,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+ca245eb0-c60e-4a94-afd8-ccf15c1008df,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+ce0f2e87-6c46-45b5-8df7-3ba32e48ce52,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+cfbeefdc-667f-4df0-967f-74b625f0d96a,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+cff68090-09df-492b-874c-0caeb29f9361,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+d1a96a7a-2b11-48ce-869e-1fa19c1eb0a5,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+d2748e35-4719-43c1-a533-b6b0cd9688c3,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+d34c99b6-d90d-4328-86f8-e0152365e1ab,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+d48bec14-6466-4924-a9e1-a37e31fcf83c,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+d4c9fd69-d447-4607-be1e-2b5f7ec15f90,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+d80f601b-1064-4ff0-9c51-7f6afb22d1f5,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+d8b88441-16c7-4201-9c01-3e7237d18eee,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+db882417-af3c-4a86-9004-f7e943798409,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+dc39df39-9945-4cb6-a852-d3b42177ac80,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+dc4b12b4-9b0d-4015-8e97-9f8756e24485,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+deace3d5-26fc-44d3-9f39-b5cde2c94152,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+e08c161c-a9ac-4001-b567-2c15bef66fd5,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+e4245fff-1281-40e5-87b4-4e42a18a3a63,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+e8bb682e-60a1-4842-a732-74558256dff8,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+ed53edb2-3951-4d97-b62a-b9aee879cecd,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+ed560804-50b9-488e-bfa9-33f20cb83106,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+ee6dd13a-1436-48f5-8a9f-732898c1735f,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+f00224ff-eb5d-4e46-ac9c-02fd7230f0c2,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+f0446aed-9b4b-4e77-8708-88f239f2b671,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+f07a7717-f6eb-40b7-82ea-0aa9d17ec337,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+f900767e-097b-4def-8a74-78fb042a039d,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+f9306cb1-c4e4-42eb-8aa9-ee906c408e10,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+fcad8f85-0046-4fc9-9611-3bf8ac91e887,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+fcb7ed90-6c6b-4420-8d5b-4fc6f763adaa,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+a94e1279-a975-480a-93e9-7b1ff05cbcbf,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+35c295c2-37d1-44b2-87a3-1039645e5bae,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+68801d41-535f-4b38-989b-ef4fe5f00039,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+b6202d8d-dd3c-4fa2-9242-6e55759846af,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+10994156-7c2f-420e-aeb8-11d566b3d5e4,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+b823d6e5-54b0-43d3-95e2-9be33dc6f734,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+2a971e32-b0e7-4a3f-8c40-62d69c0307d8,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+192da41f-f0a5-494e-8eb9-96bcdae56ff8,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+613aa3e8-a70b-45a9-9c08-0c2346c8bf00,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+17633a60-e12b-4a7c-bd8a-c16341ddc606,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+5da56982-6de7-4994-aa9e-3b01200b2959,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+300fff5a-0f61-402d-b845-3938ba7b1294,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+95a54459-3fac-42d5-8ec1-ed66d971d64d,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+e831369c-78c0-4c75-9cf3-f46ed669312e,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+dc22eba5-6fb7-4875-b30a-99fa00758301,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+02f9668c-71e6-485f-88b1-b37dc8bdd2ab,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+80809d79-92e1-4d6c-ba2e-0a9589997792,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+81e7cca8-2d71-4446-9692-872c2fe68d0a,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+21bdad0d-c6a2-428c-b2b4-0de282b34abc,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+c293a148-a88c-4fb3-b2f4-e64e918044f9,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+9c34830b-4d7f-4b41-9659-fbfc36c145c9,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+a9cb21d1-4c4a-4f30-ad4d-c54bed26f187,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+23d0681a-912a-408f-b19a-0bbcf5ffc2f3,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+7a481097-14a3-4916-9632-d899c25fd284,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+5342e2e8-1465-4f7b-9450-ef27280f80c7,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+cac80259-3a26-4a99-b0d3-13454068e6ed,Rectosigmoid junction,Adenomas and Adenocarcinomas,TCGA-COAD
+92c043b6-8d53-4c1c-808a-c4be5e2926e6,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+7d8eab0a-e6c8-4449-9ebf-50c41db94a06,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+33522271-b2ca-4da4-a942-501ab9117c51,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+db246424-3979-4f23-b316-8d30c449ee15,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+227f945f-76fd-4a63-9609-d4e730a3d22a,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+0a815133-0edd-4422-89f2-2f067b6f2156,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+e6ec5a68-7555-4f26-bd7e-9cdb4c5f7004,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+ec3f3f11-75df-4fcc-ba03-f19aca907645,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+0e87e5fd-d5bb-4c0d-952d-711a6abbf336,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+aec0c661-afac-4f7a-8c31-154d743f2499,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+62d39be5-f029-4eb8-8b00-46470e06a755,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+b76d1de7-6447-474d-bf67-77e0bb2da73a,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+303286c2-bc58-4bbb-9171-74cdb1d7f62f,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+55697871-b9aa-4acd-8dbe-dcd5391db8f0,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+31a3877d-3e82-450e-811f-3448b06f3950,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+84e34cf2-b3bb-4a1a-8fb7-6c2c604c4008,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+e6c8c5fc-158a-4de4-b3f6-3b645584bbc7,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+4563e4e0-a661-46de-ad25-9c86a621e147,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+ea923671-3903-4a79-830d-e7e4b1eabab0,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+cee553c8-460d-436b-b55d-8f41624816cc,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+326c1637-ea91-4006-b440-d38420af1ae5,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+7ea546ce-f48a-4d9c-96b4-a0124c692870,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+fac2c617-8149-45bb-b766-fbe13dc3c425,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+5116e3b4-2bac-40f5-8046-b9c1783faaa5,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+ebc5a6f8-34fd-48c1-a2b9-7f60f45fbf27,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+7a6c54f1-f4e4-426b-b306-2ca3c4de12ca,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+73f9681a-f9ef-4880-bd16-93624fd117c6,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+e8841edf-e070-425b-b4d4-bbb2115f9dbd,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+fce1fd5a-54d2-4260-b187-4eb7035e96e9,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+c594196e-49ef-4195-a6b6-4ef4a1d9ec15,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+750770db-53cf-4021-a8c2-5e0ddb97fef5,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+36eaf209-c332-4321-b6aa-51a3368ecd79,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+23252dca-e836-47a0-b294-758ad60aa259,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+56e612e8-2c29-4782-be79-2813cc8dd2e6,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+8d0fa506-3f51-4108-8427-7dabf270bcd4,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+97f6c8d3-09a0-4128-8f10-41e736648a5f,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+9dcb4e16-b582-4cd0-87cf-04f480ec2cec,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+b08b5f49-9434-4653-9772-097ec29b2ca3,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+384400c1-98d6-4cc3-8724-de6711f6208b,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+857a5889-19e7-4208-8362-f1377c408037,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+19d1a5fc-3ce9-4e43-a364-a4150bcf911b,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+794131b8-f4be-4f15-b3b9-6f0b10a5a38b,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+0b8de222-119a-40f3-8beb-12b9d933225b,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+d2c99bed-3446-4d12-99e0-00611faa37dc,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+c658f35d-ceeb-4189-8e3d-03e3b9706667,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+790266bc-c252-43f4-85d1-1b06ee529cf8,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+26a41625-4680-47b2-afa9-6a72b148e1c0,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+4f9775f2-b663-4daf-aa9e-50915cae9407,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+ddf69ed9-4c53-48b8-9f01-495bd60c3425,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+654c6f5c-3e5c-49f0-b53f-87cd9797d7c9,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+0dc41cd5-0672-407c-9b4a-0f5f3970aa54,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+e83e5700-f968-4978-bb78-56a83936ce8c,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+286cbae3-8324-43b7-9b20-0f40dda1588e,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+c48e2ce0-3806-4675-92f3-d38ff67c5efa,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+73448b56-a6c6-4c98-a153-ab704261e073,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+aee20b98-df51-4ead-86cc-0d5f60a74b90,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+c21d2c68-920f-4526-b754-286579c049f3,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+49929108-023e-4d35-b26d-50ab4d3ae581,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+7a70f061-9a6f-408e-a416-7f5295ceba3b,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+8c0894fb-5e78-40ae-be0b-329ca30f758a,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+f2ef5afa-6191-43a1-a023-d53c0d985139,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+57cdaa1c-4e94-4a28-ab3b-300c0457555f,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+84959e50-17f5-4f2b-8e0c-5ebb139d2c3a,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+aedde4a5-6520-40b9-9721-c9b826490b7a,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+a06c09a8-0951-49f4-a765-5147bbcae109,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+81f6b141-2195-4091-9cd3-dfb022663949,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+3d8fd9b2-9aa2-4c81-8843-535ae66d6140,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+1e0789d6-7efb-4807-8d36-cd9224675a0c,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+c8d6fe73-3504-42a5-9723-e1916fba8208,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+7b47489f-c3cc-4388-b5d7-c7c02790a5f6,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+6775ce57-b4cf-425c-a898-061bb9a8a1a8,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+3758f4f7-ac2f-4f9d-bee2-526196f8129a,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+da21e143-dbf6-4ac7-8872-f1d9ae39512d,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+73a142e1-8ac2-4cfe-b8cf-7e9dea64f488,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+022f39e9-57ee-4b2b-8b3a-8929e3d69a37,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+0712566e-3371-4715-95f1-5b792e72d758,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+09942e9f-c178-44bc-9cd9-f5bfa350b23f,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+0c463362-7925-4d9a-9d63-098b50af2fb9,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+0cbe9848-8eac-4ea8-a36b-fb74b4a33de7,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+0ec6ed47-db99-4273-9823-ffbde6a77091,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+0f74d992-00da-4728-9564-086ca1b95921,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+10628a61-bd5e-4415-af97-631c5ca320cb,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+1136dd50-242a-4659-aad4-c53f9e759bb3,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+124b6856-f581-46da-9068-b0a49b999785,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+132229e5-947d-43e9-a54c-a97d4be7d604,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+14cc6f5b-5692-471e-98b4-ae200b3d8fed,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+15b987ba-77ab-477b-a54a-65ec5c7c399e,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+1b0b0533-7c4f-4edd-a75e-8b56f49d54ab,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+27d9c162-11bb-48fb-a41a-aa05fcb4c1c2,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+28d03569-8717-40da-8989-70baf2b18f9f,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+2a7bbafe-d499-4241-ba3d-a52ba0a5db3c,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+31d960d7-8f5b-4d22-bf5e-fae0849c4efd,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+3470b1af-689f-467a-9f9e-de74088f9b94,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+38d65618-4857-490e-86b3-0a3f772a9f60,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+39d3b5b3-d51e-4d77-a8aa-2977fa734fab,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+40c217ee-429f-41f4-adc6-db9186622b17,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+4881a390-c4e4-48b4-ae66-140c64a87614,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+4a785dc7-f5f6-4607-a19d-e6354b2fb5a9,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+51dcbfac-6f04-4364-877d-0bf1bd566335,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+565e2726-4942-4726-89d3-c5e3797f7204,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+56eb96a4-d2c2-42fb-b26c-1a80012bcb8e,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+58facedb-fcb8-4ecf-8338-2bfa4947acef,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+5b259d18-3976-4f44-967f-fe5fa8447c8b,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+5d73b382-3da3-4220-890e-2095228bbe6c,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+5f6ed48b-3b5a-4d20-8fbf-c9aa3feea186,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+622cc1c4-d721-4b5c-a88b-216d6368660b,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+6454ff0c-26f8-4cc2-b77c-7e5abdc20acd,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+65ab030d-39f2-48ab-80ac-90cb1faa823a,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+69fb431f-0caf-4cdd-9085-eda5b18ed15d,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+6f2b5a14-569c-4084-8c67-b1a44d787897,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+7144a65f-a63f-4b79-8fe2-cfe48696de03,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+74a0264d-1d31-430d-9a88-e7334c8aa96c,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+75ea63a9-357b-4566-bd78-eaa67809decd,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+76e96b5a-b565-42c7-a651-34d5132e6dde,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+80e677b1-5ebe-4069-a1a5-1538ffee6642,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+835c3e23-ac2b-4bc9-ac65-e3e81adecf77,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+849031de-ac8a-4012-9362-d192512997f1,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+85a57cfe-f1c9-44d9-8b50-022c0d3438d1,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+8632579e-d318-4dab-9994-d3945afc42ab,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+86d18004-9478-4e46-83b4-4fbe445ccb70,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+8c043ecd-2265-411f-bc3b-dc341cf56ac2,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+94067eb7-98b7-4975-bab1-c09e1b454a25,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+960d278c-c87d-42dc-ad28-42e010d8f0f1,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+9cdca5d8-ea77-4df9-b2ba-0d5e8ec37bcd,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+a123dc45-e427-461e-8d60-c51307aa498c,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+a5e14add-1552-4606-9ffe-3a03bcf76640,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+a72dd578-3a6f-4807-a843-4a942500944e,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+a85e8208-a6f5-4e91-8f35-ef574f4273fc,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+a9e4b6db-8b4b-4345-a4a1-d63175eb0174,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+abb0d53f-f74e-45dc-8fbb-40863016f3c6,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+ac13d568-f79e-4ba7-b7bf-18e4354e0920,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+acd51808-870c-4684-a2de-aa0b058729e1,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+b718134c-5231-4f29-a423-7bad17c93fc5,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+b95720b1-aa00-4c6a-b202-3350d035829f,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+bce5579c-08c6-48e9-853e-fac85ba8cbea,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+3a785e32-7960-4c72-84c4-fb42c4dd86f1,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+c0b8c55c-b993-481d-aeea-9ebfa64ee20e,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+e7af286b-3dec-4cf2-8fbd-fa64b3efdf7f,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+c5c4a0a5-900d-483d-9282-475654d63265,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+c616f95f-4ea1-4019-8c17-041878085c88,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+c7c5348f-5708-45bf-b40e-1bf7c9348f60,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+c82bbe23-0264-45a7-b1a6-82b4654108c8,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+c8d7eb0f-2502-4277-a8ef-435b08f3c863,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+c9e829d9-cd08-41a9-a5a4-34f2d7d619c7,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+ca22edd4-eb7c-4677-84aa-6f0354459a19,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+cab7bdbc-0a11-4901-97c3-26b884f79cb5,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+cbe23011-93b7-4e9f-b934-bd0122f91f54,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+cc15469c-7bad-4e86-9da3-ae0c72e9d380,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+cd845618-4cc4-49c2-9055-c171d4c24ee1,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+d181c72b-843c-4b2d-b014-2a6dd1c3c1ec,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+d3062aac-4c42-41b4-a9f3-90aa72e6fb1e,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+d3b7ada6-5395-4212-a921-8e97c92b605d,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+d42bc7f0-cfb2-4ece-ae47-521308635633,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+d5619045-060a-4b60-86e4-6a5774994fd4,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+d5a296ae-c165-413c-adcc-33c9e99ff873,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+d7048098-09b3-4763-ad54-9c5c6fe14bc0,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+d71ae66e-2c8a-4fd8-8b4b-a5a2d456a21d,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+d8e9ea52-ff28-4626-baa3-71350fd53ddf,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+dbbee8f5-d83d-4195-85cf-f89d327da0a9,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+dca004bf-9c14-45a1-b186-ab3759f6c7fe,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+dd4be58e-da22-4bcd-bf4c-2b9e60ffda19,Colon,"Epithelial Neoplasms, NOS",TCGA-COAD
+dd7a53ee-cb08-40c4-9935-51d1ca17e9e8,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+df228c56-89ac-4122-93b3-6c0740c4ec09,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+e17959bd-045d-4540-b43a-c3863e8ff3c0,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+e3b0ee77-c419-4b2b-833f-90a221415489,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+e3b6018c-ab2c-47c5-b183-a295d0110835,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+e457344d-76fb-46bf-b362-61a6e811d131,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+e4c0d890-a634-48bd-9108-e674532b0d2e,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+e588714a-7753-4c3c-abb6-eaf1aab53ab3,Rectosigmoid junction,Adenomas and Adenocarcinomas,TCGA-COAD
+e5921d6b-51cf-44be-b295-610cf7c3a69a,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+e75985cb-357e-4072-b047-eea37965d70c,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+e76258b7-e13a-4b05-855b-d792701ffba1,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+e8ec26bd-c88d-42b9-ac8a-ab121b8140f8,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+eb191e71-4b6e-4c8d-8348-519be5a1e657,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+eb4e4e09-98b3-4e85-8dd2-75676ff2af14,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+eecaa5cd-0b69-4af2-a782-035025f207b6,Colon,"Cystic, Mucinous and Serous Neoplasms",TCGA-COAD
+ef4bb5bf-4535-4bd1-8a74-aba920123ee2,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+f3b9defb-88ed-4c95-9feb-7197d869676c,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+f4a804d3-b5c4-4da5-800f-6e5757ecfa1c,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+f4e047a5-bdb2-4bc2-aff0-e0f45bcc9062,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+f6c674bf-396d-4bfe-8d08-e7266c314be3,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+f83b909c-da90-41ed-b532-a2ef9371cff9,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+f88c0259-58ff-4bcc-a777-7705cdbd8213,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+f89bbd17-c732-4847-b71c-a8627a702747,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+f9b5e6a5-c2da-4a0d-9251-bb6f557b7b58,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+fa83dfb5-7386-4a35-9861-aa866478d5f1,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+fa96d094-0165-401c-8fd5-6d1ee4ef3994,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+fafd4576-0709-49e1-926f-ad1ee09907ec,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+fdffda5f-72b2-4153-b7f1-d7043b7ca898,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+ffa7e03a-4a3c-41f0-937a-4fb862fd2194,Colon,Adenomas and Adenocarcinomas,TCGA-COAD
+9ab5714c-19bc-4022-b1ce-ef18ee2a9cb2,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+094dbc57-e3a4-4319-8964-f29a06bd0203,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+0db35585-c319-4feb-b157-41fa14f9aa11,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+a6e960af-3ca5-42fb-b546-451c2583282d,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+2797088e-f534-4c1e-abf8-cc6f832cd911,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+f459ce8d-d245-4feb-a1fe-c273b02feaaf,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+04ca8ab0-c10c-4300-8244-108ebc304410,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+07d409a0-d0dd-415a-95c3-38c26a518c56,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+0e065977-9138-4aed-9c9f-24e475f214c4,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+11d7cf4d-4ad2-4ce7-a1ac-3b729a8d566e,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+12fb96fd-c75e-4eb9-ad92-1a1ae7ad4749,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+158549f3-8f26-4efa-b3fd-62da0665830c,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+1592435b-a79a-4fae-90f7-74b193777f08,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+18545977-f8a7-42a8-a15c-7a1fe72bd77f,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+1a726069-0b44-42ad-9a20-0ee90b31796b,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+1db41963-a520-47f0-828c-ed5c626507b1,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+1ef4526a-8089-46ba-aa7f-4300ab6bbbe9,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+2030e10b-a4c2-460f-9e29-90c8a76ea05e,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+21415ae7-dad6-40c4-be9d-3f881b558fbd,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+2666ab3e-f2b9-4b3d-bfce-aac2a4bafe62,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+27fb01ac-3ea8-4dd5-8479-d89cdef1a118,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+2e930925-9eaf-4469-9328-35241f60eddd,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+307b742a-3340-41ae-8e41-934b58bbd48d,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+33c09cd7-2ccc-4a69-b738-79dfd9aa149d,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+34a19ed5-31a7-4ea4-91be-9fac72320e99,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+366f39be-05ab-402b-9525-725e095de570,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+36e36797-1059-4198-ac91-45b3fa50f683,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+39847790-c951-4f9d-b23c-88c7f44d20a0,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+3d3e1db7-716b-4f0f-84b9-2d2f11c9390f,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+3db2fdbb-ef0e-4a5d-8fb2-4e6756d29b17,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+3f253cb2-ed66-4d02-a1d2-ba2f4320e61d,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+421e845c-f4e8-4f46-bff6-9aaa9d208e81,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+43d92569-fe5d-4eeb-a9cc-f7cd26fb3284,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+44598068-5220-4287-adad-0b4c3e21dc4b,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+44e3fa7e-9a5f-438b-9c87-daa559e28d8d,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+45bdcfd6-1e3f-4be8-b843-ae949e8e43eb,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+4668cb20-6396-4d98-90d8-61814697d16a,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+466d039a-d4d3-4bf4-93a2-89039f397d0d,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+4bec3959-d59d-4e80-855c-f044a5780780,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+4edd92e1-5da5-49a3-80e4-fa456aa425b8,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+519615e6-8847-4ed5-a409-b6b183ff3f06,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+51ae5536-f55c-4fd6-b990-5d3add98de5c,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+56f883d7-3ce1-47be-a581-f7337d06d359,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+5c9a6c40-982e-45c7-98d3-aeb6cad16986,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+5cbf0134-023b-4bd0-97da-eb836ccbc729,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+6014f16b-5f3d-43ec-b8a7-7cf99583101a,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+6208a0a6-104e-48e6-964c-39d120b418d3,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+64b35577-c430-4f11-8a34-965921e3a37d,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+66e2fda4-23de-49c6-bb89-82e9edc56e4b,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+672fe335-42ed-4a86-9953-c8862a081c24,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+685a343d-c253-40e9-a53c-6521baf24f9f,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+68642658-7996-4423-bb25-d3beb9a414f1,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+6988cf52-1e6e-4ed5-922b-044cf08a4553,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+6bebd839-7a72-4e1f-9b76-146bdc0c55fc,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+6bed7cf2-4573-4757-adb3-032adc490ecd,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+71b35cd8-ecee-4599-bb24-b1ef78118423,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+725802a7-d2cb-4c4a-b20e-980ca1056ada,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+72cc3423-d214-4035-b934-0d4e4b806b6c,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+73292c19-d6a8-4bc4-97bc-ccce54f264f8,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+75a53bff-bf0f-4ad8-9b8e-14a27914d4f2,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+75f5983b-553b-4a96-8625-867885e83db4,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+77657eb5-0c77-4f85-9a5e-9f7071d82155,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+78412f82-cc55-43d5-96ca-1d02cf957725,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+793f2df2-87a3-47e2-9cc1-a1a0e8487b51,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+7c1f5540-ba4f-498d-ac15-b395197ec5f3,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+7dcb37f9-c059-4ed3-a616-963ad4ada6d7,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+7ef7c87e-6f11-4b9b-bb74-3c86036c8d20,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+817a7f60-2d13-4372-9dcc-740da772740e,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+87ecfd2a-3376-446b-9b60-2cb8541bab9a,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+8af42b33-6ab7-4ea0-860d-f3af9177ee2d,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+8b3c068d-5090-4030-8e7e-39da005dee79,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+8b3de981-66cc-4aa6-9800-9cca6f8e1554,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+8d28f586-3de5-4033-a9fd-4f67be406fb4,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+8e50e35f-3fb3-4f1a-b4d5-4bacd31bb0bd,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+8e5a0feb-b044-49ef-8cea-80816e4c5635,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+8ffd330e-d8da-4c27-871c-89831a548f30,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+94394c85-6a69-4553-b1ee-c2364d5b4dd1,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+95cb399c-0a6f-4bd8-8146-36f367f30611,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+9fc9c087-0c82-49ea-8437-861a3029c3d4,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+a0f4ee95-b457-43cf-8b6c-0b6882dd99ce,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+a7bf785f-0539-4899-ac21-47d1fc347ee8,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+a8ec7a72-7e3a-41cc-9eb7-62e7a0642a20,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+ad4101b9-b9e3-4d41-8c88-424559012853,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+ad7ba244-67fa-4155-8f13-424bdcbb12e5,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+adc5e117-f01a-4e4b-bcb8-3d1a726b01a1,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+b877d608-e4e0-4b28-9235-01dd65849cf7,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+c1ea9a13-7f40-438b-a437-566d3d23f8bc,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+c20b1007-0111-4ef6-9df5-14da6094fca1,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+c573a2f6-2404-4978-8ddc-91af27bab7c6,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+c793250d-1553-48e1-b6b2-aaffdfe5d39b,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+cefaf325-24d3-4b69-bddb-1ceb66f9a693,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+d3a226c3-a15c-4b3b-985b-211650cf0380,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+d61e22d8-c3ce-4237-83d7-da188b9fd456,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+d66c9261-6c0c-44b0-92fa-a43757f34cb2,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+d750d092-77e6-4a0f-8de6-8280cbcd6f7e,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+d8e6c4a2-7d2b-430c-8515-c2148c9bcda4,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+d9405dd0-ab00-4aac-9ba3-1e2bc43305da,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+da0289c6-ff84-4063-ba99-a0d0a338f6cd,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+dacfb24c-dc54-488c-9ad3-520ad061f1b5,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+dd9f2a45-cec8-438a-9059-74752880a90e,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+df135722-b98d-4dec-906d-77da13df39b9,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+e0c97b37-9834-4811-981e-dcb8982dba44,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+e15a108e-0b32-426f-926a-3fb1af0a82d3,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+e3d519cf-7727-4ae1-92d1-156f5add1701,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+e6831884-67a2-4ce4-bdfa-49e5e208eae8,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+e6e6a773-b155-45a9-989f-75c12ce1702a,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+e7a1cbe2-793c-4747-8412-8be794f2382b,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+e8c22f36-20ad-469f-8eac-fb52d8b2cd5c,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+ebef9db3-eedc-4015-940c-a8ccd07e0d25,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+ed013726-31cd-4201-bf95-7746cce2a525,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+f085f014-2690-4ff0-910a-89176c78cfc9,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+f0c2cc3e-afdc-41b0-a892-3c0c00da5bc7,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+f0f7e57f-1e9d-4f24-a685-a0811aacbbed,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+f1ec5a7b-0973-4c38-9908-862196df9541,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+f24b772a-147e-4889-be23-e4ea10824d66,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+f76bb0cc-eb45-4a2b-9961-e94641a53dab,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+f7a2b87f-c265-4cc5-a792-428756e31d8b,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+f89990c0-e6a1-4721-86e6-2b06c33e0588,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+f94fc471-74f8-4774-9f28-95533293fc1d,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+f9c593d1-f204-4026-8a9b-a6af0922c885,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+fa55865d-65b7-4587-800e-17b6b7f77517,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+fb3aced2-4eb5-4b82-824f-e382a469bc15,Kidney,Adenomas and Adenocarcinomas,TCGA-KIRP
+620e0648-ec20-4a12-a6cb-5546fe829c77,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+cf825b86-7ec2-4e90-bcce-3b5637b90b70,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+ad220f0d-06b7-4dad-a87d-36dff31c8623,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+18960eb6-2d79-4d12-886a-4cd1e8fc1e21,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+a4569ce7-dde7-4660-a24c-409d294b2b8c,Pancreas,"Epithelial Neoplasms, NOS",TCGA-PAAD
+7240d5da-b54e-436b-8069-f2c9f516b75e,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+13cf4e4c-8d5f-4854-a350-428fdf1ff340,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+3a3a8fe1-e35c-45d0-aa0b-4fefa9ee9183,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+1c2341f3-558b-4555-90ff-c7a23ef85c0b,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+5898434d-cfa3-4515-a0c0-810d7e515120,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+65e5bf5f-f22a-4ec2-8839-aeda37212b98,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+6983fc34-9577-45e1-b246-40e18fab953f,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+1422bc35-4597-4e76-aa75-8e79613e67d5,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+4c9e6085-41c3-4cfe-ad3d-5f94196a86e0,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+5f9a5aba-8db8-45cc-8784-c5058445bd6f,Pancreas,"Cystic, Mucinous and Serous Neoplasms",TCGA-PAAD
+565ee830-5236-4414-aeaa-48ea7eb3b753,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+3e09fd70-6464-42f6-96a6-b51d7c298fc5,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+1521ac6d-31f7-4240-9d54-4f7600e78e16,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+c53d66d9-ad9a-417e-a441-df5bcf1ae13f,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+dd5074b2-462d-4267-8b9b-5a4c54e5978c,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+1fe937f7-b4e5-4cf6-be9b-215a012533c6,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+24a40289-96fd-4c1a-a953-45a46a0a0e9d,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+e4babd46-005a-4af3-8041-131648d9c2c6,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+c60a4c63-607b-4d59-8625-bc5d20207647,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+5f468c25-73c3-49d5-ba12-50653dfe2c41,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+d47e214d-efbc-436d-b928-303d1f5135c4,Pancreas,"Cystic, Mucinous and Serous Neoplasms",TCGA-PAAD
+f0a4944c-d6cf-4163-a1ab-189803464b03,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+0a3c8161-4186-4c95-8288-9928d6db0355,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+459028fd-0cd8-4e6d-a668-71fd60bd0a37,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+05d2adb3-5c6d-4edc-ba4c-bdbf628f4eee,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+2ad10199-1381-42b7-b54f-da34c1b1d3c0,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+2e0701e1-e16f-457f-b939-7b1128f4a58b,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+a8c3e333-865d-4060-8ce4-453aa6f9f0e8,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+b8e0f4fb-c916-43b8-afd2-8077a7e3aebc,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+2048d0f9-ed9f-46df-bcd4-3dfd9137670f,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+2aaf212f-000a-4a9d-8a4a-198fa94f491e,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+9a2db69e-d429-45d4-89ca-a2c4e0cfc116,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+638b1a6a-c222-414c-96bc-f259f0afb278,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+d14154a5-9c8a-4c55-8c2d-64f3cad7b7d5,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+953359da-e535-48e6-97dc-1b4ccad6a671,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+5bfe94ed-88b9-44ce-8bbd-1285ab9678a4,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+b0cb81ad-3c20-4d56-ab7d-f64c0caee1ce,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+507a4e05-d5ab-4dbb-9b4f-76b1a21b79dd,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+869e61d6-fbbf-4ca2-be1a-57b82a03c7a1,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+556baca9-03d6-48a3-9216-4fc441e99f90,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+31aca8a3-7107-4b9d-8b6a-c07caa2a9339,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+d8aa891c-8050-471e-ad3e-32b9c5e9db03,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+8475c44d-e091-4c65-b1b4-9a77ae3c0e1d,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+70c2c861-01de-47bc-abfd-b7d14d68e1a1,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+77e49007-3e44-4157-beae-8f7e94234c78,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+a9c0f3a1-01eb-4f01-b58a-708b2960e685,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+6c0ea771-ea86-4db6-994a-2372b2b8f536,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+712c2f78-c736-42ce-b689-a954c5290987,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+53c94a86-1b4d-4833-a169-d990c460b301,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+8e7d5615-5142-4d53-a460-2cafade1f690,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+c24c54ea-4095-460d-bb53-e3629a56cd62,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+c26002e7-abf1-42b9-bf36-0e97249d872f,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+cfda26b9-d417-425c-9a72-fa76ca4b296c,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+6a0a280d-4a30-4071-afe7-de6b82a6e34c,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+45e48080-0b27-45f4-8149-1ae7e36c6933,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+cd9dc5c5-1161-43ea-a617-1356a3b23e16,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+16b38977-aea1-4c75-89ec-4fb551f652dd,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+e3a19e63-bae5-498b-9687-41194aa5728d,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+232073a1-2bf3-4539-a396-bde7836f9aeb,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+d4f66f06-9289-45c1-b9eb-aaef991a4bb6,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+f73dfd7f-e054-46ff-9485-e8d05afe2da6,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+3264459c-adeb-486e-ab8f-274574441593,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+afe89625-b355-454d-8c0b-b4161edd69f8,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+2faea98a-edf7-4e92-bfb7-f91a36259872,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+c70621cc-c8e1-441d-93ec-bd6922cc7f61,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+3559f697-8fec-4f36-962c-632272fe9c9c,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+a53c919a-4e08-46f1-af3f-30b16b597c33,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+58c1c391-5ea3-4432-bb1e-e7e1974954bc,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+3cbf56e6-dccc-40fe-b06e-2621a2121e9d,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+382b279f-87e1-4dbc-a2ca-c1dfde1cf254,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+74aa6675-28b7-46dc-9015-f07a07c7b018,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+517e0f20-56cc-470e-8c5f-543efa10cfb5,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+597a5a56-244b-4218-a55d-5d08217ea28c,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+01775b06-5836-469c-8537-120cb8cc94e9,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+02dbd5fa-e31f-4486-8df8-5b851f2e92bd,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+02ef2e1a-5afe-4c00-a3ea-7f4a153f1da4,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+0944ce65-a89a-4916-b90a-f674b334281e,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+09fd6d9e-c715-4d57-88f9-238dd74c79a7,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+0b4443a0-087d-47e7-9e67-795eac6750c3,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+0b4b50c7-aa0b-4a64-807b-d3cb47eeeb6f,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+0fa89fbc-307a-48d5-adce-192556755c22,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+10f0d40b-c4c4-441b-9cfb-bef5e44aa91e,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+17142718-742e-464a-8e0f-a6b9ac8fad75,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+1756244e-13bc-4ed7-8b91-005608803d91,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+1782bf45-7350-4053-8dd1-45faf4ed8dd9,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+178e68c0-4cb8-4042-a942-5a159ec1e12b,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+1b31d2e9-5b05-4fff-88d6-3a95bf8f8d43,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+1db061c0-9b28-4bf9-8ad2-0383c69b6800,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+1f5494c4-e26c-4512-96d9-30412b5b32ce,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+20094e3e-cee3-41dd-8553-1fc393117786,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+21814c02-6aa5-4b98-8fd8-41ca0b04ccd2,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+23908554-b98e-4ff8-98e7-dee3e2c5feaf,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+27286a38-1035-4a22-9ebc-874df8c49026,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+2be42cc2-9b97-4821-afc2-d1e42eb3932d,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+2c636fb4-c341-4c55-b920-27bc2d40c815,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+2e8f90f4-aed3-43b0-985c-dfdc2581f24f,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+31c23e65-1f18-4f59-8a54-31febedef8a2,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+31e66b80-c684-4ee8-82ae-36d00f36bc88,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+33833131-1482-42d5-9cf5-01cade540234,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+396ff766-a383-4f42-bce3-f2f32b7f1151,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+3f9cc59e-9f7d-40d1-9365-28b40dff3c59,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+40d9b9f7-42b7-4cfd-af95-660777ad0529,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+40fc7973-91c4-4fa8-a105-7fc3d6f3817c,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+4387a2c2-8007-4735-a48c-34a2b476018e,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+47cb93bc-8f6b-4b2a-804c-bb4fc78df9e1,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+4a60e87e-6bc1-4ae0-9ccb-4cdc3e99c608,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+4b37b026-1d41-4bad-8996-7cb1f0e569af,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+4f87e061-e773-48f2-84ba-32401396500e,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+503d7e36-df78-428d-9971-09ff707645c2,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+514d12b0-6f60-406e-bde9-a090e918ebff,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+5494af7d-403a-423b-b7ff-e6db9c117e93,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+55cee1dd-15a0-4717-a281-63e08e2cfdf9,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+56a1b8ff-a71c-4e5f-9c3c-d8162ff896aa,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+570f9947-1ce5-49c7-9619-49439df6c7a9,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+5750a6ed-2516-456d-97d4-2f6486845ed8,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+5965cd7b-f384-4473-826a-8381e362d10e,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+5971a597-1e16-4f6d-8d7b-0e69c6bdcead,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+5aa57fff-4515-4076-8798-55015bb4f156,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+5c51fbfe-153c-4cd2-97bd-e444daa0b20f,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+5dbb4642-6636-4d67-9e73-25c7312aec44,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+6788e0e5-b67f-4fe6-aabb-6d0430ae2d06,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+67e9abc1-4b6f-4054-bdc4-29906c55c682,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+68c0bc1b-3195-4ed6-8345-3ca53dfc54fc,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+69285f58-9b70-4262-acc0-8cf3d47540c3,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+6a4e10b6-e6c4-4210-ae4d-0d8e8d0cb3ec,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+6f777943-ffcb-46d9-872d-514559dee00d,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+70797499-16e6-48cc-8ae4-1e692713dad3,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+712335e1-f1e9-44b9-957c-497ea5e8fa2f,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+75119d1a-93e5-4ae7-9d60-69ee929a0772,Pancreas,"Cystic, Mucinous and Serous Neoplasms",TCGA-PAAD
+758b70f6-8064-4f43-aabe-e5f968fe2955,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+7a1d9862-910b-403e-9eab-697dc65618c7,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+7e4e5633-6f83-4b46-b6eb-64b3f2866ba3,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+81b6b844-d760-4146-9b01-1c4b2596eb77,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+886d6116-d496-444f-9b7b-7449dad31055,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+88eaebfc-d740-4cdc-88f5-df5e08633e2d,Pancreas,"Cystic, Mucinous and Serous Neoplasms",TCGA-PAAD
+8d9bd437-8b4b-4da5-87ba-6b5790f05022,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+9246c642-3231-4137-a24b-3efae151b655,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+94cd2278-7c76-423b-a44b-564776211a07,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+959e1f13-360e-4e12-add5-bf9a376990d2,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+98f1d0eb-0977-4f53-a3b1-e6875a34c27b,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+9924e309-5c47-42fe-b937-547f2b3d6842,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+9d449aa3-b740-4d5a-9aea-880b6f84cff4,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+9d5c5303-550f-454f-8fd4-8abcdd311215,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+a28cfa95-5a99-40f3-928e-7a94f2492d2c,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+a2fd0991-cfbd-4162-8ca9-2ed096f54a14,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+a308a5ee-8ea1-47ee-823d-14736d74a925,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+a5748656-5330-417a-8938-01f69ddb3576,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+a643d0b8-aa50-481c-9f12-f2e634d61d90,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+ab449860-46e5-485e-abd5-31c5abef2c58,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+b2e29f26-29af-4e2d-84dd-c513b4a07c70,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+b46b5a4c-59fc-4769-b05a-d15f9aaa753a,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+b84b58c7-95b8-4162-8e61-414f8fe422c6,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+bd73ed94-5f4f-4eb3-8b9b-391af4422d0e,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+c53328b4-0930-4e6a-a648-283b5565295e,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+c6388925-c0a1-4610-a6b9-d9d9500d88c6,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+ca2da39a-263c-4238-9826-de7d52e63d0f,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+ce2bfd9e-6382-47bb-9fd1-b77afe57e948,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+ce9e0431-19a1-4ea9-85b0-44a9e9792e03,Pancreas,Adenomas and Adenocarcinomas,TCGA-PAAD
+d1e0f479-77dd-42cd-89cb-c1eeac60c10a,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+d211e0c1-7968-4343-8aae-27fab0039367,Pancreas,"Cystic, Mucinous and Serous Neoplasms",TCGA-PAAD
+dd7bcdd8-1660-4dab-9860-9d136c4cee77,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+ec9ac713-08e9-4559-b606-5f58d2c4df50,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+ecdd0e44-0add-4a08-a3f8-ab2f51df7afd,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+ede2e8a7-465e-4725-880d-519899aba0c0,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+f2313562-c894-486d-a9b6-ed362e12a32a,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+f5558dc7-5bef-426f-a6bf-b704fd5dbda0,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+f852de27-b600-44a4-ab30-d74108dfc2e9,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+f89d429f-4747-468b-b894-89583bd8ab02,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+f91eb33d-76f0-418c-9962-11a5b31ca1dc,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+f96ab3fe-bb11-4585-a35e-52d400e55ab7,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+fe01a390-f45e-4352-a253-af8ef7ee9628,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+fe699c36-82ef-45dd-b636-8c18a9ef6c76,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
+ff8dac97-42ff-4f48-81c4-50315ad8de58,Pancreas,Ductal and Lobular Neoplasms,TCGA-PAAD
