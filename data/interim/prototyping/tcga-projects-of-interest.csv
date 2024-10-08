@@ -1,4 +1,18 @@
 project_id,project_primary_site,project_disease_type,project_name,project_case_count
 TCGA-PAAD,['Pancreas'],"['Cystic, Mucinous and Serous Neoplasms', 'Ductal and Lobular Neoplasms', 'Adenomas and Adenocarcinomas', 'Epithelial Neoplasms, NOS']",Pancreatic Adenocarcinoma,185
+TCGA-STAD,['Stomach'],"['Cystic, Mucinous and Serous Neoplasms', 'Adenomas and Adenocarcinomas']",Stomach Adenocarcinoma,443
+TCGA-PRAD,['Prostate gland'],"['Cystic, Mucinous and Serous Neoplasms', 'Adenomas and Adenocarcinomas', 'Ductal and Lobular Neoplasms']",Prostate Adenocarcinoma,500
+TCGA-KICH,['Kidney'],['Adenomas and Adenocarcinomas'],Kidney Chromophobe,113
+TCGA-HNSC,"['Larynx', 'Oropharynx', 'Other and unspecified parts of mouth', 'Base of tongue', 'Lip', 'Tonsil', 'Floor of mouth', 'Other and unspecified parts of tongue', 'Hypopharynx', 'Gum', 'Other and ill-defined sites in lip, oral cavity and pharynx', 'Bones, joints and articular cartilage of other and unspecified sites', 'Palate']",['Squamous Cell Neoplasms'],Head and Neck Squamous Cell Carcinoma,528
+TCGA-LUAD,['Bronchus and lung'],"['Cystic, Mucinous and Serous Neoplasms', 'Adenomas and Adenocarcinomas', 'Acinar Cell Neoplasms']",Lung Adenocarcinoma,585
+TCGA-LIHC,['Liver and intrahepatic bile ducts'],['Adenomas and Adenocarcinomas'],Liver Hepatocellular Carcinoma,377
+TCGA-LUSC,['Bronchus and lung'],['Squamous Cell Neoplasms'],Lung Squamous Cell Carcinoma,504
 TCGA-KIRP,['Kidney'],['Adenomas and Adenocarcinomas'],Kidney Renal Papillary Cell Carcinoma,291
+TCGA-KIRC,['Kidney'],['Adenomas and Adenocarcinomas'],Kidney Renal Clear Cell Carcinoma,537
+TCGA-BLCA,['Bladder'],"['Transitional Cell Papillomas and Carcinomas', 'Squamous Cell Neoplasms', 'Adenomas and Adenocarcinomas', 'Epithelial Neoplasms, NOS']",Bladder Urothelial Carcinoma,412
+TCGA-CHOL,"['Liver and intrahepatic bile ducts', 'Other and unspecified parts of biliary tract', 'Gallbladder']",['Adenomas and Adenocarcinomas'],Cholangiocarcinoma,51
 TCGA-COAD,"['Colon', 'Rectosigmoid junction']","['Cystic, Mucinous and Serous Neoplasms', 'Adenomas and Adenocarcinomas', 'Complex Epithelial Neoplasms', 'Epithelial Neoplasms, NOS']",Colon Adenocarcinoma,461
+TCGA-BRCA,['Breast'],"['Squamous Cell Neoplasms', 'Adnexal and Skin Appendage Neoplasms', 'Epithelial Neoplasms, NOS', 'Complex Epithelial Neoplasms', 'Fibroepithelial Neoplasms', 'Cystic, Mucinous and Serous Neoplasms', 'Basal Cell Neoplasms', 'Adenomas and Adenocarcinomas', 'Ductal and Lobular Neoplasms']",Breast Invasive Carcinoma,1098
+TCGA-ESCA,"['Stomach', 'Esophagus']","['Cystic, Mucinous and Serous Neoplasms', 'Squamous Cell Neoplasms', 'Adenomas and Adenocarcinomas']",Esophageal Carcinoma,185
+TCGA-THCA,['Thyroid gland'],"['Epithelial Neoplasms, NOS', 'Adenomas and Adenocarcinomas']",Thyroid Carcinoma,507
+TCGA-UCEC,"['Uterus, NOS', 'Corpus uteri']","['Epithelial Neoplasms, NOS', 'Cystic, Mucinous and Serous Neoplasms', 'Not Reported', 'Adenomas and Adenocarcinomas']",Uterine Corpus Endometrial Carcinoma,560
