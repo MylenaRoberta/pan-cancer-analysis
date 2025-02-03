@@ -1,0 +1,34 @@
+project_id,project_primary_site,project_disease_type,project_name,project_case_count
+TCGA-CHOL,"['Other and unspecified parts of biliary tract', 'Liver and intrahepatic bile ducts', 'Pancreas']",['Adenomas and Adenocarcinomas'],Cholangiocarcinoma,51
+TCGA-UCS,"['Corpus uteri', 'Uterus, NOS']","['Complex Mixed and Stromal Neoplasms', 'Basal Cell Neoplasms']",Uterine Carcinosarcoma,57
+TCGA-DLBC,"['Testis', 'Brain', 'Breast', 'Heart, mediastinum, and pleura', 'Connective, subcutaneous and other soft tissues', 'Hematopoietic and reticuloendothelial systems', 'Stomach', 'Bones, joints and articular cartilage of other and unspecified sites', 'Thyroid gland', 'Other and unspecified major salivary glands', 'Small intestine', 'Lymph nodes', 'Retroperitoneum and peritoneum', 'Colon']","['Mature B-Cell Lymphomas', 'Not Reported']",Lymphoid Neoplasm Diffuse Large B-cell Lymphoma,58
+TCGA-UVM,['Eye and adnexa'],"['Nevi and Melanomas', 'Paragangliomas and Glomus Tumors']",Uveal Melanoma,80
+TCGA-MESO,"['Bronchus and lung', 'Heart, mediastinum, and pleura']",['Mesothelial Neoplasms'],Mesothelioma,87
+TCGA-ACC,['Adrenal gland'],['Adenomas and Adenocarcinomas'],Adrenocortical Carcinoma,92
+TCGA-KICH,['Kidney'],['Adenomas and Adenocarcinomas'],Kidney Chromophobe,113
+TCGA-THYM,"['Other and ill-defined sites', 'Thymus', 'Heart, mediastinum, and pleura']",['Thymic Epithelial Neoplasms'],Thymoma,124
+TCGA-READ,"['Rectum', 'Connective, subcutaneous and other soft tissues', 'Unknown', 'Rectosigmoid junction', 'Colon']","['Adenomas and Adenocarcinomas', 'Cystic, Mucinous and Serous Neoplasms']",Rectum Adenocarcinoma,172
+TCGA-PCPG,"['Spinal cord, cranial nerves, and other parts of central nervous system', 'Heart, mediastinum, and pleura', 'Connective, subcutaneous and other soft tissues', 'Adrenal gland', 'Other endocrine glands and related structures', 'Other and ill-defined sites', 'Retroperitoneum and peritoneum']",['Paragangliomas and Glomus Tumors'],Pheochromocytoma and Paraganglioma,179
+TCGA-ESCA,"['Esophagus', 'Stomach']","['Squamous Cell Neoplasms', 'Adenomas and Adenocarcinomas', 'Cystic, Mucinous and Serous Neoplasms']",Esophageal Carcinoma,185
+TCGA-PAAD,['Pancreas'],"['Epithelial Neoplasms, NOS', 'Adenomas and Adenocarcinomas', 'Cystic, Mucinous and Serous Neoplasms', 'Ductal and Lobular Neoplasms']",Pancreatic Adenocarcinoma,185
+TCGA-LAML,['Hematopoietic and reticuloendothelial systems'],['Myeloid Leukemias'],Acute Myeloid Leukemia,200
+TCGA-SARC,"['Other and unspecified male genital organs', 'Peripheral nerves and autonomic nervous system', 'Connective, subcutaneous and other soft tissues', 'Meninges', 'Uterus, NOS', 'Other and unspecified parts of tongue', 'Corpus uteri', 'Stomach', 'Ovary', 'Bones, joints and articular cartilage of limbs', 'Kidney', 'Retroperitoneum and peritoneum', 'Colon']","['Fibromatous Neoplasms', 'Nerve Sheath Tumors', 'Lipomatous Neoplasms', 'Synovial-like Neoplasms', 'Soft Tissue Tumors and Sarcomas, NOS', 'Myomatous Neoplasms']",Sarcoma,261
+TCGA-TGCT,['Testis'],['Germ Cell Neoplasms'],Testicular Germ Cell Tumors,263
+TCGA-KIRP,['Kidney'],['Adenomas and Adenocarcinomas'],Kidney Renal Papillary Cell Carcinoma,291
+TCGA-CESC,"['Ovary', 'Cervix uteri']","['Complex Epithelial Neoplasms', 'Adenomas and Adenocarcinomas', 'Squamous Cell Neoplasms', 'Cystic, Mucinous and Serous Neoplasms']",Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma,307
+TCGA-LIHC,['Liver and intrahepatic bile ducts'],['Adenomas and Adenocarcinomas'],Liver Hepatocellular Carcinoma,377
+TCGA-BLCA,['Bladder'],"['Epithelial Neoplasms, NOS', 'Adenomas and Adenocarcinomas', 'Transitional Cell Papillomas and Carcinomas', 'Squamous Cell Neoplasms']",Bladder Urothelial Carcinoma,412
+TCGA-STAD,['Stomach'],"['Adenomas and Adenocarcinomas', 'Cystic, Mucinous and Serous Neoplasms']",Stomach Adenocarcinoma,443
+TCGA-COAD,"['Rectosigmoid junction', 'Colon']","['Complex Epithelial Neoplasms', 'Epithelial Neoplasms, NOS', 'Adenomas and Adenocarcinomas', 'Cystic, Mucinous and Serous Neoplasms']",Colon Adenocarcinoma,461
+TCGA-SKCM,"['Bronchus and lung', 'Parotid gland', 'Other and ill-defined sites', 'Vulva', 'Lymph nodes', 'Retroperitoneum and peritoneum', 'Spinal cord, cranial nerves, and other parts of central nervous system', 'Liver and intrahepatic bile ducts', 'Brain', 'Connective, subcutaneous and other soft tissues', 'Small intestine', 'Vagina', 'Nasal cavity and middle ear', 'Bones, joints and articular cartilage of other and unspecified sites', 'Anus and anal canal', 'Skin', 'Breast', 'Adrenal gland', 'Corpus uteri', 'Colon']",['Nevi and Melanomas'],Skin Cutaneous Melanoma,470
+TCGA-PRAD,['Prostate gland'],"['Adenomas and Adenocarcinomas', 'Cystic, Mucinous and Serous Neoplasms', 'Acinar Cell Neoplasms', 'Ductal and Lobular Neoplasms']",Prostate Adenocarcinoma,500
+TCGA-LUSC,['Bronchus and lung'],"['Adenomas and Adenocarcinomas', 'Squamous Cell Neoplasms']",Lung Squamous Cell Carcinoma,504
+TCGA-THCA,['Thyroid gland'],"['Squamous Cell Neoplasms', 'Adenomas and Adenocarcinomas', 'Epithelial Neoplasms, NOS']",Thyroid Carcinoma,507
+TCGA-LGG,['Brain'],['Gliomas'],Brain Lower Grade Glioma,516
+TCGA-HNSC,"['Tonsil', 'Gum', 'Lip', 'Larynx', 'Floor of mouth', 'Other and unspecified parts of mouth', 'Other and unspecified parts of tongue', 'Bones, joints and articular cartilage of other and unspecified sites', 'Hypopharynx', 'Oropharynx', 'Palate', 'Other and ill-defined sites in lip, oral cavity and pharynx', 'Base of tongue']",['Squamous Cell Neoplasms'],Head and Neck Squamous Cell Carcinoma,528
+TCGA-KIRC,['Kidney'],['Adenomas and Adenocarcinomas'],Kidney Renal Clear Cell Carcinoma,537
+TCGA-UCEC,"['Corpus uteri', 'Uterus, NOS']","['Epithelial Neoplasms, NOS', 'Adenomas and Adenocarcinomas', 'Cystic, Mucinous and Serous Neoplasms', 'Not Reported']",Uterine Corpus Endometrial Carcinoma,560
+TCGA-LUAD,['Bronchus and lung'],"['Adenomas and Adenocarcinomas', 'Cystic, Mucinous and Serous Neoplasms', 'Acinar Cell Neoplasms', 'Ductal and Lobular Neoplasms']",Lung Adenocarcinoma,585
+TCGA-OV,"['Ovary', 'Retroperitoneum and peritoneum']","['Cystic, Mucinous and Serous Neoplasms', 'Not Reported']",Ovarian Serous Cystadenocarcinoma,608
+TCGA-GBM,['Brain'],"['Gliomas', 'Not Reported']",Glioblastoma Multiforme,617
+TCGA-BRCA,['Breast'],"['Epithelial Neoplasms, NOS', 'Adnexal and Skin Appendage Neoplasms', 'Squamous Cell Neoplasms', 'Adenomas and Adenocarcinomas', 'Complex Epithelial Neoplasms', 'Fibroepithelial Neoplasms', 'Cystic, Mucinous and Serous Neoplasms', 'Basal Cell Neoplasms', 'Ductal and Lobular Neoplasms']",Breast Invasive Carcinoma,1098
