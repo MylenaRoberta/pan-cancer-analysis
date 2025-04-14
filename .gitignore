@@ -1,0 +1,4 @@
+__pycache__/
+
+# MicroRNA-Seq e RNA-Seq TCGA-BRCA files
+data/external/tcga-brca/*/
