@@ -8,7 +8,7 @@ from urllib.parse import urljoin
 # TCGA-BRCA file name
 BRCA_PAPER_FILE = 'brca-paper-supplementary-tables-1-to-4.xls'
 
-# Genomic Data Commons (GDC) API endpoints
+# Genomic Data Commons (GDC) API related constants
 GDC_API_BASE_URL = 'https://api.gdc.cancer.gov'
 GDC_API_ENDPOINTS = {
     'data': urljoin(GDC_API_BASE_URL, 'data'),
@@ -17,13 +17,16 @@ GDC_API_ENDPOINTS = {
     'projects': urljoin(GDC_API_BASE_URL, 'projects'),
     'status': urljoin(GDC_API_BASE_URL, 'status'),
 }
-
-# Constants used in filters for GDC API requests
 GDC_API_REQUESTS_CONSTANTS = {
     'projects': ['TCGA-BRCA'],
     'disease_types': ['Ductal and Lobular Neoplasms'],
     'sample_types': ['Primary Tumor', 'Solid Tissue Normal'],
 }
+
+# miRWalk website related constants 
+MIRWALK_BASE_URL = 'http://mirwalk.umm.uni-heidelberg.de'
+MIRWALK_DEFAULT_FILE = 'miRWalk_miRNA_Targets.csv'
+MIRWALK_SPECIES_SELECTION = 'human'
 
 # ======================================================================
 # PATHS
@@ -48,10 +51,25 @@ BRCA_RAW_FILES_DIRS = {
     'lum_b': os.path.join(BRCA_EXTERNAL_DATA_DIR, 'luminal-b-files'),
     'normal': os.path.join(BRCA_EXTERNAL_DATA_DIR, 'normal-tissue-files'),
 }
+MIRWALK_EXTERNAL_DATA_DIR = os.path.join(EXTERNAL_DATA_DIR, 'mirwalk')
 
 # Interim data directory paths
 GDC_INTERIM_DATA_DIR = os.path.join(INTERIM_DATA_DIR, 'gdc-api')
 BRCA_INTERIM_DATA_DIR = os.path.join(INTERIM_DATA_DIR, 'tcga-brca')
 
+# Processed data directory paths
+BRCA_PROCESSED_FILES_DIRS = {
+    'basal': os.path.join(PROCESSED_DATA_DIR, 'basal-like-files'),
+    'her2': os.path.join(PROCESSED_DATA_DIR, 'her2-enriched-files'),
+    'lum_a': os.path.join(PROCESSED_DATA_DIR, 'luminal-a-files'),
+    'lum_b': os.path.join(PROCESSED_DATA_DIR, 'luminal-b-files'),
+    'normal': os.path.join(PROCESSED_DATA_DIR, 'normal-tissue-files'),
+}
+
 # External file path
-BRCA_PAPER_FILE_PATH = os.path.join(BRCA_EXTERNAL_DATA_DIR, BRCA_PAPER_FILE)
+BRCA_PAPER_FILE_PATH = os.path.join(
+    BRCA_EXTERNAL_DATA_DIR, BRCA_PAPER_FILE
+)
+MIRWALK_DEFAULT_FILE_PATH = os.path.join(
+    MIRWALK_EXTERNAL_DATA_DIR, MIRWALK_DEFAULT_FILE
+)
