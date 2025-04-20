@@ -1,19 +1,22 @@
 import os
+
 from urllib.parse import urljoin
 
 # ======================================================================
 # CONSTANTS
 # ======================================================================
 
-# TCGA-BRCA file name
+# TCGA-BRCA paper table file name
 BRCA_PAPER_FILE = 'brca-paper-supplementary-tables-1-to-4.xls'
 
 # Genomic Data Commons (GDC) API related constants
 GDC_API_BASE_URL = 'https://api.gdc.cancer.gov'
 GDC_API_ENDPOINTS = {
+    'annotations': urljoin(GDC_API_BASE_URL, 'annotations'),
     'data': urljoin(GDC_API_BASE_URL, 'data'),
     'cases': urljoin(GDC_API_BASE_URL, 'cases'),
     'files': urljoin(GDC_API_BASE_URL, 'files'),
+    'manifest': urljoin(GDC_API_BASE_URL, 'manifest'),
     'projects': urljoin(GDC_API_BASE_URL, 'projects'),
     'status': urljoin(GDC_API_BASE_URL, 'status'),
 }
@@ -23,13 +26,13 @@ GDC_API_REQUESTS_CONSTANTS = {
     'sample_types': ['Primary Tumor', 'Solid Tissue Normal'],
 }
 
-# miRWalk website related constants 
+# miRWalk website related constants
 MIRWALK_BASE_URL = 'http://mirwalk.umm.uni-heidelberg.de'
 MIRWALK_DEFAULT_FILE = 'miRWalk_miRNA_Targets.csv'
 MIRWALK_SPECIES_SELECTION = 'human'
 
 # ======================================================================
-# PATHS
+# DIRECTORY PATHS
 # ======================================================================
 
 # Root directory path
@@ -66,10 +69,41 @@ BRCA_PROCESSED_FILES_DIRS = {
     'normal': os.path.join(PROCESSED_DATA_DIR, 'normal-tissue-files'),
 }
 
-# External file path
+# ======================================================================
+# FILE PATHS
+# ======================================================================
+
+# External file paths
 BRCA_PAPER_FILE_PATH = os.path.join(
     BRCA_EXTERNAL_DATA_DIR, BRCA_PAPER_FILE
 )
 MIRWALK_DEFAULT_FILE_PATH = os.path.join(
     MIRWALK_EXTERNAL_DATA_DIR, MIRWALK_DEFAULT_FILE
 )
+
+# Interim file paths
+GDC_INTERIM_FILE_PATHS = {
+    'all-projects': os.path.join(
+        GDC_INTERIM_DATA_DIR, 'gdc-all-projects.csv'
+    ),
+    'cases': os.path.join(
+        GDC_INTERIM_DATA_DIR, 'gdc-cases-of-interest.csv'
+    ),
+    'files': os.path.join(
+        GDC_INTERIM_DATA_DIR, 'gdc-files-of-interest.csv'
+    ),
+    'projects': os.path.join(
+        GDC_INTERIM_DATA_DIR, 'gdc-projects-of-interest.csv'
+    ),
+}
+TCGA_INTERIM_FILE_PATHS = {
+    'cases': os.path.join(
+        GDC_INTERIM_DATA_DIR, 'tcga-cases-of-interest.csv'
+    ),
+    'files': os.path.join(
+        GDC_INTERIM_DATA_DIR, 'tcga-files-of-interest.csv'
+    ),
+    'projects': os.path.join(
+        GDC_INTERIM_DATA_DIR, 'tcga-projects.csv'
+    ),
+}
