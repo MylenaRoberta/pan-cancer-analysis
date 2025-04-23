@@ -9,7 +9,7 @@ from urllib.parse import urljoin
 # TCGA-BRCA paper table file name
 BRCA_PAPER_FILE = 'brca-paper-supplementary-tables-1-to-4.xls'
 
-# Genomic Data Commons (GDC) API related constants
+# Genomic Data Commons (GDC) API endpoint of interest
 GDC_API_BASE_URL = 'https://api.gdc.cancer.gov'
 GDC_API_ENDPOINTS = {
     'annotations': urljoin(GDC_API_BASE_URL, 'annotations'),
@@ -20,9 +20,18 @@ GDC_API_ENDPOINTS = {
     'projects': urljoin(GDC_API_BASE_URL, 'projects'),
     'status': urljoin(GDC_API_BASE_URL, 'status'),
 }
-GDC_API_REQUESTS_CONSTANTS = {
-    'projects': ['TCGA-BRCA'],
+
+# TCGA-BRCA metadata preprocessing parameters
+BRCA_PREPROCESSING_PARAMETERS = {
+    'data_types': [
+        'Isoform Expression Quantification',
+        'Gene Expression Quantification'
+    ],
     'disease_types': ['Ductal and Lobular Neoplasms'],
+    'molecular_subtypes': [
+        'Basal-like', 'HER2-enriched', 'Luminal A', 'Luminal B'
+    ],
+    'project_ids': ['TCGA-BRCA'],
     'sample_types': ['Primary Tumor', 'Solid Tissue Normal'],
 }
 
@@ -73,15 +82,17 @@ BRCA_PROCESSED_FILES_DIRS = {
 # FILE PATHS
 # ======================================================================
 
-# External file paths
+# TCGA-BRCA paper table file path
 BRCA_PAPER_FILE_PATH = os.path.join(
     BRCA_EXTERNAL_DATA_DIR, BRCA_PAPER_FILE
 )
+
+# miRWalk default file path
 MIRWALK_DEFAULT_FILE_PATH = os.path.join(
     MIRWALK_EXTERNAL_DATA_DIR, MIRWALK_DEFAULT_FILE
 )
 
-# Interim file paths
+# GDC API interim file paths
 GDC_INTERIM_FILE_PATHS = {
     'all-projects': os.path.join(
         GDC_INTERIM_DATA_DIR, 'gdc-all-projects.csv'
@@ -96,6 +107,8 @@ GDC_INTERIM_FILE_PATHS = {
         GDC_INTERIM_DATA_DIR, 'gdc-projects-of-interest.csv'
     ),
 }
+
+# TCGA data interim file paths
 TCGA_INTERIM_FILE_PATHS = {
     'cases': os.path.join(
         GDC_INTERIM_DATA_DIR, 'tcga-cases-of-interest.csv'
@@ -105,5 +118,21 @@ TCGA_INTERIM_FILE_PATHS = {
     ),
     'projects': os.path.join(
         GDC_INTERIM_DATA_DIR, 'tcga-projects.csv'
+    ),
+}
+
+# TCGA-BRCA interim file paths
+BRCA_INTERIM_FILE_PATHS = {
+    'cases': os.path.join(
+        BRCA_INTERIM_DATA_DIR, 'brca-cases-metadata.csv'
+    ),
+    'files': os.path.join(
+        BRCA_INTERIM_DATA_DIR, 'brca-files-metadata.csv'
+    ),
+    'paper': os.path.join(
+        BRCA_INTERIM_DATA_DIR, 'brca-paper-cases-metadata.csv'
+    ),
+    'project': os.path.join(
+        BRCA_INTERIM_DATA_DIR, 'brca-project-metadata.csv'
     ),
 }
