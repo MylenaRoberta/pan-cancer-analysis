@@ -126,8 +126,14 @@ BRCA_INTERIM_FILE_PATHS = {
     'cases': os.path.join(
         BRCA_INTERIM_DATA_DIR, 'brca-cases-metadata.csv'
     ),
+    'cases-of-interest': os.path.join(
+        BRCA_INTERIM_DATA_DIR, 'brca-cases-of-interest-metadata.csv'
+    ),
     'files': os.path.join(
         BRCA_INTERIM_DATA_DIR, 'brca-files-metadata.csv'
+    ),
+    'files-of-interest': os.path.join(
+        BRCA_INTERIM_DATA_DIR, 'brca-files-of-interest-metadata.csv'
     ),
     'paper': os.path.join(
         BRCA_INTERIM_DATA_DIR, 'brca-paper-cases-metadata.csv'
