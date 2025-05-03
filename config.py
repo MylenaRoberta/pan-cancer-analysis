@@ -57,12 +57,12 @@ PROCESSED_DATA_DIR = os.path.join(DATA_DIR, 'processed')
 # Raw data directory paths
 GDC_RAW_DATA_DIR = os.path.join(RAW_DATA_DIR, 'gdc-api')
 BRCA_RAW_DATA_DIR = os.path.join(RAW_DATA_DIR, 'tcga-brca')
-BRCA_RAW_FILE_DIRS = {
-    'basal': os.path.join(BRCA_RAW_DATA_DIR, 'basal-like-files'),
-    'her2': os.path.join(BRCA_RAW_DATA_DIR, 'her2-enriched-files'),
-    'lum_a': os.path.join(BRCA_RAW_DATA_DIR, 'luminal-a-files'),
-    'lum_b': os.path.join(BRCA_RAW_DATA_DIR, 'luminal-b-files'),
-    'normal': os.path.join(BRCA_RAW_DATA_DIR, 'normal-tissue-files'),
+BRCA_RAW_FILES_DIRS = {
+    'basal-like': os.path.join(BRCA_RAW_DATA_DIR, 'basal-like-files'),
+    'her2-enriched': os.path.join(BRCA_RAW_DATA_DIR, 'her2-enriched-files'),
+    'luminal-a': os.path.join(BRCA_RAW_DATA_DIR, 'luminal-a-files'),
+    'luminal-b': os.path.join(BRCA_RAW_DATA_DIR, 'luminal-b-files'),
+    'paired-normal': os.path.join(BRCA_RAW_DATA_DIR, 'paired-normal-files'),
 }
 
 # External data directory paths
@@ -70,23 +70,23 @@ MIRWALK_EXTERNAL_DATA_DIR = os.path.join(EXTERNAL_DATA_DIR, 'mirwalk')
 
 # Interim data directory paths
 BRCA_INTERIM_DATA_DIR = os.path.join(INTERIM_DATA_DIR, 'tcga-brca')
-BRCA_INTERIM_FILE_DIRS = {
-    'basal': os.path.join(INTERIM_DATA_DIR, 'basal-like-files'),
-    'her2': os.path.join(INTERIM_DATA_DIR, 'her2-enriched-files'),
-    'lum_a': os.path.join(INTERIM_DATA_DIR, 'luminal-a-files'),
-    'lum_b': os.path.join(INTERIM_DATA_DIR, 'luminal-b-files'),
-    'normal': os.path.join(INTERIM_DATA_DIR, 'normal-tissue-files'),
+BRCA_INTERIM_FILES_DIRS = {
+    'basal-like': os.path.join(INTERIM_DATA_DIR, 'basal-like-files'),
+    'her2-enriched': os.path.join(INTERIM_DATA_DIR, 'her2-enriched-files'),
+    'luminal-a': os.path.join(INTERIM_DATA_DIR, 'luminal-a-files'),
+    'luminal-b': os.path.join(INTERIM_DATA_DIR, 'luminal-b-files'),
+    'paired-normal': os.path.join(INTERIM_DATA_DIR, 'paired-normal-files'),
 }
 
 # Processed data directory paths
 GDC_PROCESSED_DATA_DIR = os.path.join(PROCESSED_DATA_DIR, 'gdc-api')
 BRCA_PROCESSED_DATA_DIR = os.path.join(PROCESSED_DATA_DIR, 'tcga-brca')
-BRCA_PROCESSED_FILE_DIRS = {
-    'basal': os.path.join(PROCESSED_DATA_DIR, 'basal-like-files'),
-    'her2': os.path.join(PROCESSED_DATA_DIR, 'her2-enriched-files'),
-    'lum_a': os.path.join(PROCESSED_DATA_DIR, 'luminal-a-files'),
-    'lum_b': os.path.join(PROCESSED_DATA_DIR, 'luminal-b-files'),
-    'normal': os.path.join(PROCESSED_DATA_DIR, 'normal-tissue-files'),
+BRCA_PROCESSED_FILES_DIRS = {
+    'basal-like': os.path.join(BRCA_PROCESSED_DATA_DIR, 'basal-like-files'),
+    'her2-enriched': os.path.join(BRCA_PROCESSED_DATA_DIR, 'her2-enriched-files'),
+    'luminal-a': os.path.join(BRCA_PROCESSED_DATA_DIR, 'luminal-a-files'),
+    'luminal-b': os.path.join(BRCA_PROCESSED_DATA_DIR, 'luminal-b-files'),
+    'paired-normal': os.path.join(BRCA_PROCESSED_DATA_DIR, 'paired-normal-files'),
 }
 
 # ======================================================================
@@ -101,8 +101,8 @@ MIRWALK_DEFAULT_FILE_PATH = os.path.join(
     MIRWALK_EXTERNAL_DATA_DIR, MIRWALK_DEFAULT_FILE
 )
 
-# GDC API processed file paths
-GDC_PROCESSED_FILE_PATHS = {
+# GDC API processed files paths
+GDC_PROCESSED_FILES_PATHS = {
     'all-projects': os.path.join(
         GDC_PROCESSED_DATA_DIR, 'gdc-all-projects.csv'
     ),
@@ -117,8 +117,8 @@ GDC_PROCESSED_FILE_PATHS = {
     ),
 }
 
-# TCGA data processed file paths
-TCGA_PROCESSED_FILE_PATHS = {
+# TCGA data processed files paths
+TCGA_PROCESSED_FILES_PATHS = {
     'cases': os.path.join(
         GDC_PROCESSED_DATA_DIR, 'tcga-cases-of-interest.csv'
     ),
@@ -130,8 +130,8 @@ TCGA_PROCESSED_FILE_PATHS = {
     ),
 }
 
-# TCGA-BRCA processed file paths
-BRCA_PROCESSED_FILE_PATHS = {
+# TCGA-BRCA processed files paths
+BRCA_PROCESSED_FILES_PATHS = {
     'cases': os.path.join(
         BRCA_PROCESSED_DATA_DIR, 'brca-cases-metadata.csv'
     ),
