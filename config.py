@@ -79,11 +79,11 @@ MIRWALK_EXTERNAL_DATA_DIR = os.path.join(EXTERNAL_DATA_DIR, 'mirwalk')
 # Interim data directory paths
 BRCA_INTERIM_DATA_DIR = os.path.join(INTERIM_DATA_DIR, 'tcga-brca')
 BRCA_INTERIM_FILES_DIRS = {
-    'basal-like': os.path.join(INTERIM_DATA_DIR, 'basal-like-files'),
-    'her2-enriched': os.path.join(INTERIM_DATA_DIR, 'her2-enriched-files'),
-    'luminal-a': os.path.join(INTERIM_DATA_DIR, 'luminal-a-files'),
-    'luminal-b': os.path.join(INTERIM_DATA_DIR, 'luminal-b-files'),
-    'paired-normal': os.path.join(INTERIM_DATA_DIR, 'paired-normal-files'),
+    'basal-like': os.path.join(BRCA_INTERIM_DATA_DIR, 'basal-like-files'),
+    'her2-enriched': os.path.join(BRCA_INTERIM_DATA_DIR, 'her2-enriched-files'),
+    'luminal-a': os.path.join(BRCA_INTERIM_DATA_DIR, 'luminal-a-files'),
+    'luminal-b': os.path.join(BRCA_INTERIM_DATA_DIR, 'luminal-b-files'),
+    'paired-normal': os.path.join(BRCA_INTERIM_DATA_DIR, 'paired-normal-files'),
 }
 
 # Processed data directory paths
