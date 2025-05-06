@@ -77,6 +77,7 @@ BRCA_RAW_FILES_DIRS = {
 MIRWALK_EXTERNAL_DATA_DIR = os.path.join(EXTERNAL_DATA_DIR, 'mirwalk')
 
 # Interim data directory paths
+GDC_INTERIM_DATA_DIR = os.path.join(INTERIM_DATA_DIR, 'gdc-api')
 BRCA_INTERIM_DATA_DIR = os.path.join(INTERIM_DATA_DIR, 'tcga-brca')
 BRCA_INTERIM_FILES_DIRS = {
     'basal-like': os.path.join(BRCA_INTERIM_DATA_DIR, 'basal-like-files'),
@@ -87,7 +88,6 @@ BRCA_INTERIM_FILES_DIRS = {
 }
 
 # Processed data directory paths
-GDC_PROCESSED_DATA_DIR = os.path.join(PROCESSED_DATA_DIR, 'gdc-api')
 BRCA_PROCESSED_DATA_DIR = os.path.join(PROCESSED_DATA_DIR, 'tcga-brca')
 BRCA_PROCESSED_FILES_DIRS = {
     'basal-like': os.path.join(BRCA_PROCESSED_DATA_DIR, 'basal-like-files'),
@@ -109,32 +109,32 @@ MIRWALK_DEFAULT_FILE_PATH = os.path.join(
     MIRWALK_EXTERNAL_DATA_DIR, MIRWALK_DEFAULT_FILE
 )
 
-# GDC API processed files paths
-GDC_PROCESSED_FILES_PATHS = {
+# GDC API interim files paths
+GDC_INTERIM_FILES_PATHS = {
     'all-projects': os.path.join(
-        GDC_PROCESSED_DATA_DIR, 'gdc-all-projects.csv'
+        GDC_INTERIM_DATA_DIR, 'gdc-all-projects.csv'
     ),
     'cases': os.path.join(
-        GDC_PROCESSED_DATA_DIR, 'gdc-cases-of-interest.csv'
+        GDC_INTERIM_DATA_DIR, 'gdc-cases-of-interest.csv'
     ),
     'files': os.path.join(
-        GDC_PROCESSED_DATA_DIR, 'gdc-files-of-interest.csv'
+        GDC_INTERIM_DATA_DIR, 'gdc-files-of-interest.csv'
     ),
     'projects': os.path.join(
-        GDC_PROCESSED_DATA_DIR, 'gdc-projects-of-interest.csv'
+        GDC_INTERIM_DATA_DIR, 'gdc-projects-of-interest.csv'
     ),
 }
 
-# TCGA data processed files paths
-TCGA_PROCESSED_FILES_PATHS = {
+# TCGA data interim files paths
+TCGA_INTERIM_FILES_PATHS = {
     'cases': os.path.join(
-        GDC_PROCESSED_DATA_DIR, 'tcga-cases-of-interest.csv'
+        GDC_INTERIM_DATA_DIR, 'tcga-cases-of-interest.csv'
     ),
     'files': os.path.join(
-        GDC_PROCESSED_DATA_DIR, 'tcga-files-of-interest.csv'
+        GDC_INTERIM_DATA_DIR, 'tcga-files-of-interest.csv'
     ),
     'projects': os.path.join(
-        GDC_PROCESSED_DATA_DIR, 'tcga-projects.csv'
+        GDC_INTERIM_DATA_DIR, 'tcga-projects.csv'
     ),
 }
 
