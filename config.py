@@ -11,10 +11,10 @@ BRCA_PAPER_FILE = 'brca-paper-supplementary-tables-1-to-4.xls'
 
 # Aggregated miRNA-Seq and RNA-Seq reads file names
 AGGREGATED_READS_FILES = {
-    'mirna-raw': 'aggregated-mir-raw-reads.csv',
-    'mirna-norm': 'aggregated-mir-norm-reads.csv',
-    'rna-raw': 'aggregated-mrna-raw-reads.csv',
-    'rna-norm': 'aggregated-mrna-norm-reads.csv',
+    'mir-raw': 'aggregated-mir-raw-reads.csv',
+    'mir-norm': 'aggregated-mir-norm-reads.csv',
+    'rna-raw': 'aggregated-rna-raw-reads.csv',
+    'rna-norm': 'aggregated-rna-norm-reads.csv',
 }
 
 # Genomic Data Commons (GDC) API endpoint of interest
