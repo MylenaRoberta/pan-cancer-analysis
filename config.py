@@ -95,6 +95,7 @@ BRCA_PROCESSED_FILES_DIRS = {
     'luminal-a': os.path.join(BRCA_PROCESSED_DATA_DIR, 'luminal-a-files'),
     'luminal-b': os.path.join(BRCA_PROCESSED_DATA_DIR, 'luminal-b-files'),
     'paired-normal': os.path.join(BRCA_PROCESSED_DATA_DIR, 'paired-normal-files'),
+    'project': os.path.join(BRCA_PROCESSED_DATA_DIR, 'project-files'),
 }
 
 # ======================================================================
@@ -141,21 +142,15 @@ TCGA_INTERIM_FILES_PATHS = {
 # TCGA-BRCA processed files paths
 BRCA_PROCESSED_FILES_PATHS = {
     'cases': os.path.join(
-        BRCA_PROCESSED_DATA_DIR, 'brca-cases-metadata.csv'
-    ),
-    'cases-of-interest': os.path.join(
-        BRCA_PROCESSED_DATA_DIR, 'brca-cases-of-interest-metadata.csv'
+        BRCA_PROCESSED_FILES_DIRS['project'], 'cases-metadata.csv'
     ),
     'files': os.path.join(
-        BRCA_PROCESSED_DATA_DIR, 'brca-files-metadata.csv'
-    ),
-    'files-of-interest': os.path.join(
-        BRCA_PROCESSED_DATA_DIR, 'brca-files-of-interest-metadata.csv'
+        BRCA_PROCESSED_FILES_DIRS['project'], 'files-metadata.csv'
     ),
     'paper': os.path.join(
-        BRCA_PROCESSED_DATA_DIR, 'brca-paper-cases-metadata.csv'
+        BRCA_PROCESSED_FILES_DIRS['project'], 'paper-cases-data.csv'
     ),
     'project': os.path.join(
-        BRCA_PROCESSED_DATA_DIR, 'brca-project-metadata.csv'
+        BRCA_PROCESSED_FILES_DIRS['project'], 'project-metadata.csv'
     ),
 }
