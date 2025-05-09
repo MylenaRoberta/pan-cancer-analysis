@@ -9,14 +9,6 @@ from urllib.parse import urljoin
 # TCGA-BRCA paper table file name
 BRCA_PAPER_FILE = 'brca-paper-supplementary-tables-1-to-4.xls'
 
-# Aggregated miRNA-Seq and RNA-Seq reads file names
-AGGREGATED_READS_FILES = {
-    'mir-raw': 'aggregated-mir-raw-reads.csv',
-    'mir-norm': 'aggregated-mir-norm-reads.csv',
-    'rna-raw': 'aggregated-rna-raw-reads.csv',
-    'rna-norm': 'aggregated-rna-norm-reads.csv',
-}
-
 # Genomic Data Commons (GDC) API endpoint of interest
 GDC_API_BASE_URL = 'https://api.gdc.cancer.gov'
 GDC_API_ENDPOINTS = {
@@ -41,6 +33,20 @@ BRCA_PREPROCESSING_PARAMETERS = {
     ],
     'project_ids': ['TCGA-BRCA'],
     'sample_types': ['Primary Tumor', 'Solid Tissue Normal'],
+}
+
+# Aggregated miRNA-Seq and RNA-Seq reads file names
+AGGREGATED_READS_FILES = {
+    'mir-raw': 'aggregated-mir-raw-reads.csv',
+    'mir-norm': 'aggregated-mir-norm-reads.csv',
+    'rna-raw': 'aggregated-rna-raw-reads.csv',
+    'rna-norm': 'aggregated-rna-norm-reads.csv',
+}
+
+# Molecules (microRNA and RNA messenger) expression definition parameters
+EXPRESSION_DEFINITION_PARAMETERS = {
+    'read-threshold': 10,
+    'read-percentage-threshold': 75,
 }
 
 # miRWalk website related constants
