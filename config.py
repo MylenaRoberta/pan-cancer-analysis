@@ -43,16 +43,19 @@ AGGREGATED_READS_FILES = {
     'rna-norm': 'aggregated-rna-norm-reads.csv',
 }
 
-# Molecules (microRNA and RNA messenger) expression definition parameters
+# Molecules (microRNAs and messenger RNAs) expression definition parameters
 EXPRESSION_DEFINITION_PARAMETERS = {
     'read-threshold': 10,
     'read-percentage-threshold': 75,
 }
 
-# miRWalk website related constants
-MIRWALK_BASE_URL = 'http://mirwalk.umm.uni-heidelberg.de'
-MIRWALK_DEFAULT_FILE = 'miRWalk_miRNA_Targets.csv'
-MIRWALK_SPECIES_SELECTION = 'human'
+# miRWalk website download parameters
+MIRWALK_DOWNLOAD_PARAMETERS = {
+    'base-url': 'http://mirwalk.umm.uni-heidelberg.de',
+    'default-file-name': 'miRWalk_miRNA_Targets.csv',
+    'mir-mapping-file-name': 'mapping-mir-accession-id-to-name.csv',
+    'species-selection': 'human',
+}
 
 # ======================================================================
 # DIRECTORY PATHS
@@ -103,18 +106,11 @@ BRCA_PROCESSED_FILES_DIRS = {
     'paired-normal': os.path.join(BRCA_PROCESSED_DATA_DIR, 'paired-normal-files'),
     'project': os.path.join(BRCA_PROCESSED_DATA_DIR, 'project-files'),
 }
+MIRWALK_PROCESSED_DATA_DIR = os.path.join(PROCESSED_DATA_DIR, 'mirwalk')
 
 # ======================================================================
 # FILE PATHS
 # ======================================================================
-
-# TCGA-BRCA paper table file path
-BRCA_PAPER_FILE_PATH = os.path.join(BRCA_RAW_DATA_DIR, BRCA_PAPER_FILE)
-
-# miRWalk default file path
-MIRWALK_DEFAULT_FILE_PATH = os.path.join(
-    MIRWALK_EXTERNAL_DATA_DIR, MIRWALK_DEFAULT_FILE
-)
 
 # GDC API interim files paths
 GDC_INTERIM_FILES_PATHS = {
@@ -145,6 +141,9 @@ TCGA_INTERIM_FILES_PATHS = {
     ),
 }
 
+# TCGA-BRCA paper table file path
+BRCA_PAPER_FILE_PATH = os.path.join(BRCA_RAW_DATA_DIR, BRCA_PAPER_FILE)
+
 # TCGA-BRCA processed files paths
 BRCA_PROCESSED_FILES_PATHS = {
     'cases': os.path.join(
@@ -160,3 +159,13 @@ BRCA_PROCESSED_FILES_PATHS = {
         BRCA_PROCESSED_FILES_DIRS['project'], 'project-metadata.csv'
     ),
 }
+
+# miRWalk default file path
+MIRWALK_DEFAULT_FILE_PATH = os.path.join(
+    MIRWALK_EXTERNAL_DATA_DIR, MIRWALK_DOWNLOAD_PARAMETERS['default-file-name']
+)
+
+# miRWalk accession ID to microRNA name file path
+MIRWALK_MIR_MAPPING_FILE_PATH = os.path.join(
+    MIRWALK_PROCESSED_DATA_DIR, MIRWALK_DOWNLOAD_PARAMETERS['mir-mapping-file-name']
+)

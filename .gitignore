@@ -1,10 +1,10 @@
 __pycache__/
 
-data/external/mirwalk/*/
-
-# MicroRNA-Seq e RNA-Seq TCGA-BRCA raw files
+# TCGA-BRCA microRNA-Seq and RNA-Seq related files
 data/raw/tcga-brca/*/
-
-# MicroRNA-Seq e RNA-Seq TCGA-BRCA processed files
 data/processed/tcga-brca/**/mirna-seq_*
 data/processed/tcga-brca/**/rna-seq_*
+
+# miRWalk interaction files
+data/external/mirwalk/*
+data/processed/mirwalk/MIMAT*
