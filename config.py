@@ -46,7 +46,7 @@ AGGREGATED_READS_FILES = {
 # Molecules (microRNAs and messenger RNAs) expression definition parameters
 EXPRESSION_DEFINITION_PARAMETERS = {
     'read-threshold': 10,
-    'read-percentage-threshold': 75,
+    'read-percentage-threshold': 80,
 }
 
 # miRWalk website download parameters
