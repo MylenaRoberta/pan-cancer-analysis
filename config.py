@@ -57,6 +57,11 @@ MIRWALK_DOWNLOAD_PARAMETERS = {
     'species-selection': 'human',
 }
 
+# Spearman correlation coefficient parameters
+SPEARMAN_ANALYSIS_PARAMETERS = {
+    'file': 'spearman-correlation-coefficients.csv',
+}
+
 # ======================================================================
 # DIRECTORY PATHS
 # ======================================================================
