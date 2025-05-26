@@ -57,9 +57,12 @@ MIRWALK_DOWNLOAD_PARAMETERS = {
     'species-selection': 'human',
 }
 
-# Spearman correlation coefficient parameters
-SPEARMAN_ANALYSIS_PARAMETERS = {
-    'file': 'spearman-correlation-coefficients.csv',
+# Interaction (microRNA - messenger RNA) inference parameters
+INTERACTION_INFERENCE_PARAMETERS = {
+    'correlation': -0.3,
+    'interim-file': 'spearman-correlation-analysis.csv',
+    'processed-file': 'inferred-interactions.csv',
+    'pvalue': 0.01,
 }
 
 # ======================================================================
