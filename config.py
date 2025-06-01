@@ -37,10 +37,8 @@ BRCA_PREPROCESSING_PARAMETERS = {
 
 # Aggregated miRNA-Seq and RNA-Seq reads file names
 AGGREGATED_READS_FILES = {
-    'mir-raw': 'aggregated-mir-raw-reads.csv',
-    'mir-norm': 'aggregated-mir-norm-reads.csv',
-    'rna-raw': 'aggregated-rna-raw-reads.csv',
-    'rna-norm': 'aggregated-rna-norm-reads.csv',
+    'mir': 'aggregated-mir-reads.csv',
+    'rna': 'aggregated-rna-reads.csv',
 }
 
 # Molecules (microRNAs and messenger RNAs) expression definition parameters
