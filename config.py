@@ -1,5 +1,4 @@
 import os
-
 from urllib.parse import urljoin
 
 # ======================================================================
@@ -41,10 +40,10 @@ AGGREGATED_READS_FILES = {
     'rna': 'aggregated-rna-reads.csv',
 }
 
-# Molecules (microRNAs and messenger RNAs) expression definition parameters
-EXPRESSION_DEFINITION_PARAMETERS = {
-    'read-threshold': 10,
-    'read-percentage-threshold': 80,
+# Expressed molecules file names
+EXPRESSED_MOLECULES_FILES = {
+    'mir': 'expressed-mirs.csv',
+    'rna': 'expressed-rnas.csv',
 }
 
 # miRWalk website download parameters
