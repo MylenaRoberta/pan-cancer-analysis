@@ -40,6 +40,14 @@ AGGREGATED_READS_FILES = {
     'rna': 'aggregated-rna-reads.csv',
 }
 
+# EdgeR's filterByExpr() parameters [all default]
+FILTER_BY_EXPR_PARAMETERS = {
+    'min_count': 10,
+    'min_total_count': 15,
+    'large_n': 10,
+    'min_prop': 0.7,
+}
+
 # Expressed molecules file names
 EXPRESSED_MOLECULES_FILES = {
     'mir': 'expressed-mirs.csv',
