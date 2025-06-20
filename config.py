@@ -36,8 +36,10 @@ BRCA_PREPROCESSING_PARAMETERS = {
 
 # Aggregated miRNA-Seq and RNA-Seq reads file names
 AGGREGATED_READS_FILES = {
-    'mir': 'aggregated-mir-reads.csv',
-    'rna': 'aggregated-rna-reads.csv',
+    'mir-normalized': 'aggregated-mir-normalized-reads.csv',
+    'mir-raw': 'aggregated-mir-raw-reads.csv',
+    'rna-normalized': 'aggregated-rna-normalized-reads.csv',
+    'rna-raw': 'aggregated-rna-raw-reads.csv',
 }
 
 # EdgeR's filterByExpr() parameters [all default]
@@ -64,10 +66,9 @@ MIRWALK_DOWNLOAD_PARAMETERS = {
 
 # Interaction (microRNA - messenger RNA) inference parameters
 INTERACTION_INFERENCE_PARAMETERS = {
-    'correlation': -0.3,
+
     'interim-file': 'spearman-correlation-analysis.csv',
     'processed-file': 'inferred-interactions.csv',
-    'pvalue': 0.01,
 }
 
 # ======================================================================
