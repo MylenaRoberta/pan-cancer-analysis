@@ -66,9 +66,12 @@ MIRWALK_DOWNLOAD_PARAMETERS = {
 
 # Interaction (microRNA - messenger RNA) inference parameters
 INTERACTION_INFERENCE_PARAMETERS = {
-
-    'interim-file': 'spearman-correlation-analysis.csv',
-    'processed-file': 'inferred-interactions.csv',
+    'alternative': 'less',
+    'axis': 0,
+    'fdr-method': 'bh', # Benjamini-Hochberg
+    'file': 'inferred-interactions.csv',
+    'min_correlation': -0.3,
+    'min_qvalue': 0.05,
 }
 
 # ======================================================================
