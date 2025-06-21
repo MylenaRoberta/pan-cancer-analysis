@@ -1,4 +1,5 @@
 __pycache__/
+venv/
 
 # TCGA-BRCA microRNA-Seq and RNA-Seq related files
 data/raw/tcga-brca/*/
@@ -8,7 +9,3 @@ data/processed/tcga-brca/**/rna-seq_*
 # miRWalk interaction files
 data/external/mirwalk/*
 data/processed/mirwalk/MIMAT*
-
-# Interaction inference files
-data/interim/tcga-brca/**/spearman-*
-data/processed/tcga-brca/**/*interactions*

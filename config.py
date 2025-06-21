@@ -1,5 +1,4 @@
 import os
-
 from urllib.parse import urljoin
 
 # ======================================================================
@@ -37,16 +36,24 @@ BRCA_PREPROCESSING_PARAMETERS = {
 
 # Aggregated miRNA-Seq and RNA-Seq reads file names
 AGGREGATED_READS_FILES = {
+    'mir-normalized': 'aggregated-mir-normalized-reads.csv',
     'mir-raw': 'aggregated-mir-raw-reads.csv',
-    'mir-norm': 'aggregated-mir-norm-reads.csv',
+    'rna-normalized': 'aggregated-rna-normalized-reads.csv',
     'rna-raw': 'aggregated-rna-raw-reads.csv',
-    'rna-norm': 'aggregated-rna-norm-reads.csv',
 }
 
-# Molecules (microRNAs and messenger RNAs) expression definition parameters
-EXPRESSION_DEFINITION_PARAMETERS = {
-    'read-threshold': 10,
-    'read-percentage-threshold': 80,
+# EdgeR's filterByExpr() parameters [all default]
+FILTER_BY_EXPR_PARAMETERS = {
+    'min_count': 10,
+    'min_total_count': 15,
+    'large_n': 10,
+    'min_prop': 0.7,
+}
+
+# Expressed molecules file names
+EXPRESSED_MOLECULES_FILES = {
+    'mir': 'expressed-mirs.csv',
+    'rna': 'expressed-rnas.csv',
 }
 
 # miRWalk website download parameters
@@ -59,10 +66,12 @@ MIRWALK_DOWNLOAD_PARAMETERS = {
 
 # Interaction (microRNA - messenger RNA) inference parameters
 INTERACTION_INFERENCE_PARAMETERS = {
-    'correlation': -0.3,
-    'interim-file': 'spearman-correlation-analysis.csv',
-    'processed-file': 'inferred-interactions.csv',
-    'pvalue': 0.01,
+    'alternative': 'less',
+    'axis': 0,
+    'fdr-method': 'bh', # Benjamini-Hochberg
+    'file': 'inferred-interactions.csv',
+    'min_correlation': -0.3,
+    'min_qvalue': 0.05,
 }
 
 # ======================================================================
