@@ -1,0 +1,23 @@
+id,label,type
+mir1,hsa-let-7d-5p,microRNA
+mir2,hsa-miR-18a-5p,microRNA
+mir3,hsa-miR-30c-5p,microRNA
+mir4,hsa-miR-182-5p,microRNA
+mir5,hsa-miR-141-3p,microRNA
+mir6,hsa-miR-155-5p,microRNA
+mir7,hsa-miR-106b-5p,microRNA
+mir8,hsa-miR-378a-3p,microRNA
+mir9,hsa-miR-320b,microRNA
+gene1,HIF1AN,messenger RNA
+gene2,MEF2D,messenger RNA
+gene3,SMARCC1,messenger RNA
+gene4,PRKAR2A,messenger RNA
+gene5,ZBTB20,messenger RNA
+gene6,SNAI1,messenger RNA
+gene7,GPHN,messenger RNA
+gene8,IGF2,messenger RNA
+gene9,VAV3,messenger RNA
+gene10,PLXDC2,messenger RNA
+gene11,SALL1,messenger RNA
+gene12,ACP6,messenger RNA
+gene13,MYEF2,messenger RNA

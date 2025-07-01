@@ -74,10 +74,17 @@ INTERACTION_INFERENCE_PARAMETERS = {
 
 # Interaction (microRNA - messenger RNA) filtering parameters
 INTERACTION_FILTERING_PARAMETERS = {
-    'associations_file_name': 'monopartite-network.csv',
-    'interactions_file_name': 'bipartite-network.csv',
+    'edges_file_name': 'interaction-network-edges.csv',
+    'nodes_file_name': 'interaction-network-nodes.csv',
     'min_correlation': -0.3,
     'min_qvalue': 0.05,
+}
+
+# Association (microRNA - microRNA) filtering parameters
+ASSOCIATION_FILTERING_PARAMETERS = {
+    'edges_file_name': 'association-network-edges.csv',
+    'nodes_file_name': 'association-network-nodes.csv',
+    'min_index': 0.1,
 }
 
 # ======================================================================
