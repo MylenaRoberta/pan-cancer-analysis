@@ -69,9 +69,22 @@ INTERACTION_INFERENCE_PARAMETERS = {
     'alternative': 'less',
     'axis': 0,
     'fdr-method': 'bh', # Benjamini-Hochberg
-    'file': 'inferred-interactions.csv',
+    'file-name': 'inferred-interactions.csv',
+}
+
+# Interaction (microRNA - messenger RNA) filtering parameters
+INTERACTION_FILTERING_PARAMETERS = {
+    'edges_file_name': 'interaction-network-edges.csv',
+    'nodes_file_name': 'interaction-network-nodes.csv',
     'min_correlation': -0.3,
     'min_qvalue': 0.05,
+}
+
+# Association (microRNA - microRNA) filtering parameters
+ASSOCIATION_FILTERING_PARAMETERS = {
+    'edges_file_name': 'association-network-edges.csv',
+    'nodes_file_name': 'association-network-nodes.csv',
+    'min_index': 0.1,
 }
 
 # ======================================================================
@@ -124,6 +137,14 @@ BRCA_PROCESSED_FILES_DIRS = {
     'project': os.path.join(BRCA_PROCESSED_DATA_DIR, 'project-files'),
 }
 MIRWALK_PROCESSED_DATA_DIR = os.path.join(PROCESSED_DATA_DIR, 'mirwalk')
+CYTOSCAPE_PROCESSED_DATA_DIR = os.path.join(PROCESSED_DATA_DIR, 'cytoscape')
+CYTOSCAPE_PROCESSED_FILES_DIRS = {
+    'basal-like': os.path.join(CYTOSCAPE_PROCESSED_DATA_DIR, 'basal-like-files'),
+    'her2-enriched': os.path.join(CYTOSCAPE_PROCESSED_DATA_DIR, 'her2-enriched-files'),
+    'luminal-a': os.path.join(CYTOSCAPE_PROCESSED_DATA_DIR, 'luminal-a-files'),
+    'luminal-b': os.path.join(CYTOSCAPE_PROCESSED_DATA_DIR, 'luminal-b-files'),
+    'paired-normal': os.path.join(CYTOSCAPE_PROCESSED_DATA_DIR, 'paired-normal-files'),
+}
 
 # ======================================================================
 # FILE PATHS
