@@ -5,9 +5,6 @@ from urllib.parse import urljoin
 # CONSTANTS
 # ======================================================================
 
-# TCGA-BRCA paper table file name
-BRCA_PAPER_FILE = 'brca-paper-supplementary-tables-1-to-4.xls'
-
 # Genomic Data Commons (GDC) API endpoint of interest
 GDC_API_BASE_URL = 'https://api.gdc.cancer.gov'
 GDC_API_ENDPOINTS = {
@@ -20,16 +17,14 @@ GDC_API_ENDPOINTS = {
     'status': urljoin(GDC_API_BASE_URL, 'status'),
 }
 
+# TCGA-BRCA paper table file name
+BRCA_PAPER_FILE = 'brca-paper-supplementary-tables-1-to-4.xls'
+
 # TCGA-BRCA metadata preprocessing parameters
 BRCA_PREPROCESSING_PARAMETERS = {
-    'data_types': [
-        'Isoform Expression Quantification',
-        'Gene Expression Quantification'
-    ],
+    'data_types': ['Isoform Expression Quantification', 'Gene Expression Quantification'],
     'disease_types': ['Ductal and Lobular Neoplasms'],
-    'molecular_subtypes': [
-        'Basal-like', 'HER2-enriched', 'Luminal A', 'Luminal B',
-    ],
+    'molecular_subtypes': ['Basal-like', 'HER2-enriched', 'Luminal A', 'Luminal B'],
     'project_ids': ['TCGA-BRCA'],
     'sample_types': ['Primary Tumor', 'Solid Tissue Normal'],
 }
@@ -134,7 +129,6 @@ BRCA_PROCESSED_FILES_DIRS = {
     'luminal-a': os.path.join(BRCA_PROCESSED_DATA_DIR, 'luminal-a-files'),
     'luminal-b': os.path.join(BRCA_PROCESSED_DATA_DIR, 'luminal-b-files'),
     'paired-normal': os.path.join(BRCA_PROCESSED_DATA_DIR, 'paired-normal-files'),
-    'project': os.path.join(BRCA_PROCESSED_DATA_DIR, 'project-files'),
 }
 MIRWALK_PROCESSED_DATA_DIR = os.path.join(PROCESSED_DATA_DIR, 'mirwalk')
 CYTOSCAPE_PROCESSED_DATA_DIR = os.path.join(PROCESSED_DATA_DIR, 'cytoscape')
@@ -150,52 +144,34 @@ CYTOSCAPE_PROCESSED_FILES_DIRS = {
 # FILE PATHS
 # ======================================================================
 
+# TCGA-BRCA raw files paths
+BRCA_RAW_FILES_PATHS = {
+    'cases': os.path.join(BRCA_RAW_DATA_DIR, 'cases-metadata.csv'),
+    'files': os.path.join(BRCA_RAW_DATA_DIR, 'files-metadata.csv'),
+    'paper': os.path.join(BRCA_RAW_DATA_DIR, BRCA_PAPER_FILE),
+    'project': os.path.join(BRCA_RAW_DATA_DIR, 'project-metadata.csv'),
+}
+
 # GDC API interim files paths
 GDC_INTERIM_FILES_PATHS = {
-    'all-projects': os.path.join(
-        GDC_INTERIM_DATA_DIR, 'gdc-all-projects.csv'
-    ),
-    'cases': os.path.join(
-        GDC_INTERIM_DATA_DIR, 'gdc-cases-of-interest.csv'
-    ),
-    'files': os.path.join(
-        GDC_INTERIM_DATA_DIR, 'gdc-files-of-interest.csv'
-    ),
-    'projects': os.path.join(
-        GDC_INTERIM_DATA_DIR, 'gdc-projects-of-interest.csv'
-    ),
+    'all-projects': os.path.join(GDC_INTERIM_DATA_DIR, 'gdc-all-projects.csv'),
+    'cases': os.path.join(GDC_INTERIM_DATA_DIR, 'gdc-cases-of-interest.csv'),
+    'files': os.path.join(GDC_INTERIM_DATA_DIR, 'gdc-files-of-interest.csv'),
+    'projects': os.path.join(GDC_INTERIM_DATA_DIR, 'gdc-projects-of-interest.csv'),
 }
 
 # TCGA data interim files paths
 TCGA_INTERIM_FILES_PATHS = {
-    'cases': os.path.join(
-        GDC_INTERIM_DATA_DIR, 'tcga-cases-of-interest.csv'
-    ),
-    'files': os.path.join(
-        GDC_INTERIM_DATA_DIR, 'tcga-files-of-interest.csv'
-    ),
-    'projects': os.path.join(
-        GDC_INTERIM_DATA_DIR, 'tcga-projects.csv'
-    ),
+    'cases': os.path.join(GDC_INTERIM_DATA_DIR, 'tcga-cases-of-interest.csv'),
+    'files': os.path.join(GDC_INTERIM_DATA_DIR, 'tcga-files-of-interest.csv'),
+    'projects': os.path.join(GDC_INTERIM_DATA_DIR, 'tcga-projects.csv'),
 }
-
-# TCGA-BRCA paper table file path
-BRCA_PAPER_FILE_PATH = os.path.join(BRCA_RAW_DATA_DIR, BRCA_PAPER_FILE)
 
 # TCGA-BRCA processed files paths
 BRCA_PROCESSED_FILES_PATHS = {
-    'cases': os.path.join(
-        BRCA_PROCESSED_FILES_DIRS['project'], 'cases-metadata.csv'
-    ),
-    'files': os.path.join(
-        BRCA_PROCESSED_FILES_DIRS['project'], 'files-metadata.csv'
-    ),
-    'paper': os.path.join(
-        BRCA_PROCESSED_FILES_DIRS['project'], 'paper-cases-data.csv'
-    ),
-    'project': os.path.join(
-        BRCA_PROCESSED_FILES_DIRS['project'], 'project-metadata.csv'
-    ),
+    'cases': os.path.join(BRCA_PROCESSED_DATA_DIR, 'cases-metadata.csv'),
+    'files': os.path.join(BRCA_PROCESSED_DATA_DIR, 'files-metadata.csv'),
+    'paper': os.path.join(BRCA_PROCESSED_DATA_DIR, 'paper-cases-data.csv'),
 }
 
 # miRWalk default file path
