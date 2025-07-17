@@ -5,7 +5,7 @@ from urllib.parse import urljoin
 # CONSTANTS
 # ======================================================================
 
-# Genomic Data Commons (GDC) API endpoint of interest
+# Genomic Data Commons (GDC) API endpoints of interest
 GDC_API_BASE_URL = 'https://api.gdc.cancer.gov'
 GDC_API_ENDPOINTS = {
     'annotations': urljoin(GDC_API_BASE_URL, 'annotations'),
@@ -18,7 +18,7 @@ GDC_API_ENDPOINTS = {
 }
 
 # TCGA-BRCA paper table file name
-BRCA_PAPER_FILE = 'brca-paper-supplementary-tables-1-to-4.xls'
+BRCA_PAPER_FILE = 'tcga-brca-paper-supplementary-tables-1-to-4.xls'
 
 # TCGA-BRCA metadata preprocessing parameters
 BRCA_PREPROCESSING_PARAMETERS = {
