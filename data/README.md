@@ -2,7 +2,9 @@
 
 ## Ontologies
 
+* [Web Access Control Ontology](https://www.w3.org/wiki/WebAccessControl)
 * [Gene Regulation Ontology](https://bioportal.bioontology.org/ontologies/GRO)
+* [Ontology for Biomedical Investigations](https://bioportal.bioontology.org/ontologies/OBI)
 * [Systems Biology Ontology](https://bioportal.bioontology.org/ontologies/SBO)
 * [Statistics Ontology](https://bioportal.bioontology.org/ontologies/STATO)
 * [EDAM - Ontology of bioscientific data analysis and data management](https://edamontology.org)
@@ -14,11 +16,14 @@
 * `descendant of`: When the field descends from another artifact, it refers to the unique ID of the original field.
 * `data type`: Data type of the field content.
 * `role`: Role of the field in the artifact. It can contain biological data, statistical metrics, or transformation operations. The field prefix (namespace) indicates its role:
+  * `access`
+    * [Web Access Control Ontology](https://www.w3.org/wiki/WebAccessControl): `wac:`
   * `biological`
     * [Gene Regulation Ontology](https://bioportal.bioontology.org/ontologies/GRO): `gro:`
+    * [Ontology for Biomedical Investigations](https://bioportal.bioontology.org/ontologies/OBI): `obi:`
     * [Systems Biology Ontology](https://bioportal.bioontology.org/ontologies/SBO): `sbo:`
   * `statistical`
-    * [Statistics Ontology](https://bioportal.bioontology.org/ontologies/STATO): `sto:`
+    * [Statistics Ontology](https://bioportal.bioontology.org/ontologies/STATO): `stato:`
   * `transformation`
     * [EDAM](https://edamontology.org): `edam:`
 * `uri`: URI of the concept related to this field in an ontology defined by role.
@@ -34,14 +39,14 @@
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-| project_id | Unique identifier for the TCGA project | trp:ORPM01 | - | string | edam:data_identifier | http://edamontology.org/data_0842 |
-| project_name | Human-readable name of the TCGA project describing the cancer type | trp:ORPM02 | - | string | edam:data_label | http://edamontology.org/data_0842 |
-| primary_site | JSON array containing the primary anatomical site(s) where the cancer originated | trp:ORPM03 | - | string | gro:GRO_0000061 | http://purl.obolibrary.org/obo/GRO_0000061 |
+| project_id | Unique identifier for the TCGA project | trp:ORPM01 | - | string | edam:Identifier | http://edamontology.org/data_0842 |
+| project_name | Full name of the TCGA project | trp:ORPM02 | - | string | edam:Identifier | http://edamontology.org/data_0842 |
+| primary_site | JSON array containing the primary anatomical site(s) where the cancer originated | trp:ORPM03 | - | string | edam:Classification | http://edamontology.org/operation_2990 |
 | disease_type | JSON array containing the histological classification types of the diseases/cancers in the project | trp:ORPM04 | - | string | gro:Disease | http://www.bootstrep.eu/ontology/GRO#Disease |
-| experimental_strategies | JSON array containing details about experimental strategies used, including file counts and case counts for each strategy | trp:ORPM05 | - | string | edam:data_protocol | http://edamontology.org/data_2531 |
-| data_categories | JSON array containing information about data categories available, including file counts and case counts for each category | trp:ORPM06 | - | string | edam:data_classification | http://edamontology.org/operation_2990 |
-| case_count | Total number of cases/patients included in the project | trp:ORPM07 | - | integer | sto:sample_size | http://purl.obolibrary.org/obo/OBI_0000938 |
-| file_count | Total number of data files available in the project | trp:ORPM08 | - | integer | edam:data_quantity | http://edamontology.org/data_0006 |
+| experimental_strategies | JSON array containing information about experimental strategies used, including file counts and case counts for each strategy | trp:ORPM05 | - | string | edam:Classification | http://edamontology.org/operation_2990 |
+| data_categories | JSON array containing information about data categories available, including file counts and case counts for each category | trp:ORPM06 | - | string | edam:Classification | http://edamontology.org/operation_2990 |
+| case_count | Total number of cases/patients included in the project | trp:ORPM07 | - | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
+| file_count | Total number of data files available in the project | trp:ORPM08 | - | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
 
 ### Artifact AT_OR/CM
 
@@ -50,9 +55,9 @@
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-| case_id | Unique identifier for each case/patient in the TCGA database | trp:ORCM01 | - | string | edam:data_identifier | http://edamontology.org/data_0842 |
-| submitter_id | Identifier assigned by the data submitter/contributor | trp:ORCM02 | - | string | edam:data_identifier | http://edamontology.org/data_0842 |
-| disease_type | Type of cancer/disease for the case | trp:ORCM03 | - | string | edam:data_classification| http://edamontology.org/data_2914 |
+| case_id | Unique identifier for each case/patient in the TCGA database | trp:ORCM01 | - | string | edam:Identifier | http://edamontology.org/data_0842 |
+| submitter_id | Identifier assigned to the case by the submitting institution | trp:ORCM02 | - | string | edam:Identifier | http://edamontology.org/data_0842 |
+| disease_type | Histological classification of the cancer for the given case | trp:ORCM03 | - | string | gro:Disease | http://www.bootstrep.eu/ontology/GRO#Disease |
 
 ### Artifact AT_OR/FM
 
@@ -61,13 +66,14 @@
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-| file_id | Unique identifier for each file in the TCGA database | trp:ORFM01 | - | string | edam:data_identifier | http://edamontology.org/data_0842 |
-| case_id | Unique identifier for each case/patient in the TCGA database | trp:ORFM02 | - | string | edam:data_identifier | http://edamontology.org/data_0842 |
-| access | Access level for the file (controlled, open, etc.) | trp:ORFM03 | - | string | wac:accessTo | http://www.w3.org/ns/auth/acl#accessTo |
-| experimental_strategy | Experimental approach used to generate the data (WXS, RNA-Seq, etc.) | trp:ORFM04 | - | string | sbo:ExperimentalMethod | http://www.bootstrep.eu/ontology/GRO#ExperimentalMethod |
-| data_type | Type of data contained in the file (Annotated Somatic Mutation, Aligned Reads, etc.) | trp:ORFM05 | - | string | gro:GRO_0000008 | http://purl.obolibrary.org/obo/GRO_0000008 |
-| data_format | File format of the data (VCF, BAM, etc.) | trp:ORFM06 | - | string | edam:format_1915 | http://edamontology.org/format_1915 |
-| samples | JSON array containing sample information including sample type and tissue type | trp:ORFM07 | - | string | gro:GRO_0000061 | http://purl.obolibrary.org/obo/GRO_0000061 |
+| file_id | Unique identifier of the data file in the TCGA database | trp:ORFM01 | - | string | edam:Identifier | http://edamontology.org/data_0842 |
+| case_id | Identifier linking the file to a specific case | trp:ORFM02 | - | string | edam:Identifier | http://edamontology.org/data_0842 |
+| access | Access level of the file (open or controlled) | trp:ORFM03 | - | string | wac:AccessControl | https://www.w3.org/ns/auth/acl#accessControl |
+| experimental_strategy | Experimental approach used to generate the data (e.g., RNA-Seq, WGS) | trp:ORFM04 | - | string | edam:Classification | http://edamontology.org/operation_2990 |
+| data_category | Broad category of data in the file (e.g., Transcriptome Profiling, DNA Methylation) | trp:ORFM05 | - | string | edam:Classification | http://edamontology.org/operation_2990 |
+| data_type | Type of data represented in the file (e.g., Gene Expression Quantification, Annotated Somatic Mutation) | trp:ORFM06 | - | string | edam:Classification | http://edamontology.org/operation_2990 |
+| data_format | Format of the file content (e.g., TXT, TSV, BEDPE) | trp:ORFM07 | - | string | edam:Format | http://edamontology.org/format_1915 |
+| samples | JSON array containing sample metadata, including sample type and tissue type | trp:ORFM08 | - | string | obi:Specimen | http://purl.obolibrary.org/obo/OBI_0100051 |
 
 
 ## Family of Artifacts AT_FOR
@@ -302,7 +308,7 @@ arquivos estão sendo salvos em data/processed/mirwalk)
 | field name   | unique id  | descendant_of | data type | role                | URI |
 | ------------ | ---------- | --------------| --------- | ------------------- | --- |
 | is_expressed | trp:AGMR02 |               | boolean   | edam:data_filtering | http://edamontology.org/operation_3695 |
-| qvalue       | trp:INE05  |               | real      | sto:q-value         | http://purl.obolibrary.org/obo/OBI_0001442    |
+| qvalue       | trp:INE05  |               | real      | stato:q-value         | http://purl.obolibrary.org/obo/OBI_0001442    |
 
 ### Artifact AT_MN/ANN
 
