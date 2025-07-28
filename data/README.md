@@ -215,12 +215,10 @@
 | cross-mapped | Indicates whether the reads are cross-mapped to other loci (Y/N) | trp:EFMOF05 | - | string | edam:DataFiltering | http://edamontology.org/operation_3695 |
 | miRNA_region | Region classification of the isoform (e.g., mature, precursor) with optional miRBase accession | trp:EFMOF06 | - | string | so:MicroRNARegion | http://purl.obolibrary.org/obo/SO_0000836 |
 
-
 ### Artifact AT_EF/MPF
 
 * Name: TCGA Origin MicroRNA-Seq Processed File
 * Example File: [mirna-seq-processed-file.csv](examples/mirna-seq-processed-file.txt)
-
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -319,9 +317,6 @@
 
 * Family Name: TCGA Molecule Filtering Artifacts
 
-| field name | description | unique id | descendant of | data type | role | URI |
-| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-
 ### Artifact AT_MF/EM
 
 * Name: edgeR's filterByExpr Expressed MicroRNAs
@@ -331,10 +326,6 @@
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
 | accession_id | Accession identifier for mature miRNAs from miRBase | trp:MFEM01 | trp:EFAMR01 | string | edam:Identifier | http://edamontology.org/data_0842 |
 | is_expressed | Indicates if the miRNA is expressed according to edgeR's filterByExpr function (1: yes, 0: no) | trp:MFEM02 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
-
-
-| field name | description | unique id | descendant of | data type | role | URI |
-| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
 
 ### Artifact AT_MF/AMR
 
@@ -368,9 +359,6 @@
 | gene_id | Ensembl gene identifier with version | trp:MFER01 | trp:EFARR01 | string | edam:Identifier | http://edamontology.org/data_0842 |
 | gene_name | Human-readable symbol for the gene | trp:MFER02 | trp:EFARR02 | string | so:Gene | http://purl.obolibrary.org/obo/SO_0000704 |
 | is_expressed | Indicates if the mRNA is expressed according to edgeR's filterByExpr function (1: yes, 0: no) | trp:MFER03 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
-
-| field name | description | unique id | descendant of | data type | role | URI |
-| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
 
 ### Artifact AT_MF/ARR
 
@@ -430,9 +418,6 @@
 | TargetScan | Indicates if TargetScan predicts the interaction (1: yes, 0: no) | trp:IIMO20 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
 | miRDB | Indicates if miRDB predicts the interaction (1: yes, 0: no) | trp:IIMO21 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
 
-| field name | description | unique id | descendant of | data type | role | URI |
-| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-
 ### Artifact AT_II/MP
 
 * Name: miRWalk Origin Processed Targets File 
@@ -463,10 +448,6 @@
 | mirdb | Indicates if miRDB predicts the interaction (1: yes, 0: no) | trp:IIMP21 | trp:IIMO21 | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
 | is_interaction_of_interest | Indicates if the interaction meets criteria for inclusion in the study (1: yes, 0: no) | trp:IIMP22 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
 
-
-| field name | description | unique id | descendant of | data type | role | URI |
-| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-
 ### Artifact AT_II/MNP
 
 * Name: MIMAT ID to MicroRNA Name Mapping
@@ -476,10 +457,6 @@
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
 | accession_id | Accession identifier for mature miRNAs from miRBase | trp:IIMNP01 | trp:MFEM01 | string | edam:Identifier | http://edamontology.org/data_0842 |
 | mirna_name | Human-readable name for the mature miRNA | trp:IIMNP02 | trp:IIMP01 | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
-
-
-| field name | description | unique id | descendant of | data type | role | URI |
-| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
 
 ### Artifact AT_II/IS
 
@@ -500,9 +477,6 @@
 ## Family of Artifacts AT_MN
 
 * Family Name: MicroRNA Networks Artifacts
-
-| field name | description | unique id | descendant of | data type | role | URI |
-| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
 
 ### Artifact AT_MN/FI
 
@@ -532,9 +506,6 @@
 | mirtarbase | Indicates if the interaction is supported by experimental evidence in miRTarBase | trp:MNINE03 | trp:MNFI04 | boolean | edam:Identifier | http://edamontology.org/data_0842 |
 | correlation  | Correlation coefficient between microRNA and gene expression | trp:MNINE04 | trp:MNFI05 | real | stato:CorrelationCoefficient | http://purl.obolibrary.org/obo/STATO_0000142 |
 | qvalue | Adjusted p-value for multiple hypothesis testing | trp:MNINE05 | trp:MNFI07 | real | obi:QValue | http://purl.obolibrary.org/obo/OBI_0001442 |
-
-| field name | description | unique id | descendant of | data type | role | URI |
-| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
 
 ### Artifact AT_MN/INN
 
@@ -569,9 +540,6 @@
 | node_b | Second microRNA in the pair being associated | trp:MNFAS02 | trp:MNAS02 | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
 | association | Strength of the association between the microRNA pair | trp:MNFAS03 | trp:MNAS03 | real | stato:MeasureOfAssociation | http://purl.obolibrary.org/obo/STATO_0000610 |
 | is_association_of_interest | Indicates if the association meets criteria for inclusion in the study (1: yes, 0: no) | trp:MNFAS04 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
-
-| field name | description | unique id | descendant of | data type | role | URI |
-| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
 
 ### Artifact AT_MN/ANE
 
