@@ -6,6 +6,7 @@
 * [Gene Regulation Ontology](https://bioportal.bioontology.org/ontologies/GRO)
 * [National Cancer Institute Thesaurus](https://bioportal.bioontology.org/ontologies/NCIT)
 * [Ontology for Biomedical Investigations](https://bioportal.bioontology.org/ontologies/OBI)
+* [Sequence Types and Features Ontology](https://bioportal.bioontology.org/ontologies/SO)
 * [Systems Biology Ontology](https://bioportal.bioontology.org/ontologies/SBO)
 * [Statistics Ontology](https://bioportal.bioontology.org/ontologies/STATO)
 * [EDAM - Ontology of bioscientific data analysis and data management](https://edamontology.org)
@@ -23,6 +24,7 @@
     * [Gene Regulation Ontology](https://bioportal.bioontology.org/ontologies/GRO): `gro:`
     * [National Cancer Institute Thesaurus](https://bioportal.bioontology.org/ontologies/NCIT): `ncit:`
     * [Ontology for Biomedical Investigations](https://bioportal.bioontology.org/ontologies/OBI): `obi:`
+    * [Sequence Types and Features Ontology](https://bioportal.bioontology.org/ontologies/SO): `so:`
     * [Systems Biology Ontology](https://bioportal.bioontology.org/ontologies/SBO): `sbo:`
   * `statistical`
     * [Statistics Ontology](https://bioportal.bioontology.org/ontologies/STATO): `stato:`
@@ -80,7 +82,7 @@
 
 ## Family of Artifacts AT_FOR
 
-* Family Name: TCGA Filtered Origin Artifacts
+* Family Name: TCGA Origin Filtered Artifacts
 
 ### Artifact AT_FOR/PC
 
@@ -122,7 +124,7 @@
 
 ### Artifact AT_FOR/FPC
 
-* Name: TCGA Filtered Origin Paper Cases Metadata
+* Name: TCGA Origin Filtered Paper Cases Data
 * File: [paper-cases-data.csv](processed/tcga-brca/paper-cases-data.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
@@ -162,7 +164,7 @@
 
 ### Artifact AT_FOR/CM
 
-* Name: TCGA Filtered Origin Cases Metadata
+* Name: TCGA Origin Filtered Cases Metadata
 * File: [cases-metadata.csv](processed/tcga-brca/cases-metadata.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
@@ -177,7 +179,7 @@
 
 ### Artifact AT_FOR/FM
 
-* Name: TCGA Filtered Origin Files Metadata
+* Name: TCGA Origin Filtered Files Metadata
 * File: [files-metadata.csv](processed/tcga-brca/files-metadata.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
@@ -197,69 +199,120 @@
 
 ## Family of Artifacts AT_EF
 
-* Family Name: TCGA File Data Artifacts
+* Family Name: TCGA Origin Expression File Artifacts
 
-### Artifact AT_FD/MOF
+### Artifact AT_EF/MOF
 
-* Name: TCGA MicroRNA-Seq Origin File
-(exemplo em: data/raw/gdc-api/63d7ceb1-b280-43a0-8f19-02fb6dfba18c.mirnaseq.isoforms.quantification.txt)
-
-| field name | description | unique id | descendant of | data type | role | URI |
-| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-
-### Artifact AT_FD/ROF
-
-* Name: TCGA RNA-Seq Origin File
-(exemplo em: data/raw/gdc-api/a6f6d0c2-4309-48c3-829a-7fd30fde6d71.rna_seq.augmented_star_gene_counts.tsv)
+* Name: TCGA Origin MicroRNA-Seq File
+* Example File: [mirna-seq-origin-file.txt](examples/mirna-seq-origin-file.txt)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| miRNA_ID | Identifier of the microRNA (miRNA) as annotated in miRBase | trp:EFMOF01 | - | string | so:MiRNA | http://purl.obolibrary.org/obo/SO_0000276 |
+| isoform_coords | Genomic coordinates and strand of the miRNA isoform based on the hg38 assembly | trp:EFMOF02 | - | string | so:SequenceFeature | http://purl.obolibrary.org/obo/SO_0000110 |
+| read_count | Number of reads mapped to the isoform | trp:EFMOF03 | - | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
+| reads_per_million_miRNA_mapped | Normalized abundance of the isoform (reads per million mapped miRNA reads) | trp:EFMOF04 | - | real | obi:NormalizedDataSet | http://purl.obolibrary.org/obo/OBI_0000451 |
+| cross-mapped | Indicates whether the reads are cross-mapped to other loci (Y/N) | trp:EFMOF05 | - | string | edam:DataFiltering | http://edamontology.org/operation_3695 |
+| miRNA_region | Region classification of the isoform (e.g., mature, precursor) with optional miRBase accession | trp:EFMOF06 | - | string | so:MiRNARegion | http://purl.obolibrary.org/obo/SO_0000836 |
 
-### Artifact AT_FD/MPF
 
-* Name: TCGA MicroRNA-Seq Processed File
-(arquivo original + quebra de colunas + coluna "is_mirna_of_interest"; 
-exemplos em notebooks/01_tcga-brca/04_brca-file-processing.ipynb)
+### Artifact AT_EF/MPF
 
-| field name | description | unique id | descendant of | data type | role | URI |
-| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+* Name: TCGA Origin MicroRNA-Seq Processed File
+* Example File: [mirna-seq-processed-file.csv](examples/mirna-seq-processed-file.txt)
 
-### Artifact AT_FD/RPF
-
-* Name: TCGA RNA-Seq Processed File
-(arquivo original + coluna "is_mrna_of_interest";
-exemplos em notebooks/01_tcga-brca/04_brca-file-processing.ipynb)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| mirna_id | Identifier of the microRNA (miRNA) as annotated in miRBase | trp:EFMPF01 | trp:EFMOF01 | string | so:MiRNA | http://purl.obolibrary.org/obo/SO_0000276 |
+| genome_assembly | Reference genome assembly version | trp:EFMPF02 | trp:EFMOF02 | string | edam:SequenceAssembly | http://edamontology.org/data_0925 |
+| chromosome | Chromosome on which the miRNA isoform is located | trp:EFMPF03 | trp:EFMOF02 | string | so:Chromosome | http://purl.obolibrary.org/obo/SO_0000340 |
+| position_range | Genomic coordinate range of the isoform, start-end | trp:EFMPF04 | trp:EFMOF02 | string | so:SequenceLocation | http://purl.obolibrary.org/obo/SO_0000735 |
+| strand | DNA strand of the isoform, '+' for forward or '-' for reverse | trp:EFMPF05 | trp:EFMOF02 | string | so:StrandAttribute | http://purl.obolibrary.org/obo/SO_0000983 |
+| cross_mapped | Indicates whether the reads are cross-mapped to other loci (Y/N) | trp:EFMPF06 | trp:EFMOF05 | string | edam:DataFiltering | http://edamontology.org/operation_3695 |
+| region_type | Classification of the miRNA region (e.g., mature, precursor) | trp:EFMPF07 | trp:EFMOF06 | string | so:MiRNARegion | http://purl.obolibrary.org/obo/SO_0000836 |
+| accession_id | miRBase accession identifier corresponding to the miRNA isoform | trp:EFMPF08 | trp:EFMOF06 | string | edam:Identifier | http://edamontology.org/data_0842 |
+| read_count | Number of reads mapped to the isoform | trp:EFMPF09 | trp:EFMOF03 | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
+| reads_per_million | Normalized abundance of the isoform (reads per million mapped miRNA reads) | trp:EFMPF10 | trp:EFMOF04 | real | obi:NormalizedDataSet | http://purl.obolibrary.org/obo/OBI_0000451 |
+| is_mirna_of_interest | Indicates if the isoform meets criteria for inclusion in the study | trp:EFMPF11 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
 
-### Artifact AT_FD/AMN
+### Artifact AT_EF/AMR
 
-* Name: TCGA Aggregated MicroRNA Normalized Reads (data/interim/tcga-brca/.../aggregated-mir-normalized-reads.csv)
-
-| field name | description | unique id | descendant of | data type | role | URI |
-| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-
-### Artifact AT_FD/AMR
-
-* Name: TCGA Aggregated MicroRNA Raw Reads (data/interim/tcga-brca/.../aggregated-mir-raw-reads.csv)
-
-| field name | description | unique id | descendant of | data type | role | URI |
-| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-
-### Artifact AT_FD/ARN
-
-* Name: TCGA Aggregated Messenger RNA Normalized Reads (data/interim/tcga-brca/.../aggregated-rna-normalized-reads.csv)
+* Name: Aggregated MicroRNA Raw Reads
+* Example File: [aggregated-mir-raw-reads.csv](interim/tcga-brca/basal-like-files/aggregated-mir-raw-reads.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| accession_id | Accession identifier for mature miRNA from miRBase | trp:EFAMR01 | trp:EFMPF08 | string | edam:Identifier | http://edamontology.org/data_0842 |
+| \<UUID\> | Aggregated raw read count from the file identified by this UUID | trp:EFAMR02+ | trp:EFMPF09 | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
 
-### Artifact AT_FD/ARR
+### Artifact AT_EF/AMN
 
-* Name: TCGA Aggregated Messenger RNA Raw Reads (data/interim/tcga-brca/.../aggregated-rna-raw-reads.csv)
+* Name: Aggregated MicroRNA Normalized Reads
+* Example File: [aggregated-mir-normalized-reads.csv](interim/tcga-brca/basal-like-files/aggregated-mir-normalized-reads.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| accession_id | Accession identifier for mature miRNA from miRBase | trp:EFAMN01 | trp:EFMPF08 | string | edam:Identifier | http://edamontology.org/data_0842 |
+| \<UUID\> | Aggregated normalized read count from the file identified by this UUID | trp:EFAMN02+ | trp:EFMPF10 | real | obi:NormalizedDataSet | http://purl.obolibrary.org/obo/OBI_0000451 |
+
+
+### Artifact AT_EF/ROF
+
+* Name: TCGA Origin RNA-Seq File
+* Example File: [rna-seq-origin-file.tsv](examples/rna-seq-origin-file.tsv)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| gene_id | Ensembl gene identifier with version | trp:EFROF01 | - | string | edam:Identifier | http://edamontology.org/data_0842 |
+| gene_name | Human-readable symbol for the gene | trp:EFROF02 | - | string | so:Gene | http://purl.obolibrary.org/obo/SO_0000704 |
+| gene_type | Gene biotype classification (e.g., protein_coding, pseudogene) | trp:EFROF03 | - | string | edam:Classification | http://edamontology.org/operation_2990 |
+| unstranded | Raw read count for unstranded protocol | trp:EFROF04 | - | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
+| stranded_first | Raw read count for first-strand protocol | trp:EFROF05 | - | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
+| stranded_second | Raw read count for second-strand protocol | trp:EFROF06 | - | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
+| tpm_unstranded | Normalized expression in TPM (Transcripts Per Million), unstranded protocol | trp:EFROF07 | - | real | obi:NormalizedDataSet | http://purl.obolibrary.org/obo/OBI_0000451 |
+| fpkm_unstranded | Normalized expression in FPKM (Fragments Per Kilobase Million), unstranded | trp:EFROF08 | - | real | obi:NormalizedDataSet | http://purl.obolibrary.org/obo/OBI_0000451 |
+| fpkm_uq_unstranded | Upper quartile normalized FPKM expression, unstranded | trp:EFROF09 | - | real | obi:NormalizedDataSet | http://purl.obolibrary.org/obo/OBI_0000451 |
+
+### Artifact AT_EF/RPF
+
+* Name: TCGA Origin RNA-Seq Processed File
+* Example File: [rna-seq-processed-file.csv](examples/rna-seq-processed-file.tsv)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| gene_id | Ensembl gene identifier with version | trp:EFRPF01 | trp:EFROF01 | string | edam:Identifier | http://edamontology.org/data_0842 |
+| gene_name | Human-readable symbol for the gene | trp:EFRPF02 | trp:EFROF02 | string | so:Gene | http://purl.obolibrary.org/obo/SO_0000704 |
+| gene_type | Gene biotype classification (e.g., protein_coding, pseudogene) | trp:EFRPF03 | trp:EFROF03 | string | edam:Classification | http://edamontology.org/operation_2990 |
+| unstranded | Raw read count for unstranded protocol | trp:EFRPF04 | trp:EFROF04 | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
+| stranded_first | Raw read count for first-strand protocol | trp:EFRPF05 | trp:EFROF05 | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
+| stranded_second | Raw read count for second-strand protocol | trp:EFRPF06 | trp:EFROF06 | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
+| tpm_unstranded | Normalized expression in TPM (Transcripts Per Million), unstranded protocol | trp:EFRPF07 | trp:EFROF07 | real | obi:NormalizedDataSet | http://purl.obolibrary.org/obo/OBI_0000451 |
+| fpkm_unstranded | Normalized expression in FPKM (Fragments Per Kilobase Million), unstranded | trp:EFRPF08 | trp:EFROF08 | real | obi:NormalizedDataSet | http://purl.obolibrary.org/obo/OBI_0000451 |
+| fpkm_uq_unstranded | Upper quartile normalized FPKM expression, unstranded | trp:EFRPF09 | trp:EFROF09 | real | obi:NormalizedDataSet | http://purl.obolibrary.org/obo/OBI_0000451 |
+| is_mrna_of_interest | Indicates if the gene meets criteria for inclusion in the study | trp:EFRPF10 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
+
+### Artifact AT_EF/ARR
+
+* Name: Aggregated Messenger RNA Raw Reads
+* Example File: [aggregated-rna-raw-reads.csv](interim/tcga-brca/basal-like-files/aggregated-rna-raw-reads.csv)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| gene_id | Ensembl gene identifier with version | trp:EFARR01 | trp:EFRPF01 | string | edam:Identifier | http://edamontology.org/data_0842 |
+| gene_name | Human-readable symbol for the gene | trp:EFARR02 | trp:EFRPF02 | string | so:Gene | http://purl.obolibrary.org/obo/SO_0000704 |
+| \<UUID\> | Aggregated raw read count from the file identified by this UUID | trp:EFARR03+ | trp:EFRPF04 | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
+
+### Artifact AT_EF/ARN
+
+* Name: Aggregated Messenger RNA Normalized Reads
+* Example File: [aggregated-rna-normalized-reads.csv](interim/tcga-brca/basal-like-files/aggregated-rna-normalized-reads.csv)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| gene_id | Ensembl gene identifier with version | trp:EFARN01 | trp:EFRPF01 | string | edam:Identifier | http://edamontology.org/data_0842 |
+| gene_name | Human-readable symbol for the gene | trp:EFARN02 | trp:EFRPF02 | string | so:Gene | http://purl.obolibrary.org/obo/SO_0000704 |
+| \<UUID\> | Aggregated normalized read count from the file identified by this UUID | trp:EFARN03+ | trp:EFRPF07 | real | obi:NormalizedDataSet | http://purl.obolibrary.org/obo/OBI_0000451 |
 
 
 ## Family of Artifacts AT_MF
@@ -269,6 +322,7 @@ exemplos em notebooks/01_tcga-brca/04_brca-file-processing.ipynb)
 ### Artifact AT_MF/ER
 
 * Name: edgeR's filterByExpr Expressed Messenger RNAs (data/processed/tcga-brca/expressed-rnas.csv)
+* File: [.csv]()
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -276,34 +330,39 @@ exemplos em notebooks/01_tcga-brca/04_brca-file-processing.ipynb)
 ### Artifact AT_MF/EM
 
 * Name: edgeR's filterByExpr Expressed MicroRNAs (data/processed/tcga-brca/expressed-mirs.csv)
+* File: [.csv]()
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
 
 ### Artifact AT_MF/AMN
 
-* Name: TCGA Aggregated MicroRNA Normalized Reads (data/processed/tcga-brca/.../aggregated-mir-normalized-reads.csv)
+* Name: Aggregated MicroRNA Normalized Reads (data/processed/tcga-brca/.../aggregated-mir-normalized-reads.csv)
+* Example file: [.csv]()
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
 
 ### Artifact AT_MF/AMR
 
-* Name: TCGA Aggregated MicroRNA Raw Reads (data/processed/tcga-brca/.../aggregated-mir-raw-reads.csv)
+* Name: Aggregated MicroRNA Raw Reads (data/processed/tcga-brca/.../aggregated-mir-raw-reads.csv)
+* Example file: [.csv]()
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
 
 ### Artifact AT_MF/ARN
 
-* Name: TCGA Aggregated Messenger RNA Normalized Reads (data/processed/tcga-brca/.../aggregated-rna-normalized-reads.csv)
+* Name: Aggregated Messenger RNA Normalized Reads (data/processed/tcga-brca/.../aggregated-rna-normalized-reads.csv)
+* Example file: [.csv]()
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
 
 ### Artifact AT_MF/ARR
 
-* Name: TCGA Aggregated Messenger RNA Raw Reads (data/processed/tcga-brca/.../aggregated-rna-raw-reads.csv)
+* Name: Aggregated Messenger RNA Raw Reads (data/processed/tcga-brca/.../aggregated-rna-raw-reads.csv)
+* Example file: [.csv]()
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -317,6 +376,7 @@ exemplos em notebooks/01_tcga-brca/04_brca-file-processing.ipynb)
 
 * Name: miRWalk Origin Target File 
 (arquivos estão sendo salvos em data/external/mirwalk)
+* Example file: [.csv]()
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -326,6 +386,7 @@ exemplos em notebooks/01_tcga-brca/04_brca-file-processing.ipynb)
 * Name: miRWalk Processed Origin Target File 
 (arquivo original + coluna "is_interaction_of_interest";
 arquivos estão sendo salvos em data/processed/mirwalk)
+* Example file: [.csv]()
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -333,6 +394,7 @@ arquivos estão sendo salvos em data/processed/mirwalk)
 ### Artifact AT_II/MNP
 
 * Name: miRWalk MIMAT ID to Name Mapping (data/processed/mirwalk/mapping-mir-accession-id-to-name.csv)
+* Example file: [.csv]()
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -340,6 +402,7 @@ arquivos estão sendo salvos em data/processed/mirwalk)
 ### Artifact AT_II/IS
 
 * Name: TCGA Inferred Interactions Set (data/interim/tcga-brca/.../inferred-interactions.csv)
+* Example file: [.csv]()
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -348,6 +411,7 @@ arquivos estão sendo salvos em data/processed/mirwalk)
 ## Family of Artifacts AT_MN
 
 * Family Name: TCGA MicroRNA Network Artifacts
+* Example file: [.csv]()
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -355,6 +419,7 @@ arquivos estão sendo salvos em data/processed/mirwalk)
 ### Artifact AT_MN/FI
 
 * Name: TCGA Filtered Inferred Interactions Set (data/processed/tcga-brca/.../inferred-interactions.csv)
+* Example file: [.csv]()
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -362,6 +427,7 @@ arquivos estão sendo salvos em data/processed/mirwalk)
 ### Artifact AT_MN/INN
 
 * Name: TCGA MicroRNA Interaction Network Nodes (data/processed/cytoscape/.../interaction-network-nodes.csv)
+* Example file: [.csv]()
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -369,8 +435,9 @@ arquivos estão sendo salvos em data/processed/mirwalk)
 ### Artifact AT_MN/INE
 
 * Name: TCGA MicroRNA Interaction Network Edges (data/processed/cytoscape/.../interaction-network-edges.csv)
+* Example file: [.csv]()
 
-| field name   | unique id  | descendant_of | data type | role                | URI |
+| field name   | unique id  | descendant_of | data type | role   | URI |
 | ------------ | ---------- | --------------| --------- | ------------------- | --- |
 | is_expressed | trp:AGMR02 |               | boolean   | edam:data_filtering | http://edamontology.org/operation_3695 |
 | qvalue       | trp:INE05  |               | real      | stato:q-value         | http://purl.obolibrary.org/obo/OBI_0001442    |
@@ -378,6 +445,7 @@ arquivos estão sendo salvos em data/processed/mirwalk)
 ### Artifact AT_MN/ANN
 
 * Name: TCGA MicroRNA Association Network Nodes (data/processed/cytoscape/.../association-network-nodes.csv)
+* Example file: [.csv]()
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -385,6 +453,7 @@ arquivos estão sendo salvos em data/processed/mirwalk)
 ### Artifact AT_MN/ANE
 
 * Name: TCGA MicroRNA Association Network Edges (data/processed/cytoscape/.../association-network-edges.csv)
+* Example file: [.csv]()
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
