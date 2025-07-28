@@ -208,12 +208,12 @@
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-| miRNA_ID | Identifier of the microRNA (miRNA) as annotated in miRBase | trp:EFMOF01 | - | string | so:MiRNA | http://purl.obolibrary.org/obo/SO_0000276 |
+| miRNA_ID | Identifier of the microRNA (miRNA) as annotated in miRBase | trp:EFMOF01 | - | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
 | isoform_coords | Genomic coordinates and strand of the miRNA isoform based on the hg38 assembly | trp:EFMOF02 | - | string | so:SequenceFeature | http://purl.obolibrary.org/obo/SO_0000110 |
 | read_count | Number of reads mapped to the isoform | trp:EFMOF03 | - | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
 | reads_per_million_miRNA_mapped | Normalized abundance of the isoform (reads per million mapped miRNA reads) | trp:EFMOF04 | - | real | obi:NormalizedDataSet | http://purl.obolibrary.org/obo/OBI_0000451 |
 | cross-mapped | Indicates whether the reads are cross-mapped to other loci (Y/N) | trp:EFMOF05 | - | string | edam:DataFiltering | http://edamontology.org/operation_3695 |
-| miRNA_region | Region classification of the isoform (e.g., mature, precursor) with optional miRBase accession | trp:EFMOF06 | - | string | so:MiRNARegion | http://purl.obolibrary.org/obo/SO_0000836 |
+| miRNA_region | Region classification of the isoform (e.g., mature, precursor) with optional miRBase accession | trp:EFMOF06 | - | string | so:MicroRNARegion | http://purl.obolibrary.org/obo/SO_0000836 |
 
 
 ### Artifact AT_EF/MPF
@@ -224,13 +224,13 @@
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-| mirna_id | Identifier of the microRNA (miRNA) as annotated in miRBase | trp:EFMPF01 | trp:EFMOF01 | string | so:MiRNA | http://purl.obolibrary.org/obo/SO_0000276 |
+| mirna_id | Identifier of the microRNA (miRNA) as annotated in miRBase | trp:EFMPF01 | trp:EFMOF01 | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
 | genome_assembly | Reference genome assembly version | trp:EFMPF02 | trp:EFMOF02 | string | edam:SequenceAssembly | http://edamontology.org/data_0925 |
 | chromosome | Chromosome on which the miRNA isoform is located | trp:EFMPF03 | trp:EFMOF02 | string | so:Chromosome | http://purl.obolibrary.org/obo/SO_0000340 |
 | position_range | Genomic coordinate range of the isoform, start-end | trp:EFMPF04 | trp:EFMOF02 | string | so:SequenceLocation | http://purl.obolibrary.org/obo/SO_0000735 |
 | strand | DNA strand of the isoform, '+' for forward or '-' for reverse | trp:EFMPF05 | trp:EFMOF02 | string | so:StrandAttribute | http://purl.obolibrary.org/obo/SO_0000983 |
 | cross_mapped | Indicates whether the reads are cross-mapped to other loci (Y/N) | trp:EFMPF06 | trp:EFMOF05 | string | edam:DataFiltering | http://edamontology.org/operation_3695 |
-| region_type | Classification of the miRNA region (e.g., mature, precursor) | trp:EFMPF07 | trp:EFMOF06 | string | so:MiRNARegion | http://purl.obolibrary.org/obo/SO_0000836 |
+| region_type | Classification of the miRNA region (e.g., mature, precursor) | trp:EFMPF07 | trp:EFMOF06 | string | so:MicroRNARegion | http://purl.obolibrary.org/obo/SO_0000836 |
 | accession_id | miRBase accession identifier corresponding to the miRNA isoform | trp:EFMPF08 | trp:EFMOF06 | string | edam:Identifier | http://edamontology.org/data_0842 |
 | read_count | Number of reads mapped to the isoform | trp:EFMPF09 | trp:EFMOF03 | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
 | reads_per_million | Normalized abundance of the isoform (reads per million mapped miRNA reads) | trp:EFMPF10 | trp:EFMOF04 | real | obi:NormalizedDataSet | http://purl.obolibrary.org/obo/OBI_0000451 |
@@ -390,42 +390,93 @@
 
 ## Family of Artifacts AT_II
 
-* Family Name: TCGA Interaction Inference Artifacts
+* Family Name: MicroRNA-Messenger RNA Interaction Inference Artifacts
 
 ### Artifact AT_II/MO
 
-* Name: miRWalk Origin Target File 
-(arquivos estão sendo salvos em data/external/mirwalk)
-* Example file: [.csv]()
+* Name: miRWalk Origin Targets File 
+* Example file: [mirwalk-origin-file.csv](examples/mirwalk-origin-file.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| mirnaid | miRNA identifier indicating the microRNA | trp:IIMO01 | - | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
+| refseqid | RefSeq accession number for the target transcript | trp:IIMO02 | - | string | so:MessengerRNA | http://purl.obolibrary.org/obo/SO_0000234 |
+| genesymbol | Human-readable gene symbol of the target gene | trp:IIMO03 | - | string | so:Gene | http://purl.obolibrary.org/obo/SO_0000704 |
+| duplex | RNA duplex structure between miRNA and target mRNA | trp:IIMO04 | - | string | edam:SecondaryStructureData | http://edamontology.org/data_2973 |
+| start | Start position of the binding site on the transcript | trp:IIMO05 | - | integer | so:Region | http://purl.obolibrary.org/obo/SO_0000001 |
+| end | End position of the binding site on the transcript | trp:IIMO06 | - | integer | so:Region | http://purl.obolibrary.org/obo/SO_0000001 |
+| bindingp | Probability of miRNA binding at the site | trp:IIMO07 | - | real | stato:Statistic | http://purl.obolibrary.org/obo/STATO_0000039 |
+| energy | Minimum free energy of miRNA-mRNA duplex | trp:IIMO08 | - | real | sbo:ThermodynamicParameter | http://biomodels.net/SBO/SBO_0000571 |
+| seed | Indicates if the seed region of the miRNA is matched (1: yes, 0: no) | trp:IIMO09 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
+| accessibility | Accessibility score of the target region | trp:IIMO10 | - | real | stato:Score | http://purl.obolibrary.org/obo/STATO_0000569 |
+| au | AU content in the binding region | trp:IIMO11 | - | real | so:SequenceAttribute | http://purl.obolibrary.org/obo/SO_0000400 |
+| phylopstem | PhyloP conservation score of the binding stem region | trp:IIMO12 | - | real | stato:Score | http://purl.obolibrary.org/obo/STATO_0000569 |
+| phylopflank | PhyloP conservation score of the binding flanking region | trp:IIMO13 | - | real | stato:Score | http://purl.obolibrary.org/obo/STATO_0000569 |
+| me | Log-odds score (mirSVR or similar) for interaction effectiveness | trp:IIMO14 | - | real | stato:Score | http://purl.obolibrary.org/obo/STATO_0000569 |
+| number_of_pairings | Total number of paired bases in the duplex | trp:IIMO15 | - | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
+| binding_region_length | Length of the binding region in nucleotides | trp:IIMO16 | - | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
+| longest_consecutive_pairings | Maximum number of consecutive base pairings in the duplex | trp:IIMO17 | - | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
+| position | Region of the transcript where the binding occurs (e.g., 3UTR, CDS, 5UTR) | trp:IIMO18 | - | string | so:TranscriptRegion | http://purl.obolibrary.org/obo/SO_0000833 |
+| validated | Indicates if miRTarBase validated the interaction | trp:IIMO19 | - | string | edam:Identifier | http://edamontology.org/data_0842 |
+| TargetScan | Indicates if TargetScan predicts the interaction (1: yes, 0: no) | trp:IIMO20 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
+| miRDB | Indicates if miRDB predicts the interaction (1: yes, 0: no) | trp:IIMO21 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
 
 ### Artifact AT_II/MP
 
-* Name: miRWalk Processed Origin Target File 
-(arquivo original + coluna "is_interaction_of_interest";
-arquivos estão sendo salvos em data/processed/mirwalk)
-* Example file: [.csv]()
+* Name: miRWalk Origin Processed Targets File 
+* Example file: [mirwalk-processed-file.csv](examples/mirwalk-processed-file.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| mirna_name | miRNA identifier indicating the microRNA | trp:IIMP01 | trp:IIMO01 | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
+| refseq_id | RefSeq accession number for the target transcript | trp:IIMP02 | trp:IIMO02 | string | so:MessengerRNA | http://purl.obolibrary.org/obo/SO_0000234 |
+| gene_name | Human-readable gene symbol of the target gene | trp:IIMP03 | trp:IIMO03 | string | so:Gene | http://purl.obolibrary.org/obo/SO_0000704 |
+| duplex | RNA duplex structure between miRNA and target mRNA | trp:IIMP04 | trp:IIMO04 | string | edam:SecondaryStructureData | http://edamontology.org/data_2973 |
+| start | Start position of the binding site on the transcript | trp:IIMP05 | trp:IIMO05 | integer | so:Region | http://purl.obolibrary.org/obo/SO_0000001 |
+| end | End position of the binding site on the transcript | trp:IIMP06 | trp:IIMO06 | integer | so:Region | http://purl.obolibrary.org/obo/SO_0000001 |
+| binding_probability | Probability of miRNA binding at the site | trp:IIMP07 | trp:IIMO07 | real | stato:Statistic | http://purl.obolibrary.org/obo/STATO_0000039 |
+| energy | Minimum free energy of miRNA-mRNA duplex | trp:IIMP08 | trp:IIMO08 | real | sbo:ThermodynamicParameter | http://biomodels.net/SBO/SBO_0000571 |
+| seed | Indicates if the seed region of the miRNA is matched (1: yes, 0: no) | trp:IIMP09 | trp:IIMO09 | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
+| accessibility | Accessibility score of the target region | trp:IIMP10 | trp:IIMO10 | real | stato:Score | http://purl.obolibrary.org/obo/STATO_0000569 |
+| au | AU content proportion in the binding region | trp:IIMP11 | trp:IIMO11 | real | so:SequenceAttribute | http://purl.obolibrary.org/obo/SO_0000400 |
+| phylopstem | PhyloP conservation score of the binding stem region | trp:IIMP12 | trp:IIMO12 | real | stato:Score | http://purl.obolibrary.org/obo/STATO_0000569 |
+| phylopflank | PhyloP conservation score of the binding flanking region | trp:IIMP13 | trp:IIMO13 | real | stato:Score | http://purl.obolibrary.org/obo/STATO_0000569 |
+| me | Log-odds score (mirSVR or similar) for interaction effectiveness | trp:IIMP14 | trp:IIMO14 | real | stato:Score | http://purl.obolibrary.org/obo/STATO_0000569 |
+| number_of_pairings | Total number of paired bases in the duplex | trp:IIMP15 | trp:IIMO15 | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
+| binding_region_length | Length of the binding region in nucleotides | trp:IIMP16 | trp:IIMO16 | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
+| longest_consecutive_pairings | Maximum number of consecutive base pairings in the duplex | trp:IIMP17 | trp:IIMO17 | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
+| binding_position | Region of the transcript where the binding occurs (e.g., 3UTR, CDS, 5UTR) | trp:IIMP18 | trp:IIMO18 | string | so:TranscriptRegion | http://purl.obolibrary.org/obo/SO_0000833 |
+| mirtarbase | Indicates if miRTarBase validated the interaction | trp:IIMP19 | trp:IIMO19 | string | edam:Identifier | http://edamontology.org/data_0842 |
+| targetscan | Indicates if TargetScan predicts the interaction (1: yes, 0: no) | trp:IIMP20 | trp:IIMO20 | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
+| mirdb | Indicates if miRDB predicts the interaction (1: yes, 0: no) | trp:IIMP21 | trp:IIMO21 | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
+| is_interaction_of_interest | Indicates if the interaction meets criteria for inclusion in the study (1: yes, 0: no) | trp:IIMP22 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
+
 
 ### Artifact AT_II/MNP
 
-* Name: miRWalk MIMAT ID to Name Mapping (data/processed/mirwalk/mapping-mir-accession-id-to-name.csv)
-* Example file: [.csv]()
+* Name: MIMAT ID to MicroRNA Name Mapping
+* File: [mapping-mir-accession-id-to-name.csv](processed/mirwalk/mapping-mir-accession-id-to-name.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| accession_id | Accession identifier for mature miRNAs from miRBase | trp:IIMNP01 | trp:MFEM01 | string | edam:Identifier | http://edamontology.org/data_0842 |
+| mirna_name | Human-readable name for the mature miRNA | trp:IIMNP02 | trp:IIMP01 | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
+
 
 ### Artifact AT_II/IS
 
-* Name: TCGA Inferred Interactions Set (data/interim/tcga-brca/.../inferred-interactions.csv)
-* Example file: [.csv]()
+* Name: MicroRNA-Messenger Inferred Interactions Set
+* Example file: [inferred-interactions.csv](interim/tcga-brca/basal-like-files/inferred-interactions.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| accession_id | Accession identifier for mature miRNAs from miRBase | trp:IIIS01 | trp:MFAMN01 | string | edam:Identifier | http://edamontology.org/data_0842 |
+| mirna_name | Name of the microRNA according to miRBase nomenclature | trp:IIIS02 | trp:IIMNP02 | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
+| gene_name | Name of the target gene tested for correlation with the microRNA | trp:IIIS03 | trp:MFARN02 | string | gro:Gene | http://purl.obolibrary.org/obo/SO_0000704 |
+| mirtarbase | Indicates if the interaction is supported by experimental evidence in miRTarBase | trp:IIIS04 | trp:IIMP19 | boolean | edam:Identifier | http://edamontology.org/data_0842 |
+| correlation  | Correlation coefficient between microRNA and gene expression | trp:IIIS05 | - | real | stato:CorrelationCoefficient | http://purl.obolibrary.org/obo/STATO_0000142 |
+| pvalue | Nominal p-value for the correlation significance test | trp:IIIS06 | - | real | stato:PValue | http://purl.obolibrary.org/obo/STATO_0000700 |
+| qvalue | Adjusted p-value for multiple hypothesis testing | trp:IIIS07 | - | real | obi:QValue | http://purl.obolibrary.org/obo/OBI_0001442 |
 
 
 ## Family of Artifacts AT_MN

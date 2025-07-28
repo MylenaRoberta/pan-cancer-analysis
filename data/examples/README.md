@@ -5,9 +5,11 @@ This folder contains small sample files that illustrate the types of data artifa
 ## Included Files
 
 - `mirna-seq-origin-file.txt`: An example of TCGA origin miRNA-Seq expression data file.
-- `mirna-seq-processed-file.txt`: An example of TCGA processed miRNA-Seq expression data file.
+- `mirna-seq-processed-file.txt`: An example of TCGA origin miRNA-Seq processed expression data file.
+- `mirwalk-origin-file.csv`: An example of miRWalk origin targets file.
+- `mirwalk-processed-file.csv`: An example of miRWalk origin processed targets file.
 - `rna-seq-origin-file.txt`: An example of TCGA origin RNA-Seq expression data file.
-- `rna-seq-processed-file.txt`: An example of TCGA processed RNA-Seq expression data file.
+- `rna-seq-processed-file.txt`: An example of TCGA origin RNA-Seq processed expression data file.
 
 ## Purpose
 
