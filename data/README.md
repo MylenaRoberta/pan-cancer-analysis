@@ -159,7 +159,7 @@
 | integrated_clusters_(with_pam50) | Final integrated cluster including PAM50 subtype | trp:FORFPC28 | trp:FORPC28 | integer | edam:Clustering | http://edamontology.org/operation_3432 |
 | integrated_clusters_(no_exp) | Integrated cluster excluding expression-based features | trp:FORFPC29 | trp:FORPC29 | integer | edam:Clustering | http://edamontology.org/operation_3432 |
 | integrated_clusters_(unsup_exp) | Integrated cluster using unsupervised expression-based features only | trp:FORFPC30 | trp:FORPC30 | integer | edam:Clustering | http://edamontology.org/operation_3432 |
-| is_case_of_interest | Indicates if the case meets criteria for inclusion in the study | trp:FORFPC31 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
+| is_case_of_interest | Indicates if the case meets criteria for inclusion in the study (1: yes, 0: no) | trp:FORFPC31 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
 
 
 ### Artifact AT_FOR/CM
@@ -173,9 +173,9 @@
 | submitter_id | Identifier assigned to the case by the submitting institution | trp:FORCM02 | trp:ORCM02 | string | edam:Identifier | http://edamontology.org/data_0842 |
 | disease_type | Histological classification of the cancer for the given case | trp:FORCM03 | trp:ORCM03 | string | gro:Disease | http://www.bootstrep.eu/ontology/GRO#Disease |
 | pam50_mrna | PAM50 molecular subtype classification based on mRNA expression | trp:FORCM04 | trp:FORFPC21 | string | edam:Classification | http://edamontology.org/operation_2990 |
-| has_tumor_files_of_interest | Indicates if the case has tumor files relevant to the analysis | trp:FORCM05 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
-| has_normal_files_of_interest | Indicates if the case has normal tissue files relevant to the analysis | trp:FORCM06 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
-| is_case_of_interest | Indicates if the case meets criteria for inclusion in the study | trp:FORCM07 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
+| has_tumor_files_of_interest | Indicates if the case has tumor files relevant to the analysis (1: yes, 0: no) | trp:FORCM05 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
+| has_normal_files_of_interest | Indicates if the case has normal tissue files relevant to the analysis (1: yes, 0: no) | trp:FORCM06 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
+| is_case_of_interest | Indicates if the case meets criteria for inclusion in the study (1: yes, 0: no) | trp:FORCM07 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
 
 ### Artifact AT_FOR/FM
 
@@ -192,9 +192,9 @@
 | data_type | Type of data represented in the file (e.g., Gene Expression Quantification, Annotated Somatic Mutation) | trp:FORFM06 | trp:ORFM06 | string | edam:Classification | http://edamontology.org/operation_2990 |
 | data_format | Format of the file content (e.g., TXT, TSV, BEDPE) | trp:FORFM07 | trp:ORFM07 | string | edam:Format | http://edamontology.org/format_1915 |
 | samples | JSON array containing sample metadata, including sample type and tissue type | trp:FORFM08 | trp:ORFM08 | string | obi:Specimen | http://purl.obolibrary.org/obo/OBI_0100051 |
-| is_tumor_file_of_interest | Indicates if the file corresponds to a tumor sample relevant to the analysis | trp:FORFM09 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
-| is_normal_file_of_interest | Indicates if the file corresponds to a normal sample relevant to the analysis | trp:FORFM11 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
-| is_file_of_interest | Indicates if the file meets criteria for inclusion in the study | trp:FORFM11 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
+| is_tumor_file_of_interest | Indicates if the file corresponds to a tumor sample relevant to the analysis (1: yes, 0: no) | trp:FORFM09 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
+| is_normal_file_of_interest | Indicates if the file corresponds to a normal sample relevant to the analysis (1: yes, 0: no) | trp:FORFM11 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
+| is_file_of_interest | Indicates if the file meets criteria for inclusion in the study (1: yes, 0: no) | trp:FORFM11 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
 
 
 ## Family of Artifacts AT_EF
@@ -234,7 +234,7 @@
 | accession_id | miRBase accession identifier corresponding to the miRNA isoform | trp:EFMPF08 | trp:EFMOF06 | string | edam:Identifier | http://edamontology.org/data_0842 |
 | read_count | Number of reads mapped to the isoform | trp:EFMPF09 | trp:EFMOF03 | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
 | reads_per_million | Normalized abundance of the isoform (reads per million mapped miRNA reads) | trp:EFMPF10 | trp:EFMOF04 | real | obi:NormalizedDataSet | http://purl.obolibrary.org/obo/OBI_0000451 |
-| is_mirna_of_interest | Indicates if the isoform meets criteria for inclusion in the study | trp:EFMPF11 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
+| is_mirna_of_interest | Indicates if the isoform meets criteria for inclusion in the study (1: yes, 0: no) | trp:EFMPF11 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
 
 ### Artifact AT_EF/AMR
 
@@ -290,7 +290,7 @@
 | tpm_unstranded | Normalized expression in TPM (Transcripts Per Million), unstranded protocol | trp:EFRPF07 | trp:EFROF07 | real | obi:NormalizedDataSet | http://purl.obolibrary.org/obo/OBI_0000451 |
 | fpkm_unstranded | Normalized expression in FPKM (Fragments Per Kilobase Million), unstranded | trp:EFRPF08 | trp:EFROF08 | real | obi:NormalizedDataSet | http://purl.obolibrary.org/obo/OBI_0000451 |
 | fpkm_uq_unstranded | Upper quartile normalized FPKM expression, unstranded | trp:EFRPF09 | trp:EFROF09 | real | obi:NormalizedDataSet | http://purl.obolibrary.org/obo/OBI_0000451 |
-| is_mrna_of_interest | Indicates if the gene meets criteria for inclusion in the study | trp:EFRPF10 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
+| is_mrna_of_interest | Indicates if the gene meets criteria for inclusion in the study (1: yes, 0: no) | trp:EFRPF10 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
 
 ### Artifact AT_EF/ARR
 
@@ -319,53 +319,73 @@
 
 * Family Name: TCGA Molecule Filtering Artifacts
 
-### Artifact AT_MF/ER
-
-* Name: edgeR's filterByExpr Expressed Messenger RNAs (data/processed/tcga-brca/expressed-rnas.csv)
-* File: [.csv]()
-
-| field name | description | unique id | descendant of | data type | role | URI |
-| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-
 ### Artifact AT_MF/EM
 
-* Name: edgeR's filterByExpr Expressed MicroRNAs (data/processed/tcga-brca/expressed-mirs.csv)
-* File: [.csv]()
+* Name: edgeR's filterByExpr Expressed MicroRNAs
+* File: [expressed-mirs.csv](processed/tcga-brca/expressed-mirs.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| accession_id | Accession identifier for mature miRNAs from miRBase | trp:MFEM01 | trp:EFAMR01 | string | edam:Identifier | http://edamontology.org/data_0842 |
+| is_expressed | Indicates if the miRNA is expressed according to edgeR's filterByExpr function (1: yes, 0: no) | trp:MFEM02 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
 
-### Artifact AT_MF/AMN
-
-* Name: Aggregated MicroRNA Normalized Reads (data/processed/tcga-brca/.../aggregated-mir-normalized-reads.csv)
-* Example file: [.csv]()
-
-| field name | description | unique id | descendant of | data type | role | URI |
-| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
 
 ### Artifact AT_MF/AMR
 
-* Name: Aggregated MicroRNA Raw Reads (data/processed/tcga-brca/.../aggregated-mir-raw-reads.csv)
-* Example file: [.csv]()
+* Name: Aggregated MicroRNA Raw Reads
+* Example file: [aggregated-mir-raw-reads.csv](processed/tcga-brca/basal-like-files/aggregated-mir-raw-reads.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| accession_id | Accession identifier for mature miRNA from miRBase | trp:MFAMR01 | trp:EFAMR01 | string | edam:Identifier | http://edamontology.org/data_0842 |
+| is_expressed | Indicates if the miRNA is expressed according to edgeR's filterByExpr function (1: yes, 0: no) | trp:MFAMR02 | trp:MFEM02 | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
+| \<UUID\> | Aggregated raw read count from the file identified by this UUID | trp:MFAMR03+ | trp:EFAMR02+ | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
 
-### Artifact AT_MF/ARN
+### Artifact AT_MF/AMN
 
-* Name: Aggregated Messenger RNA Normalized Reads (data/processed/tcga-brca/.../aggregated-rna-normalized-reads.csv)
-* Example file: [.csv]()
+* Name: Aggregated MicroRNA Normalized Reads
+* Example file: [aggregated-mir-normalized-reads.csv](processed/tcga-brca/basal-like-files/aggregated-mir-normalized-reads.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| accession_id | Accession identifier for mature miRNA from miRBase | trp:MFAMN01 | trp:EFAMN01 | string | edam:Identifier | http://edamontology.org/data_0842 |
+| is_expressed | Indicates if the miRNA is expressed according to edgeR's filterByExpr function (1: yes, 0: no) | trp:MFAMN02 | trp:MFEM02 | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
+| \<UUID\> | Aggregated normalized read count from the file identified by this UUID | trp:MFAMN03+ | trp:EFAMN02+ | real | obi:NormalizedDataSet | http://purl.obolibrary.org/obo/OBI_0000451 |
+
+### Artifact AT_MF/ER
+
+* Name: edgeR's filterByExpr Expressed Messenger RNAs
+* File: [expressed-rnas.csv](processed/tcga-brca/expressed-rnas.csv)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| gene_id | Ensembl gene identifier with version | trp:MFER01 | trp:EFARR01 | string | edam:Identifier | http://edamontology.org/data_0842 |
+| gene_name | Human-readable symbol for the gene | trp:MFER02 | trp:EFARR02 | string | so:Gene | http://purl.obolibrary.org/obo/SO_0000704 |
+| is_expressed | Indicates if the mRNA is expressed according to edgeR's filterByExpr function (1: yes, 0: no) | trp:MFER03 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
 
 ### Artifact AT_MF/ARR
 
-* Name: Aggregated Messenger RNA Raw Reads (data/processed/tcga-brca/.../aggregated-rna-raw-reads.csv)
-* Example file: [.csv]()
+* Name: Aggregated Messenger RNA Raw Reads
+* Example file: [aggregated-rna-raw-reads.csv](processed/tcga-brca/basal-like-files/aggregated-rna-raw-reads.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| gene_id | Ensembl gene identifier with version | trp:MFARR01 | trp:EFARR01 | string | edam:Identifier | http://edamontology.org/data_0842 |
+| gene_name | Human-readable symbol for the gene | trp:MFARR02 | trp:EFARR02 | string | so:Gene | http://purl.obolibrary.org/obo/SO_0000704 |
+| is_expressed | Indicates if the mRNA is expressed according to edgeR's filterByExpr function (1: yes, 0: no) | trp:MFARR03 | trp:MFER03 | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
+| \<UUID\> | Aggregated raw read count from the file identified by this UUID | trp:MFARR04+ | trp:EFARR03+ | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
+
+### Artifact AT_MF/ARN
+
+* Name: Aggregated Messenger RNA Normalized Reads
+* Example file: [aggregated-rna-normalized-reads.csv](processed/tcga-brca/basal-like-files/aggregated-rna-normalized-reads.csv)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| gene_id | Ensembl gene identifier with version | trp:MFARN01 | trp:EFARN01 | string | edam:Identifier | http://edamontology.org/data_0842 |
+| gene_name | Human-readable symbol for the gene | trp:MFARN02 | trp:EFARN02 | string | so:Gene | http://purl.obolibrary.org/obo/SO_0000704 |
+| is_expressed | Indicates if the mRNA is expressed according to edgeR's filterByExpr function (1: yes, 0: no) | trp:MFARN03 | trp:MFER03 | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
+| \<UUID\> | Aggregated normalized read count from the file identified by this UUID | trp:MFARN04+ | trp:EFARN03+ | real | obi:NormalizedDataSet | http://purl.obolibrary.org/obo/OBI_0000451 |
 
 
 ## Family of Artifacts AT_II
