@@ -465,7 +465,7 @@
 
 ### Artifact AT_II/IS
 
-* Name: MicroRNA-Messenger Inferred Interactions Set
+* Name: MicroRNA-Messenger RNA Inferred Interactions Set
 * Example file: [inferred-interactions.csv](interim/tcga-brca/basal-like-files/inferred-interactions.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
@@ -481,50 +481,66 @@
 
 ## Family of Artifacts AT_MN
 
-* Family Name: TCGA MicroRNA Network Artifacts
-* Example file: [.csv]()
-
-| field name | description | unique id | descendant of | data type | role | URI |
-| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+* Family Name: MicroRNA Networks Artifacts
 
 ### Artifact AT_MN/FI
 
-* Name: TCGA Filtered Inferred Interactions Set (data/processed/tcga-brca/.../inferred-interactions.csv)
-* Example file: [.csv]()
+* Name: MicroRNA-Messenger RNA Filtered Inferred Interactions Set
+* Example file: [inferred-interactions.csv](processed/tcga-brca/basal-like-files/inferred-interactions.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-
-### Artifact AT_MN/INN
-
-* Name: TCGA MicroRNA Interaction Network Nodes (data/processed/cytoscape/.../interaction-network-nodes.csv)
-* Example file: [.csv]()
-
-| field name | description | unique id | descendant of | data type | role | URI |
-| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| accession_id | Accession identifier for mature miRNAs from miRBase | trp:MNFI01 | trp:IIIS01 | string | edam:Identifier | http://edamontology.org/data_0842 |
+| mirna_name | Name of the microRNA according to miRBase nomenclature | trp:MNFI02 | trp:IIIS02 | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
+| gene_name | Name of the target gene tested for correlation with the microRNA | trp:MNFI03 | trp:IIIS03 | string | gro:Gene | http://purl.obolibrary.org/obo/SO_0000704 |
+| mirtarbase | Indicates if the interaction is supported by experimental evidence in miRTarBase | trp:MNFI04 | trp:IIIS04 | boolean | edam:Identifier | http://edamontology.org/data_0842 |
+| correlation  | Correlation coefficient between microRNA and gene expression | trp:MNFI05 | trp:IIIS05 | real | stato:CorrelationCoefficient | http://purl.obolibrary.org/obo/STATO_0000142 |
+| pvalue | Nominal p-value for the correlation significance test | trp:MNFI06 | trp:IIIS06 | real | stato:PValue | http://purl.obolibrary.org/obo/STATO_0000700 |
+| qvalue | Adjusted p-value for multiple hypothesis testing | trp:MNFI07 | trp:IIIS07 | real | obi:QValue | http://purl.obolibrary.org/obo/OBI_0001442 |
+| is_interaction_of_interest | Indicates if the interaction meets criteria for inclusion in the study (1: yes, 0: no) | trp:MNFI08 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
 
 ### Artifact AT_MN/INE
 
-* Name: TCGA MicroRNA Interaction Network Edges (data/processed/cytoscape/.../interaction-network-edges.csv)
-* Example file: [.csv]()
+* Name: MicroRNA-Messenger RNA Interaction Network Edges
+* Example file: [interaction-network-edges.csv](processed/cytoscape/basal-like-files/interaction-network-edges.csv)
 
 | field name   | unique id  | descendant_of | data type | role   | URI |
 | ------------ | ---------- | --------------| --------- | ------------------- | --- |
-| is_expressed | trp:AGMR02 |               | boolean   | edam:data_filtering | http://edamontology.org/operation_3695 |
-| qvalue       | trp:INE05  |               | real      | stato:q-value         | http://purl.obolibrary.org/obo/OBI_0001442    |
+| source | Name of the microRNA according to miRBase nomenclature | trp:MNINE01 | trp:MNFI02 | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
+| target | Name of the target gene tested for correlation with the microRNA | trp:MNINE02 | trp:MNFI03 | string | gro:Gene | http://purl.obolibrary.org/obo/SO_0000704 |
+| mirtarbase | Indicates if the interaction is supported by experimental evidence in miRTarBase | trp:MNINE03 | trp:MNFI04 | boolean | edam:Identifier | http://edamontology.org/data_0842 |
+| correlation  | Correlation coefficient between microRNA and gene expression | trp:MNINE04 | trp:MNFI05 | real | stato:CorrelationCoefficient | http://purl.obolibrary.org/obo/STATO_0000142 |
+| qvalue | Adjusted p-value for multiple hypothesis testing | trp:MNINE05 | trp:MNFI07 | real | obi:QValue | http://purl.obolibrary.org/obo/OBI_0001442 |
 
-### Artifact AT_MN/ANN
+### Artifact AT_MN/INN
 
-* Name: TCGA MicroRNA Association Network Nodes (data/processed/cytoscape/.../association-network-nodes.csv)
-* Example file: [.csv]()
+* Name: MicroRNA-Messenger RNA Interaction Network Nodes
+* Example file: [interaction-network-nodes.csv](processed/cytoscape/basal-like-files/interaction-network-nodes.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| id | Unique identifier for the node, using standardized gene or miRNA symbols | trp:MNINN01 | trp:MNINE01 & trp:MNINE02 | string | edam:Identifier | http://edamontology.org/data_0842 |
+| label | Display label for the node, typically matching the identifier | trp:MNINN02 | trp:MNINE01 & trp:MNINE02 | string | edam:DataDisplay | http://edamontology.org/data_2603 |
+| type | Biological entity type: either `microRNA` (SO:0000276) or `messenger RNA` (SO:0000234) | trp:MNINN03 | - | string | gro:EntityType | http://purl.obolibrary.org/obo/SO_0000110 |
 
 ### Artifact AT_MN/ANE
 
-* Name: TCGA MicroRNA Association Network Edges (data/processed/cytoscape/.../association-network-edges.csv)
-* Example file: [.csv]()
+* Name: MicroRNA Association Network Edges
+* Example file: [association-network-edges.csv](processed/cytoscape/basal-like-files/association-network-edges.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| source | Source miRNA in the association pair | trp:MNANE01 | - | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
+| target | Target miRNA in the association pair | trp:MNANE02 | - | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
+| association | Association index between the pair of miRNAs | trp:MNANE03 | - | real | stato:SimilarityMeasure | http://purl.obolibrary.org/obo/STATO_0000259 |
+
+### Artifact AT_MN/ANN
+
+* Name: MicroRNA Association Network Nodes
+* Example file: [association-network-nodes.csv](processed/cytoscape/basal-like-files/association-network-nodes.csv)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| id | Unique identifier for the microRNA node | trp:MNANN01 | trp:MNANE01 & trp:MNANE02 | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
+| label | Display label for the microRNA | trp:MNANN02 | trp:MNANE01 & trp:MNANE02 | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
+| type | Type of biological entity represented by the node | trp:MNANN03 | - | string | gro:EntityType | http://purl.obolibrary.org/obo/SO_0000276 |
