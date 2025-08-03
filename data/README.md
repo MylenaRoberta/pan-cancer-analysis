@@ -501,11 +501,11 @@
 
 ### Artifact AT_MN/INE
 
-* Name: MicroRNA-Messenger RNA Interaction Network Edges
+* Name: MicroRNA-Messenger RNA Interaction Network Edges for Cytoscape
 * Example file: [interaction-network-edges.csv](processed/cytoscape/basal-like-files/interaction-network-edges.csv)
 
-| field name   | unique id  | descendant_of | data type | role   | URI |
-| ------------ | ---------- | --------------| --------- | ------------------- | --- |
+| field name | description | unique id | descendant_of | data type | role | URI |
+| ---------- | ----------- | --------- | --------------| --------- | ---- | --- |
 | source | Name of the microRNA according to miRBase nomenclature | trp:MNINE01 | trp:MNFI02 | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
 | target | Name of the target gene tested for correlation with the microRNA | trp:MNINE02 | trp:MNFI03 | string | gro:Gene | http://purl.obolibrary.org/obo/SO_0000704 |
 | mirtarbase | Indicates if the interaction is supported by experimental evidence in miRTarBase | trp:MNINE03 | trp:MNFI04 | boolean | edam:Identifier | http://edamontology.org/data_0842 |
@@ -514,33 +514,56 @@
 
 ### Artifact AT_MN/INN
 
-* Name: MicroRNA-Messenger RNA Interaction Network Nodes
+* Name: MicroRNA-Messenger RNA Interaction Network Nodes for Cytoscape
 * Example file: [interaction-network-nodes.csv](processed/cytoscape/basal-like-files/interaction-network-nodes.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-| id | Unique identifier for the node, using standardized gene or miRNA symbols | trp:MNINN01 | trp:MNINE01 & trp:MNINE02 | string | edam:Identifier | http://edamontology.org/data_0842 |
-| label | Display label for the node, typically matching the identifier | trp:MNINN02 | trp:MNINE01 & trp:MNINE02 | string | edam:DataDisplay | http://edamontology.org/data_2603 |
-| type | Biological entity type: either `microRNA` (SO:0000276) or `messenger RNA` (SO:0000234) | trp:MNINN03 | - | string | gro:EntityType | http://purl.obolibrary.org/obo/SO_0000110 |
+| id | Unique identifier for the node, using standardized gene or microRNA symbols | trp:MNINN01 | trp:MNINE01 and trp:MNINE02 | string | edam:Identifier | http://edamontology.org/data_0842 |
+| label | Display label for the node, typically matching the identifier | trp:MNINN02 | trp:MNINE01 and trp:MNINE02 | string | edam:Identifier | http://edamontology.org/data_0842 |
+| type | Biological entity type (MicroRNA/Messenger RNA) | trp:MNINN03 | - | string | edam:Classification | http://edamontology.org/operation_2990 |
+
+### Artifact AT_MN/AS
+
+* Name: MicroRNA-MicroRNA Inferred Associations Set
+* Example file: [inferred-associations.csv](interim/tcga-brca/basal-like-files/inferred-associations.csv)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| node_a | First microRNA in the pair being associated | trp:MNAS01 | - | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
+| node_b | Second microRNA in the pair being associated | trp:MNAS02 | - | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
+| association | Strength of the association between the microRNA pair | trp:MNAS03 | - | real | stato:MeasureOfAssociation | http://purl.obolibrary.org/obo/STATO_0000610 |
+
+### Artifact AT_MN/FAS
+
+* Name: MicroRNA-MicroRNA Filtered Inferred Associations Set
+* Example file: [inferred-associations.csv](processed/tcga-brca/basal-like-files/inferred-associations.csv)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| node_a | First microRNA in the pair being associated | trp:MNFAS01 | trp:MNAS01 | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
+| node_b | Second microRNA in the pair being associated | trp:MNFAS02 | trp:MNAS02 | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
+| association | Strength of the association between the microRNA pair | trp:MNFAS03 | trp:MNAS03 | real | stato:MeasureOfAssociation | http://purl.obolibrary.org/obo/STATO_0000610 |
+| is_association_of_interest | Indicates if the association meets criteria for inclusion in the study (1: yes, 0: no) | trp:MNFAS04 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
 
 ### Artifact AT_MN/ANE
 
-* Name: MicroRNA Association Network Edges
+* Name: MicroRNA Association Network Edges for Cytoscape
 * Example file: [association-network-edges.csv](processed/cytoscape/basal-like-files/association-network-edges.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-| source | Source miRNA in the association pair | trp:MNANE01 | - | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
-| target | Target miRNA in the association pair | trp:MNANE02 | - | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
-| association | Association index between the pair of miRNAs | trp:MNANE03 | - | real | stato:SimilarityMeasure | http://purl.obolibrary.org/obo/STATO_0000259 |
+| source | Source miRNA in the association pair | trp:MNANE01 | trp:MNFAS01 | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
+| target | Target miRNA in the association pair | trp:MNANE02 | trp:MNFAS02 | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
+| association | Association index between the pair of miRNAs | trp:MNANE03 | trp:MNFAS03 | real | stato:MeasureOfAssociation | http://purl.obolibrary.org/obo/STATO_0000610 |
 
 ### Artifact AT_MN/ANN
 
-* Name: MicroRNA Association Network Nodes
+* Name: MicroRNA Association Network Nodes for Cytoscape
 * Example file: [association-network-nodes.csv](processed/cytoscape/basal-like-files/association-network-nodes.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-| id | Unique identifier for the microRNA node | trp:MNANN01 | trp:MNANE01 & trp:MNANE02 | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
-| label | Display label for the microRNA | trp:MNANN02 | trp:MNANE01 & trp:MNANE02 | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
-| type | Type of biological entity represented by the node | trp:MNANN03 | - | string | gro:EntityType | http://purl.obolibrary.org/obo/SO_0000276 |
+| id | Unique identifier for the microRNA node | trp:MNANN01 | trp:MNANE01 and trp:MNANE02 | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
+| label | Display label for the microRNA | trp:MNANN02 | trp:MNANE01 and trp:MNANE02 | string | so:MicroRNA | http://purl.obolibrary.org/obo/SO_0000276 |
+| type | Type of biological entity represented by the node | trp:MNANN03 | - | string | edam:Classification | http://edamontology.org/operation_2990 |
