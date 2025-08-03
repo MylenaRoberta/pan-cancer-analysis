@@ -8,11 +8,9 @@ from urllib.parse import urljoin
 # Genomic Data Commons (GDC) API endpoints of interest
 GDC_API_BASE_URL = 'https://api.gdc.cancer.gov'
 GDC_API_ENDPOINTS = {
-    'annotations': urljoin(GDC_API_BASE_URL, 'annotations'),
     'data': urljoin(GDC_API_BASE_URL, 'data'),
     'cases': urljoin(GDC_API_BASE_URL, 'cases'),
     'files': urljoin(GDC_API_BASE_URL, 'files'),
-    'manifest': urljoin(GDC_API_BASE_URL, 'manifest'),
     'projects': urljoin(GDC_API_BASE_URL, 'projects'),
     'status': urljoin(GDC_API_BASE_URL, 'status'),
 }
@@ -97,7 +95,6 @@ INTERIM_DATA_DIR = os.path.join(DATA_DIR, 'interim')
 PROCESSED_DATA_DIR = os.path.join(DATA_DIR, 'processed')
 
 # Raw data directory paths
-GDC_RAW_DATA_DIR = os.path.join(RAW_DATA_DIR, 'gdc-api')
 BRCA_RAW_DATA_DIR = os.path.join(RAW_DATA_DIR, 'tcga-brca')
 BRCA_RAW_FILES_DIRS = {
     'basal-like': os.path.join(BRCA_RAW_DATA_DIR, 'basal-like-files'),
@@ -111,7 +108,6 @@ BRCA_RAW_FILES_DIRS = {
 MIRWALK_EXTERNAL_DATA_DIR = os.path.join(EXTERNAL_DATA_DIR, 'mirwalk')
 
 # Interim data directory paths
-GDC_INTERIM_DATA_DIR = os.path.join(INTERIM_DATA_DIR, 'gdc-api')
 BRCA_INTERIM_DATA_DIR = os.path.join(INTERIM_DATA_DIR, 'tcga-brca')
 BRCA_INTERIM_FILES_DIRS = {
     'basal-like': os.path.join(BRCA_INTERIM_DATA_DIR, 'basal-like-files'),
@@ -150,21 +146,6 @@ BRCA_RAW_FILES_PATHS = {
     'files': os.path.join(BRCA_RAW_DATA_DIR, 'files-metadata.csv'),
     'paper': os.path.join(BRCA_RAW_DATA_DIR, BRCA_PAPER_FILE),
     'project': os.path.join(BRCA_RAW_DATA_DIR, 'project-metadata.csv'),
-}
-
-# GDC API interim files paths
-GDC_INTERIM_FILES_PATHS = {
-    'all-projects': os.path.join(GDC_INTERIM_DATA_DIR, 'gdc-all-projects.csv'),
-    'cases': os.path.join(GDC_INTERIM_DATA_DIR, 'gdc-cases-of-interest.csv'),
-    'files': os.path.join(GDC_INTERIM_DATA_DIR, 'gdc-files-of-interest.csv'),
-    'projects': os.path.join(GDC_INTERIM_DATA_DIR, 'gdc-projects-of-interest.csv'),
-}
-
-# TCGA data interim files paths
-TCGA_INTERIM_FILES_PATHS = {
-    'cases': os.path.join(GDC_INTERIM_DATA_DIR, 'tcga-cases-of-interest.csv'),
-    'files': os.path.join(GDC_INTERIM_DATA_DIR, 'tcga-files-of-interest.csv'),
-    'projects': os.path.join(GDC_INTERIM_DATA_DIR, 'tcga-projects.csv'),
 }
 
 # TCGA-BRCA processed files paths
