@@ -11,6 +11,7 @@
 * [Statistics Ontology](https://bioportal.bioontology.org/ontologies/STATO)
 * [EDAM - Ontology of bioscientific data analysis and data management](https://edamontology.org)
 
+
 ## Schema Documentation Fields
 
 * `field name`: Name of the field in the artifact’s table.
@@ -31,6 +32,19 @@
   * `transformation`
     * [EDAM](https://edamontology.org): `edam:`
 * `uri`: URI of the concept related to this field in an ontology defined by role.
+
+
+## Family of Artifacts AT_SETUP
+
+* Name: Pipeline Parameter Setup Artifacts
+
+### Artifact AT_SETUP/
+
+* Name: 
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+
 
 ## Family of Artifacts AT_OR
 
