@@ -1,11 +1,17 @@
 __pycache__/
 venv/
 
+# Exploration data and notebooks
+data/interim/gdc-api/
+data/raw/gdc-api/
+notebooks/exploratory-analyses/
+notebooks/gdc-api-exploration/
+
 # TCGA-BRCA microRNA-Seq and RNA-Seq related files
 data/raw/tcga-brca/*/
-data/processed/tcga-brca/**/mirna-seq_*
-data/processed/tcga-brca/**/rna-seq_*
+data/processed/tcga-brca/*/mirna-seq_*
+data/processed/tcga-brca/*/rna-seq_*
 
 # miRWalk interaction files
-data/external/mirwalk/*
+data/external/mirwalk/
 data/processed/mirwalk/MIMAT*

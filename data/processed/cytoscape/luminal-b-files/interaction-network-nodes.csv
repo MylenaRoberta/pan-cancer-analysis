@@ -1,560 +1,560 @@
 id,label,type
-mir1,hsa-let-7b-5p,microRNA
-mir2,hsa-let-7d-5p,microRNA
-mir3,hsa-let-7f-5p,microRNA
-mir4,hsa-miR-15a-5p,microRNA
-mir5,hsa-miR-16-5p,microRNA
-mir6,hsa-miR-17-5p,microRNA
-mir7,hsa-miR-18a-5p,microRNA
-mir8,hsa-miR-19b-3p,microRNA
-mir9,hsa-miR-22-3p,microRNA
-mir10,hsa-miR-23a-3p,microRNA
-mir11,hsa-miR-24-3p,microRNA
-mir12,hsa-miR-25-3p,microRNA
-mir13,hsa-miR-26a-5p,microRNA
-mir14,hsa-miR-26b-5p,microRNA
-mir15,hsa-miR-27a-3p,microRNA
-mir16,hsa-miR-29a-3p,microRNA
-mir17,hsa-miR-30a-5p,microRNA
-mir18,hsa-miR-32-5p,microRNA
-mir19,hsa-miR-33a-5p,microRNA
-mir20,hsa-miR-96-5p,microRNA
-mir21,hsa-miR-98-5p,microRNA
-mir22,hsa-miR-29b-3p,microRNA
-mir23,hsa-miR-106a-5p,microRNA
-mir24,hsa-miR-107,microRNA
-mir25,hsa-miR-196a-5p,microRNA
-mir26,hsa-miR-199a-5p,microRNA
-mir27,hsa-miR-148a-3p,microRNA
-mir28,hsa-miR-30c-5p,microRNA
-mir29,hsa-miR-30d-5p,microRNA
-mir30,hsa-miR-7-5p,microRNA
-mir31,hsa-miR-34a-5p,microRNA
-mir32,hsa-miR-181b-5p,microRNA
-mir33,hsa-miR-182-5p,microRNA
-mir34,hsa-miR-205-5p,microRNA
-mir35,hsa-miR-212-3p,microRNA
-mir36,hsa-miR-221-3p,microRNA
-mir37,hsa-miR-222-3p,microRNA
-mir38,hsa-miR-223-3p,microRNA
-mir39,hsa-miR-200b-3p,microRNA
-mir40,hsa-let-7g-5p,microRNA
-mir41,hsa-let-7i-5p,microRNA
-mir42,hsa-miR-15b-5p,microRNA
-mir43,hsa-miR-23b-3p,microRNA
-mir44,hsa-miR-27b-3p,microRNA
-mir45,hsa-miR-30b-5p,microRNA
-mir46,hsa-miR-125b-5p,microRNA
-mir47,hsa-miR-128-3p,microRNA
-mir48,hsa-miR-140-5p,microRNA
-mir49,hsa-miR-141-3p,microRNA
-mir50,hsa-miR-142-5p,microRNA
-mir51,hsa-miR-143-3p,microRNA
-mir52,hsa-miR-144-3p,microRNA
-mir53,hsa-miR-9-5p,microRNA
-mir54,hsa-miR-134-5p,microRNA
-mir55,hsa-miR-146a-5p,microRNA
-mir56,hsa-miR-150-5p,microRNA
-mir57,hsa-miR-185-5p,microRNA
-mir58,hsa-miR-186-5p,microRNA
-mir59,hsa-miR-193a-3p,microRNA
-mir60,hsa-miR-195-5p,microRNA
-mir61,hsa-miR-200c-3p,microRNA
-mir62,hsa-miR-155-5p,microRNA
-mir63,hsa-miR-106b-5p,microRNA
-mir64,hsa-miR-29c-3p,microRNA
-mir65,hsa-miR-200a-3p,microRNA
-mir66,hsa-miR-301a-3p,microRNA
-mir67,hsa-miR-130b-3p,microRNA
-mir68,hsa-miR-30e-5p,microRNA
-mir69,hsa-miR-362-5p,microRNA
-mir70,hsa-miR-363-3p,microRNA
-mir71,hsa-miR-378a-3p,microRNA
-mir72,hsa-miR-379-5p,microRNA
-mir73,hsa-miR-381-3p,microRNA
-mir74,hsa-miR-330-3p,microRNA
-mir75,hsa-miR-342-3p,microRNA
-mir76,hsa-miR-151a-3p,microRNA
-mir77,hsa-miR-135b-5p,microRNA
-mir78,hsa-miR-148b-3p,microRNA
-mir79,hsa-miR-338-3p,microRNA
-mir80,hsa-miR-339-5p,microRNA
-mir81,hsa-miR-20b-5p,microRNA
-mir82,hsa-miR-429,microRNA
-mir83,hsa-miR-449a,microRNA
-mir84,hsa-miR-452-5p,microRNA
-mir85,hsa-miR-146b-5p,microRNA
-mir86,hsa-miR-193b-3p,microRNA
-mir87,hsa-miR-532-5p,microRNA
-mir88,hsa-miR-299-5p,microRNA
-mir89,hsa-miR-92b-3p,microRNA
-mir90,hsa-miR-590-5p,microRNA
-mir91,hsa-miR-33b-5p,microRNA
-mir92,hsa-miR-421,microRNA
-mir93,hsa-miR-454-3p,microRNA
-mir94,hsa-miR-340-5p,microRNA
-mir95,hsa-miR-423-5p,microRNA
-mir96,hsa-miR-501-3p,microRNA
-mir97,hsa-miR-502-3p,microRNA
-mir98,hsa-miR-532-3p,microRNA
-mir99,hsa-miR-708-5p,microRNA
-mir100,hsa-miR-374b-5p,microRNA
-mir101,hsa-miR-760,microRNA
-mir102,hsa-miR-320b,microRNA
-mir103,hsa-miR-1271-5p,microRNA
-mir104,hsa-miR-378c,microRNA
-mir105,hsa-miR-374c-5p,microRNA
-gene1,SENP5,messenger RNA
-gene2,PEG10,messenger RNA
-gene3,PDE12,messenger RNA
-gene4,CALU,messenger RNA
-gene5,CSRNP3,messenger RNA
-gene6,CPEB4,messenger RNA
-gene7,TMEM251,messenger RNA
-gene8,SLC38A7,messenger RNA
-gene9,ADGRL2,messenger RNA
-gene10,SHROOM4,messenger RNA
-gene11,EFNB2,messenger RNA
-gene12,CRISPLD2,messenger RNA
-gene13,MYLK,messenger RNA
-gene14,CCNJL,messenger RNA
-gene15,PPP6R3,messenger RNA
-gene16,BACE1,messenger RNA
-gene17,ANKIB1,messenger RNA
-gene18,GALNT1,messenger RNA
-gene19,ZMAT3,messenger RNA
-gene20,SH3BGRL2,messenger RNA
-gene21,GNB5,messenger RNA
-gene22,ZBTB20,messenger RNA
-gene23,ATXN1,messenger RNA
-gene24,JADE2,messenger RNA
-gene25,NAV1,messenger RNA
-gene26,ANK3,messenger RNA
-gene27,MEF2D,messenger RNA
-gene28,ZBTB4,messenger RNA
-gene29,FOSL2,messenger RNA
-gene30,CREBL2,messenger RNA
-gene31,CHST7,messenger RNA
-gene32,BCL3,messenger RNA
-gene33,MSL2,messenger RNA
-gene34,STAG2,messenger RNA
-gene35,C17orf58,messenger RNA
-gene36,RSBN1,messenger RNA
-gene37,ASB14,messenger RNA
-gene38,C5orf24,messenger RNA
-gene39,ZNF740,messenger RNA
-gene40,GPBP1,messenger RNA
-gene41,SRGAP3,messenger RNA
-gene42,EIF5,messenger RNA
-gene43,AQR,messenger RNA
-gene44,NEDD4L,messenger RNA
-gene45,NEK4,messenger RNA
-gene46,DALRD3,messenger RNA
-gene47,ACVR1B,messenger RNA
-gene48,TMED8,messenger RNA
-gene49,ERBB3,messenger RNA
-gene50,GBA2,messenger RNA
-gene51,RSBN1L,messenger RNA
-gene52,MLEC,messenger RNA
-gene53,STRADB,messenger RNA
-gene54,CHIC1,messenger RNA
-gene55,CAMK2A,messenger RNA
-gene56,FNDC3B,messenger RNA
-gene57,MITF,messenger RNA
-gene58,PMEPA1,messenger RNA
-gene59,LPP,messenger RNA
-gene60,AXL,messenger RNA
-gene61,PLXDC2,messenger RNA
-gene62,JPH2,messenger RNA
-gene63,HEG1,messenger RNA
-gene64,ITM2B,messenger RNA
-gene65,NRG1,messenger RNA
-gene66,KCND2,messenger RNA
-gene67,ENTPD4,messenger RNA
-gene68,PTPRD,messenger RNA
-gene69,ELAVL2,messenger RNA
-gene70,MTPN,messenger RNA
-gene71,SOS1,messenger RNA
-gene72,BBX,messenger RNA
-gene73,RLIM,messenger RNA
-gene74,AFF3,messenger RNA
-gene75,XIAP,messenger RNA
-gene76,CPEB3,messenger RNA
-gene77,KIF3A,messenger RNA
-gene78,DCP2,messenger RNA
-gene79,DAAM1,messenger RNA
-gene80,MIB1,messenger RNA
-gene81,PPM1D,messenger RNA
-gene82,GRPEL2,messenger RNA
-gene83,DTWD2,messenger RNA
-gene84,TET3,messenger RNA
-gene85,ATP6V1A,messenger RNA
-gene86,CNNM2,messenger RNA
-gene87,IRGQ,messenger RNA
-gene88,FEM1B,messenger RNA
-gene89,YY1,messenger RNA
-gene90,GPR157,messenger RNA
-gene91,CABLES2,messenger RNA
-gene92,ONECUT2,messenger RNA
-gene93,TCF4,messenger RNA
-gene94,DKK3,messenger RNA
-gene95,ITGAV,messenger RNA
-gene96,PDZD2,messenger RNA
-gene97,RBFOX2,messenger RNA
-gene98,IPO5,messenger RNA
-gene99,DDX3X,messenger RNA
-gene100,CALN1,messenger RNA
-gene101,CACNA1C,messenger RNA
-gene102,HIPK1,messenger RNA
-gene103,MAP4K4,messenger RNA
-gene104,TTC28,messenger RNA
-gene105,NAV3,messenger RNA
-gene106,CTDSPL2,messenger RNA
-gene107,PPP1R9A,messenger RNA
-gene108,MSRB3,messenger RNA
-gene109,ZNF281,messenger RNA
-gene110,CROT,messenger RNA
-gene111,CDH6,messenger RNA
-gene112,SH2B3,messenger RNA
-gene113,TRAM2,messenger RNA
-gene114,SLC30A4,messenger RNA
-gene115,NCKAP1,messenger RNA
-gene116,RORA,messenger RNA
-gene117,STRN,messenger RNA
-gene118,MAP3K7,messenger RNA
-gene119,SLC16A7,messenger RNA
-gene120,PLEKHM3,messenger RNA
-gene121,STXBP5,messenger RNA
-gene122,RBM33,messenger RNA
-gene123,PALM2AKAP2,messenger RNA
-gene124,DAB2,messenger RNA
-gene125,MTDH,messenger RNA
-gene126,CELF2,messenger RNA
-gene127,SGMS2,messenger RNA
-gene128,PPM1F,messenger RNA
-gene129,BACH2,messenger RNA
-gene130,TNS3,messenger RNA
-gene131,FOXN3,messenger RNA
-gene132,LMOD1,messenger RNA
-gene133,FOXO1,messenger RNA
-gene134,RFTN1,messenger RNA
-gene135,ANTXR2,messenger RNA
-gene136,ARL4C,messenger RNA
-gene137,ELMO1,messenger RNA
-gene138,BHLHE22,messenger RNA
-gene139,PTAR1,messenger RNA
-gene140,STX17,messenger RNA
-gene141,EOGT,messenger RNA
-gene142,GPCPD1,messenger RNA
-gene143,TRIB2,messenger RNA
-gene144,HMGCR,messenger RNA
-gene145,ABHD5,messenger RNA
-gene146,SLC16A14,messenger RNA
-gene147,MEST,messenger RNA
-gene148,TMTC3,messenger RNA
-gene149,FKBP14,messenger RNA
-gene150,DSC2,messenger RNA
-gene151,NREP,messenger RNA
-gene152,STMP1,messenger RNA
-gene153,DCUN1D4,messenger RNA
-gene154,TMEM167A,messenger RNA
-gene155,EFCAB14,messenger RNA
-gene156,RND3,messenger RNA
-gene157,PLSCR4,messenger RNA
-gene158,IL1RAP,messenger RNA
-gene159,FOXF1,messenger RNA
-gene160,FRZB,messenger RNA
-gene161,GNS,messenger RNA
-gene162,JAK1,messenger RNA
-gene163,PTEN,messenger RNA
-gene164,RASGRP1,messenger RNA
-gene165,ZC2HC1C,messenger RNA
-gene166,GPR137C,messenger RNA
-gene167,DOCK6,messenger RNA
-gene168,SMAD2,messenger RNA
-gene169,MGAT5,messenger RNA
-gene170,SH3PXD2A,messenger RNA
-gene171,ARFIP1,messenger RNA
-gene172,LMTK2,messenger RNA
-gene173,ADAM22,messenger RNA
-gene174,HIF1AN,messenger RNA
-gene175,STOX2,messenger RNA
-gene176,KLF6,messenger RNA
-gene177,NFAT5,messenger RNA
-gene178,SPIN1,messenger RNA
-gene179,USP38,messenger RNA
-gene180,PHAX,messenger RNA
-gene181,MACIR,messenger RNA
-gene182,DYNLL2,messenger RNA
-gene183,C18orf25,messenger RNA
-gene184,INTS2,messenger RNA
-gene185,CBX2,messenger RNA
-gene186,FYN,messenger RNA
-gene187,KCNN3,messenger RNA
-gene188,SNAI1,messenger RNA
-gene189,KCNJ15,messenger RNA
-gene190,IFNAR2,messenger RNA
-gene191,RNF122,messenger RNA
-gene192,FST,messenger RNA
-gene193,KPNA3,messenger RNA
-gene194,GALNT3,messenger RNA
-gene195,ADAM19,messenger RNA
-gene196,SEMA6D,messenger RNA
-gene197,GLI3,messenger RNA
-gene198,SNCA,messenger RNA
-gene199,BMPR2,messenger RNA
-gene200,NFIC,messenger RNA
-gene201,HERPUD2,messenger RNA
-gene202,TCF12,messenger RNA
-gene203,CTNND2,messenger RNA
-gene204,BCL2,messenger RNA
-gene205,CREBRF,messenger RNA
-gene206,PPP4R2,messenger RNA
-gene207,LIN54,messenger RNA
-gene208,CNOT6L,messenger RNA
-gene209,MYRIP,messenger RNA
-gene210,PDE7B,messenger RNA
-gene211,USP31,messenger RNA
-gene212,CDS2,messenger RNA
-gene213,YTHDC1,messenger RNA
-gene214,ATXN7,messenger RNA
-gene215,AFF4,messenger RNA
-gene216,RTF1,messenger RNA
-gene217,WAC,messenger RNA
-gene218,TBCK,messenger RNA
-gene219,PTPN4,messenger RNA
-gene220,CBX7,messenger RNA
-gene221,CHST11,messenger RNA
-gene222,RRAGD,messenger RNA
-gene223,UBASH3B,messenger RNA
-gene224,MAF,messenger RNA
-gene225,SRGAP1,messenger RNA
-gene226,CALM1,messenger RNA
-gene227,TTLL7,messenger RNA
-gene228,SATB2,messenger RNA
-gene229,BMF,messenger RNA
-gene230,SECISBP2L,messenger RNA
-gene231,RAB11FIP1,messenger RNA
-gene232,MINDY2,messenger RNA
-gene233,FRK,messenger RNA
-gene234,NSUN4,messenger RNA
-gene235,ZFHX3,messenger RNA
-gene236,MYEF2,messenger RNA
-gene237,PANK3,messenger RNA
-gene238,ERBB4,messenger RNA
-gene239,SLC16A6,messenger RNA
-gene240,PLEKHA3,messenger RNA
-gene241,MSI2,messenger RNA
-gene242,ETS1,messenger RNA
-gene243,WIPF1,messenger RNA
-gene244,DIRAS2,messenger RNA
-gene245,NR5A2,messenger RNA
-gene246,GRAP2,messenger RNA
-gene247,PRLR,messenger RNA
-gene248,BZW1,messenger RNA
-gene249,SMARCAD1,messenger RNA
-gene250,KLHL13,messenger RNA
-gene251,AFF2,messenger RNA
-gene252,POLR3D,messenger RNA
-gene253,PAWR,messenger RNA
-gene254,KCTD10,messenger RNA
-gene255,ACER2,messenger RNA
-gene256,FNIP1,messenger RNA
-gene257,DZIP1,messenger RNA
-gene258,AKT3,messenger RNA
-gene259,HOXA3,messenger RNA
-gene260,RUNX1T1,messenger RNA
-gene261,CCN4,messenger RNA
-gene262,PLAGL1,messenger RNA
-gene263,AKAP12,messenger RNA
-gene264,FAT3,messenger RNA
-gene265,FGF1,messenger RNA
-gene266,NRP2,messenger RNA
-gene267,PRKG1,messenger RNA
-gene268,ADAMTS5,messenger RNA
-gene269,CCND2,messenger RNA
-gene270,LAMC1,messenger RNA
-gene271,FBXO28,messenger RNA
-gene272,VRK3,messenger RNA
-gene273,SUCO,messenger RNA
-gene274,MAP3K1,messenger RNA
-gene275,LPGAT1,messenger RNA
-gene276,RCBTB1,messenger RNA
-gene277,TGOLN2,messenger RNA
-gene278,TNPO1,messenger RNA
-gene279,NAV2,messenger RNA
-gene280,CREB1,messenger RNA
-gene281,RNF111,messenger RNA
-gene282,RCOR3,messenger RNA
-gene283,IL6ST,messenger RNA
-gene284,HIPK2,messenger RNA
-gene285,SETD7,messenger RNA
-gene286,ARIH1,messenger RNA
-gene287,NEDD4,messenger RNA
-gene288,LIFR,messenger RNA
-gene289,PTPN9,messenger RNA
-gene290,CDC42BPB,messenger RNA
-gene291,USF3,messenger RNA
-gene292,FNDC3A,messenger RNA
-gene293,ZBTB37,messenger RNA
-gene294,SPRY2,messenger RNA
-gene295,NF1,messenger RNA
-gene296,UHRF1BP1,messenger RNA
-gene297,ZNF106,messenger RNA
-gene298,ITGA2,messenger RNA
-gene299,SLC41A2,messenger RNA
-gene300,GRIN2A,messenger RNA
-gene301,SAMD4A,messenger RNA
-gene302,KLF12,messenger RNA
-gene303,RAB10,messenger RNA
-gene304,CTTNBP2NL,messenger RNA
-gene305,TPM4,messenger RNA
-gene306,TSPAN2,messenger RNA
-gene307,RAP2B,messenger RNA
-gene308,FTO,messenger RNA
-gene309,ADAM10,messenger RNA
-gene310,CCDC85C,messenger RNA
-gene311,KIRREL1,messenger RNA
-gene312,GNG12,messenger RNA
-gene313,PAPPA,messenger RNA
-gene314,ZNF827,messenger RNA
-gene315,PEAK1,messenger RNA
-gene316,MEIS2,messenger RNA
-gene317,WWTR1,messenger RNA
-gene318,SOX17,messenger RNA
-gene319,MOB3B,messenger RNA
-gene320,NRP1,messenger RNA
-gene321,IGF2,messenger RNA
-gene322,SYNPO2,messenger RNA
-gene323,KCNJ2,messenger RNA
-gene324,SMAD5,messenger RNA
-gene325,ARPP19,messenger RNA
-gene326,CYB561D1,messenger RNA
-gene327,COL11A1,messenger RNA
-gene328,CLMN,messenger RNA
-gene329,RPAP2,messenger RNA
-gene330,NIPA1,messenger RNA
-gene331,AFAP1L2,messenger RNA
-gene332,MARCHF6,messenger RNA
-gene333,LSM11,messenger RNA
-gene334,TLCD5,messenger RNA
-gene335,ZNF37A,messenger RNA
-gene336,TRAF6,messenger RNA
-gene337,PRELID2,messenger RNA
-gene338,CDS1,messenger RNA
-gene339,BAG1,messenger RNA
-gene340,ABI2,messenger RNA
-gene341,NFIX,messenger RNA
-gene342,RILPL1,messenger RNA
-gene343,CEP41,messenger RNA
-gene344,ETV6,messenger RNA
-gene345,KIT,messenger RNA
-gene346,ATP7A,messenger RNA
-gene347,ERG,messenger RNA
-gene348,SGCE,messenger RNA
-gene349,INTS6L,messenger RNA
-gene350,FAM126A,messenger RNA
-gene351,ZSWIM4,messenger RNA
-gene352,RPS6KA3,messenger RNA
-gene353,BNC2,messenger RNA
-gene354,PRKCA,messenger RNA
-gene355,NEGR1,messenger RNA
-gene356,KCTD16,messenger RNA
-gene357,JAKMIP2,messenger RNA
-gene358,ZNF423,messenger RNA
-gene359,SPATS2L,messenger RNA
-gene360,JCAD,messenger RNA
-gene361,LOX,messenger RNA
-gene362,HAS2,messenger RNA
-gene363,FSTL1,messenger RNA
-gene364,CDH11,messenger RNA
-gene365,CLIP2,messenger RNA
-gene366,ZFHX4,messenger RNA
-gene367,LRRC8A,messenger RNA
-gene368,ZEB1,messenger RNA
-gene369,VEZF1,messenger RNA
-gene370,BCORL1,messenger RNA
-gene371,AHCYL2,messenger RNA
-gene372,MID2,messenger RNA
-gene373,TNS1,messenger RNA
-gene374,RASGRF2,messenger RNA
-gene375,RPS6KA2,messenger RNA
-gene376,NBEAL1,messenger RNA
-gene377,ARHGAP31,messenger RNA
-gene378,DCUN1D3,messenger RNA
-gene379,AAK1,messenger RNA
-gene380,ANO6,messenger RNA
-gene381,LRCH1,messenger RNA
-gene382,TGFBR2,messenger RNA
-gene383,MMP2,messenger RNA
-gene384,GIT2,messenger RNA
-gene385,RAB6B,messenger RNA
-gene386,KCTD20,messenger RNA
-gene387,TMOD3,messenger RNA
-gene388,VTA1,messenger RNA
-gene389,SERPINH1,messenger RNA
-gene390,VASH2,messenger RNA
-gene391,DIO2,messenger RNA
-gene392,HMCN1,messenger RNA
-gene393,COL6A3,messenger RNA
-gene394,SPSB4,messenger RNA
-gene395,EIF4E2,messenger RNA
-gene396,PPIC,messenger RNA
-gene397,BHLHE41,messenger RNA
-gene398,PTPN14,messenger RNA
-gene399,PTPRM,messenger RNA
-gene400,KIAA1217,messenger RNA
-gene401,RALGPS2,messenger RNA
-gene402,ING1,messenger RNA
-gene403,VMP1,messenger RNA
-gene404,MEOX2,messenger RNA
-gene405,SLC25A12,messenger RNA
-gene406,ATXN7L1,messenger RNA
-gene407,ATXN1L,messenger RNA
-gene408,TBX3,messenger RNA
-gene409,CAMKK2,messenger RNA
-gene410,GOLT1A,messenger RNA
-gene411,ALS2,messenger RNA
-gene412,IGF1R,messenger RNA
-gene413,ESR1,messenger RNA
-gene414,GJC1,messenger RNA
-gene415,CARM1,messenger RNA
-gene416,SEPTIN11,messenger RNA
-gene417,CYTH3,messenger RNA
-gene418,ENAH,messenger RNA
-gene419,ADAMTS2,messenger RNA
-gene420,TBX15,messenger RNA
-gene421,PDGFRA,messenger RNA
-gene422,TBX18,messenger RNA
-gene423,FLNC,messenger RNA
-gene424,DEUP1,messenger RNA
-gene425,ZKSCAN1,messenger RNA
-gene426,COX4I1,messenger RNA
-gene427,ZBTB16,messenger RNA
-gene428,DAAM2,messenger RNA
-gene429,HS3ST5,messenger RNA
-gene430,NCOA3,messenger RNA
-gene431,TMEM184B,messenger RNA
-gene432,BCL2L13,messenger RNA
-gene433,SKP1,messenger RNA
-gene434,BTG2,messenger RNA
-gene435,ENTPD1,messenger RNA
-gene436,ZC3H14,messenger RNA
-gene437,TTC14,messenger RNA
-gene438,FAR1,messenger RNA
-gene439,SBNO1,messenger RNA
-gene440,RIC1,messenger RNA
-gene441,AJAP1,messenger RNA
-gene442,ALX4,messenger RNA
-gene443,YPEL2,messenger RNA
-gene444,S1PR1,messenger RNA
-gene445,DOK6,messenger RNA
-gene446,SLC25A26,messenger RNA
-gene447,CSNK1A1,messenger RNA
-gene448,LUZP1,messenger RNA
-gene449,CHD3,messenger RNA
-gene450,NOL4L,messenger RNA
-gene451,CDK6,messenger RNA
-gene452,USP46,messenger RNA
-gene453,TOLLIP,messenger RNA
-gene454,PRRC2C,messenger RNA
+hsa-miR-200c-3p,hsa-miR-200c-3p,MicroRNA
+hsa-let-7g-5p,hsa-let-7g-5p,MicroRNA
+hsa-miR-30d-5p,hsa-miR-30d-5p,MicroRNA
+hsa-miR-151a-3p,hsa-miR-151a-3p,MicroRNA
+hsa-miR-27b-3p,hsa-miR-27b-3p,MicroRNA
+hsa-miR-193b-3p,hsa-miR-193b-3p,MicroRNA
+hsa-miR-30b-5p,hsa-miR-30b-5p,MicroRNA
+hsa-miR-18a-5p,hsa-miR-18a-5p,MicroRNA
+hsa-miR-381-3p,hsa-miR-381-3p,MicroRNA
+hsa-miR-330-3p,hsa-miR-330-3p,MicroRNA
+hsa-miR-33a-5p,hsa-miR-33a-5p,MicroRNA
+hsa-miR-29c-3p,hsa-miR-29c-3p,MicroRNA
+hsa-miR-29b-3p,hsa-miR-29b-3p,MicroRNA
+hsa-miR-34a-5p,hsa-miR-34a-5p,MicroRNA
+hsa-miR-106b-5p,hsa-miR-106b-5p,MicroRNA
+hsa-miR-141-3p,hsa-miR-141-3p,MicroRNA
+hsa-miR-25-3p,hsa-miR-25-3p,MicroRNA
+hsa-miR-29a-3p,hsa-miR-29a-3p,MicroRNA
+hsa-miR-30a-5p,hsa-miR-30a-5p,MicroRNA
+hsa-miR-96-5p,hsa-miR-96-5p,MicroRNA
+hsa-miR-155-5p,hsa-miR-155-5p,MicroRNA
+hsa-miR-106a-5p,hsa-miR-106a-5p,MicroRNA
+hsa-miR-144-3p,hsa-miR-144-3p,MicroRNA
+hsa-miR-532-5p,hsa-miR-532-5p,MicroRNA
+hsa-miR-221-3p,hsa-miR-221-3p,MicroRNA
+hsa-miR-7-5p,hsa-miR-7-5p,MicroRNA
+hsa-miR-181b-5p,hsa-miR-181b-5p,MicroRNA
+hsa-miR-501-3p,hsa-miR-501-3p,MicroRNA
+hsa-miR-148a-3p,hsa-miR-148a-3p,MicroRNA
+hsa-miR-148b-3p,hsa-miR-148b-3p,MicroRNA
+hsa-miR-146a-5p,hsa-miR-146a-5p,MicroRNA
+hsa-miR-205-5p,hsa-miR-205-5p,MicroRNA
+hsa-miR-342-3p,hsa-miR-342-3p,MicroRNA
+hsa-miR-362-5p,hsa-miR-362-5p,MicroRNA
+hsa-miR-24-3p,hsa-miR-24-3p,MicroRNA
+hsa-miR-15b-5p,hsa-miR-15b-5p,MicroRNA
+hsa-miR-130b-3p,hsa-miR-130b-3p,MicroRNA
+hsa-miR-200b-3p,hsa-miR-200b-3p,MicroRNA
+hsa-miR-9-5p,hsa-miR-9-5p,MicroRNA
+hsa-miR-32-5p,hsa-miR-32-5p,MicroRNA
+hsa-miR-760,hsa-miR-760,MicroRNA
+hsa-miR-22-3p,hsa-miR-22-3p,MicroRNA
+hsa-miR-33b-5p,hsa-miR-33b-5p,MicroRNA
+hsa-miR-590-5p,hsa-miR-590-5p,MicroRNA
+hsa-miR-182-5p,hsa-miR-182-5p,MicroRNA
+hsa-miR-26a-5p,hsa-miR-26a-5p,MicroRNA
+hsa-miR-379-5p,hsa-miR-379-5p,MicroRNA
+hsa-miR-16-5p,hsa-miR-16-5p,MicroRNA
+hsa-miR-140-5p,hsa-miR-140-5p,MicroRNA
+hsa-miR-98-5p,hsa-miR-98-5p,MicroRNA
+hsa-let-7d-5p,hsa-let-7d-5p,MicroRNA
+hsa-miR-421,hsa-miR-421,MicroRNA
+hsa-miR-378a-3p,hsa-miR-378a-3p,MicroRNA
+hsa-miR-532-3p,hsa-miR-532-3p,MicroRNA
+hsa-let-7i-5p,hsa-let-7i-5p,MicroRNA
+hsa-miR-142-5p,hsa-miR-142-5p,MicroRNA
+hsa-miR-128-3p,hsa-miR-128-3p,MicroRNA
+hsa-miR-17-5p,hsa-miR-17-5p,MicroRNA
+hsa-let-7b-5p,hsa-let-7b-5p,MicroRNA
+hsa-miR-185-5p,hsa-miR-185-5p,MicroRNA
+hsa-miR-1271-5p,hsa-miR-1271-5p,MicroRNA
+hsa-miR-27a-3p,hsa-miR-27a-3p,MicroRNA
+hsa-miR-363-3p,hsa-miR-363-3p,MicroRNA
+hsa-miR-23b-3p,hsa-miR-23b-3p,MicroRNA
+hsa-miR-222-3p,hsa-miR-222-3p,MicroRNA
+hsa-miR-502-3p,hsa-miR-502-3p,MicroRNA
+hsa-miR-374c-5p,hsa-miR-374c-5p,MicroRNA
+hsa-miR-212-3p,hsa-miR-212-3p,MicroRNA
+hsa-miR-193a-3p,hsa-miR-193a-3p,MicroRNA
+hsa-miR-301a-3p,hsa-miR-301a-3p,MicroRNA
+hsa-miR-195-5p,hsa-miR-195-5p,MicroRNA
+hsa-miR-135b-5p,hsa-miR-135b-5p,MicroRNA
+hsa-miR-150-5p,hsa-miR-150-5p,MicroRNA
+hsa-miR-30c-5p,hsa-miR-30c-5p,MicroRNA
+hsa-miR-378c,hsa-miR-378c,MicroRNA
+hsa-miR-320b,hsa-miR-320b,MicroRNA
+hsa-miR-452-5p,hsa-miR-452-5p,MicroRNA
+hsa-miR-454-3p,hsa-miR-454-3p,MicroRNA
+hsa-miR-223-3p,hsa-miR-223-3p,MicroRNA
+hsa-miR-339-5p,hsa-miR-339-5p,MicroRNA
+hsa-miR-423-5p,hsa-miR-423-5p,MicroRNA
+hsa-miR-429,hsa-miR-429,MicroRNA
+hsa-miR-196a-5p,hsa-miR-196a-5p,MicroRNA
+hsa-miR-19b-3p,hsa-miR-19b-3p,MicroRNA
+hsa-miR-125b-5p,hsa-miR-125b-5p,MicroRNA
+hsa-miR-92b-3p,hsa-miR-92b-3p,MicroRNA
+hsa-miR-134-5p,hsa-miR-134-5p,MicroRNA
+hsa-miR-340-5p,hsa-miR-340-5p,MicroRNA
+hsa-miR-23a-3p,hsa-miR-23a-3p,MicroRNA
+hsa-miR-449a,hsa-miR-449a,MicroRNA
+hsa-miR-338-3p,hsa-miR-338-3p,MicroRNA
+hsa-miR-199a-5p,hsa-miR-199a-5p,MicroRNA
+hsa-miR-15a-5p,hsa-miR-15a-5p,MicroRNA
+hsa-miR-299-5p,hsa-miR-299-5p,MicroRNA
+hsa-miR-107,hsa-miR-107,MicroRNA
+hsa-miR-186-5p,hsa-miR-186-5p,MicroRNA
+hsa-miR-26b-5p,hsa-miR-26b-5p,MicroRNA
+hsa-miR-143-3p,hsa-miR-143-3p,MicroRNA
+hsa-miR-708-5p,hsa-miR-708-5p,MicroRNA
+hsa-miR-20b-5p,hsa-miR-20b-5p,MicroRNA
+hsa-miR-200a-3p,hsa-miR-200a-3p,MicroRNA
+hsa-miR-374b-5p,hsa-miR-374b-5p,MicroRNA
+hsa-let-7f-5p,hsa-let-7f-5p,MicroRNA
+hsa-miR-30e-5p,hsa-miR-30e-5p,MicroRNA
+hsa-miR-146b-5p,hsa-miR-146b-5p,MicroRNA
+ZMAT3,ZMAT3,Messenger RNA
+KLHL13,KLHL13,Messenger RNA
+FST,FST,Messenger RNA
+FAM126A,FAM126A,Messenger RNA
+FRK,FRK,Messenger RNA
+NEDD4,NEDD4,Messenger RNA
+RORA,RORA,Messenger RNA
+FSTL1,FSTL1,Messenger RNA
+SLC41A2,SLC41A2,Messenger RNA
+ZBTB4,ZBTB4,Messenger RNA
+ESR1,ESR1,Messenger RNA
+NRG1,NRG1,Messenger RNA
+SH3PXD2A,SH3PXD2A,Messenger RNA
+NREP,NREP,Messenger RNA
+FKBP14,FKBP14,Messenger RNA
+TMTC3,TMTC3,Messenger RNA
+MAF,MAF,Messenger RNA
+CREBRF,CREBRF,Messenger RNA
+KCNJ15,KCNJ15,Messenger RNA
+FNDC3A,FNDC3A,Messenger RNA
+PPIC,PPIC,Messenger RNA
+EIF4E2,EIF4E2,Messenger RNA
+NRP1,NRP1,Messenger RNA
+PTPRD,PTPRD,Messenger RNA
+CREBL2,CREBL2,Messenger RNA
+MAP4K4,MAP4K4,Messenger RNA
+FNDC3B,FNDC3B,Messenger RNA
+DAAM1,DAAM1,Messenger RNA
+LIFR,LIFR,Messenger RNA
+ONECUT2,ONECUT2,Messenger RNA
+CELF2,CELF2,Messenger RNA
+FOXN3,FOXN3,Messenger RNA
+AHCYL2,AHCYL2,Messenger RNA
+ZEB1,ZEB1,Messenger RNA
+CROT,CROT,Messenger RNA
+ATXN1,ATXN1,Messenger RNA
+HEG1,HEG1,Messenger RNA
+LOX,LOX,Messenger RNA
+DZIP1,DZIP1,Messenger RNA
+PTEN,PTEN,Messenger RNA
+WAC,WAC,Messenger RNA
+ETS1,ETS1,Messenger RNA
+COL11A1,COL11A1,Messenger RNA
+TTC14,TTC14,Messenger RNA
+KLF12,KLF12,Messenger RNA
+HIPK1,HIPK1,Messenger RNA
+SGCE,SGCE,Messenger RNA
+DCP2,DCP2,Messenger RNA
+GLI3,GLI3,Messenger RNA
+CBX7,CBX7,Messenger RNA
+KIT,KIT,Messenger RNA
+BNC2,BNC2,Messenger RNA
+DOCK6,DOCK6,Messenger RNA
+TNS1,TNS1,Messenger RNA
+PLSCR4,PLSCR4,Messenger RNA
+MEIS2,MEIS2,Messenger RNA
+GJC1,GJC1,Messenger RNA
+PEAK1,PEAK1,Messenger RNA
+UHRF1BP1,UHRF1BP1,Messenger RNA
+ADAM22,ADAM22,Messenger RNA
+ERBB4,ERBB4,Messenger RNA
+SATB2,SATB2,Messenger RNA
+ELMO1,ELMO1,Messenger RNA
+PDGFRA,PDGFRA,Messenger RNA
+CLIP2,CLIP2,Messenger RNA
+SOX17,SOX17,Messenger RNA
+ATXN1L,ATXN1L,Messenger RNA
+STRN,STRN,Messenger RNA
+EIF5,EIF5,Messenger RNA
+KPNA3,KPNA3,Messenger RNA
+ARHGAP31,ARHGAP31,Messenger RNA
+SPIN1,SPIN1,Messenger RNA
+TBX18,TBX18,Messenger RNA
+VTA1,VTA1,Messenger RNA
+CCN4,CCN4,Messenger RNA
+TBX15,TBX15,Messenger RNA
+ITM2B,ITM2B,Messenger RNA
+PTPRM,PTPRM,Messenger RNA
+RSBN1L,RSBN1L,Messenger RNA
+CALU,CALU,Messenger RNA
+NR5A2,NR5A2,Messenger RNA
+TCF12,TCF12,Messenger RNA
+CLMN,CLMN,Messenger RNA
+JCAD,JCAD,Messenger RNA
+PDZD2,PDZD2,Messenger RNA
+CDK6,CDK6,Messenger RNA
+BAG1,BAG1,Messenger RNA
+HAS2,HAS2,Messenger RNA
+CPEB4,CPEB4,Messenger RNA
+MSL2,MSL2,Messenger RNA
+DEUP1,DEUP1,Messenger RNA
+MEF2D,MEF2D,Messenger RNA
+GPR137C,GPR137C,Messenger RNA
+SECISBP2L,SECISBP2L,Messenger RNA
+GPR157,GPR157,Messenger RNA
+MACIR,MACIR,Messenger RNA
+IL1RAP,IL1RAP,Messenger RNA
+KLF6,KLF6,Messenger RNA
+JAKMIP2,JAKMIP2,Messenger RNA
+C17orf58,C17orf58,Messenger RNA
+CALN1,CALN1,Messenger RNA
+NAV1,NAV1,Messenger RNA
+TGFBR2,TGFBR2,Messenger RNA
+IGF1R,IGF1R,Messenger RNA
+CALM1,CALM1,Messenger RNA
+C18orf25,C18orf25,Messenger RNA
+ADAM10,ADAM10,Messenger RNA
+MTDH,MTDH,Messenger RNA
+SGMS2,SGMS2,Messenger RNA
+RALGPS2,RALGPS2,Messenger RNA
+GALNT1,GALNT1,Messenger RNA
+CSRNP3,CSRNP3,Messenger RNA
+SYNPO2,SYNPO2,Messenger RNA
+TNPO1,TNPO1,Messenger RNA
+ZBTB20,ZBTB20,Messenger RNA
+ZNF827,ZNF827,Messenger RNA
+PTAR1,PTAR1,Messenger RNA
+NRP2,NRP2,Messenger RNA
+NFAT5,NFAT5,Messenger RNA
+CDH11,CDH11,Messenger RNA
+IPO5,IPO5,Messenger RNA
+MGAT5,MGAT5,Messenger RNA
+RSBN1,RSBN1,Messenger RNA
+HOXA3,HOXA3,Messenger RNA
+ABI2,ABI2,Messenger RNA
+CHD3,CHD3,Messenger RNA
+ADAMTS5,ADAMTS5,Messenger RNA
+PHAX,PHAX,Messenger RNA
+FOXO1,FOXO1,Messenger RNA
+TMOD3,TMOD3,Messenger RNA
+FEM1B,FEM1B,Messenger RNA
+ANKIB1,ANKIB1,Messenger RNA
+ZNF106,ZNF106,Messenger RNA
+MOB3B,MOB3B,Messenger RNA
+ARPP19,ARPP19,Messenger RNA
+PLXDC2,PLXDC2,Messenger RNA
+C5orf24,C5orf24,Messenger RNA
+IFNAR2,IFNAR2,Messenger RNA
+ING1,ING1,Messenger RNA
+BMF,BMF,Messenger RNA
+DTWD2,DTWD2,Messenger RNA
+GBA2,GBA2,Messenger RNA
+DIO2,DIO2,Messenger RNA
+GNB5,GNB5,Messenger RNA
+MIB1,MIB1,Messenger RNA
+SMAD5,SMAD5,Messenger RNA
+PRLR,PRLR,Messenger RNA
+RNF111,RNF111,Messenger RNA
+ABHD5,ABHD5,Messenger RNA
+PEG10,PEG10,Messenger RNA
+VASH2,VASH2,Messenger RNA
+GRPEL2,GRPEL2,Messenger RNA
+VMP1,VMP1,Messenger RNA
+LRCH1,LRCH1,Messenger RNA
+ARFIP1,ARFIP1,Messenger RNA
+SLC16A14,SLC16A14,Messenger RNA
+AAK1,AAK1,Messenger RNA
+EFNB2,EFNB2,Messenger RNA
+TSPAN2,TSPAN2,Messenger RNA
+ANK3,ANK3,Messenger RNA
+NFIX,NFIX,Messenger RNA
+SPSB4,SPSB4,Messenger RNA
+LAMC1,LAMC1,Messenger RNA
+MSI2,MSI2,Messenger RNA
+AKT3,AKT3,Messenger RNA
+KCTD16,KCTD16,Messenger RNA
+RLIM,RLIM,Messenger RNA
+CACNA1C,CACNA1C,Messenger RNA
+DKK3,DKK3,Messenger RNA
+BBX,BBX,Messenger RNA
+ANTXR2,ANTXR2,Messenger RNA
+ADGRL2,ADGRL2,Messenger RNA
+BMPR2,BMPR2,Messenger RNA
+FGF1,FGF1,Messenger RNA
+TBX3,TBX3,Messenger RNA
+NCKAP1,NCKAP1,Messenger RNA
+MAP3K1,MAP3K1,Messenger RNA
+FLNC,FLNC,Messenger RNA
+VEZF1,VEZF1,Messenger RNA
+SLC16A6,SLC16A6,Messenger RNA
+SRGAP1,SRGAP1,Messenger RNA
+CAMKK2,CAMKK2,Messenger RNA
+PRKG1,PRKG1,Messenger RNA
+JADE2,JADE2,Messenger RNA
+FOSL2,FOSL2,Messenger RNA
+CYTH3,CYTH3,Messenger RNA
+USF3,USF3,Messenger RNA
+SLC30A4,SLC30A4,Messenger RNA
+SLC16A7,SLC16A7,Messenger RNA
+MYLK,MYLK,Messenger RNA
+NAV3,NAV3,Messenger RNA
+TRAM2,TRAM2,Messenger RNA
+PRRC2C,PRRC2C,Messenger RNA
+RCBTB1,RCBTB1,Messenger RNA
+SUCO,SUCO,Messenger RNA
+MLEC,MLEC,Messenger RNA
+TLCD5,TLCD5,Messenger RNA
+ZSWIM4,ZSWIM4,Messenger RNA
+NAV2,NAV2,Messenger RNA
+CDS1,CDS1,Messenger RNA
+FTO,FTO,Messenger RNA
+DAB2,DAB2,Messenger RNA
+USP38,USP38,Messenger RNA
+ACVR1B,ACVR1B,Messenger RNA
+CARM1,CARM1,Messenger RNA
+KCND2,KCND2,Messenger RNA
+ZNF423,ZNF423,Messenger RNA
+RUNX1T1,RUNX1T1,Messenger RNA
+TMED8,TMED8,Messenger RNA
+AQR,AQR,Messenger RNA
+YTHDC1,YTHDC1,Messenger RNA
+SOS1,SOS1,Messenger RNA
+TRAF6,TRAF6,Messenger RNA
+PRELID2,PRELID2,Messenger RNA
+RPS6KA2,RPS6KA2,Messenger RNA
+LPP,LPP,Messenger RNA
+CNOT6L,CNOT6L,Messenger RNA
+CSNK1A1,CSNK1A1,Messenger RNA
+TCF4,TCF4,Messenger RNA
+STMP1,STMP1,Messenger RNA
+CPEB3,CPEB3,Messenger RNA
+RRAGD,RRAGD,Messenger RNA
+TTLL7,TTLL7,Messenger RNA
+HMCN1,HMCN1,Messenger RNA
+ADAM19,ADAM19,Messenger RNA
+BHLHE41,BHLHE41,Messenger RNA
+STAG2,STAG2,Messenger RNA
+PPP1R9A,PPP1R9A,Messenger RNA
+YY1,YY1,Messenger RNA
+ATP7A,ATP7A,Messenger RNA
+MYEF2,MYEF2,Messenger RNA
+CDH6,CDH6,Messenger RNA
+CNNM2,CNNM2,Messenger RNA
+ZKSCAN1,ZKSCAN1,Messenger RNA
+ITGA2,ITGA2,Messenger RNA
+BHLHE22,BHLHE22,Messenger RNA
+AFF4,AFF4,Messenger RNA
+CBX2,CBX2,Messenger RNA
+ATXN7L1,ATXN7L1,Messenger RNA
+BACH2,BACH2,Messenger RNA
+USP46,USP46,Messenger RNA
+NEK4,NEK4,Messenger RNA
+ZNF740,ZNF740,Messenger RNA
+ITGAV,ITGAV,Messenger RNA
+PALM2AKAP2,PALM2AKAP2,Messenger RNA
+CCND2,CCND2,Messenger RNA
+RAP2B,RAP2B,Messenger RNA
+CABLES2,CABLES2,Messenger RNA
+KIAA1217,KIAA1217,Messenger RNA
+PPM1F,PPM1F,Messenger RNA
+HIPK2,HIPK2,Messenger RNA
+PTPN4,PTPN4,Messenger RNA
+SMAD2,SMAD2,Messenger RNA
+SHROOM4,SHROOM4,Messenger RNA
+SKP1,SKP1,Messenger RNA
+ARL4C,ARL4C,Messenger RNA
+FAT3,FAT3,Messenger RNA
+LPGAT1,LPGAT1,Messenger RNA
+TET3,TET3,Messenger RNA
+AJAP1,AJAP1,Messenger RNA
+GALNT3,GALNT3,Messenger RNA
+ADAMTS2,ADAMTS2,Messenger RNA
+TGOLN2,TGOLN2,Messenger RNA
+NFIC,NFIC,Messenger RNA
+LSM11,LSM11,Messenger RNA
+COL6A3,COL6A3,Messenger RNA
+DCUN1D3,DCUN1D3,Messenger RNA
+RTF1,RTF1,Messenger RNA
+PPP6R3,PPP6R3,Messenger RNA
+GRIN2A,GRIN2A,Messenger RNA
+CTNND2,CTNND2,Messenger RNA
+DOK6,DOK6,Messenger RNA
+RASGRF2,RASGRF2,Messenger RNA
+ENTPD1,ENTPD1,Messenger RNA
+CTTNBP2NL,CTTNBP2NL,Messenger RNA
+ZBTB16,ZBTB16,Messenger RNA
+RND3,RND3,Messenger RNA
+AXL,AXL,Messenger RNA
+LRRC8A,LRRC8A,Messenger RNA
+SEMA6D,SEMA6D,Messenger RNA
+S1PR1,S1PR1,Messenger RNA
+AKAP12,AKAP12,Messenger RNA
+NCOA3,NCOA3,Messenger RNA
+LIN54,LIN54,Messenger RNA
+SBNO1,SBNO1,Messenger RNA
+FNIP1,FNIP1,Messenger RNA
+CDS2,CDS2,Messenger RNA
+RASGRP1,RASGRP1,Messenger RNA
+AFAP1L2,AFAP1L2,Messenger RNA
+EOGT,EOGT,Messenger RNA
+KCNN3,KCNN3,Messenger RNA
+ZFHX4,ZFHX4,Messenger RNA
+SMARCAD1,SMARCAD1,Messenger RNA
+CHST7,CHST7,Messenger RNA
+ERG,ERG,Messenger RNA
+ACER2,ACER2,Messenger RNA
+CTDSPL2,CTDSPL2,Messenger RNA
+TTC28,TTC28,Messenger RNA
+PRKCA,PRKCA,Messenger RNA
+DYNLL2,DYNLL2,Messenger RNA
+PLEKHM3,PLEKHM3,Messenger RNA
+CCDC85C,CCDC85C,Messenger RNA
+UBASH3B,UBASH3B,Messenger RNA
+FAR1,FAR1,Messenger RNA
+FBXO28,FBXO28,Messenger RNA
+JAK1,JAK1,Messenger RNA
+ZFHX3,ZFHX3,Messenger RNA
+NIPA1,NIPA1,Messenger RNA
+ATP6V1A,ATP6V1A,Messenger RNA
+MITF,MITF,Messenger RNA
+NSUN4,NSUN4,Messenger RNA
+LMOD1,LMOD1,Messenger RNA
+SNCA,SNCA,Messenger RNA
+PTPN9,PTPN9,Messenger RNA
+ENAH,ENAH,Messenger RNA
+IGF2,IGF2,Messenger RNA
+EFCAB14,EFCAB14,Messenger RNA
+YPEL2,YPEL2,Messenger RNA
+TOLLIP,TOLLIP,Messenger RNA
+ELAVL2,ELAVL2,Messenger RNA
+CHST11,CHST11,Messenger RNA
+SRGAP3,SRGAP3,Messenger RNA
+IRGQ,IRGQ,Messenger RNA
+GNG12,GNG12,Messenger RNA
+INTS2,INTS2,Messenger RNA
+BCL2L13,BCL2L13,Messenger RNA
+DSC2,DSC2,Messenger RNA
+ARIH1,ARIH1,Messenger RNA
+IL6ST,IL6ST,Messenger RNA
+KCTD20,KCTD20,Messenger RNA
+BCL3,BCL3,Messenger RNA
+MMP2,MMP2,Messenger RNA
+MEOX2,MEOX2,Messenger RNA
+CAMK2A,CAMK2A,Messenger RNA
+HMGCR,HMGCR,Messenger RNA
+SH2B3,SH2B3,Messenger RNA
+COX4I1,COX4I1,Messenger RNA
+STXBP5,STXBP5,Messenger RNA
+MEST,MEST,Messenger RNA
+BCORL1,BCORL1,Messenger RNA
+ZC3H14,ZC3H14,Messenger RNA
+BACE1,BACE1,Messenger RNA
+XIAP,XIAP,Messenger RNA
+FRZB,FRZB,Messenger RNA
+SERPINH1,SERPINH1,Messenger RNA
+GPBP1,GPBP1,Messenger RNA
+PPP4R2,PPP4R2,Messenger RNA
+KIF3A,KIF3A,Messenger RNA
+WWTR1,WWTR1,Messenger RNA
+TBCK,TBCK,Messenger RNA
+INTS6L,INTS6L,Messenger RNA
+NBEAL1,NBEAL1,Messenger RNA
+HERPUD2,HERPUD2,Messenger RNA
+PTPN14,PTPN14,Messenger RNA
+CRISPLD2,CRISPLD2,Messenger RNA
+CCNJL,CCNJL,Messenger RNA
+TRIB2,TRIB2,Messenger RNA
+RAB10,RAB10,Messenger RNA
+KCTD10,KCTD10,Messenger RNA
+NEDD4L,NEDD4L,Messenger RNA
+DCUN1D4,DCUN1D4,Messenger RNA
+MTPN,MTPN,Messenger RNA
+LUZP1,LUZP1,Messenger RNA
+ERBB3,ERBB3,Messenger RNA
+KIRREL1,KIRREL1,Messenger RNA
+KCNJ2,KCNJ2,Messenger RNA
+PAPPA,PAPPA,Messenger RNA
+MARCHF6,MARCHF6,Messenger RNA
+NF1,NF1,Messenger RNA
+SNAI1,SNAI1,Messenger RNA
+LMTK2,LMTK2,Messenger RNA
+SPATS2L,SPATS2L,Messenger RNA
+STRADB,STRADB,Messenger RNA
+PLAGL1,PLAGL1,Messenger RNA
+FOXF1,FOXF1,Messenger RNA
+PPM1D,PPM1D,Messenger RNA
+STX17,STX17,Messenger RNA
+ZC2HC1C,ZC2HC1C,Messenger RNA
+DIRAS2,DIRAS2,Messenger RNA
+BZW1,BZW1,Messenger RNA
+MID2,MID2,Messenger RNA
+FYN,FYN,Messenger RNA
+RAB6B,RAB6B,Messenger RNA
+PMEPA1,PMEPA1,Messenger RNA
+SLC25A12,SLC25A12,Messenger RNA
+SLC38A7,SLC38A7,Messenger RNA
+ZNF37A,ZNF37A,Messenger RNA
+BCL2,BCL2,Messenger RNA
+GPCPD1,GPCPD1,Messenger RNA
+TNS3,TNS3,Messenger RNA
+PLEKHA3,PLEKHA3,Messenger RNA
+RILPL1,RILPL1,Messenger RNA
+RFTN1,RFTN1,Messenger RNA
+ANO6,ANO6,Messenger RNA
+ASB14,ASB14,Messenger RNA
+GIT2,GIT2,Messenger RNA
+MYRIP,MYRIP,Messenger RNA
+CYB561D1,CYB561D1,Messenger RNA
+NOL4L,NOL4L,Messenger RNA
+USP31,USP31,Messenger RNA
+RBM33,RBM33,Messenger RNA
+RPS6KA3,RPS6KA3,Messenger RNA
+CDC42BPB,CDC42BPB,Messenger RNA
+SLC25A26,SLC25A26,Messenger RNA
+MINDY2,MINDY2,Messenger RNA
+ALX4,ALX4,Messenger RNA
+ENTPD4,ENTPD4,Messenger RNA
+RBFOX2,RBFOX2,Messenger RNA
+SENP5,SENP5,Messenger RNA
+HS3ST5,HS3ST5,Messenger RNA
+RPAP2,RPAP2,Messenger RNA
+AFF3,AFF3,Messenger RNA
+SETD7,SETD7,Messenger RNA
+GOLT1A,GOLT1A,Messenger RNA
+NEGR1,NEGR1,Messenger RNA
+ETV6,ETV6,Messenger RNA
+ZBTB37,ZBTB37,Messenger RNA
+RCOR3,RCOR3,Messenger RNA
+CEP41,CEP41,Messenger RNA
+PAWR,PAWR,Messenger RNA
+CHIC1,CHIC1,Messenger RNA
+DALRD3,DALRD3,Messenger RNA
+MAP3K7,MAP3K7,Messenger RNA
+MSRB3,MSRB3,Messenger RNA
+SPRY2,SPRY2,Messenger RNA
+VRK3,VRK3,Messenger RNA
+TMEM167A,TMEM167A,Messenger RNA
+TMEM251,TMEM251,Messenger RNA
+PDE7B,PDE7B,Messenger RNA
+JPH2,JPH2,Messenger RNA
+STOX2,STOX2,Messenger RNA
+CREB1,CREB1,Messenger RNA
+HIF1AN,HIF1AN,Messenger RNA
+TMEM184B,TMEM184B,Messenger RNA
+ZNF281,ZNF281,Messenger RNA
+TPM4,TPM4,Messenger RNA
+WIPF1,WIPF1,Messenger RNA
+SH3BGRL2,SH3BGRL2,Messenger RNA
+POLR3D,POLR3D,Messenger RNA
+BTG2,BTG2,Messenger RNA
+ATXN7,ATXN7,Messenger RNA
+RNF122,RNF122,Messenger RNA
+PDE12,PDE12,Messenger RNA
+SEPTIN11,SEPTIN11,Messenger RNA
+GNS,GNS,Messenger RNA
+GRAP2,GRAP2,Messenger RNA
+RIC1,RIC1,Messenger RNA
+DDX3X,DDX3X,Messenger RNA
+SAMD4A,SAMD4A,Messenger RNA
+AFF2,AFF2,Messenger RNA
+DAAM2,DAAM2,Messenger RNA
+RAB11FIP1,RAB11FIP1,Messenger RNA
+PANK3,PANK3,Messenger RNA
+ALS2,ALS2,Messenger RNA
