@@ -2,6 +2,43 @@ import os
 from urllib.parse import urljoin
 
 # ======================================================================
+# PIPELINE PARAMETER SETUP
+# ======================================================================
+
+# Parameter setup of the [1] metadata selective access stage
+METADATA_SELECTIVE_ACCESS_SETUP = {
+    'project_ids': ['TCGA-BRCA'],
+}
+
+# Parameter setup of the [2] metadata filtering stage
+METADATA_FILTERING_SETUP = {
+    'data_types': ['Isoform Expression Quantification', 'Gene Expression Quantification'],
+    'disease_types': ['Ductal and Lobular Neoplasms'],
+    'molecular_subtypes': ['Basal-like', 'HER2-enriched', 'Luminal A', 'Luminal B'],
+    'sample_types': ['Primary Tumor', 'Solid Tissue Normal'],
+}
+
+# Parameter setup of the [3] expression retrieval and aggregation stage
+EXPRESSION_RETRIEVAL_AND_AGGREGATION_SETUP = {
+    
+}
+
+# Parameter setup of the [4] molecule filtering by expression stage
+MOLECULE_FILTERING_BY_EXPRESSION_SETUP = {
+    
+}
+
+# Parameter setup of the [5] interaction inference stage
+INTERACTION_INFERENCE_SETUP = {
+    
+}
+
+# Parameter setup of the [6] network construction stage
+NETWORK_CONSTRUCTION_SETUP = {
+    
+}
+
+# ======================================================================
 # CONSTANTS
 # ======================================================================
 
@@ -18,14 +55,6 @@ GDC_API_ENDPOINTS = {
 # TCGA-BRCA paper table file name
 BRCA_PAPER_FILE = 'tcga-brca-paper-supplementary-tables-1-to-4.xls'
 
-# TCGA-BRCA metadata preprocessing parameters
-BRCA_PREPROCESSING_PARAMETERS = {
-    'data_types': ['Isoform Expression Quantification', 'Gene Expression Quantification'],
-    'disease_types': ['Ductal and Lobular Neoplasms'],
-    'molecular_subtypes': ['Basal-like', 'HER2-enriched', 'Luminal A', 'Luminal B'],
-    'project_ids': ['TCGA-BRCA'],
-    'sample_types': ['Primary Tumor', 'Solid Tissue Normal'],
-}
 
 # Aggregated miRNA-Seq and RNA-Seq reads file names
 AGGREGATED_READS_FILES = {
