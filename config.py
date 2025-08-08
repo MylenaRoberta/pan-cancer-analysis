@@ -163,7 +163,7 @@ ensure_directories(
 TCGA_FILES = {
     'cases': 'cases-metadata.csv',
     'files': 'files-metadata.csv',
-    'paper': TCGA_BRCA_PAPER_FILE,
+    'paper': 'paper-cases-data.csv',
     'project': 'project-metadata.csv',
 }
 
