@@ -75,11 +75,12 @@ MIRWALK_BASE_URL = 'http://mirwalk.umm.uni-heidelberg.de'
 ROOT_DIR = os.path.abspath(os.path.dirname(__file__))
 
 # Data directory paths
+DATA_DIR = os.path.join(ROOT_DIR, 'data')
 DATA_DIRS = {
-    'external': os.path.join(ROOT_DIR, 'data', 'external'),
-    'interim': os.path.join(ROOT_DIR, 'data', 'interim'),
-    'processed': os.path.join(ROOT_DIR, 'data', 'processed'),
-    'raw': os.path.join(ROOT_DIR, 'data', 'raw'),
+    'external': os.path.join(DATA_DIR, 'external'),
+    'interim': os.path.join(DATA_DIR, 'interim'),
+    'processed': os.path.join(DATA_DIR, 'processed'),
+    'raw': os.path.join(DATA_DIR, 'raw'),
 }
 
 # Data subdirectories names
@@ -88,8 +89,11 @@ DATA_SUBDIRS = ['basal-like', 'her2-enriched', 'luminal-a', 'luminal-b', 'paired
 # TCGA-related data directories paths
 TCGA_DATA_DIRS = {
     dir: {
-        subdir: os.path.join(DATA_DIRS[dir], 'tcga-brca', subdir)
-        for subdir in DATA_SUBDIRS
+        'root': os.path.join(DATA_DIRS[dir], 'tcga-brca'),
+        **{
+            subdir: os.path.join(DATA_DIRS[dir], 'tcga-brca', subdir)
+            for subdir in DATA_SUBDIRS
+        }
     }
     for dir in ['interim', 'processed', 'raw']
 }
