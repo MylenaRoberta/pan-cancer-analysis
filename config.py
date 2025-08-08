@@ -7,35 +7,44 @@ from urllib.parse import urljoin
 
 # Parameter setup of the [1] metadata selective access stage
 METADATA_SELECTIVE_ACCESS_SETUP = {
-    'project_ids': ['TCGA-BRCA'],
+    'project-ids': ['TCGA-BRCA'],
 }
 
 # Parameter setup of the [2] metadata filtering stage
 METADATA_FILTERING_SETUP = {
-    'data_types': ['Isoform Expression Quantification', 'Gene Expression Quantification'],
-    'disease_types': ['Ductal and Lobular Neoplasms'],
-    'molecular_subtypes': ['Basal-like', 'HER2-enriched', 'Luminal A', 'Luminal B'],
-    'sample_types': ['Primary Tumor', 'Solid Tissue Normal'],
+    'data-types': ['Isoform Expression Quantification', 'Gene Expression Quantification'],
+    'disease-types': ['Ductal and Lobular Neoplasms'],
+    'molecular-subtypes': ['Basal-like', 'HER2-enriched', 'Luminal A', 'Luminal B'],
+    'sample-types': ['Primary Tumor', 'Solid Tissue Normal'],
 }
 
 # Parameter setup of the [3] expression retrieval and aggregation stage
 EXPRESSION_RETRIEVAL_AND_AGGREGATION_SETUP = {
-    
+    'rna-seq-raw-reads-column': 'unstranded',
+    'rna-seq-norm-reads-column': 'tpm_unstranded', 
 }
 
 # Parameter setup of the [4] molecule filtering by expression stage
 MOLECULE_FILTERING_BY_EXPRESSION_SETUP = {
-    
+    'large-n': 10,
+    'min-count': 10,
+    'min-prop': 0.7,
+    'min-total-count': 15,
 }
 
 # Parameter setup of the [5] interaction inference stage
 INTERACTION_INFERENCE_SETUP = {
-    
+    'species-selection': 'human',
+    'fdr-method': 'bh', # Benjamini-Hochberg
+    'inference-alternative': 'less',
+    'inference-axis': 0,
 }
 
 # Parameter setup of the [6] network construction stage
 NETWORK_CONSTRUCTION_SETUP = {
-    
+    'max-correlation': -0.3,
+    'max-qvalue': 0.05,
+    'min-association': 0.1,
 }
 
 # ======================================================================
@@ -53,62 +62,10 @@ GDC_API_ENDPOINTS = {
 }
 
 # TCGA-BRCA paper table file name
-BRCA_PAPER_FILE = 'tcga-brca-paper-supplementary-tables-1-to-4.xls'
+TCGA_BRCA_PAPER_FILE = 'tcga-brca-paper-supplementary-tables-1-to-4.xls'
 
-
-# Aggregated miRNA-Seq and RNA-Seq reads file names
-AGGREGATED_READS_FILES = {
-    'mir-normalized': 'aggregated-mir-normalized-reads.csv',
-    'mir-raw': 'aggregated-mir-raw-reads.csv',
-    'rna-normalized': 'aggregated-rna-normalized-reads.csv',
-    'rna-raw': 'aggregated-rna-raw-reads.csv',
-}
-
-# EdgeR's filterByExpr() parameters [all default]
-FILTER_BY_EXPR_PARAMETERS = {
-    'min_count': 10,
-    'min_total_count': 15,
-    'large_n': 10,
-    'min_prop': 0.7,
-}
-
-# Expressed molecules file names
-EXPRESSED_MOLECULES_FILES = {
-    'mir': 'expressed-mirs.csv',
-    'rna': 'expressed-rnas.csv',
-}
-
-# miRWalk website download parameters
-MIRWALK_DOWNLOAD_PARAMETERS = {
-    'base-url': 'http://mirwalk.umm.uni-heidelberg.de',
-    'default-file-name': 'miRWalk_miRNA_Targets.csv',
-    'mir-mapping-file-name': 'mapping-mir-accession-id-to-name.csv',
-    'species-selection': 'human',
-}
-
-# Interaction (microRNA - messenger RNA) inference parameters
-INTERACTION_INFERENCE_PARAMETERS = {
-    'alternative': 'less',
-    'axis': 0,
-    'fdr-method': 'bh', # Benjamini-Hochberg
-    'file-name': 'inferred-interactions.csv',
-}
-
-# Interaction (microRNA - messenger RNA) filtering parameters
-INTERACTION_FILTERING_PARAMETERS = {
-    'edges_file_name': 'interaction-network-edges.csv',
-    'nodes_file_name': 'interaction-network-nodes.csv',
-    'max_correlation': -0.3,
-    'max_qvalue': 0.05,
-}
-
-# Association (microRNA - microRNA) filtering parameters
-ASSOCIATION_FILTERING_PARAMETERS = {
-    'inferred_associations': 'inferred-associations.csv',
-    'edges_file_name': 'association-network-edges.csv',
-    'nodes_file_name': 'association-network-nodes.csv',
-    'min_index': 0.1,
-}
+# miRWalk base URL
+MIRWALK_BASE_URL = 'http://mirwalk.umm.uni-heidelberg.de'
 
 # ======================================================================
 # DIRECTORY PATHS
@@ -118,79 +75,116 @@ ASSOCIATION_FILTERING_PARAMETERS = {
 ROOT_DIR = os.path.abspath(os.path.dirname(__file__))
 
 # Data directory paths
-DATA_DIR = os.path.join(ROOT_DIR, 'data')
-RAW_DATA_DIR = os.path.join(DATA_DIR, 'raw')
-EXTERNAL_DATA_DIR = os.path.join(DATA_DIR, 'external')
-INTERIM_DATA_DIR = os.path.join(DATA_DIR, 'interim')
-PROCESSED_DATA_DIR = os.path.join(DATA_DIR, 'processed')
-
-# Raw data directory paths
-BRCA_RAW_DATA_DIR = os.path.join(RAW_DATA_DIR, 'tcga-brca')
-BRCA_RAW_FILES_DIRS = {
-    'basal-like': os.path.join(BRCA_RAW_DATA_DIR, 'basal-like-files'),
-    'her2-enriched': os.path.join(BRCA_RAW_DATA_DIR, 'her2-enriched-files'),
-    'luminal-a': os.path.join(BRCA_RAW_DATA_DIR, 'luminal-a-files'),
-    'luminal-b': os.path.join(BRCA_RAW_DATA_DIR, 'luminal-b-files'),
-    'paired-normal': os.path.join(BRCA_RAW_DATA_DIR, 'paired-normal-files'),
+DATA_DIRS = {
+    'external': os.path.join(ROOT_DIR, 'data', 'external'),
+    'interim': os.path.join(ROOT_DIR, 'data', 'interim'),
+    'processed': os.path.join(ROOT_DIR, 'data', 'processed'),
+    'raw': os.path.join(ROOT_DIR, 'data', 'raw'),
 }
 
-# External data directory paths
-MIRWALK_EXTERNAL_DATA_DIR = os.path.join(EXTERNAL_DATA_DIR, 'mirwalk')
+# Data subdirectories names
+DATA_SUBDIRS = ['basal-like', 'her2-enriched', 'luminal-a', 'luminal-b', 'paired-normal']
 
-# Interim data directory paths
-BRCA_INTERIM_DATA_DIR = os.path.join(INTERIM_DATA_DIR, 'tcga-brca')
-BRCA_INTERIM_FILES_DIRS = {
-    'basal-like': os.path.join(BRCA_INTERIM_DATA_DIR, 'basal-like-files'),
-    'her2-enriched': os.path.join(BRCA_INTERIM_DATA_DIR, 'her2-enriched-files'),
-    'luminal-a': os.path.join(BRCA_INTERIM_DATA_DIR, 'luminal-a-files'),
-    'luminal-b': os.path.join(BRCA_INTERIM_DATA_DIR, 'luminal-b-files'),
-    'paired-normal': os.path.join(BRCA_INTERIM_DATA_DIR, 'paired-normal-files'),
+# TCGA-related data directories paths
+TCGA_DATA_DIRS = {
+    dir: {
+        subdir: os.path.join(DATA_DIRS[dir], 'tcga-brca', subdir)
+        for subdir in DATA_SUBDIRS
+    }
+    for dir in ['interim', 'processed', 'raw']
 }
 
-# Processed data directory paths
-BRCA_PROCESSED_DATA_DIR = os.path.join(PROCESSED_DATA_DIR, 'tcga-brca')
-BRCA_PROCESSED_FILES_DIRS = {
-    'basal-like': os.path.join(BRCA_PROCESSED_DATA_DIR, 'basal-like-files'),
-    'her2-enriched': os.path.join(BRCA_PROCESSED_DATA_DIR, 'her2-enriched-files'),
-    'luminal-a': os.path.join(BRCA_PROCESSED_DATA_DIR, 'luminal-a-files'),
-    'luminal-b': os.path.join(BRCA_PROCESSED_DATA_DIR, 'luminal-b-files'),
-    'paired-normal': os.path.join(BRCA_PROCESSED_DATA_DIR, 'paired-normal-files'),
+# miRWalk-related data directories paths
+MIRWALK_DATA_DIRS = {
+    dir: os.path.join(DATA_DIRS[dir], 'mirwalk')
+    for dir in ['external', 'processed']
 }
-MIRWALK_PROCESSED_DATA_DIR = os.path.join(PROCESSED_DATA_DIR, 'mirwalk')
-CYTOSCAPE_PROCESSED_DATA_DIR = os.path.join(PROCESSED_DATA_DIR, 'cytoscape')
-CYTOSCAPE_PROCESSED_FILES_DIRS = {
-    'basal-like': os.path.join(CYTOSCAPE_PROCESSED_DATA_DIR, 'basal-like-files'),
-    'her2-enriched': os.path.join(CYTOSCAPE_PROCESSED_DATA_DIR, 'her2-enriched-files'),
-    'luminal-a': os.path.join(CYTOSCAPE_PROCESSED_DATA_DIR, 'luminal-a-files'),
-    'luminal-b': os.path.join(CYTOSCAPE_PROCESSED_DATA_DIR, 'luminal-b-files'),
-    'paired-normal': os.path.join(CYTOSCAPE_PROCESSED_DATA_DIR, 'paired-normal-files'),
+
+# Network-related data directories paths
+NETWORK_DATA_DIRS = {
+    dir: {
+        subdir: os.path.join(DATA_DIRS[dir], 'networks', subdir)
+        for subdir in DATA_SUBDIRS
+    }
+    for dir in ['interim', 'processed']
 }
 
 # ======================================================================
-# FILE PATHS
+# ENSURE THE EXISTENCE OF DATA DIRECTORIES
 # ======================================================================
 
-# TCGA-BRCA raw files paths
-BRCA_RAW_FILES_PATHS = {
-    'cases': os.path.join(BRCA_RAW_DATA_DIR, 'cases-metadata.csv'),
-    'files': os.path.join(BRCA_RAW_DATA_DIR, 'files-metadata.csv'),
-    'paper': os.path.join(BRCA_RAW_DATA_DIR, BRCA_PAPER_FILE),
-    'project': os.path.join(BRCA_RAW_DATA_DIR, 'project-metadata.csv'),
-}
+def ensure_directories(*dir_dicts):
+    """
+    Recursively ensure that all directories in the given dictionaries exist.
 
-# TCGA-BRCA processed files paths
-BRCA_PROCESSED_FILES_PATHS = {
-    'cases': os.path.join(BRCA_PROCESSED_DATA_DIR, 'cases-metadata.csv'),
-    'files': os.path.join(BRCA_PROCESSED_DATA_DIR, 'files-metadata.csv'),
-    'paper': os.path.join(BRCA_PROCESSED_DATA_DIR, 'paper-cases-data.csv'),
-}
+    This function accepts one or more dictionaries whose values are:
+    - strings representing directory paths; or
+    - nested dictionaries containing more directory paths.
 
-# miRWalk default file path
-MIRWALK_DEFAULT_FILE_PATH = os.path.join(
-    MIRWALK_EXTERNAL_DATA_DIR, MIRWALK_DOWNLOAD_PARAMETERS['default-file-name']
+    For each path, it creates the directory (and any missing parent 
+    directories) if it does not already exist.
+
+    Parameters
+    ----------
+    *dir_dicts : dict
+        One or more dictionaries containing directory paths or nested 
+        dictionaries of directory paths.
+
+    Examples
+    --------
+    >>> ensure_directories(DATA_DIRS, TCGA_DATA_DIRS)
+    """
+    for dir_dict in dir_dicts:
+        for path in dir_dict.values():
+            if isinstance(path, dict):
+                # If the value is another dictionary, go deeper
+                ensure_directories(path)
+            else:
+                # Create the directory if it does not exist
+                os.makedirs(path, exist_ok=True)
+
+# Create all data directories if necessary
+ensure_directories(
+    DATA_DIRS,
+    TCGA_DATA_DIRS,
+    MIRWALK_DATA_DIRS,
+    NETWORK_DATA_DIRS,
 )
 
-# miRWalk accession ID to microRNA name file path
-MIRWALK_MIR_MAPPING_FILE_PATH = os.path.join(
-    MIRWALK_PROCESSED_DATA_DIR, MIRWALK_DOWNLOAD_PARAMETERS['mir-mapping-file-name']
-)
+# ======================================================================
+# FILE NAMES
+# ======================================================================
+
+# TCGA-related file names
+TCGA_FILES = {
+    'cases': 'cases-metadata.csv',
+    'files': 'files-metadata.csv',
+    'paper': TCGA_BRCA_PAPER_FILE,
+    'project': 'project-metadata.csv',
+}
+
+# Expression-related file names
+EXPRESSION_FILES = {
+    'agg-mirnas-norm': 'aggregated-mirna-normalized-reads.csv',
+    'agg-mirnas-raw': 'aggregated-mirna-raw-reads.csv',
+    'agg-mrnas-norm': 'aggregated-mrna-normalized-reads.csv',
+    'agg-mrnas-raw': 'aggregated-mrna-raw-reads.csv',
+    'expressed-mirnas': 'expressed-mirnas.csv',
+    'expressed-mrnas': 'expressed-mrnas.csv',
+}
+
+# miRWalk-related file names
+MIRWALK_FILES = {
+    'default-file': 'miRWalk_miRNA_Targets.csv',
+    'mirna-mapping': 'mapping-mirna-accession-id-to-name.csv',
+}
+
+# Network-related file names
+NETWORK_FILES = {
+    'association-edges': 'association-network-edges.csv',
+    'association-nodes': 'association-network-nodes.csv',
+    'inferred-associations': 'inferred-associations.csv',
+    'inferred-interactions': 'inferred-interactions.csv',
+    'interaction-edges': 'interaction-network-edges.csv',
+    'interaction-nodes': 'interaction-network-nodes.csv',
+}
