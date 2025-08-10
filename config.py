@@ -119,24 +119,43 @@ NETWORK_DATA_DIRS = {
 
 def ensure_directories(*dir_dicts):
     """
-    Recursively ensure that all directories in the given dictionaries exist.
+    Ensure that all directories in one or more nested directory dictionaries exist.
 
-    This function accepts one or more dictionaries whose values are:
-    - strings representing directory paths; or
-    - nested dictionaries containing more directory paths.
-
-    For each path, it creates the directory (and any missing parent 
-    directories) if it does not already exist.
+    This function takes one or more dictionaries mapping keys to directory paths.
+    Values can themselves be nested dictionaries. It recursively traverses the
+    dictionaries, creating any directories that do not already exist.
 
     Parameters
     ----------
     *dir_dicts : dict
-        One or more dictionaries containing directory paths or nested 
-        dictionaries of directory paths.
+        One or more dictionaries where values are either:
+        - strings: paths to directories to create, or
+        - dicts: nested dictionaries containing further paths.
+
+    Returns
+    -------
+    None
+        This function is called for its side effects of ensuring directories exist.
+
+    Notes
+    -----
+    - Uses :func:`os.makedirs` with ``exist_ok=True`` to avoid errors if a directory
+      already exists.
+    - Handles arbitrarily nested dictionaries of directory paths.
+    - Typically used with global configuration variables such as
+      ``TCGA_DATA_DIRS`` or ``TCGA_FILES``.
 
     Examples
     --------
-    >>> ensure_directories(DATA_DIRS, TCGA_DATA_DIRS)
+    >>> dirs = {
+    ...     "raw": "/data/raw",
+    ...     "processed": {
+    ...         "group1": "/data/processed/group1",
+    ...         "group2": "/data/processed/group2"
+    ...     }
+    ... }
+    >>> ensure_directories(dirs)
+    # Creates /data/raw, /data/processed/group1, and /data/processed/group2
     """
     for dir_dict in dir_dicts:
         for path in dir_dict.values():
