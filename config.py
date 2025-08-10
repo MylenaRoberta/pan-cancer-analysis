@@ -169,18 +169,18 @@ TCGA_FILES = {
 
 # Expression-related file names
 EXPRESSION_FILES = {
-    'agg-mirnas-norm': 'aggregated-mirna-normalized-reads.csv',
-    'agg-mirnas-raw': 'aggregated-mirna-raw-reads.csv',
-    'agg-mrnas-norm': 'aggregated-mrna-normalized-reads.csv',
-    'agg-mrnas-raw': 'aggregated-mrna-raw-reads.csv',
-    'expressed-mirnas': 'expressed-mirnas.csv',
+    'agg-mirs-norm-reads': 'aggregated-mirna-normalized-reads.csv',
+    'agg-mirs-raw-reads': 'aggregated-mirna-raw-reads.csv',
+    'agg-mrnas-norm-reads': 'aggregated-mrna-normalized-reads.csv',
+    'agg-mrnas-raw-reads': 'aggregated-mrna-raw-reads.csv',
+    'expressed-mirs': 'expressed-mirnas.csv',
     'expressed-mrnas': 'expressed-mrnas.csv',
 }
 
 # miRWalk-related file names
 MIRWALK_FILES = {
     'default-file': 'miRWalk_miRNA_Targets.csv',
-    'mirna-mapping': 'mapping-mirna-accession-id-to-name.csv',
+    'mirs-mapping': 'mapping-mirna-accession-id-to-name.csv',
 }
 
 # Network-related file names
