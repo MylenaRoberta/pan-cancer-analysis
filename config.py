@@ -34,10 +34,13 @@ MOLECULE_FILTERING_BY_EXPRESSION_SETUP = {
 
 # Parameter setup of the [5] interaction inference stage
 INTERACTION_INFERENCE_SETUP = {
-    'species-selection': 'human',
-    'fdr-method': 'bh', # Benjamini-Hochberg
+    'binding-position': '3UTR',
+    'fdr-method': 'bh',
     'inference-alternative': 'less',
     'inference-axis': 0,
+    'min-binding-probability': 0.9,
+    'species-selection': 'human',
+    'targetscan-prediction': 1,
 }
 
 # Parameter setup of the [6] network construction stage
@@ -198,8 +201,8 @@ EXPRESSION_FILES = {
 
 # miRWalk-related file names
 MIRWALK_FILES = {
-    'default-file': 'miRWalk_miRNA_Targets.csv',
-    'mirs-mapping': 'mapping-mirna-accession-id-to-name.csv',
+    'download': 'miRWalk_miRNA_Targets.csv',
+    'mapping': 'mapping-mirna-accession-id-to-name.csv',
 }
 
 # Network-related file names
