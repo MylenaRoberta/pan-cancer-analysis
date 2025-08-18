@@ -38,12 +38,68 @@
 
 * Name: Pipeline Parameter Setup Artifacts
 
-### Artifact AT_SETUP/
+### Artifact AT_SETUP/MSA
 
-* Name: 
+* Name: Metadata Selective Access Setup
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| project-ids | List of TCGA project identifiers used for metadata access | trp:SETUPMSA01 | - | string | edam:Identifier | http://edamontology.org/data_0842 |
+
+### Artifact AT_SETUP/MF
+
+* Name: Metadata Filtering Setup
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| data-types | List of file data types to retain | trp:SETUPMF01 | - | string | edam:Classification | http://edamontology.org/operation_2990 |
+| disease-types | List of disease classifications to retain | trp:SETUPMF02 | - | string | gro:Disease | http://www.bootstrep.eu/ontology/GRO#Disease |
+| molecular-subtypes| Molecular subtype filter | trp:SETUPMF03 | - | string | edam:Classification | http://edamontology.org/operation_2990 |
+| sample-types | List of sample classifications | trp:SETUPMF04 | - | string | obi:Specimen | http://purl.obolibrary.org/obo/OBI_0100051 |
+
+### Artifact AT_SETUP/ERA
+
+* Name: Expression Retrieval and Aggregation Setup
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| rna-seq-raw-reads-column | Column name for raw RNA-Seq read counts | trp:SETUPERA01 | - | string | edam:Identifier | http://edamontology.org/data_0842 |
+| rna-seq-norm-reads-column | Column name for normalized RNA-Seq counts | trp:SETUPERA02 | - | string | edam:Identifier | http://edamontology.org/data_0842 |
+
+### Artifact AT_SETUP/MFE
+
+* Name: Molecule Filtering by Expression Setup
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| large-n | Minimum group size for expression filter | trp:SETUPMFE01 | - | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
+| min-count | Minimum raw count threshold | trp:SETUPMFE02 | - | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047  |
+| min-prop | Minimum proportion of samples expressing the molecule | trp:SETUPMFE03 | - | real | stato:Proportion | http://purl.obolibrary.org/obo/STATO_0000607 |
+| min-total-count | Minimum total read count across all samples | trp:SETUPMFE04 | - | integer | stato:Count | http://purl.obolibrary.org/obo/STATO_0000047 |
+
+### Artifact AT_SETUP/II
+
+* Name: Interaction Inference Setup
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| binding-position | Transcript region for binding (e.g., 3UTR) | trp:SETUPII01 | - | string | so:TranscriptRegion | http://purl.obolibrary.org/obo/SO_0000833 |
+| fdr-method | False discovery rate control method | trp:SETUPII02 | - | string | obi:MultipleTestingCorrectionMethod | http://purl.obolibrary.org/obo/OBI_0200089 |
+| inference-alternative | Alternative hypothesis for statistical test | trp:SETUPII03 | - | string | stato:AlternativeHypothesis | http://purl.obolibrary.org/obo/STATO_0000208 |
+| inference-axis | Axis/dimension of inference testing | trp:SETUPII04 | - | integer | obi:DataTransformation | http://purl.obolibrary.org/obo/OBI_0200000 |
+| min-binding-probability | Minimum probability threshold for binding | trp:SETUPII05 | - | real | stato:Statistic | http://purl.obolibrary.org/obo/STATO_0000039 |
+| species-selection | Species considered for predictions | trp:SETUPII06 | - | string | ncit:Species | http://purl.obolibrary.org/obo/NCIT_C45293 |
+| targetscan-prediction | Use TargetScan prediction flag (0: no, 1: yes) | trp:SETUPII07 | - | boolean | edam:DataFiltering | http://edamontology.org/operation_3695 |
+
+### Artifact AT_SETUP/NC
+
+* Name: Network Construction Setup
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| max-correlation | Maximum (negative) correlation threshold for inclusion | trp:SETUPNC01 | - | real | stato:CorrelationCoefficient | http://purl.obolibrary.org/obo/STATO_0000142 |
+| max-qvalue | Maximum allowed adjusted p-value | trp:SETUPNC02 | - | real | obi:QValue | http://purl.obolibrary.org/obo/OBI_0001442 |
+| min-association | Minimum association strength required | trp:SETUPNC03 | - | real | stato:MeasureOfAssociation | http://purl.obolibrary.org/obo/STATO_0000610 |
 
 
 ## Family of Artifacts AT_OR
