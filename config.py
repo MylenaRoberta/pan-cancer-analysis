@@ -1,3 +1,82 @@
+"""
+Configuration module for the TCGA-BRCA analysis pipeline.
+
+This module defines parameters, constants, directory paths, and file names
+used across the pipeline. It centralizes setup to ensure its consistency,
+reproducibility, and maintainability.
+
+Parameters
+----------
+METADATA_SELECTIVE_ACCESS_SETUP : dict
+    Configuration for metadata selective access (project IDs).
+METADATA_FILTERING_SETUP : dict
+    Configuration for metadata filtering (data types, disease types,
+    molecular subtypes, sample types).
+EXPRESSION_RETRIEVAL_AND_AGGREGATION_SETUP : dict
+    Configuration for expression retrieval and aggregation (RNA-seq columns).
+MOLECULE_FILTERING_BY_EXPRESSION_SETUP : dict
+    Configuration for filtering molecules by expression thresholds.
+INTERACTION_INFERENCE_SETUP : dict
+    Configuration for interaction inference (binding site, FDR, inference
+    method, species, etc.).
+NETWORK_CONSTRUCTION_SETUP : dict
+    Configuration for network construction (correlation, q-values,
+    associations).
+
+Constants
+---------
+GDC_API_BASE_URL : str
+    Base URL of the Genomic Data Commons API.
+GDC_API_ENDPOINTS : dict
+    API endpoints for data, cases, files, projects, and status.
+TCGA_BRCA_PAPER_FILE : str
+    Filename of TCGA-BRCA supplementary data.
+MIRWALK_BASE_URL : str
+    Base URL of miRWalk database.
+
+Paths
+-----
+ROOT_DIR : str
+    Root directory of the repository.
+DATA_DIR : str
+    Path to the main data directory.
+DATA_DIRS : dict
+    Paths for external, interim, processed, and raw data.
+DATA_SUBDIRS : list of str
+    Names of TCGA-BRCA subtype subdirectories.
+TCGA_DATA_DIRS : dict
+    Nested dictionary of TCGA-BRCA data directories.
+MIRWALK_DATA_DIRS : dict
+    Paths for miRWalk data.
+NETWORK_DATA_DIRS : dict
+    Paths for network data.
+
+Functions
+---------
+ensure_directories(*dir_dicts)
+    Ensure that all directories in one or more nested directory
+    dictionaries exist.
+
+Files
+-----
+TCGA_FILES : dict
+    Filenames for TCGA-related data (cases, files, projects, paper).
+EXPRESSION_FILES : dict
+    Filenames for aggregated and expressed miRNA/mRNA data.
+MIRWALK_FILES : dict
+    Filenames for miRWalk data (downloaded targets, mapping).
+NETWORK_FILES : dict
+    Filenames for inferred interactions and constructed networks.
+
+Examples
+--------
+>>> from config import DATA_DIRS, TCGA_FILES
+>>> DATA_DIRS['raw']
+'/path/to/repo/data/raw'
+>>> TCGA_FILES['cases']
+'cases-metadata.csv'
+"""
+
 import os
 from urllib.parse import urljoin
 
