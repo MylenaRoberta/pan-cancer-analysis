@@ -166,7 +166,7 @@ DATA_DIRS = {
 }
 
 # Data subdirectories names
-DATA_SUBDIRS = ['basal-like', 'her2-enriched', 'luminal-a', 'luminal-b', 'paired-normal']
+DATA_SUBDIRS = ['basal-like', 'her2-enriched', 'luminal-a', 'luminal-b', 'normal']
 
 # TCGA-related data directories paths
 TCGA_DATA_DIRS = {
