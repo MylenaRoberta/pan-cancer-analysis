@@ -1,0 +1,14 @@
+source,target,mirtarbase,correlation,qvalue
+hsa-miR-141-3p,IGF2,,-0.587,0.032
+hsa-let-7d-5p,MEF2D,MIRT735654,-0.562,0.032
+hsa-miR-378a-3p,ACP6,,-0.562,0.032
+hsa-miR-18a-5p,ZBTB20,,-0.559,0.032
+hsa-miR-106b-5p,PLXDC2,,-0.558,0.032
+hsa-let-7d-5p,SMARCC1,,-0.546,0.042
+hsa-miR-106b-5p,SALL1,,-0.545,0.042
+hsa-let-7d-5p,HIF1AN,,-0.539,0.042
+hsa-let-7d-5p,PRKAR2A,,-0.537,0.042
+hsa-miR-155-5p,VAV3,,-0.537,0.042
+hsa-miR-182-5p,GPHN,,-0.532,0.044
+hsa-miR-320b,MYEF2,,-0.529,0.044
+hsa-miR-30c-5p,SNAI1,MIRT006762,-0.529,0.044

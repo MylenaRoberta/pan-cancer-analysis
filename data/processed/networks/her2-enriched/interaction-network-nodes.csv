@@ -1,0 +1,23 @@
+id,label,type
+hsa-miR-141-3p,hsa-miR-141-3p,MicroRNA
+hsa-let-7d-5p,hsa-let-7d-5p,MicroRNA
+hsa-miR-378a-3p,hsa-miR-378a-3p,MicroRNA
+hsa-miR-18a-5p,hsa-miR-18a-5p,MicroRNA
+hsa-miR-106b-5p,hsa-miR-106b-5p,MicroRNA
+hsa-miR-155-5p,hsa-miR-155-5p,MicroRNA
+hsa-miR-182-5p,hsa-miR-182-5p,MicroRNA
+hsa-miR-320b,hsa-miR-320b,MicroRNA
+hsa-miR-30c-5p,hsa-miR-30c-5p,MicroRNA
+IGF2,IGF2,Messenger RNA
+MEF2D,MEF2D,Messenger RNA
+ACP6,ACP6,Messenger RNA
+ZBTB20,ZBTB20,Messenger RNA
+PLXDC2,PLXDC2,Messenger RNA
+SMARCC1,SMARCC1,Messenger RNA
+SALL1,SALL1,Messenger RNA
+HIF1AN,HIF1AN,Messenger RNA
+PRKAR2A,PRKAR2A,Messenger RNA
+VAV3,VAV3,Messenger RNA
+GPHN,GPHN,Messenger RNA
+MYEF2,MYEF2,Messenger RNA
+SNAI1,SNAI1,Messenger RNA
