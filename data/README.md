@@ -1,44 +1,40 @@
 # Transparent Reproducible Pipeline (TRP)
 
-## Ontologies
-
-* [Web Access Control Ontology](https://www.w3.org/wiki/WebAccessControl)
-* [Gene Regulation Ontology](https://bioportal.bioontology.org/ontologies/GRO)
-* [National Cancer Institute Thesaurus](https://bioportal.bioontology.org/ontologies/NCIT)
-* [Ontology for Biomedical Investigations](https://bioportal.bioontology.org/ontologies/OBI)
-* [Sequence Types and Features Ontology](https://bioportal.bioontology.org/ontologies/SO)
-* [Systems Biology Ontology](https://bioportal.bioontology.org/ontologies/SBO)
-* [Statistics Ontology](https://bioportal.bioontology.org/ontologies/STATO)
-* [EDAM - Ontology of bioscientific data analysis and data management](https://edamontology.org)
-
 ## Schema Documentation Fields
 
-* `field name`: Name of the field in the artifact’s table.
-* `unique id`: ID attributed to the field, which is unique among all artifacts/tables.
-* `descendant of`: When the field descends from another artifact, it refers to the unique ID of the original field.
-* `data type`: Data type of the field content.
-* `role`: Role of the field in the artifact. It can contain biological data, statistical metrics, or transformation operations. The field prefix (namespace) indicates its role:
-  * `access`
-    * [Web Access Control Ontology](https://www.w3.org/wiki/WebAccessControl): `wac:`
-  * `biological`
-    * [Gene Regulation Ontology](https://bioportal.bioontology.org/ontologies/GRO): `gro:`
-    * [National Cancer Institute Thesaurus](https://bioportal.bioontology.org/ontologies/NCIT): `ncit:`
-    * [Ontology for Biomedical Investigations](https://bioportal.bioontology.org/ontologies/OBI): `obi:`
-    * [Sequence Types and Features Ontology](https://bioportal.bioontology.org/ontologies/SO): `so:`
-    * [Systems Biology Ontology](https://bioportal.bioontology.org/ontologies/SBO): `sbo:`
-  * `statistical`
-    * [Statistics Ontology](https://bioportal.bioontology.org/ontologies/STATO): `stato:`
-  * `transformation`
-    * [EDAM](https://edamontology.org): `edam:`
-* `uri`: URI of the concept related to this field in an ontology defined by role.
+- `field name`: Name of the field in the artifact’s table.  
+- `unique id`: ID attributed to the field, which is unique among all artifacts/tables.  
+- `descendant of`: When the field descends from another artifact, it refers to the unique ID of the original field.  
+- `data type`: Data type of the field content.  
+- `role`: Role of the field in the artifact. It can contain biological data, statistical metrics, transformation operations, or access permissions.  
+  - Each role is indicated by a **prefix** (namespace), such as `obi:`, `so:`, or `edam:`.  
+  - The mapping of prefixes to ontologies is provided in the [Ontologies](#ontologies) section.  
+- `uri`: URI of the concept related to this field in the ontology defined by the role.  
+
+## Ontologies
+
+Our documentation uses a set of established ontologies, organized by their role.  
+Each ontology is referenced by a prefix in the schema.
+
+| ontology | prefix | role | scope | homepage |
+| -------- | ------ | ---- | ----- | -------- |
+| **Web Access Control (WAC)** | `wac:` | Access | Defines concepts for authorization and access control policies on the Web | <https://solid.github.io/web-access-control-spec/> |
+| **Gene Regulation Ontology (GRO)** | `gro:` | Biological | Provides terms for gene regulation events, interactions, and related biological entities | <https://bioportal.bioontology.org/ontologies/GRO> |
+| **National Cancer Institute Thesaurus (NCIT)** | `ncit:` | Biological | Provides terms for cancer research, clinical care, and related biomedical concepts | <https://evsexplore.semantics.cancer.gov/evsexplore/welcome?terminology=ncit> |
+| **Ontology for Biomedical Investigations (OBI)** | `obi:` | Biological | Provides terms for biological and clinical investigations, assays, protocols, and results | <http://obi-ontology.org> |
+| **Sequence Ontology (SO)** | `so:` | Biological | Defines concepts for biological sequence features such as genes, transcripts, and regulatory regions | <http://www.sequenceontology.org> |
+| **Systems Biology Ontology (SBO)** | `sbo:` | Biological | Provides terms for biochemical reactions, modeling parameters, and systems biology concepts | <https://github.com/EBI-BioModels/SBO> |
+| **Statistics Ontology (STATO)** | `stato:` | Statistical | Provides terms for statistical methods, tests, hypotheses, and measures | <https://stato-ontology.org/> |
+| **EDAM - The ontology of data analysis and management** | `edam:` | Transformation / Data Management | Provides terms for bioinformatics data types, identifiers, formats, and analysis operations | <https://edamontology.org> |
 
 ## Family of Artifacts AT_SETUP
 
-* Name: Pipeline Parameter Setup Artifacts
+- Name: Pipeline Parameter Setup Artifacts
+- File: [config.py](../config.py)
 
 ### Artifact AT_SETUP/MSA
 
-* Name: Metadata Selective Access Setup
+- Name: Metadata Selective Access Setup
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -46,7 +42,7 @@
 
 ### Artifact AT_SETUP/MF
 
-* Name: Metadata Filtering Setup
+- Name: Metadata Filtering Setup
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -57,7 +53,7 @@
 
 ### Artifact AT_SETUP/ERA
 
-* Name: Expression Retrieval and Aggregation Setup
+- Name: Expression Retrieval and Aggregation Setup
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -66,7 +62,7 @@
 
 ### Artifact AT_SETUP/MFE
 
-* Name: Molecule Filtering by Expression Setup
+- Name: Molecule Filtering by Expression Setup
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -77,7 +73,7 @@
 
 ### Artifact AT_SETUP/II
 
-* Name: Interaction Inference Setup
+- Name: Interaction Inference Setup
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -91,7 +87,7 @@
 
 ### Artifact AT_SETUP/NC
 
-* Name: Network Construction Setup
+- Name: Network Construction Setup
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -101,12 +97,12 @@
 
 ## Family of Artifacts AT_OR
 
-* Name: TCGA Origin Artifacts
+- Name: TCGA Origin Artifacts
 
 ### Artifact AT_OR/PM
 
-* Name: TCGA Origin Project Metadata
-* File: [project-metadata.csv](raw/tcga-brca/project-metadata.csv)
+- Name: Project Metadata
+- File: [project-metadata.csv](raw/tcga-brca/project-metadata.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -121,8 +117,8 @@
 
 ### Artifact AT_OR/CM
 
-* Name: TCGA Origin Cases Metadata
-* File: [cases-metadata.csv](raw/tcga-brca/cases-metadata.csv)
+- Name: Cases Metadata
+- File: [cases-metadata.csv](raw/tcga-brca/cases-metadata.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -132,8 +128,8 @@
 
 ### Artifact AT_OR/FM
 
-* Name: TCGA Origin Files Metadata
-* File: [files-metadata.csv](raw/tcga-brca/files-metadata.csv)
+- Name: Files Metadata
+- File: [files-metadata.csv](raw/tcga-brca/files-metadata.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -148,12 +144,12 @@
 
 ## Family of Artifacts AT_FOR
 
-* Family Name: TCGA Origin Filtered Artifacts
+- Name: TCGA Origin Filtered Artifacts
 
 ### Artifact AT_FOR/PC
 
-* Name: TCGA Origin Paper Cases Data
-* File (SuppTable1): [tcga-brca-paper-supplementary-tables-1-to-4.xls](raw/tcga-brca/tcga-brca-paper-supplementary-tables-1-to-4.xls)
+- Name: Paper Cases Data
+- File (SuppTable1): [tcga-brca-paper-supplementary-tables-1-to-4.xls](raw/tcga-brca/tcga-brca-paper-supplementary-tables-1-to-4.xls)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 |------------|-------------|-----------|----------------|-----------|------|-----|
@@ -190,8 +186,8 @@
 
 ### Artifact AT_FOR/FPC
 
-* Name: TCGA Origin Filtered Paper Cases Data
-* File: [paper-cases-data.csv](processed/tcga-brca/paper-cases-data.csv)
+- Name: Filtered Paper Cases Data
+- File: [paper-cases-data.csv](processed/tcga-brca/paper-cases-data.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 |------------|-------------|-----------|----------------|-----------|------|-----|
@@ -229,8 +225,8 @@
 
 ### Artifact AT_FOR/CM
 
-* Name: TCGA Origin Filtered Cases Metadata
-* File: [cases-metadata.csv](processed/tcga-brca/cases-metadata.csv)
+- Name: Filtered Cases Metadata
+- File: [cases-metadata.csv](processed/tcga-brca/cases-metadata.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -244,8 +240,8 @@
 
 ### Artifact AT_FOR/FM
 
-* Name: TCGA Origin Filtered Files Metadata
-* File: [files-metadata.csv](processed/tcga-brca/files-metadata.csv)
+- Name: Filtered Files Metadata
+- File: [files-metadata.csv](processed/tcga-brca/files-metadata.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -263,126 +259,126 @@
 
 ## Family of Artifacts AT_EF
 
-* Family Name: TCGA Origin Expression File Artifacts
+- Name: TCGA Origin Expression File Artifacts
 
-### Artifact AT_EF/MOF
+### Artifact AT_EF/MR
 
-* Name: TCGA Origin MicroRNA-Seq File
-* Example File: [mirna-seq-origin-file.txt](examples/mirna-seq-origin-file.txt)
-
-| field name | description | unique id | descendant of | data type | role | URI |
-| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-| miRNA_ID | Identifier of the microRNA (miRNA) as annotated in miRBase | trp:EFMOF01 | - | string | so:MicroRNA | <http://purl.obolibrary.org/obo/SO_0000276> |
-| isoform_coords | Genomic coordinates and strand of the miRNA isoform based on the hg38 assembly | trp:EFMOF02 | - | string | so:SequenceFeature | <http://purl.obolibrary.org/obo/SO_0000110> |
-| read_count | Number of reads mapped to the isoform | trp:EFMOF03 | - | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
-| reads_per_million_miRNA_mapped | Normalized abundance of the isoform (reads per million mapped miRNA reads) | trp:EFMOF04 | - | real | obi:NormalizedDataSet | <http://purl.obolibrary.org/obo/OBI_0000451> |
-| cross-mapped | Indicates whether the reads are cross-mapped to other loci (Y/N) | trp:EFMOF05 | - | string | edam:DataFiltering | <http://edamontology.org/operation_3695> |
-| miRNA_region | Region classification of the isoform (e.g., mature, precursor) with optional miRBase accession | trp:EFMOF06 | - | string | so:MicroRNARegion | <http://purl.obolibrary.org/obo/SO_0000836> |
-
-### Artifact AT_EF/MPF
-
-* Name: TCGA Origin MicroRNA-Seq Processed File
-* Example File: [mirna-seq-processed-file.csv](examples/mirna-seq-processed-file.txt)
+- Name: MicroRNA-Seq Read Counts
+- Example file: [mirna-seq-origin-file.txt](examples/mirna-seq-origin-file.txt)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-| mirna_id | Identifier of the microRNA (miRNA) as annotated in miRBase | trp:EFMPF01 | trp:EFMOF01 | string | so:MicroRNA | <http://purl.obolibrary.org/obo/SO_0000276> |
-| genome_assembly | Reference genome assembly version | trp:EFMPF02 | trp:EFMOF02 | string | edam:SequenceAssembly | <http://edamontology.org/data_0925> |
-| chromosome | Chromosome on which the miRNA isoform is located | trp:EFMPF03 | trp:EFMOF02 | string | so:Chromosome | <http://purl.obolibrary.org/obo/SO_0000340> |
-| position_range | Genomic coordinate range of the isoform, start-end | trp:EFMPF04 | trp:EFMOF02 | string | so:SequenceLocation | <http://purl.obolibrary.org/obo/SO_0000735> |
-| strand | DNA strand of the isoform, '+' for forward or '-' for reverse | trp:EFMPF05 | trp:EFMOF02 | string | so:StrandAttribute | <http://purl.obolibrary.org/obo/SO_0000983> |
-| cross_mapped | Indicates whether the reads are cross-mapped to other loci (Y/N) | trp:EFMPF06 | trp:EFMOF05 | string | edam:DataFiltering | <http://edamontology.org/operation_3695> |
-| region_type | Classification of the miRNA region (e.g., mature, precursor) | trp:EFMPF07 | trp:EFMOF06 | string | so:MicroRNARegion | <http://purl.obolibrary.org/obo/SO_0000836> |
-| accession_id | miRBase accession identifier corresponding to the miRNA isoform | trp:EFMPF08 | trp:EFMOF06 | string | edam:Identifier | <http://edamontology.org/data_0842> |
-| read_count | Number of reads mapped to the isoform | trp:EFMPF09 | trp:EFMOF03 | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
-| reads_per_million | Normalized abundance of the isoform (reads per million mapped miRNA reads) | trp:EFMPF10 | trp:EFMOF04 | real | obi:NormalizedDataSet | <http://purl.obolibrary.org/obo/OBI_0000451> |
-| is_mirna_of_interest | Indicates if the isoform meets criteria for inclusion in the study (1: yes, 0: no) | trp:EFMPF11 | - | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
+| miRNA_ID | Identifier of the microRNA (miRNA) as annotated in miRBase | trp:EFMR01 | - | string | so:MicroRNA | <http://purl.obolibrary.org/obo/SO_0000276> |
+| isoform_coords | Genomic coordinates and strand of the miRNA isoform based on the hg38 assembly | trp:EFMR02 | - | string | so:SequenceFeature | <http://purl.obolibrary.org/obo/SO_0000110> |
+| read_count | Number of reads mapped to the isoform | trp:EFMR03 | - | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| reads_per_million_miRNA_mapped | Normalized abundance of the isoform (reads per million mapped miRNA reads) | trp:EFMR04 | - | real | obi:NormalizedDataSet | <http://purl.obolibrary.org/obo/OBI_0000451> |
+| cross-mapped | Indicates whether the reads are cross-mapped to other loci (Y/N) | trp:EFMR05 | - | string | edam:DataFiltering | <http://edamontology.org/operation_3695> |
+| miRNA_region | Region classification of the isoform (e.g., mature, precursor) with optional miRBase accession | trp:EFMR06 | - | string | so:MicroRNARegion | <http://purl.obolibrary.org/obo/SO_0000836> |
+
+### Artifact AT_EF/MPR
+
+- Name: MicroRNA-Seq Processed Read Counts
+- Example file: [mirna-seq-processed-file.csv](examples/mirna-seq-processed-file.txt)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| mirna_id | Identifier of the microRNA (miRNA) as annotated in miRBase | trp:EFMPR01 | trp:EFMR01 | string | so:MicroRNA | <http://purl.obolibrary.org/obo/SO_0000276> |
+| genome_assembly | Reference genome assembly version | trp:EFMPR02 | trp:EFMR02 | string | edam:SequenceAssembly | <http://edamontology.org/data_0925> |
+| chromosome | Chromosome on which the miRNA isoform is located | trp:EFMPR03 | trp:EFMR02 | string | so:Chromosome | <http://purl.obolibrary.org/obo/SO_0000340> |
+| position_range | Genomic coordinate range of the isoform, start-end | trp:EFMPR04 | trp:EFMR02 | string | so:SequenceLocation | <http://purl.obolibrary.org/obo/SO_0000735> |
+| strand | DNA strand of the isoform, '+' for forward or '-' for reverse | trp:EFMPR05 | trp:EFMR02 | string | so:StrandAttribute | <http://purl.obolibrary.org/obo/SO_0000983> |
+| cross_mapped | Indicates whether the reads are cross-mapped to other loci (Y/N) | trp:EFMPR06 | trp:EFMR05 | string | edam:DataFiltering | <http://edamontology.org/operation_3695> |
+| region_type | Classification of the miRNA region (e.g., mature, precursor) | trp:EFMPR07 | trp:EFMR06 | string | so:MicroRNARegion | <http://purl.obolibrary.org/obo/SO_0000836> |
+| accession_id | miRBase accession identifier corresponding to the miRNA isoform | trp:EFMPR08 | trp:EFMR06 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| read_count | Number of reads mapped to the isoform | trp:EFMPR09 | trp:EFMR03 | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| reads_per_million | Normalized abundance of the isoform (reads per million mapped miRNA reads) | trp:EFMPR10 | trp:EFMR04 | real | obi:NormalizedDataSet | <http://purl.obolibrary.org/obo/OBI_0000451> |
+| is_mirna_of_interest | Indicates if the isoform meets criteria for inclusion in the study (1: yes, 0: no) | trp:EFMPR11 | - | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
 
 ### Artifact AT_EF/AMR
 
-* Name: Aggregated MicroRNA Raw Reads
-* Example File: [aggregated-mirna-raw-reads.csv](interim/tcga-brca/basal-like/aggregated-mirna-raw-reads.csv)
+- Name: Aggregated MicroRNA Raw Read Counts
+- Example file: [aggregated-mirna-raw-reads.csv](interim/tcga-brca/basal-like/aggregated-mirna-raw-reads.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-| accession_id | Accession identifier for mature miRNA from miRBase | trp:EFAMR01 | trp:EFMPF08 | string | edam:Identifier | <http://edamontology.org/data_0842> |
-| \<UUID\> | Aggregated raw read count from the file identified by this UUID | trp:EFAMR02+ | trp:EFMPF09 | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| accession_id | Accession identifier for mature miRNA from miRBase | trp:EFAMR01 | trp:EFMPR08 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| \<UUID\> | Aggregated raw read count from the file identified by this UUID | trp:EFAMR02+ | trp:EFMPR09 | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
 
 ### Artifact AT_EF/AMN
 
-* Name: Aggregated MicroRNA Normalized Reads
-* Example File: [aggregated-mirna-normalized-reads.csv](interim/tcga-brca/basal-like/aggregated-mirna-normalized-reads.csv)
+- Name: Aggregated MicroRNA Normalized Read Counts
+- Example file: [aggregated-mirna-normalized-reads.csv](interim/tcga-brca/basal-like/aggregated-mirna-normalized-reads.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-| accession_id | Accession identifier for mature miRNA from miRBase | trp:EFAMN01 | trp:EFMPF08 | string | edam:Identifier | <http://edamontology.org/data_0842> |
-| \<UUID\> | Aggregated normalized read count from the file identified by this UUID | trp:EFAMN02+ | trp:EFMPF10 | real | obi:NormalizedDataSet | <http://purl.obolibrary.org/obo/OBI_0000451> |
+| accession_id | Accession identifier for mature miRNA from miRBase | trp:EFAMN01 | trp:EFMPR08 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| \<UUID\> | Aggregated normalized read count from the file identified by this UUID | trp:EFAMN02+ | trp:EFMPR10 | real | obi:NormalizedDataSet | <http://purl.obolibrary.org/obo/OBI_0000451> |
 
-### Artifact AT_EF/ROF
+### Artifact AT_EF/RR
 
-* Name: TCGA Origin RNA-Seq File
-* Example File: [rna-seq-origin-file.tsv](examples/rna-seq-origin-file.tsv)
-
-| field name | description | unique id | descendant of | data type | role | URI |
-| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-| gene_id | Ensembl gene identifier with version | trp:EFROF01 | - | string | edam:Identifier | <http://edamontology.org/data_0842> |
-| gene_name | Human-readable symbol for the gene | trp:EFROF02 | - | string | so:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
-| gene_type | Gene biotype classification (e.g., protein_coding, pseudogene) | trp:EFROF03 | - | string | edam:Classification | <http://edamontology.org/operation_2990> |
-| unstranded | Raw read count for unstranded protocol | trp:EFROF04 | - | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
-| stranded_first | Raw read count for first-strand protocol | trp:EFROF05 | - | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
-| stranded_second | Raw read count for second-strand protocol | trp:EFROF06 | - | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
-| tpm_unstranded | Normalized expression in TPM (Transcripts Per Million), unstranded protocol | trp:EFROF07 | - | real | obi:NormalizedDataSet | <http://purl.obolibrary.org/obo/OBI_0000451> |
-| fpkm_unstranded | Normalized expression in FPKM (Fragments Per Kilobase Million), unstranded | trp:EFROF08 | - | real | obi:NormalizedDataSet | <http://purl.obolibrary.org/obo/OBI_0000451> |
-| fpkm_uq_unstranded | Upper quartile normalized FPKM expression, unstranded | trp:EFROF09 | - | real | obi:NormalizedDataSet | <http://purl.obolibrary.org/obo/OBI_0000451> |
-
-### Artifact AT_EF/RPF
-
-* Name: TCGA Origin RNA-Seq Processed File
-* Example File: [rna-seq-processed-file.csv](examples/rna-seq-processed-file.tsv)
+- Name: RNA-Seq Read Counts
+- Example file: [rna-seq-origin-file.tsv](examples/rna-seq-origin-file.tsv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-| gene_id | Ensembl gene identifier with version | trp:EFRPF01 | trp:EFROF01 | string | edam:Identifier | <http://edamontology.org/data_0842> |
-| gene_name | Human-readable symbol for the gene | trp:EFRPF02 | trp:EFROF02 | string | so:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
-| gene_type | Gene biotype classification (e.g., protein_coding, pseudogene) | trp:EFRPF03 | trp:EFROF03 | string | edam:Classification | <http://edamontology.org/operation_2990> |
-| unstranded | Raw read count for unstranded protocol | trp:EFRPF04 | trp:EFROF04 | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
-| stranded_first | Raw read count for first-strand protocol | trp:EFRPF05 | trp:EFROF05 | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
-| stranded_second | Raw read count for second-strand protocol | trp:EFRPF06 | trp:EFROF06 | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
-| tpm_unstranded | Normalized expression in TPM (Transcripts Per Million), unstranded protocol | trp:EFRPF07 | trp:EFROF07 | real | obi:NormalizedDataSet | <http://purl.obolibrary.org/obo/OBI_0000451> |
-| fpkm_unstranded | Normalized expression in FPKM (Fragments Per Kilobase Million), unstranded | trp:EFRPF08 | trp:EFROF08 | real | obi:NormalizedDataSet | <http://purl.obolibrary.org/obo/OBI_0000451> |
-| fpkm_uq_unstranded | Upper quartile normalized FPKM expression, unstranded | trp:EFRPF09 | trp:EFROF09 | real | obi:NormalizedDataSet | <http://purl.obolibrary.org/obo/OBI_0000451> |
-| is_mrna_of_interest | Indicates if the gene meets criteria for inclusion in the study (1: yes, 0: no) | trp:EFRPF10 | - | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
+| gene_id | Ensembl gene identifier with version | trp:EFRR01 | - | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| gene_name | Human-readable symbol for the gene | trp:EFRR02 | - | string | so:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
+| gene_type | Gene biotype classification (e.g., protein_coding, pseudogene) | trp:EFRR03 | - | string | edam:Classification | <http://edamontology.org/operation_2990> |
+| unstranded | Raw read count for unstranded protocol | trp:EFRR04 | - | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| stranded_first | Raw read count for first-strand protocol | trp:EFRR05 | - | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| stranded_second | Raw read count for second-strand protocol | trp:EFRR06 | - | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| tpm_unstranded | Normalized expression in TPM (Transcripts Per Million), unstranded protocol | trp:EFRR07 | - | real | obi:NormalizedDataSet | <http://purl.obolibrary.org/obo/OBI_0000451> |
+| fpkm_unstranded | Normalized expression in FPKM (Fragments Per Kilobase Million), unstranded | trp:EFRR08 | - | real | obi:NormalizedDataSet | <http://purl.obolibrary.org/obo/OBI_0000451> |
+| fpkm_uq_unstranded | Upper quartile normalized FPKM expression, unstranded | trp:EFRR09 | - | real | obi:NormalizedDataSet | <http://purl.obolibrary.org/obo/OBI_0000451> |
+
+### Artifact AT_EF/RPR
+
+- Name: RNA-Seq Processed Read Counts
+- Example file: [rna-seq-processed-file.csv](examples/rna-seq-processed-file.tsv)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| gene_id | Ensembl gene identifier with version | trp:EFRPR01 | trp:EFRR01 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| gene_name | Human-readable symbol for the gene | trp:EFRPR02 | trp:EFRR02 | string | so:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
+| gene_type | Gene biotype classification (e.g., protein_coding, pseudogene) | trp:EFRPR03 | trp:EFRR03 | string | edam:Classification | <http://edamontology.org/operation_2990> |
+| unstranded | Raw read count for unstranded protocol | trp:EFRPR04 | trp:EFRR04 | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| stranded_first | Raw read count for first-strand protocol | trp:EFRPR05 | trp:EFRR05 | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| stranded_second | Raw read count for second-strand protocol | trp:EFRPR06 | trp:EFRR06 | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| tpm_unstranded | Normalized expression in TPM (Transcripts Per Million), unstranded protocol | trp:EFRPR07 | trp:EFRR07 | real | obi:NormalizedDataSet | <http://purl.obolibrary.org/obo/OBI_0000451> |
+| fpkm_unstranded | Normalized expression in FPKM (Fragments Per Kilobase Million), unstranded | trp:EFRPR08 | trp:EFRR08 | real | obi:NormalizedDataSet | <http://purl.obolibrary.org/obo/OBI_0000451> |
+| fpkm_uq_unstranded | Upper quartile normalized FPKM expression, unstranded | trp:EFRPR09 | trp:EFRR09 | real | obi:NormalizedDataSet | <http://purl.obolibrary.org/obo/OBI_0000451> |
+| is_mrna_of_interest | Indicates if the gene meets criteria for inclusion in the study (1: yes, 0: no) | trp:EFRPR10 | - | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
 
 ### Artifact AT_EF/ARR
 
-* Name: Aggregated Messenger RNA Raw Reads
-* Example File: [aggregated-mrna-raw-reads.csv](interim/tcga-brca/basal-like/aggregated-mrna-raw-reads.csv)
+- Name: Aggregated Messenger RNA Raw Read Counts
+- Example file: [aggregated-mrna-raw-reads.csv](interim/tcga-brca/basal-like/aggregated-mrna-raw-reads.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-| gene_id | Ensembl gene identifier with version | trp:EFARR01 | trp:EFRPF01 | string | edam:Identifier | <http://edamontology.org/data_0842> |
-| gene_name | Human-readable symbol for the gene | trp:EFARR02 | trp:EFRPF02 | string | so:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
-| \<UUID\> | Aggregated raw read count from the file identified by this UUID | trp:EFARR03+ | trp:EFRPF04 | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| gene_id | Ensembl gene identifier with version | trp:EFARR01 | trp:EFRPR01 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| gene_name | Human-readable symbol for the gene | trp:EFARR02 | trp:EFRPR02 | string | so:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
+| \<UUID\> | Aggregated raw read count from the file identified by this UUID | trp:EFARR03+ | trp:EFRPR04 | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
 
 ### Artifact AT_EF/ARN
 
-* Name: Aggregated Messenger RNA Normalized Reads
-* Example File: [aggregated-mrna-normalized-reads.csv](interim/tcga-brca/basal-like/aggregated-mrna-normalized-reads.csv)
+- Name: Aggregated Messenger RNA Normalized Read Counts
+- Example file: [aggregated-mrna-normalized-reads.csv](interim/tcga-brca/basal-like/aggregated-mrna-normalized-reads.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-| gene_id | Ensembl gene identifier with version | trp:EFARN01 | trp:EFRPF01 | string | edam:Identifier | <http://edamontology.org/data_0842> |
-| gene_name | Human-readable symbol for the gene | trp:EFARN02 | trp:EFRPF02 | string | so:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
-| \<UUID\> | Aggregated normalized read count from the file identified by this UUID | trp:EFARN03+ | trp:EFRPF07 | real | obi:NormalizedDataSet | <http://purl.obolibrary.org/obo/OBI_0000451> |
+| gene_id | Ensembl gene identifier with version | trp:EFARN01 | trp:EFRPR01 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| gene_name | Human-readable symbol for the gene | trp:EFARN02 | trp:EFRPR02 | string | so:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
+| \<UUID\> | Aggregated normalized read count from the file identified by this UUID | trp:EFARN03+ | trp:EFRPR07 | real | obi:NormalizedDataSet | <http://purl.obolibrary.org/obo/OBI_0000451> |
 
 ## Family of Artifacts AT_MF
 
-* Family Name: TCGA Molecule Filtering Artifacts
+- Name: Molecule Filtering Artifacts
 
 ### Artifact AT_MF/EM
 
-* Name: edgeR's filterByExpr Expressed MicroRNAs
-* File: [expressed-mirnas.csv](processed/tcga-brca/expressed-mirnas.csv)
+- Name: edgeR's filterByExpr Expressed MicroRNAs
+- File: [expressed-mirnas.csv](processed/tcga-brca/expressed-mirnas.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -391,8 +387,8 @@
 
 ### Artifact AT_MF/AMR
 
-* Name: Aggregated MicroRNA Raw Reads
-* Example file: [aggregated-mirna-raw-reads.csv](processed/tcga-brca/basal-like/aggregated-mirna-raw-reads.csv)
+- Name: Aggregated and Filtered MicroRNA Raw Read Counts
+- Example file: [aggregated-mirna-raw-reads.csv](processed/tcga-brca/basal-like/aggregated-mirna-raw-reads.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -402,8 +398,8 @@
 
 ### Artifact AT_MF/AMN
 
-* Name: Aggregated MicroRNA Normalized Reads
-* Example file: [aggregated-mirna-normalized-reads.csv](processed/tcga-brca/basal-like/aggregated-mirna-normalized-reads.csv)
+- Name: Aggregated and Filtered MicroRNA Normalized Read Counts
+- Example file: [aggregated-mirna-normalized-reads.csv](processed/tcga-brca/basal-like/aggregated-mirna-normalized-reads.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -413,8 +409,8 @@
 
 ### Artifact AT_MF/ER
 
-* Name: edgeR's filterByExpr Expressed Messenger RNAs
-* File: [expressed-mrnas.csv](processed/tcga-brca/expressed-mrnas.csv)
+- Name: edgeR's filterByExpr Expressed Messenger RNAs
+- File: [expressed-mrnas.csv](processed/tcga-brca/expressed-mrnas.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -424,8 +420,8 @@
 
 ### Artifact AT_MF/ARR
 
-* Name: Aggregated Messenger RNA Raw Reads
-* Example file: [aggregated-mrna-raw-reads.csv](processed/tcga-brca/basal-like/aggregated-mrna-raw-reads.csv)
+- Name: Aggregated and Filtered Messenger RNA Raw Read Counts
+- Example file: [aggregated-mrna-raw-reads.csv](processed/tcga-brca/basal-like/aggregated-mrna-raw-reads.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -436,8 +432,8 @@
 
 ### Artifact AT_MF/ARN
 
-* Name: Aggregated Messenger RNA Normalized Reads
-* Example file: [aggregated-mrna-normalized-reads.csv](processed/tcga-brca/basal-like/aggregated-mrna-normalized-reads.csv)
+- Name: Aggregated and Filtered Messenger RNA Normalized Read Counts
+- Example file: [aggregated-mrna-normalized-reads.csv](processed/tcga-brca/basal-like/aggregated-mrna-normalized-reads.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -448,129 +444,129 @@
 
 ## Family of Artifacts AT_II
 
-* Family Name: MicroRNA-Messenger RNA Interaction Inference Artifacts
+- Name: MicroRNA-Messenger RNA Interaction Inference Artifacts
 
-### Artifact AT_II/MO
+### Artifact AT_II/MT
 
-* Name: miRWalk Origin Targets File
-* Example file: [mirwalk-origin-file.csv](examples/mirwalk-origin-file.csv)
-
-| field name | description | unique id | descendant of | data type | role | URI |
-| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-| mirnaid | miRNA identifier indicating the microRNA | trp:IIMO01 | - | string | so:MicroRNA | <http://purl.obolibrary.org/obo/SO_0000276> |
-| refseqid | RefSeq accession number for the target transcript | trp:IIMO02 | - | string | so:MessengerRNA | <http://purl.obolibrary.org/obo/SO_0000234> |
-| genesymbol | Human-readable gene symbol of the target gene | trp:IIMO03 | - | string | so:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
-| duplex | RNA duplex structure between miRNA and target mRNA | trp:IIMO04 | - | string | edam:SecondaryStructureData | <http://edamontology.org/data_2973> |
-| start | Start position of the binding site on the transcript | trp:IIMO05 | - | integer | so:Region | <http://purl.obolibrary.org/obo/SO_0000001> |
-| end | End position of the binding site on the transcript | trp:IIMO06 | - | integer | so:Region | <http://purl.obolibrary.org/obo/SO_0000001> |
-| bindingp | Probability of miRNA binding at the site | trp:IIMO07 | - | real | stato:Statistic | <http://purl.obolibrary.org/obo/STATO_0000039> |
-| energy | Minimum free energy of miRNA-mRNA duplex | trp:IIMO08 | - | real | sbo:ThermodynamicParameter | <http://biomodels.net/SBO/SBO_0000571> |
-| seed | Indicates if the seed region of the miRNA is matched (1: yes, 0: no) | trp:IIMO09 | - | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
-| accessibility | Accessibility score of the target region | trp:IIMO10 | - | real | stato:Score | <http://purl.obolibrary.org/obo/STATO_0000569> |
-| au | AU content in the binding region | trp:IIMO11 | - | real | so:SequenceAttribute | <http://purl.obolibrary.org/obo/SO_0000400> |
-| phylopstem | PhyloP conservation score of the binding stem region | trp:IIMO12 | - | real | stato:Score | <http://purl.obolibrary.org/obo/STATO_0000569> |
-| phylopflank | PhyloP conservation score of the binding flanking region | trp:IIMO13 | - | real | stato:Score | <http://purl.obolibrary.org/obo/STATO_0000569> |
-| me | Log-odds score (mirSVR or similar) for interaction effectiveness | trp:IIMO14 | - | real | stato:Score | <http://purl.obolibrary.org/obo/STATO_0000569> |
-| number_of_pairings | Total number of paired bases in the duplex | trp:IIMO15 | - | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
-| binding_region_length | Length of the binding region in nucleotides | trp:IIMO16 | - | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
-| longest_consecutive_pairings | Maximum number of consecutive base pairings in the duplex | trp:IIMO17 | - | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
-| position | Region of the transcript where the binding occurs (e.g., 3UTR, CDS, 5UTR) | trp:IIMO18 | - | string | so:TranscriptRegion | <http://purl.obolibrary.org/obo/SO_0000833> |
-| validated | Indicates if miRTarBase validated the interaction | trp:IIMO19 | - | string | edam:Identifier | <http://edamontology.org/data_0842> |
-| TargetScan | Indicates if TargetScan predicts the interaction (1: yes, 0: no) | trp:IIMO20 | - | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
-| miRDB | Indicates if miRDB predicts the interaction (1: yes, 0: no) | trp:IIMO21 | - | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
-
-### Artifact AT_II/MP
-
-* Name: miRWalk Origin Processed Targets File
-* Example file: [mirwalk-processed-file.csv](examples/mirwalk-processed-file.csv)
+- Name: miRWalk Origin Targets
+- Example file: [mirwalk-origin-file.csv](examples/mirwalk-origin-file.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-| mirna_name | miRNA identifier indicating the microRNA | trp:IIMP01 | trp:IIMO01 | string | so:MicroRNA | <http://purl.obolibrary.org/obo/SO_0000276> |
-| refseq_id | RefSeq accession number for the target transcript | trp:IIMP02 | trp:IIMO02 | string | so:MessengerRNA | <http://purl.obolibrary.org/obo/SO_0000234> |
-| gene_name | Human-readable gene symbol of the target gene | trp:IIMP03 | trp:IIMO03 | string | so:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
-| duplex | RNA duplex structure between miRNA and target mRNA | trp:IIMP04 | trp:IIMO04 | string | edam:SecondaryStructureData | <http://edamontology.org/data_2973> |
-| start | Start position of the binding site on the transcript | trp:IIMP05 | trp:IIMO05 | integer | so:Region | <http://purl.obolibrary.org/obo/SO_0000001> |
-| end | End position of the binding site on the transcript | trp:IIMP06 | trp:IIMO06 | integer | so:Region | <http://purl.obolibrary.org/obo/SO_0000001> |
-| binding_probability | Probability of miRNA binding at the site | trp:IIMP07 | trp:IIMO07 | real | stato:Statistic | <http://purl.obolibrary.org/obo/STATO_0000039> |
-| energy | Minimum free energy of miRNA-mRNA duplex | trp:IIMP08 | trp:IIMO08 | real | sbo:ThermodynamicParameter | <http://biomodels.net/SBO/SBO_0000571> |
-| seed | Indicates if the seed region of the miRNA is matched (1: yes, 0: no) | trp:IIMP09 | trp:IIMO09 | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
-| accessibility | Accessibility score of the target region | trp:IIMP10 | trp:IIMO10 | real | stato:Score | <http://purl.obolibrary.org/obo/STATO_0000569> |
-| au | AU content proportion in the binding region | trp:IIMP11 | trp:IIMO11 | real | so:SequenceAttribute | <http://purl.obolibrary.org/obo/SO_0000400> |
-| phylopstem | PhyloP conservation score of the binding stem region | trp:IIMP12 | trp:IIMO12 | real | stato:Score | <http://purl.obolibrary.org/obo/STATO_0000569> |
-| phylopflank | PhyloP conservation score of the binding flanking region | trp:IIMP13 | trp:IIMO13 | real | stato:Score | <http://purl.obolibrary.org/obo/STATO_0000569> |
-| me | Log-odds score (mirSVR or similar) for interaction effectiveness | trp:IIMP14 | trp:IIMO14 | real | stato:Score | <http://purl.obolibrary.org/obo/STATO_0000569> |
-| number_of_pairings | Total number of paired bases in the duplex | trp:IIMP15 | trp:IIMO15 | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
-| binding_region_length | Length of the binding region in nucleotides | trp:IIMP16 | trp:IIMO16 | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
-| longest_consecutive_pairings | Maximum number of consecutive base pairings in the duplex | trp:IIMP17 | trp:IIMO17 | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
-| binding_position | Region of the transcript where the binding occurs (e.g., 3UTR, CDS, 5UTR) | trp:IIMP18 | trp:IIMO18 | string | so:TranscriptRegion | <http://purl.obolibrary.org/obo/SO_0000833> |
-| mirtarbase | Indicates if miRTarBase validated the interaction | trp:IIMP19 | trp:IIMO19 | string | edam:Identifier | <http://edamontology.org/data_0842> |
-| targetscan | Indicates if TargetScan predicts the interaction (1: yes, 0: no) | trp:IIMP20 | trp:IIMO20 | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
-| mirdb | Indicates if miRDB predicts the interaction (1: yes, 0: no) | trp:IIMP21 | trp:IIMO21 | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
-| is_interaction_of_interest | Indicates if the interaction meets criteria for inclusion in the study (1: yes, 0: no) | trp:IIMP22 | - | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
+| mirnaid | miRNA identifier indicating the microRNA | trp:IIMT01 | - | string | so:MicroRNA | <http://purl.obolibrary.org/obo/SO_0000276> |
+| refseqid | RefSeq accession number for the target transcript | trp:IIMT02 | - | string | so:MessengerRNA | <http://purl.obolibrary.org/obo/SO_0000234> |
+| genesymbol | Human-readable gene symbol of the target gene | trp:IIMT03 | - | string | so:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
+| duplex | RNA duplex structure between miRNA and target mRNA | trp:IIMT04 | - | string | edam:SecondaryStructureData | <http://edamontology.org/data_2973> |
+| start | Start position of the binding site on the transcript | trp:IIMT05 | - | integer | so:Region | <http://purl.obolibrary.org/obo/SO_0000001> |
+| end | End position of the binding site on the transcript | trp:IIMT06 | - | integer | so:Region | <http://purl.obolibrary.org/obo/SO_0000001> |
+| bindingp | Probability of miRNA binding at the site | trp:IIMT07 | - | real | stato:Statistic | <http://purl.obolibrary.org/obo/STATO_0000039> |
+| energy | Minimum free energy of miRNA-mRNA duplex | trp:IIMT08 | - | real | sbo:ThermodynamicParameter | <http://biomodels.net/SBO/SBO_0000571> |
+| seed | Indicates if the seed region of the miRNA is matched (1: yes, 0: no) | trp:IIMT09 | - | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
+| accessibility | Accessibility score of the target region | trp:IIMT10 | - | real | stato:Score | <http://purl.obolibrary.org/obo/STATO_0000569> |
+| au | AU content in the binding region | trp:IIMT11 | - | real | so:SequenceAttribute | <http://purl.obolibrary.org/obo/SO_0000400> |
+| phylopstem | PhyloP conservation score of the binding stem region | trp:IIMT12 | - | real | stato:Score | <http://purl.obolibrary.org/obo/STATO_0000569> |
+| phylopflank | PhyloP conservation score of the binding flanking region | trp:IIMT13 | - | real | stato:Score | <http://purl.obolibrary.org/obo/STATO_0000569> |
+| me | Log-odds score (mirSVR or similar) for interaction effectiveness | trp:IIMT14 | - | real | stato:Score | <http://purl.obolibrary.org/obo/STATO_0000569> |
+| number_of_pairings | Total number of paired bases in the duplex | trp:IIMT15 | - | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| binding_region_length | Length of the binding region in nucleotides | trp:IIMT16 | - | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| longest_consecutive_pairings | Maximum number of consecutive base pairings in the duplex | trp:IIMT17 | - | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| position | Region of the transcript where the binding occurs (e.g., 3UTR, CDS, 5UTR) | trp:IIMT18 | - | string | so:TranscriptRegion | <http://purl.obolibrary.org/obo/SO_0000833> |
+| validated | Indicates if miRTarBase validated the interaction | trp:IIMT19 | - | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| TargetScan | Indicates if TargetScan predicts the interaction (1: yes, 0: no) | trp:IIMT20 | - | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
+| miRDB | Indicates if miRDB predicts the interaction (1: yes, 0: no) | trp:IIMT21 | - | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
+
+### Artifact AT_II/MPT
+
+- Name: miRWalk Origin Processed Targets
+- Example file: [mirwalk-processed-file.csv](examples/mirwalk-processed-file.csv)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| mirna_name | miRNA identifier indicating the microRNA | trp:IIMPT01 | trp:IIMT01 | string | so:MicroRNA | <http://purl.obolibrary.org/obo/SO_0000276> |
+| refseq_id | RefSeq accession number for the target transcript | trp:IIMPT02 | trp:IIMT02 | string | so:MessengerRNA | <http://purl.obolibrary.org/obo/SO_0000234> |
+| gene_name | Human-readable gene symbol of the target gene | trp:IIMPT03 | trp:IIMT03 | string | so:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
+| duplex | RNA duplex structure between miRNA and target mRNA | trp:IIMPT04 | trp:IIMT04 | string | edam:SecondaryStructureData | <http://edamontology.org/data_2973> |
+| start | Start position of the binding site on the transcript | trp:IIMPT05 | trp:IIMT05 | integer | so:Region | <http://purl.obolibrary.org/obo/SO_0000001> |
+| end | End position of the binding site on the transcript | trp:IIMPT06 | trp:IIMT06 | integer | so:Region | <http://purl.obolibrary.org/obo/SO_0000001> |
+| binding_probability | Probability of miRNA binding at the site | trp:IIMPT07 | trp:IIMT07 | real | stato:Statistic | <http://purl.obolibrary.org/obo/STATO_0000039> |
+| energy | Minimum free energy of miRNA-mRNA duplex | trp:IIMPT08 | trp:IIMT08 | real | sbo:ThermodynamicParameter | <http://biomodels.net/SBO/SBO_0000571> |
+| seed | Indicates if the seed region of the miRNA is matched (1: yes, 0: no) | trp:IIMPT09 | trp:IIMT09 | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
+| accessibility | Accessibility score of the target region | trp:IIMPT10 | trp:IIMT10 | real | stato:Score | <http://purl.obolibrary.org/obo/STATO_0000569> |
+| au | AU content proportion in the binding region | trp:IIMPT11 | trp:IIMT11 | real | so:SequenceAttribute | <http://purl.obolibrary.org/obo/SO_0000400> |
+| phylopstem | PhyloP conservation score of the binding stem region | trp:IIMPT12 | trp:IIMT12 | real | stato:Score | <http://purl.obolibrary.org/obo/STATO_0000569> |
+| phylopflank | PhyloP conservation score of the binding flanking region | trp:IIMPT13 | trp:IIMT13 | real | stato:Score | <http://purl.obolibrary.org/obo/STATO_0000569> |
+| me | Log-odds score (mirSVR or similar) for interaction effectiveness | trp:IIMPT14 | trp:IIMT14 | real | stato:Score | <http://purl.obolibrary.org/obo/STATO_0000569> |
+| number_of_pairings | Total number of paired bases in the duplex | trp:IIMPT15 | trp:IIMT15 | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| binding_region_length | Length of the binding region in nucleotides | trp:IIMPT16 | trp:IIMT16 | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| longest_consecutive_pairings | Maximum number of consecutive base pairings in the duplex | trp:IIMPT17 | trp:IIMT17 | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| binding_position | Region of the transcript where the binding occurs (e.g., 3UTR, CDS, 5UTR) | trp:IIMPT18 | trp:IIMT18 | string | so:TranscriptRegion | <http://purl.obolibrary.org/obo/SO_0000833> |
+| mirtarbase | Indicates if miRTarBase validated the interaction | trp:IIMPT19 | trp:IIMT19 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| targetscan | Indicates if TargetScan predicts the interaction (1: yes, 0: no) | trp:IIMPT20 | trp:IIMT20 | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
+| mirdb | Indicates if miRDB predicts the interaction (1: yes, 0: no) | trp:IIMPT21 | trp:IIMT21 | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
+| is_interaction_of_interest | Indicates if the interaction meets criteria for inclusion in the study (1: yes, 0: no) | trp:IIMPT22 | - | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
 
 ### Artifact AT_II/MNP
 
-* Name: MIMAT ID to MicroRNA Name Mapping
-* File: [mapping-mirna-accession-id-to-name.csv](processed/mirwalk/mapping-mirna-accession-id-to-name.csv)
+- Name: MIMAT ID to MicroRNA Name Mapping
+- File: [mapping-mirna-accession-id-to-name.csv](processed/mirwalk/mapping-mirna-accession-id-to-name.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
 | accession_id | Accession identifier for mature miRNAs from miRBase | trp:IIMNP01 | trp:MFEM01 | string | edam:Identifier | <http://edamontology.org/data_0842> |
-| mirna_name | Human-readable name for the mature miRNA | trp:IIMNP02 | trp:IIMP01 | string | so:MicroRNA | <http://purl.obolibrary.org/obo/SO_0000276> |
+| mirna_name | Human-readable name for the mature miRNA | trp:IIMNP02 | trp:IIMPT01 | string | so:MicroRNA | <http://purl.obolibrary.org/obo/SO_0000276> |
 
 ### Artifact AT_II/IS
 
-* Name: MicroRNA-Messenger RNA Inferred Interactions Set
-* Example file: [inferred-interactions.csv](interim/networks/basal-like/inferred-interactions.csv)
+- Name: MicroRNA-Messenger RNA Inferred Interactions Set
+- Example file: [inferred-interactions.csv](interim/networks/basal-like/inferred-interactions.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
 | accession_id | Accession identifier for mature miRNAs from miRBase | trp:IIIS01 | trp:MFAMN01 | string | edam:Identifier | <http://edamontology.org/data_0842> |
 | mirna_name | Name of the microRNA according to miRBase nomenclature | trp:IIIS02 | trp:IIMNP02 | string | so:MicroRNA | <http://purl.obolibrary.org/obo/SO_0000276> |
 | gene_name | Name of the target gene tested for correlation with the microRNA | trp:IIIS03 | trp:MFARN02 | string | gro:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
-| mirtarbase | Indicates if the interaction is supported by experimental evidence in miRTarBase | trp:IIIS04 | trp:IIMP19 | boolean | edam:Identifier | <http://edamontology.org/data_0842> |
+| mirtarbase | Indicates if the interaction is supported by experimental evidence in miRTarBase | trp:IIIS04 | trp:IIMPT19 | boolean | edam:Identifier | <http://edamontology.org/data_0842> |
 | correlation  | Correlation coefficient between microRNA and gene expression | trp:IIIS05 | - | real | stato:CorrelationCoefficient | <http://purl.obolibrary.org/obo/STATO_0000142> |
 | pvalue | Nominal p-value for the correlation significance test | trp:IIIS06 | - | real | stato:PValue | <http://purl.obolibrary.org/obo/STATO_0000700> |
 | qvalue | Adjusted p-value for multiple hypothesis testing | trp:IIIS07 | - | real | obi:QValue | <http://purl.obolibrary.org/obo/OBI_0001442> |
 
 ## Family of Artifacts AT_MN
 
-* Family Name: MicroRNA Networks Artifacts
+- Name: MicroRNA Networks Artifacts
 
-### Artifact AT_MN/FI
+### Artifact AT_MN/IS
 
-* Name: MicroRNA-Messenger RNA Filtered Inferred Interactions Set
-* Example file: [inferred-interactions.csv](processed/networks/basal-like/inferred-interactions.csv)
+- Name: MicroRNA-Messenger RNA Inferred and Filtered Interactions Set
+- Example file: [inferred-interactions.csv](processed/networks/basal-like/inferred-interactions.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
-| accession_id | Accession identifier for mature miRNAs from miRBase | trp:MNFI01 | trp:IIIS01 | string | edam:Identifier | <http://edamontology.org/data_0842> |
-| mirna_name | Name of the microRNA according to miRBase nomenclature | trp:MNFI02 | trp:IIIS02 | string | so:MicroRNA | <http://purl.obolibrary.org/obo/SO_0000276> |
-| gene_name | Name of the target gene tested for correlation with the microRNA | trp:MNFI03 | trp:IIIS03 | string | gro:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
-| mirtarbase | Indicates if the interaction is supported by experimental evidence in miRTarBase | trp:MNFI04 | trp:IIIS04 | boolean | edam:Identifier | <http://edamontology.org/data_0842> |
-| correlation  | Correlation coefficient between microRNA and gene expression | trp:MNFI05 | trp:IIIS05 | real | stato:CorrelationCoefficient | <http://purl.obolibrary.org/obo/STATO_0000142> |
-| pvalue | Nominal p-value for the correlation significance test | trp:MNFI06 | trp:IIIS06 | real | stato:PValue | <http://purl.obolibrary.org/obo/STATO_0000700> |
-| qvalue | Adjusted p-value for multiple hypothesis testing | trp:MNFI07 | trp:IIIS07 | real | obi:QValue | <http://purl.obolibrary.org/obo/OBI_0001442> |
-| is_interaction_of_interest | Indicates if the interaction meets criteria for inclusion in the study (1: yes, 0: no) | trp:MNFI08 | - | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
+| accession_id | Accession identifier for mature miRNAs from miRBase | trp:MNIS01 | trp:IIIS01 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| mirna_name | Name of the microRNA according to miRBase nomenclature | trp:MNIS02 | trp:IIIS02 | string | so:MicroRNA | <http://purl.obolibrary.org/obo/SO_0000276> |
+| gene_name | Name of the target gene tested for correlation with the microRNA | trp:MNIS03 | trp:IIIS03 | string | gro:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
+| mirtarbase | Indicates if the interaction is supported by experimental evidence in miRTarBase | trp:MNIS04 | trp:IIIS04 | boolean | edam:Identifier | <http://edamontology.org/data_0842> |
+| correlation  | Correlation coefficient between microRNA and gene expression | trp:MNIS05 | trp:IIIS05 | real | stato:CorrelationCoefficient | <http://purl.obolibrary.org/obo/STATO_0000142> |
+| pvalue | Nominal p-value for the correlation significance test | trp:MNIS06 | trp:IIIS06 | real | stato:PValue | <http://purl.obolibrary.org/obo/STATO_0000700> |
+| qvalue | Adjusted p-value for multiple hypothesis testing | trp:MNIS07 | trp:IIIS07 | real | obi:QValue | <http://purl.obolibrary.org/obo/OBI_0001442> |
+| is_interaction_of_interest | Indicates if the interaction meets criteria for inclusion in the study (1: yes, 0: no) | trp:MNIS08 | - | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
 
 ### Artifact AT_MN/INE
 
-* Name: MicroRNA-Messenger RNA Interaction Network Edges for Cytoscape
-* Example file: [interaction-network-edges.csv](processed/networks/basal-like/interaction-network-edges.csv)
+- Name: MicroRNA-Messenger RNA Interaction Network Edges
+- Example file: [interaction-network-edges.csv](processed/networks/basal-like/interaction-network-edges.csv)
 
 | field name | description | unique id | descendant_of | data type | role | URI |
 | ---------- | ----------- | --------- | --------------| --------- | ---- | --- |
-| source | Name of the microRNA according to miRBase nomenclature | trp:MNINE01 | trp:MNFI02 | string | so:MicroRNA | <http://purl.obolibrary.org/obo/SO_0000276> |
-| target | Name of the target gene tested for correlation with the microRNA | trp:MNINE02 | trp:MNFI03 | string | gro:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
-| mirtarbase | Indicates if the interaction is supported by experimental evidence in miRTarBase | trp:MNINE03 | trp:MNFI04 | boolean | edam:Identifier | <http://edamontology.org/data_0842> |
-| correlation  | Correlation coefficient between microRNA and gene expression | trp:MNINE04 | trp:MNFI05 | real | stato:CorrelationCoefficient | <http://purl.obolibrary.org/obo/STATO_0000142> |
-| qvalue | Adjusted p-value for multiple hypothesis testing | trp:MNINE05 | trp:MNFI07 | real | obi:QValue | <http://purl.obolibrary.org/obo/OBI_0001442> |
+| source | Name of the microRNA according to miRBase nomenclature | trp:MNINE01 | trp:MNIS02 | string | so:MicroRNA | <http://purl.obolibrary.org/obo/SO_0000276> |
+| target | Name of the target gene tested for correlation with the microRNA | trp:MNINE02 | trp:MNIS03 | string | gro:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
+| mirtarbase | Indicates if the interaction is supported by experimental evidence in miRTarBase | trp:MNINE03 | trp:MNIS04 | boolean | edam:Identifier | <http://edamontology.org/data_0842> |
+| correlation  | Correlation coefficient between microRNA and gene expression | trp:MNINE04 | trp:MNIS05 | real | stato:CorrelationCoefficient | <http://purl.obolibrary.org/obo/STATO_0000142> |
+| qvalue | Adjusted p-value for multiple hypothesis testing | trp:MNINE05 | trp:MNIS07 | real | obi:QValue | <http://purl.obolibrary.org/obo/OBI_0001442> |
 
 ### Artifact AT_MN/INN
 
-* Name: MicroRNA-Messenger RNA Interaction Network Nodes for Cytoscape
-* Example file: [interaction-network-nodes.csv](processed/networks/basal-like/interaction-network-nodes.csv)
+- Name: MicroRNA-Messenger RNA Interaction Network Nodes
+- Example file: [interaction-network-nodes.csv](processed/networks/basal-like/interaction-network-nodes.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -580,8 +576,8 @@
 
 ### Artifact AT_MN/AS
 
-* Name: MicroRNA-MicroRNA Inferred Associations Set
-* Example file: [inferred-associations.csv](interim/networks/basal-like/inferred-associations.csv)
+- Name: MicroRNA-MicroRNA Inferred Associations Set
+- Example file: [inferred-associations.csv](interim/networks/basal-like/inferred-associations.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -591,8 +587,8 @@
 
 ### Artifact AT_MN/FAS
 
-* Name: MicroRNA-MicroRNA Filtered Inferred Associations Set
-* Example file: [inferred-associations.csv](processed/networks/basal-like/inferred-associations.csv)
+- Name: MicroRNA-MicroRNA Inferred and Filtered Associations Set
+- Example file: [inferred-associations.csv](processed/networks/basal-like/inferred-associations.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -603,8 +599,8 @@
 
 ### Artifact AT_MN/ANE
 
-* Name: MicroRNA Association Network Edges for Cytoscape
-* Example file: [association-network-edges.csv](processed/networks/basal-like/association-network-edges.csv)
+- Name: MicroRNA Association Network Edges
+- Example file: [association-network-edges.csv](processed/networks/basal-like/association-network-edges.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -614,8 +610,8 @@
 
 ### Artifact AT_MN/ANN
 
-* Name: MicroRNA Association Network Nodes for Cytoscape
-* Example file: [association-network-nodes.csv](processed/networks/basal-like/association-network-nodes.csv)
+- Name: MicroRNA Association Network Nodes
+- Example file: [association-network-nodes.csv](processed/networks/basal-like/association-network-nodes.csv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
