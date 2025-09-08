@@ -2,10 +2,10 @@ __pycache__/
 venv/
 
 # Exploration-related data and notebooks
-data/interim/gdc-api/
-data/raw/gdc-api/
-notebooks/exploratory-analyses/
-notebooks/gdc-api-exploration/
+# data/interim/gdc-api/
+# data/raw/gdc-api/
+# notebooks/exploratory-analyses/
+# notebooks/gdc-api-exploration/
 
 # TCGA expression-related files
 data/raw/tcga-brca/*/
