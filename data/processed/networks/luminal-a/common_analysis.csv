@@ -1,0 +1,15 @@
+metrics,total_metrics,source,target,target_label,mediators,total_mediators
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-96-5p,KEGG:04510,Focal adhesion,TCF4; PRRX1; TRPM3,3
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-96-5p,KEGG:04151,PI3K-Akt signaling pathway,TCF4; TRPM3,2
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-96-5p,KEGG:04390,Hippo signaling pathway,TCF4; TNS1,2
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-96-5p,KEGG:05165,Human papillomavirus infection,TCF4; TRPM3,2
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-96-5p,KEGG:05202,Transcriptional misregulation in cancer,TCF4,1
+closeness_centrality; degree_centrality; functional_impact; pathway_reach,4.0,hsa-miR-33a-5p,KEGG:05202,Transcriptional misregulation in cancer,TCF4; RGMA,2
+closeness_centrality; degree_centrality; functional_impact; pathway_reach,4.0,hsa-miR-29c-3p,KEGG:04151,PI3K-Akt signaling pathway,EIF4E2,1
+closeness_centrality; degree_centrality; functional_impact; pathway_reach,4.0,hsa-miR-33a-5p,KEGG:04151,PI3K-Akt signaling pathway,TCF4,1
+closeness_centrality; degree_centrality; functional_impact; pathway_reach,4.0,hsa-miR-33a-5p,KEGG:04390,Hippo signaling pathway,TCF4,1
+closeness_centrality; degree_centrality; functional_impact; pathway_reach,4.0,hsa-miR-33a-5p,KEGG:04510,Focal adhesion,TCF4,1
+closeness_centrality; degree_centrality; functional_impact; pathway_reach,4.0,hsa-miR-33a-5p,KEGG:05165,Human papillomavirus infection,TCF4,1
+functional_impact; pathway_reach; redundancy_coefficient,3.0,hsa-miR-342-3p,KEGG:04510,Focal adhesion,FLNC; PDGFRA,2
+betweenness_centrality; degree_centrality; functional_impact,3.0,hsa-miR-141-3p,KEGG:04390,Hippo signaling pathway,WWTR1,1
+functional_impact; pathway_reach; redundancy_coefficient,3.0,hsa-miR-342-3p,KEGG:04151,PI3K-Akt signaling pathway,PDGFRA,1

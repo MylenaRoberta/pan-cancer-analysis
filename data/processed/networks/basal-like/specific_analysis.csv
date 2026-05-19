@@ -1,0 +1,46 @@
+metrics,total_metrics,source,target,target_label,mediators,total_mediators
+functional_impact; pathway_reach,2.0,hsa-miR-93-5p,KEGG:05202,Transcriptional misregulation in cancer,ESR1; CCND2,2
+functional_impact; pathway_reach,2.0,hsa-miR-222-3p,KEGG:04020,Calcium signaling pathway,ERBB3,1
+functional_impact; pathway_reach,2.0,hsa-miR-222-3p,KEGG:01521,EGFR tyrosine kinase inhibitor resistance,ERBB3,1
+functional_impact; pathway_reach,2.0,hsa-miR-196a-5p,KEGG:05202,Transcriptional misregulation in cancer,DIAPH2,1
+functional_impact; pathway_reach,2.0,hsa-miR-196a-5p,KEGG:05200,Pathways in cancer,ICOS,1
+functional_impact; pathway_reach,2.0,hsa-miR-196a-5p,KEGG:01522,Endocrine resistance,ICOS,1
+functional_impact; pathway_reach,2.0,hsa-miR-222-3p,KEGG:01522,Endocrine resistance,TP53INP2,1
+functional_impact; pathway_reach,2.0,hsa-miR-222-3p,KEGG:05205,Proteoglycans in cancer,TP53INP2; ERBB3,2
+functional_impact; pathway_reach,2.0,hsa-miR-93-5p,KEGG:05200,Pathways in cancer,CCND2,1
+functional_impact; pathway_reach,2.0,hsa-miR-93-5p,KEGG:04115,p53 signaling pathway,CCND2,1
+functional_impact; pathway_reach,2.0,hsa-miR-222-3p,KEGG:05200,Pathways in cancer,TP53INP2,1
+functional_impact; pathway_reach,2.0,hsa-miR-222-3p,KEGG:04010,MAPK signaling pathway,ERBB3,1
+functional_impact; pathway_reach,2.0,hsa-miR-93-5p,KEGG:04068,FoxO signaling pathway,CCND2; SLC46A3,2
+functional_impact; pathway_reach,2.0,hsa-miR-196a-5p,KEGG:04020,Calcium signaling pathway,ICOS; CELF2,2
+functional_impact,1.0,hsa-miR-23a-3p,KEGG:05200,Pathways in cancer,RXRG,1
+pathway_reach,1.0,hsa-let-7e-5p,KEGG:04115,p53 signaling pathway,CD200R1,1
+pathway_reach,1.0,hsa-let-7e-5p,KEGG:04211,Longevity regulating pathway,CD200R1,1
+pathway_reach,1.0,hsa-let-7e-5p,KEGG:05200,Pathways in cancer,CD200R1,1
+pathway_reach,1.0,hsa-let-7e-5p,KEGG:05202,Transcriptional misregulation in cancer,CD200R1,1
+pathway_reach,1.0,hsa-let-7e-5p,KEGG:05214,Glioma,CD200R1,1
+betweenness_centrality,1.0,hsa-miR-182-5p,KEGG:04010,MAPK signaling pathway,ANKRD44,1
+redundancy_coefficient,1.0,hsa-miR-128-3p,KEGG:05202,Transcriptional misregulation in cancer,IGF1,1
+pathway_reach,1.0,hsa-miR-92a-3p,KEGG:01522,Endocrine resistance,CHST1,1
+redundancy_coefficient,1.0,hsa-miR-18a-5p,KEGG:04010,MAPK signaling pathway,PRKACB,1
+redundancy_coefficient,1.0,hsa-miR-18a-5p,KEGG:04020,Calcium signaling pathway,ORAI3,1
+functional_impact,1.0,hsa-miR-23a-3p,KEGG:04659,Th17 cell differentiation,RXRG,1
+pathway_reach,1.0,hsa-miR-335-5p,KEGG:05200,Pathways in cancer,GAN,1
+pathway_reach,1.0,hsa-let-7e-5p,KEGG:04068,FoxO signaling pathway,CD200R1,1
+pathway_reach,1.0,hsa-miR-335-5p,KEGG:04020,Calcium signaling pathway,GAN,1
+pathway_reach,1.0,hsa-let-7e-5p,KEGG:04010,MAPK signaling pathway,CD200R1,1
+pathway_reach,1.0,hsa-let-7e-5p,KEGG:01522,Endocrine resistance,CD200R1,1
+pathway_reach,1.0,hsa-let-7e-5p,KEGG:05205,Proteoglycans in cancer,CD200R1,1
+pathway_reach,1.0,hsa-let-7e-5p,KEGG:01521,EGFR tyrosine kinase inhibitor resistance,CD200R1,1
+functional_impact,1.0,hsa-let-7c-5p,KEGG:05202,Transcriptional misregulation in cancer,IGF1R,1
+functional_impact,1.0,hsa-miR-23a-3p,KEGG:05202,Transcriptional misregulation in cancer,RXRG,1
+redundancy_coefficient,1.0,hsa-miR-27a-3p,KEGG:05202,Transcriptional misregulation in cancer,IGF1,1
+pathway_reach,1.0,hsa-miR-335-5p,KEGG:04010,MAPK signaling pathway,GAN,1
+pathway_reach,1.0,hsa-miR-92a-3p,KEGG:05205,Proteoglycans in cancer,CHST1,1
+pathway_reach,1.0,hsa-miR-92a-3p,KEGG:05200,Pathways in cancer,CHST1,1
+pathway_reach,1.0,hsa-miR-92a-3p,KEGG:04211,Longevity regulating pathway,CHST1,1
+pathway_reach,1.0,hsa-miR-92a-3p,KEGG:04020,Calcium signaling pathway,CHST1,1
+pathway_reach,1.0,hsa-miR-92a-3p,KEGG:04014,Ras signaling pathway,CHST1,1
+pathway_reach,1.0,hsa-miR-92a-3p,KEGG:04010,MAPK signaling pathway,CHST1,1
+pathway_reach,1.0,hsa-miR-335-5p,KEGG:04014,Ras signaling pathway,GAN,1
+pathway_reach,1.0,hsa-let-7e-5p,KEGG:04014,Ras signaling pathway,CD200R1,1

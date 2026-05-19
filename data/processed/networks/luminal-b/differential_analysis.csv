@@ -1,0 +1,115 @@
+metrics,total_metrics,source,target,target_label,mediators,total_mediators
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:05200,Pathways in cancer,DZIP1; JCAD; LRRC8A; ERG,4
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-25-3p,KEGG:04310,Wnt signaling pathway,FNDC3B,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-25-3p,KEGG:04140,Autophagy - animal,PMEPA1,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-29b-3p,KEGG:05202,Transcriptional misregulation in cancer,TMTC3,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-25-3p,KEGG:05222,Small cell lung cancer,PMEPA1,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-29b-3p,KEGG:04510,Focal adhesion,MEST,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-29b-3p,KEGG:04140,Autophagy - animal,ABHD5,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-25-3p,KEGG:05215,Prostate cancer,PMEPA1,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-29b-3p,KEGG:05222,Small cell lung cancer,MEST,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-29b-3p,KEGG:05205,Proteoglycans in cancer,SLC16A14,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-25-3p,KEGG:05200,Pathways in cancer,PMEPA1,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-25-3p,KEGG:05161,Hepatitis B,PMEPA1,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:04713,Circadian entrainment,ERG,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-25-3p,KEGG:04722,Neurotrophin signaling pathway,PMEPA1,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-25-3p,KEGG:04630,JAK-STAT signaling pathway,PMEPA1,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:04151,PI3K-Akt signaling pathway,DZIP1; JCAD; ERG,3
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-25-3p,KEGG:04151,PI3K-Akt signaling pathway,PMEPA1,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:04720,Long-term potentiation,ERG,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-25-3p,KEGG:04725,Cholinergic synapse,PMEPA1,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:04310,Wnt signaling pathway,ERG,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-106b-5p,KEGG:04722,Neurotrophin signaling pathway,MMP2,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-106b-5p,KEGG:04520,Adherens junction,ATXN1,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-106b-5p,KEGG:04014,Ras signaling pathway,KIRREL1,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-106b-5p,KEGG:04010,MAPK signaling pathway,KIRREL1,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-106b-5p,KEGG:01521,EGFR tyrosine kinase inhibitor resistance,KIRREL1,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:04144,Endocytosis,ZSWIM4,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:04140,Autophagy - animal,DZIP1,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:04068,FoxO signaling pathway,DZIP1,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:04014,Ras signaling pathway,ERG,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:04012,ErbB signaling pathway,ERG,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:04010,MAPK signaling pathway,ERG,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:01522,Endocrine resistance,LRRC8A,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-25-3p,KEGG:01521,EGFR tyrosine kinase inhibitor resistance,PMEPA1,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-25-3p,KEGG:04510,Focal adhesion,PMEPA1,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:05224,Breast cancer,DZIP1; JCAD; LRRC8A,3
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:05218,Melanoma,DZIP1; JCAD,2
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:04510,Focal adhesion,DZIP1; ERG,2
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:04725,Cholinergic synapse,ERG,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:05214,Glioma,DZIP1; JCAD; ERG,3
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:05222,Small cell lung cancer,DZIP1; JCAD,2
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-29b-3p,KEGG:05200,Pathways in cancer,MEST,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:01521,EGFR tyrosine kinase inhibitor resistance,DZIP1; ERG,2
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:05215,Prostate cancer,DZIP1,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:04218,Cellular senescence,DZIP1; JCAD; KLF12,3
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:04926,Relaxin signaling pathway,ERG,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:05161,Hepatitis B,ERG,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:05225,Hepatocellular carcinoma,DZIP1; JCAD; ERG,3
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:04150,mTOR signaling pathway,DZIP1; ERG,2
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-200c-3p,KEGG:05205,Proteoglycans in cancer,ERG,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-106b-5p,KEGG:04310,Wnt signaling pathway,DCUN1D3; FNDC3B,2
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-25-3p,KEGG:01522,Endocrine resistance,PMEPA1,1
+betweenness_centrality; closeness_centrality; degree_centrality; pathway_reach,4.0,hsa-miR-106a-5p,KEGG:05215,Prostate cancer,TMEM167A,1
+betweenness_centrality; closeness_centrality; degree_centrality; pathway_reach,4.0,hsa-miR-106a-5p,KEGG:05218,Melanoma,JAK1,1
+betweenness_centrality; closeness_centrality; degree_centrality; pathway_reach,4.0,hsa-miR-106a-5p,KEGG:04151,PI3K-Akt signaling pathway,TMEM167A,1
+betweenness_centrality; closeness_centrality; degree_centrality; pathway_reach,4.0,hsa-miR-106a-5p,KEGG:04068,FoxO signaling pathway,RND3,1
+betweenness_centrality; closeness_centrality; degree_centrality; pathway_reach,4.0,hsa-miR-106a-5p,KEGG:04380,Osteoclast differentiation,JAK1; TMEM167A,2
+betweenness_centrality; closeness_centrality; degree_centrality; pathway_reach,4.0,hsa-miR-106a-5p,KEGG:04725,Cholinergic synapse,TMEM167A,1
+betweenness_centrality; closeness_centrality; degree_centrality; pathway_reach,4.0,hsa-miR-106a-5p,KEGG:05202,Transcriptional misregulation in cancer,JAK1,1
+betweenness_centrality; closeness_centrality; degree_centrality; pathway_reach,4.0,hsa-miR-106a-5p,KEGG:05200,Pathways in cancer,JAK1,1
+betweenness_centrality; closeness_centrality; degree_centrality; pathway_reach,4.0,hsa-miR-106a-5p,KEGG:05161,Hepatitis B,TMEM167A,1
+betweenness_centrality; closeness_centrality; degree_centrality; pathway_reach,4.0,hsa-miR-106a-5p,KEGG:04926,Relaxin signaling pathway,TMEM167A,1
+betweenness_centrality; closeness_centrality; degree_centrality; pathway_reach,4.0,hsa-miR-106a-5p,KEGG:04713,Circadian entrainment,TMEM167A,1
+betweenness_centrality; closeness_centrality; degree_centrality; pathway_reach,4.0,hsa-miR-106a-5p,KEGG:04152,AMPK signaling pathway,TMEM167A,1
+functional_impact; pathway_reach,2.0,hsa-miR-193b-3p,KEGG:04012,ErbB signaling pathway,RUNX1T1,1
+functional_impact; pathway_reach,2.0,hsa-miR-193b-3p,KEGG:05225,Hepatocellular carcinoma,RUNX1T1,1
+functional_impact; pathway_reach,2.0,hsa-miR-193b-3p,KEGG:04520,Adherens junction,ATXN1; KCNJ2,2
+functional_impact; pathway_reach,2.0,hsa-miR-193b-3p,KEGG:01522,Endocrine resistance,RUNX1T1,1
+functional_impact; pathway_reach,2.0,hsa-miR-193b-3p,KEGG:04010,MAPK signaling pathway,RUNX1T1,1
+functional_impact; pathway_reach,2.0,hsa-miR-193b-3p,KEGG:05215,Prostate cancer,RUNX1T1,1
+functional_impact; pathway_reach,2.0,hsa-miR-193b-3p,KEGG:01521,EGFR tyrosine kinase inhibitor resistance,RUNX1T1; ENTPD1,2
+functional_impact; pathway_reach,2.0,hsa-miR-193b-3p,KEGG:05224,Breast cancer,RUNX1T1,1
+functional_impact; pathway_reach,2.0,hsa-miR-193b-3p,KEGG:04510,Focal adhesion,RUNX1T1,1
+functional_impact; pathway_reach,2.0,hsa-miR-193b-3p,KEGG:04068,FoxO signaling pathway,RUNX1T1,1
+functional_impact; pathway_reach,2.0,hsa-miR-193b-3p,KEGG:04150,mTOR signaling pathway,RUNX1T1,1
+functional_impact; pathway_reach,2.0,hsa-miR-27a-3p,KEGG:05224,Breast cancer,BBX,1
+functional_impact; pathway_reach,2.0,hsa-miR-27a-3p,KEGG:05218,Melanoma,BBX,1
+functional_impact; pathway_reach,2.0,hsa-miR-27a-3p,KEGG:05202,Transcriptional misregulation in cancer,AFF3,1
+functional_impact; pathway_reach,2.0,hsa-miR-27a-3p,KEGG:05200,Pathways in cancer,BBX,1
+functional_impact; pathway_reach,2.0,hsa-miR-27a-3p,KEGG:04151,PI3K-Akt signaling pathway,BBX,1
+functional_impact; pathway_reach,2.0,hsa-miR-27a-3p,KEGG:04014,Ras signaling pathway,BBX,1
+functional_impact; pathway_reach,2.0,hsa-miR-27a-3p,KEGG:04010,MAPK signaling pathway,BBX,1
+functional_impact; pathway_reach,2.0,hsa-miR-193b-3p,KEGG:04151,PI3K-Akt signaling pathway,RUNX1T1,1
+functional_impact; pathway_reach,2.0,hsa-miR-193b-3p,KEGG:04630,JAK-STAT signaling pathway,RUNX1T1,1
+functional_impact; pathway_reach,2.0,hsa-miR-193b-3p,KEGG:04722,Neurotrophin signaling pathway,RUNX1T1,1
+functional_impact; pathway_reach,2.0,hsa-miR-221-3p,KEGG:04151,PI3K-Akt signaling pathway,MYEF2,1
+functional_impact; pathway_reach,2.0,hsa-miR-221-3p,KEGG:04510,Focal adhesion,MYEF2,1
+functional_impact; pathway_reach,2.0,hsa-miR-221-3p,KEGG:05200,Pathways in cancer,MYEF2,1
+functional_impact; pathway_reach,2.0,hsa-miR-221-3p,KEGG:05205,Proteoglycans in cancer,MYEF2,1
+functional_impact; pathway_reach,2.0,hsa-miR-221-3p,KEGG:05222,Small cell lung cancer,MYEF2,1
+functional_impact; pathway_reach,2.0,hsa-miR-193b-3p,KEGG:04926,Relaxin signaling pathway,RUNX1T1,1
+functional_impact; pathway_reach,2.0,hsa-miR-193b-3p,KEGG:05161,Hepatitis B,RUNX1T1,1
+functional_impact; pathway_reach,2.0,hsa-miR-193b-3p,KEGG:05205,Proteoglycans in cancer,RUNX1T1,1
+functional_impact; pathway_reach,2.0,hsa-miR-193b-3p,KEGG:04014,Ras signaling pathway,RUNX1T1,1
+functional_impact; pathway_reach,2.0,hsa-miR-193b-3p,KEGG:05214,Glioma,RUNX1T1,1
+functional_impact; pathway_reach,2.0,hsa-miR-193b-3p,KEGG:05200,Pathways in cancer,RUNX1T1,1
+closeness_centrality,1.0,hsa-miR-200b-3p,KEGG:04310,Wnt signaling pathway,GRAP2,1
+pathway_reach,1.0,hsa-miR-30b-5p,KEGG:05202,Transcriptional misregulation in cancer,TMTC3,1
+pathway_reach,1.0,hsa-miR-130b-3p,KEGG:04144,Endocytosis,KIAA1217,1
+pathway_reach,1.0,hsa-miR-30b-5p,KEGG:04218,Cellular senescence,RAP2B; KLF12,2
+pathway_reach,1.0,hsa-miR-30b-5p,KEGG:05200,Pathways in cancer,TSPAN2,1
+pathway_reach,1.0,hsa-miR-30b-5p,KEGG:04510,Focal adhesion,TSPAN2,1
+pathway_reach,1.0,hsa-miR-30b-5p,KEGG:04151,PI3K-Akt signaling pathway,TSPAN2,1
+pathway_reach,1.0,hsa-miR-30b-5p,KEGG:01522,Endocrine resistance,FTO,1
+functional_impact,1.0,hsa-miR-301a-3p,KEGG:04152,AMPK signaling pathway,PTPN14,1
+functional_impact,1.0,hsa-miR-301a-3p,KEGG:04144,Endocytosis,PTPN14,1
+degree_centrality,1.0,hsa-miR-182-5p,KEGG:04550,Signaling pathways regulating pluripotency of stem cells,UBASH3B,1
+pathway_reach,1.0,hsa-miR-130b-3p,KEGG:04218,Cellular senescence,KIAA1217,1
+functional_impact,1.0,hsa-miR-148a-3p,KEGG:04144,Endocytosis,SPIN1,1
+pathway_reach,1.0,hsa-miR-130b-3p,KEGG:05225,Hepatocellular carcinoma,KIAA1217,1
+pathway_reach,1.0,hsa-miR-130b-3p,KEGG:05205,Proteoglycans in cancer,KIAA1217,1
+pathway_reach,1.0,hsa-miR-130b-3p,KEGG:05200,Pathways in cancer,KIAA1217,1
+pathway_reach,1.0,hsa-miR-130b-3p,KEGG:04926,Relaxin signaling pathway,KIAA1217,1
+pathway_reach,1.0,hsa-miR-130b-3p,KEGG:04550,Signaling pathways regulating pluripotency of stem cells,KIAA1217,1
+pathway_reach,1.0,hsa-miR-30b-5p,KEGG:05222,Small cell lung cancer,TSPAN2,1
