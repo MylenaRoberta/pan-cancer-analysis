@@ -1,0 +1,35 @@
+id,label,type
+FLNC,FLNC,Messenger RNA
+LAMA2,LAMA2,Messenger RNA
+PDGFRA,PDGFRA,Messenger RNA
+PRKG1,PRKG1,Messenger RNA
+GATA6,GATA6,Messenger RNA
+TCF4,TCF4,Messenger RNA
+DIO2,DIO2,Messenger RNA
+PRRX1,PRRX1,Messenger RNA
+TRPM3,TRPM3,Messenger RNA
+CROT,CROT,Messenger RNA
+WWTR1,WWTR1,Messenger RNA
+FRMD6,FRMD6,Messenger RNA
+MAF,MAF,Messenger RNA
+TNS1,TNS1,Messenger RNA
+ITGA9,ITGA9,Messenger RNA
+TBX3,TBX3,Messenger RNA
+TBCEL,TBCEL,Messenger RNA
+RUNX1T1,RUNX1T1,Messenger RNA
+FLI1,FLI1,Messenger RNA
+RGMA,RGMA,Messenger RNA
+HMCN1,HMCN1,Messenger RNA
+DZIP1,DZIP1,Messenger RNA
+FRZB,FRZB,Messenger RNA
+RASGRF2,RASGRF2,Messenger RNA
+KIT,KIT,Messenger RNA
+EIF4E2,EIF4E2,Messenger RNA
+ETS1,ETS1,Messenger RNA
+SLC2A3,SLC2A3,Messenger RNA
+TBC1D12,TBC1D12,Messenger RNA
+KEGG:04510,Focal adhesion,Pathway
+KEGG:04390,Hippo signaling pathway,Pathway
+KEGG:05202,Transcriptional misregulation in cancer,Pathway
+KEGG:04151,PI3K-Akt signaling pathway,Pathway
+KEGG:05165,Human papillomavirus infection,Pathway

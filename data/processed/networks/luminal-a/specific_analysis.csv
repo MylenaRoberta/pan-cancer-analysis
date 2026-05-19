@@ -1,0 +1,27 @@
+metrics,total_metrics,source,target,target_label,mediators,total_mediators
+functional_impact; pathway_reach,2.0,hsa-miR-192-5p,KEGG:04151,PI3K-Akt signaling pathway,PRKG1,1
+functional_impact; pathway_reach,2.0,hsa-miR-192-5p,KEGG:04510,Focal adhesion,PRKG1,1
+functional_impact; pathway_reach,2.0,hsa-miR-192-5p,KEGG:05165,Human papillomavirus infection,PRKG1,1
+closeness_centrality; degree_centrality,2.0,hsa-miR-200a-3p,KEGG:04390,Hippo signaling pathway,WWTR1,1
+closeness_centrality; degree_centrality,2.0,hsa-miR-200a-3p,KEGG:04510,Focal adhesion,GATA6,1
+closeness_centrality; degree_centrality,2.0,hsa-miR-200a-3p,KEGG:05202,Transcriptional misregulation in cancer,DZIP1,1
+pathway_reach,1.0,hsa-miR-429,KEGG:05165,Human papillomavirus infection,TCF4; SLC2A3; MAF,3
+pathway_reach,1.0,hsa-miR-429,KEGG:04151,PI3K-Akt signaling pathway,TCF4; SLC2A3; MAF,3
+redundancy_coefficient,1.0,hsa-miR-106b-5p,KEGG:05202,Transcriptional misregulation in cancer,RASGRF2,1
+redundancy_coefficient,1.0,hsa-miR-148b-3p,KEGG:05202,Transcriptional misregulation in cancer,RUNX1T1,1
+redundancy_coefficient,1.0,hsa-miR-193b-3p,KEGG:04151,PI3K-Akt signaling pathway,KIT,1
+redundancy_coefficient,1.0,hsa-miR-193b-3p,KEGG:05202,Transcriptional misregulation in cancer,RUNX1T1,1
+betweenness_centrality,1.0,hsa-miR-301a-3p,KEGG:04390,Hippo signaling pathway,FRMD6,1
+betweenness_centrality,1.0,hsa-miR-301a-3p,KEGG:05165,Human papillomavirus infection,TBC1D12,1
+pathway_reach,1.0,hsa-miR-33b-5p,KEGG:04151,PI3K-Akt signaling pathway,CROT,1
+pathway_reach,1.0,hsa-miR-33b-5p,KEGG:04510,Focal adhesion,CROT,1
+pathway_reach,1.0,hsa-miR-33b-5p,KEGG:05165,Human papillomavirus infection,CROT,1
+pathway_reach,1.0,hsa-miR-363-3p,KEGG:04151,PI3K-Akt signaling pathway,TBX3,1
+pathway_reach,1.0,hsa-miR-363-3p,KEGG:04390,Hippo signaling pathway,TBX3,1
+pathway_reach,1.0,hsa-miR-363-3p,KEGG:05165,Human papillomavirus infection,TBX3,1
+pathway_reach,1.0,hsa-miR-429,KEGG:04510,Focal adhesion,TCF4,1
+redundancy_coefficient,1.0,hsa-miR-106b-5p,KEGG:05165,Human papillomavirus infection,TBCEL,1
+redundancy_coefficient,1.0,hsa-miR-106b-5p,KEGG:04390,Hippo signaling pathway,TBCEL,1
+pathway_reach,1.0,hsa-miR-33b-5p,KEGG:05202,Transcriptional misregulation in cancer,RUNX1T1; RGMA,2
+pathway_reach,1.0,hsa-miR-429,KEGG:04390,Hippo signaling pathway,TCF4; MAF,2
+pathway_reach,1.0,hsa-miR-429,KEGG:05202,Transcriptional misregulation in cancer,TCF4,1

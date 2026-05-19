@@ -1,0 +1,16 @@
+metrics,total_metrics,source,target,target_label,mediators,total_mediators
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-96-5p,KEGG:05200,Pathways in cancer,CCND2; HAS2; CCDC50; PTPRQ,4
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-96-5p,KEGG:04020,Calcium signaling pathway,HAS2; CELF2; TNS1,3
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-96-5p,KEGG:05202,Transcriptional misregulation in cancer,CCND2; CCDC50; ZEB1,3
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-96-5p,KEGG:05205,Proteoglycans in cancer,MSN; HAS2; CCDC50,3
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-96-5p,KEGG:04068,FoxO signaling pathway,CCND2; CCDC50,2
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-96-5p,KEGG:05214,Glioma,HAS2; CCDC50,2
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-96-5p,KEGG:01521,EGFR tyrosine kinase inhibitor resistance,CCDC50,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-96-5p,KEGG:01522,Endocrine resistance,CCDC50,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-96-5p,KEGG:04010,MAPK signaling pathway,CCDC50,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-96-5p,KEGG:04014,Ras signaling pathway,CCDC50,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-96-5p,KEGG:04115,p53 signaling pathway,CCND2,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-96-5p,KEGG:04211,Longevity regulating pathway,CCDC50,1
+betweenness_centrality; closeness_centrality; degree_centrality; functional_impact; pathway_reach,5.0,hsa-miR-96-5p,KEGG:04659,Th17 cell differentiation,PTPRQ,1
+betweenness_centrality; closeness_centrality; functional_impact; pathway_reach,4.0,hsa-miR-18a-5p,KEGG:04010,MAPK signaling pathway,PRKACB,1
+betweenness_centrality; closeness_centrality; functional_impact; pathway_reach,4.0,hsa-miR-18a-5p,KEGG:04020,Calcium signaling pathway,ORAI3,1

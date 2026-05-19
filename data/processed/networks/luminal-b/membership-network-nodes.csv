@@ -1,0 +1,141 @@
+id,label,type
+ZBTB4,ZBTB4,Messenger RNA
+DZIP1,DZIP1,Messenger RNA
+WAC,WAC,Messenger RNA
+DCP2,DCP2,Messenger RNA
+CBX7,CBX7,Messenger RNA
+SATB2,SATB2,Messenger RNA
+JCAD,JCAD,Messenger RNA
+CALN1,CALN1,Messenger RNA
+NAV1,NAV1,Messenger RNA
+ABI2,ABI2,Messenger RNA
+MOB3B,MOB3B,Messenger RNA
+BMF,BMF,Messenger RNA
+TSPAN2,TSPAN2,Messenger RNA
+NFIX,NFIX,Messenger RNA
+BBX,BBX,Messenger RNA
+ACVR1B,ACVR1B,Messenger RNA
+RUNX1T1,RUNX1T1,Messenger RNA
+TMED8,TMED8,Messenger RNA
+MYEF2,MYEF2,Messenger RNA
+BACH2,BACH2,Messenger RNA
+NEK4,NEK4,Messenger RNA
+KIAA1217,KIAA1217,Messenger RNA
+HIPK2,HIPK2,Messenger RNA
+DOK6,DOK6,Messenger RNA
+LRRC8A,LRRC8A,Messenger RNA
+LIN54,LIN54,Messenger RNA
+ERG,ERG,Messenger RNA
+CCDC85C,CCDC85C,Messenger RNA
+JAK1,JAK1,Messenger RNA
+LMOD1,LMOD1,Messenger RNA
+ELAVL2,ELAVL2,Messenger RNA
+INTS2,INTS2,Messenger RNA
+ARIH1,ARIH1,Messenger RNA
+KCTD20,KCTD20,Messenger RNA
+MEST,MEST,Messenger RNA
+PMEPA1,PMEPA1,Messenger RNA
+ESR1,ESR1,Messenger RNA
+PPIC,PPIC,Messenger RNA
+ENTPD1,ENTPD1,Messenger RNA
+NEDD4L,NEDD4L,Messenger RNA
+KIRREL1,KIRREL1,Messenger RNA
+CREBL2,CREBL2,Messenger RNA
+UHRF1BP1,UHRF1BP1,Messenger RNA
+GPR157,GPR157,Messenger RNA
+MSI2,MSI2,Messenger RNA
+BMPR2,BMPR2,Messenger RNA
+FGF1,FGF1,Messenger RNA
+YTHDC1,YTHDC1,Messenger RNA
+PPP6R3,PPP6R3,Messenger RNA
+CYB561D1,CYB561D1,Messenger RNA
+CEP41,CEP41,Messenger RNA
+DIO2,DIO2,Messenger RNA
+ADAMTS2,ADAMTS2,Messenger RNA
+TMEM167A,TMEM167A,Messenger RNA
+CYTH3,CYTH3,Messenger RNA
+ZC2HC1C,ZC2HC1C,Messenger RNA
+AHCYL2,AHCYL2,Messenger RNA
+KCNN3,KCNN3,Messenger RNA
+SLC16A14,SLC16A14,Messenger RNA
+DAAM1,DAAM1,Messenger RNA
+GBA2,GBA2,Messenger RNA
+DKK3,DKK3,Messenger RNA
+ANTXR2,ANTXR2,Messenger RNA
+CDS1,CDS1,Messenger RNA
+AFAP1L2,AFAP1L2,Messenger RNA
+UBASH3B,UBASH3B,Messenger RNA
+CSNK1A1,CSNK1A1,Messenger RNA
+AKAP12,AKAP12,Messenger RNA
+FBXO28,FBXO28,Messenger RNA
+NF1,NF1,Messenger RNA
+MTPN,MTPN,Messenger RNA
+COL6A3,COL6A3,Messenger RNA
+FNDC3B,FNDC3B,Messenger RNA
+PDGFRA,PDGFRA,Messenger RNA
+TBX18,TBX18,Messenger RNA
+PRELID2,PRELID2,Messenger RNA
+DCUN1D3,DCUN1D3,Messenger RNA
+BCORL1,BCORL1,Messenger RNA
+GRAP2,GRAP2,Messenger RNA
+KLF12,KLF12,Messenger RNA
+RAP2B,RAP2B,Messenger RNA
+SEMA6D,SEMA6D,Messenger RNA
+SRGAP1,SRGAP1,Messenger RNA
+PDE12,PDE12,Messenger RNA
+FTO,FTO,Messenger RNA
+MMP2,MMP2,Messenger RNA
+VEZF1,VEZF1,Messenger RNA
+FLNC,FLNC,Messenger RNA
+BCL3,BCL3,Messenger RNA
+PTPN14,PTPN14,Messenger RNA
+FRK,FRK,Messenger RNA
+SPIN1,SPIN1,Messenger RNA
+CAMKK2,CAMKK2,Messenger RNA
+ZSWIM4,ZSWIM4,Messenger RNA
+CCNJL,CCNJL,Messenger RNA
+RILPL1,RILPL1,Messenger RNA
+CREB1,CREB1,Messenger RNA
+RIC1,RIC1,Messenger RNA
+RND3,RND3,Messenger RNA
+SENP5,SENP5,Messenger RNA
+TMTC3,TMTC3,Messenger RNA
+AFF3,AFF3,Messenger RNA
+ABHD5,ABHD5,Messenger RNA
+STRADB,STRADB,Messenger RNA
+ATXN1,ATXN1,Messenger RNA
+TBX15,TBX15,Messenger RNA
+KCNJ2,KCNJ2,Messenger RNA
+KEGG:05200,Pathways in cancer,Pathway
+KEGG:01521,EGFR tyrosine kinase inhibitor resistance,Pathway
+KEGG:04010,MAPK signaling pathway,Pathway
+KEGG:04151,PI3K-Akt signaling pathway,Pathway
+KEGG:04510,Focal adhesion,Pathway
+KEGG:05215,Prostate cancer,Pathway
+KEGG:05205,Proteoglycans in cancer,Pathway
+KEGG:04550,Signaling pathways regulating pluripotency of stem cells,Pathway
+KEGG:04150,mTOR signaling pathway,Pathway
+KEGG:05222,Small cell lung cancer,Pathway
+KEGG:04725,Cholinergic synapse,Pathway
+KEGG:05214,Glioma,Pathway
+KEGG:04014,Ras signaling pathway,Pathway
+KEGG:04310,Wnt signaling pathway,Pathway
+KEGG:04218,Cellular senescence,Pathway
+KEGG:04380,Osteoclast differentiation,Pathway
+KEGG:05218,Melanoma,Pathway
+KEGG:05161,Hepatitis B,Pathway
+KEGG:01522,Endocrine resistance,Pathway
+KEGG:04722,Neurotrophin signaling pathway,Pathway
+KEGG:04713,Circadian entrainment,Pathway
+KEGG:04152,AMPK signaling pathway,Pathway
+KEGG:04144,Endocytosis,Pathway
+KEGG:05224,Breast cancer,Pathway
+KEGG:04926,Relaxin signaling pathway,Pathway
+KEGG:04012,ErbB signaling pathway,Pathway
+KEGG:04068,FoxO signaling pathway,Pathway
+KEGG:04630,JAK-STAT signaling pathway,Pathway
+KEGG:04720,Long-term potentiation,Pathway
+KEGG:05202,Transcriptional misregulation in cancer,Pathway
+KEGG:04140,Autophagy - animal,Pathway
+KEGG:05225,Hepatocellular carcinoma,Pathway
+KEGG:04520,Adherens junction,Pathway

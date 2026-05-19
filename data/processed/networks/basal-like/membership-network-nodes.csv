@@ -1,0 +1,60 @@
+id,label,type
+CCND2,CCND2,Messenger RNA
+RXRG,RXRG,Messenger RNA
+KLF3,KLF3,Messenger RNA
+ESR1,ESR1,Messenger RNA
+PAPLN,PAPLN,Messenger RNA
+DIAPH2,DIAPH2,Messenger RNA
+TARDBP,TARDBP,Messenger RNA
+ZEB1,ZEB1,Messenger RNA
+SMARCD1,SMARCD1,Messenger RNA
+CCDC50,CCDC50,Messenger RNA
+IGF1R,IGF1R,Messenger RNA
+LASP1,LASP1,Messenger RNA
+SCN1B,SCN1B,Messenger RNA
+CD200R1,CD200R1,Messenger RNA
+IGF1,IGF1,Messenger RNA
+GPX7,GPX7,Messenger RNA
+B4GALT5,B4GALT5,Messenger RNA
+MMP2,MMP2,Messenger RNA
+ICOS,ICOS,Messenger RNA
+HAS2,HAS2,Messenger RNA
+TP53INP2,TP53INP2,Messenger RNA
+AFF1,AFF1,Messenger RNA
+GAN,GAN,Messenger RNA
+CHST1,CHST1,Messenger RNA
+PTPRQ,PTPRQ,Messenger RNA
+IL6ST,IL6ST,Messenger RNA
+DCUN1D5,DCUN1D5,Messenger RNA
+PRDM16,PRDM16,Messenger RNA
+SLC35B4,SLC35B4,Messenger RNA
+ETS1,ETS1,Messenger RNA
+ORAI3,ORAI3,Messenger RNA
+ERBB3,ERBB3,Messenger RNA
+TNS1,TNS1,Messenger RNA
+CELF2,CELF2,Messenger RNA
+SSTR1,SSTR1,Messenger RNA
+AXL,AXL,Messenger RNA
+RASGRF2,RASGRF2,Messenger RNA
+ANKRD44,ANKRD44,Messenger RNA
+PRKACB,PRKACB,Messenger RNA
+WIPF1,WIPF1,Messenger RNA
+SLC46A3,SLC46A3,Messenger RNA
+MSN,MSN,Messenger RNA
+RXRA,RXRA,Messenger RNA
+ELFN2,ELFN2,Messenger RNA
+NOVA1,NOVA1,Messenger RNA
+SESN3,SESN3,Messenger RNA
+KEGG:05202,Transcriptional misregulation in cancer,Pathway
+KEGG:05200,Pathways in cancer,Pathway
+KEGG:04211,Longevity regulating pathway,Pathway
+KEGG:04020,Calcium signaling pathway,Pathway
+KEGG:01521,EGFR tyrosine kinase inhibitor resistance,Pathway
+KEGG:01522,Endocrine resistance,Pathway
+KEGG:04010,MAPK signaling pathway,Pathway
+KEGG:04068,FoxO signaling pathway,Pathway
+KEGG:05205,Proteoglycans in cancer,Pathway
+KEGG:04659,Th17 cell differentiation,Pathway
+KEGG:04014,Ras signaling pathway,Pathway
+KEGG:04115,p53 signaling pathway,Pathway
+KEGG:05214,Glioma,Pathway
