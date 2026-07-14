@@ -15,3 +15,6 @@ data/processed/tcga-brca/*/rna-seq_*
 # miRWalk-related files
 data/external/mirwalk/
 data/processed/mirwalk/MIMAT*
+
+# Reactome Homo sapiens file
+data/external/reactome/
