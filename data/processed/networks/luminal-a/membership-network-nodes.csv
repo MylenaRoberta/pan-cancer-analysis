@@ -1,35 +1,41 @@
-id,label,type
-FLNC,FLNC,Messenger RNA
-LAMA2,LAMA2,Messenger RNA
-PDGFRA,PDGFRA,Messenger RNA
-PRKG1,PRKG1,Messenger RNA
-GATA6,GATA6,Messenger RNA
-TCF4,TCF4,Messenger RNA
-DIO2,DIO2,Messenger RNA
-PRRX1,PRRX1,Messenger RNA
-TRPM3,TRPM3,Messenger RNA
-CROT,CROT,Messenger RNA
-WWTR1,WWTR1,Messenger RNA
-FRMD6,FRMD6,Messenger RNA
-MAF,MAF,Messenger RNA
-TNS1,TNS1,Messenger RNA
-ITGA9,ITGA9,Messenger RNA
-TBX3,TBX3,Messenger RNA
-TBCEL,TBCEL,Messenger RNA
-RUNX1T1,RUNX1T1,Messenger RNA
-FLI1,FLI1,Messenger RNA
-RGMA,RGMA,Messenger RNA
-HMCN1,HMCN1,Messenger RNA
-DZIP1,DZIP1,Messenger RNA
-FRZB,FRZB,Messenger RNA
-RASGRF2,RASGRF2,Messenger RNA
-KIT,KIT,Messenger RNA
-EIF4E2,EIF4E2,Messenger RNA
-ETS1,ETS1,Messenger RNA
-SLC2A3,SLC2A3,Messenger RNA
-TBC1D12,TBC1D12,Messenger RNA
-KEGG:04510,Focal adhesion,Pathway
-KEGG:04390,Hippo signaling pathway,Pathway
-KEGG:05202,Transcriptional misregulation in cancer,Pathway
-KEGG:04151,PI3K-Akt signaling pathway,Pathway
-KEGG:05165,Human papillomavirus infection,Pathway
+id,label,type,qvalue
+WWTR1,WWTR1,Messenger RNA,
+FRMD6,FRMD6,Messenger RNA,
+PPP2R2B,PPP2R2B,Messenger RNA,
+CCND2,CCND2,Messenger RNA,
+LATS2,LATS2,Messenger RNA,
+TGFBR2,TGFBR2,Messenger RNA,
+PPP2CB,PPP2CB,Messenger RNA,
+PARD6B,PARD6B,Messenger RNA,
+LAMA2,LAMA2,Messenger RNA,
+PDGFRA,PDGFRA,Messenger RNA,
+COL6A3,COL6A3,Messenger RNA,
+MYLK,MYLK,Messenger RNA,
+CAV2,CAV2,Messenger RNA,
+VCL,VCL,Messenger RNA,
+ITGA11,ITGA11,Messenger RNA,
+ITGA9,ITGA9,Messenger RNA,
+FBN1,FBN1,Messenger RNA,
+FLNC,FLNC,Messenger RNA,
+COL5A1,COL5A1,Messenger RNA,
+SGCE,SGCE,Messenger RNA,
+LMOD1,LMOD1,Messenger RNA,
+RUNX1T1,RUNX1T1,Messenger RNA,
+FLI1,FLI1,Messenger RNA,
+ZEB1,ZEB1,Messenger RNA,
+FOXO1,FOXO1,Messenger RNA,
+MAF,MAF,Messenger RNA,
+ETV1,ETV1,Messenger RNA,
+BCL11B,BCL11B,Messenger RNA,
+KIT,KIT,Messenger RNA,
+EIF4E2,EIF4E2,Messenger RNA,
+IGF2,IGF2,Messenger RNA,
+CDK6,CDK6,Messenger RNA,
+HEY2,HEY2,Messenger RNA,
+KEGG:04390,Hippo signaling pathway,Pathway,0.018968994308871612
+KEGG:04510,Focal adhesion,Pathway,0.018968994308871612
+KEGG:04518,Integrin signaling,Pathway,0.018968994308871612
+KEGG:04820,Cytoskeleton in muscle cells,Pathway,0.018968994308871612
+KEGG:05202,Transcriptional misregulation in cancer,Pathway,0.018968994308871612
+KEGG:04151,PI3K-Akt signaling pathway,Pathway,0.024586838792191843
+KEGG:05165,Human papillomavirus infection,Pathway,0.03777410471615125
