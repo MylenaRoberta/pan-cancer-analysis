@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - feature/quadripartite-network
     paths:
       - "external/quadri-partite/graph_viewer.html"
       - "external/quadri-partite/*_nodes.csv"
