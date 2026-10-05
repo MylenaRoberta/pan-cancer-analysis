@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk -F',' 'NR>1{print $2}' luminal-b_nodes.csv)"
+    ]
+  },
+  "additionalDirectories": [
+    "~/git/datasci4health/homepage/language-model/gat/visualizer"
+  ]
+}
