@@ -1,141 +1,188 @@
 id,label,type
+FRK,FRK,Messenger RNA
 ZBTB4,ZBTB4,Messenger RNA
-DZIP1,DZIP1,Messenger RNA
-WAC,WAC,Messenger RNA
-DCP2,DCP2,Messenger RNA
+ESR1,ESR1,Messenger RNA
+EIF4E2,EIF4E2,Messenger RNA
+ETS1,ETS1,Messenger RNA
 CBX7,CBX7,Messenger RNA
+ERBB4,ERBB4,Messenger RNA
 SATB2,SATB2,Messenger RNA
-JCAD,JCAD,Messenger RNA
-CALN1,CALN1,Messenger RNA
+CALU,CALU,Messenger RNA
+MSL2,MSL2,Messenger RNA
 NAV1,NAV1,Messenger RNA
-ABI2,ABI2,Messenger RNA
-MOB3B,MOB3B,Messenger RNA
-BMF,BMF,Messenger RNA
+TGFBR2,TGFBR2,Messenger RNA
+TNPO1,TNPO1,Messenger RNA
+IPO5,IPO5,Messenger RNA
 TSPAN2,TSPAN2,Messenger RNA
 NFIX,NFIX,Messenger RNA
 BBX,BBX,Messenger RNA
-ACVR1B,ACVR1B,Messenger RNA
+ADGRL2,ADGRL2,Messenger RNA
 RUNX1T1,RUNX1T1,Messenger RNA
-TMED8,TMED8,Messenger RNA
+YTHDC1,YTHDC1,Messenger RNA
 MYEF2,MYEF2,Messenger RNA
 BACH2,BACH2,Messenger RNA
-NEK4,NEK4,Messenger RNA
+FAT3,FAT3,Messenger RNA
+ADAMTS2,ADAMTS2,Messenger RNA
+ENTPD1,ENTPD1,Messenger RNA
+ERG,ERG,Messenger RNA
+FBXO28,FBXO28,Messenger RNA
+LMOD1,LMOD1,Messenger RNA
+MMP2,MMP2,Messenger RNA
+ZC2HC1C,ZC2HC1C,Messenger RNA
+SLC38A7,SLC38A7,Messenger RNA
+CYB561D1,CYB561D1,Messenger RNA
+SLC25A26,SLC25A26,Messenger RNA
+CHIC1,CHIC1,Messenger RNA
+DALRD3,DALRD3,Messenger RNA
+ATXN7,ATXN7,Messenger RNA
+FST,FST,Messenger RNA
+FAM126A,FAM126A,Messenger RNA
+RORA,RORA,Messenger RNA
+NRG1,NRG1,Messenger RNA
+FNDC3B,FNDC3B,Messenger RNA
+LOX,LOX,Messenger RNA
+DZIP1,DZIP1,Messenger RNA
+DCP2,DCP2,Messenger RNA
+BNC2,BNC2,Messenger RNA
+GJC1,GJC1,Messenger RNA
+PDGFRA,PDGFRA,Messenger RNA
+SOX17,SOX17,Messenger RNA
+EIF5,EIF5,Messenger RNA
+RSBN1L,RSBN1L,Messenger RNA
+CALN1,CALN1,Messenger RNA
+MGAT5,MGAT5,Messenger RNA
+ABI2,ABI2,Messenger RNA
+CHD3,CHD3,Messenger RNA
+BMF,BMF,Messenger RNA
+DTWD2,DTWD2,Messenger RNA
+GBA2,GBA2,Messenger RNA
+GNB5,GNB5,Messenger RNA
+ANK3,ANK3,Messenger RNA
+DKK3,DKK3,Messenger RNA
+MAP3K1,MAP3K1,Messenger RNA
+FLNC,FLNC,Messenger RNA
+VEZF1,VEZF1,Messenger RNA
+CYTH3,CYTH3,Messenger RNA
+CDS1,CDS1,Messenger RNA
+FTO,FTO,Messenger RNA
+TMED8,TMED8,Messenger RNA
+PRELID2,PRELID2,Messenger RNA
+RPS6KA2,RPS6KA2,Messenger RNA
+CSNK1A1,CSNK1A1,Messenger RNA
+TTLL7,TTLL7,Messenger RNA
+ADAM19,ADAM19,Messenger RNA
+ZKSCAN1,ZKSCAN1,Messenger RNA
 KIAA1217,KIAA1217,Messenger RNA
 HIPK2,HIPK2,Messenger RNA
-DOK6,DOK6,Messenger RNA
+PTPN4,PTPN4,Messenger RNA
+PPP6R3,PPP6R3,Messenger RNA
+RASGRF2,RASGRF2,Messenger RNA
+RND3,RND3,Messenger RNA
+AXL,AXL,Messenger RNA
 LRRC8A,LRRC8A,Messenger RNA
 LIN54,LIN54,Messenger RNA
-ERG,ERG,Messenger RNA
+ACER2,ACER2,Messenger RNA
 CCDC85C,CCDC85C,Messenger RNA
-JAK1,JAK1,Messenger RNA
-LMOD1,LMOD1,Messenger RNA
+YPEL2,YPEL2,Messenger RNA
 ELAVL2,ELAVL2,Messenger RNA
-INTS2,INTS2,Messenger RNA
 ARIH1,ARIH1,Messenger RNA
 KCTD20,KCTD20,Messenger RNA
 MEST,MEST,Messenger RNA
-PMEPA1,PMEPA1,Messenger RNA
-ESR1,ESR1,Messenger RNA
-PPIC,PPIC,Messenger RNA
-ENTPD1,ENTPD1,Messenger RNA
-NEDD4L,NEDD4L,Messenger RNA
-KIRREL1,KIRREL1,Messenger RNA
-CREBL2,CREBL2,Messenger RNA
-UHRF1BP1,UHRF1BP1,Messenger RNA
-GPR157,GPR157,Messenger RNA
-MSI2,MSI2,Messenger RNA
-BMPR2,BMPR2,Messenger RNA
-FGF1,FGF1,Messenger RNA
-YTHDC1,YTHDC1,Messenger RNA
-PPP6R3,PPP6R3,Messenger RNA
-CYB561D1,CYB561D1,Messenger RNA
-CEP41,CEP41,Messenger RNA
-DIO2,DIO2,Messenger RNA
-ADAMTS2,ADAMTS2,Messenger RNA
-TMEM167A,TMEM167A,Messenger RNA
-CYTH3,CYTH3,Messenger RNA
-ZC2HC1C,ZC2HC1C,Messenger RNA
-AHCYL2,AHCYL2,Messenger RNA
-KCNN3,KCNN3,Messenger RNA
-SLC16A14,SLC16A14,Messenger RNA
-DAAM1,DAAM1,Messenger RNA
-GBA2,GBA2,Messenger RNA
-DKK3,DKK3,Messenger RNA
-ANTXR2,ANTXR2,Messenger RNA
-CDS1,CDS1,Messenger RNA
-AFAP1L2,AFAP1L2,Messenger RNA
-UBASH3B,UBASH3B,Messenger RNA
-CSNK1A1,CSNK1A1,Messenger RNA
-AKAP12,AKAP12,Messenger RNA
-FBXO28,FBXO28,Messenger RNA
-NF1,NF1,Messenger RNA
-MTPN,MTPN,Messenger RNA
-COL6A3,COL6A3,Messenger RNA
-FNDC3B,FNDC3B,Messenger RNA
-PDGFRA,PDGFRA,Messenger RNA
-TBX18,TBX18,Messenger RNA
-PRELID2,PRELID2,Messenger RNA
-DCUN1D3,DCUN1D3,Messenger RNA
-BCORL1,BCORL1,Messenger RNA
-GRAP2,GRAP2,Messenger RNA
-KLF12,KLF12,Messenger RNA
-RAP2B,RAP2B,Messenger RNA
-SEMA6D,SEMA6D,Messenger RNA
-SRGAP1,SRGAP1,Messenger RNA
-PDE12,PDE12,Messenger RNA
-FTO,FTO,Messenger RNA
-MMP2,MMP2,Messenger RNA
-VEZF1,VEZF1,Messenger RNA
-FLNC,FLNC,Messenger RNA
-BCL3,BCL3,Messenger RNA
-PTPN14,PTPN14,Messenger RNA
-FRK,FRK,Messenger RNA
-SPIN1,SPIN1,Messenger RNA
-CAMKK2,CAMKK2,Messenger RNA
-ZSWIM4,ZSWIM4,Messenger RNA
+FRZB,FRZB,Messenger RNA
+SERPINH1,SERPINH1,Messenger RNA
 CCNJL,CCNJL,Messenger RNA
-RILPL1,RILPL1,Messenger RNA
-CREB1,CREB1,Messenger RNA
-RIC1,RIC1,Messenger RNA
-RND3,RND3,Messenger RNA
-SENP5,SENP5,Messenger RNA
-TMTC3,TMTC3,Messenger RNA
-AFF3,AFF3,Messenger RNA
-ABHD5,ABHD5,Messenger RNA
-STRADB,STRADB,Messenger RNA
-ATXN1,ATXN1,Messenger RNA
-TBX15,TBX15,Messenger RNA
+KIRREL1,KIRREL1,Messenger RNA
 KCNJ2,KCNJ2,Messenger RNA
-KEGG:05200,Pathways in cancer,Pathway
-KEGG:01521,EGFR tyrosine kinase inhibitor resistance,Pathway
-KEGG:04010,MAPK signaling pathway,Pathway
-KEGG:04151,PI3K-Akt signaling pathway,Pathway
-KEGG:04510,Focal adhesion,Pathway
-KEGG:05215,Prostate cancer,Pathway
-KEGG:05205,Proteoglycans in cancer,Pathway
-KEGG:04550,Signaling pathways regulating pluripotency of stem cells,Pathway
-KEGG:04150,mTOR signaling pathway,Pathway
-KEGG:05222,Small cell lung cancer,Pathway
-KEGG:04725,Cholinergic synapse,Pathway
-KEGG:05214,Glioma,Pathway
-KEGG:04014,Ras signaling pathway,Pathway
-KEGG:04310,Wnt signaling pathway,Pathway
-KEGG:04218,Cellular senescence,Pathway
-KEGG:04380,Osteoclast differentiation,Pathway
-KEGG:05218,Melanoma,Pathway
-KEGG:05161,Hepatitis B,Pathway
-KEGG:01522,Endocrine resistance,Pathway
-KEGG:04722,Neurotrophin signaling pathway,Pathway
-KEGG:04713,Circadian entrainment,Pathway
-KEGG:04152,AMPK signaling pathway,Pathway
-KEGG:04144,Endocytosis,Pathway
-KEGG:05224,Breast cancer,Pathway
-KEGG:04926,Relaxin signaling pathway,Pathway
-KEGG:04012,ErbB signaling pathway,Pathway
-KEGG:04068,FoxO signaling pathway,Pathway
-KEGG:04630,JAK-STAT signaling pathway,Pathway
-KEGG:04720,Long-term potentiation,Pathway
-KEGG:05202,Transcriptional misregulation in cancer,Pathway
-KEGG:04140,Autophagy - animal,Pathway
-KEGG:05225,Hepatocellular carcinoma,Pathway
-KEGG:04520,Adherens junction,Pathway
+NF1,NF1,Messenger RNA
+BZW1,BZW1,Messenger RNA
+PMEPA1,PMEPA1,Messenger RNA
+RILPL1,RILPL1,Messenger RNA
+NOL4L,NOL4L,Messenger RNA
+CEP41,CEP41,Messenger RNA
+MSRB3,MSRB3,Messenger RNA
+STOX2,STOX2,Messenger RNA
+CREB1,CREB1,Messenger RNA
+SAMD4A,SAMD4A,Messenger RNA
+ZNF827,ZNF827,Messenger RNA
+CPEB3,CPEB3,Messenger RNA
+CDH6,CDH6,Messenger RNA
+LMTK2,LMTK2,Messenger RNA
+AFF3,AFF3,Messenger RNA
+CREBRF,CREBRF,Messenger RNA
+CCND2,CCND2,Messenger RNA
+COL6A3,COL6A3,Messenger RNA
+MTPN,MTPN,Messenger RNA
+PLXDC2,PLXDC2,Messenger RNA
+PPP1R9A,PPP1R9A,Messenger RNA
+TMTC3,TMTC3,Messenger RNA
+ADAM22,ADAM22,Messenger RNA
+NEDD4,NEDD4,Messenger RNA
+PPIC,PPIC,Messenger RNA
+DAAM1,DAAM1,Messenger RNA
+AHCYL2,AHCYL2,Messenger RNA
+STRN,STRN,Messenger RNA
+DIO2,DIO2,Messenger RNA
+CABLES2,CABLES2,Messenger RNA
+ATP6V1A,ATP6V1A,Messenger RNA
+MITF,MITF,Messenger RNA
+ENAH,ENAH,Messenger RNA
+GNG12,GNG12,Messenger RNA
+INTS2,INTS2,Messenger RNA
+TBCK,TBCK,Messenger RNA
+SH3BGRL2,SH3BGRL2,Messenger RNA
+PEAK1,PEAK1,Messenger RNA
+CDH11,CDH11,Messenger RNA
+ING1,ING1,Messenger RNA
+LRCH1,LRCH1,Messenger RNA
+SLC16A14,SLC16A14,Messenger RNA
+MSI2,MSI2,Messenger RNA
+ANTXR2,ANTXR2,Messenger RNA
+USP38,USP38,Messenger RNA
+TRAF6,TRAF6,Messenger RNA
+SKP1,SKP1,Messenger RNA
+RTF1,RTF1,Messenger RNA
+ZBTB16,ZBTB16,Messenger RNA
+JAK1,JAK1,Messenger RNA
+NSUN4,NSUN4,Messenger RNA
+IRGQ,IRGQ,Messenger RNA
+BCL3,BCL3,Messenger RNA
+RFTN1,RFTN1,Messenger RNA
+REAC:R-HSA-9006934,Signaling by Receptor Tyrosine Kinases,Pathway
+REAC:R-HSA-162582,Signal Transduction,Pathway
+REAC:R-HSA-9006925,Intracellular signaling by second messengers,Pathway
+REAC:R-HSA-1433559,Regulation of KIT signaling,Pathway
+REAC:R-HSA-9006936,Signaling by TGFB family members,Pathway
+REAC:R-HSA-1257604,PIP3 activates AKT signaling,Pathway
+REAC:R-HSA-2219528,PI3K/AKT Signaling in Cancer,Pathway
+REAC:R-HSA-199418,Negative regulation of the PI3K/AKT network,Pathway
+REAC:R-HSA-194138,Signaling by VEGF,Pathway
+REAC:R-HSA-2428933,SHC-related events triggered by IGF1R,Pathway
+REAC:R-HSA-9009391,Extra-nuclear estrogen signaling,Pathway
+REAC:R-HSA-1433557,Signaling by SCF-KIT,Pathway
+REAC:R-HSA-881907,Gastrin-CREB signalling pathway via PKC and MAPK,Pathway
+REAC:R-HSA-9759475,Regulation of CDH11 Expression and Function,Pathway
+REAC:R-HSA-9759476,Regulation of Homotypic Cell-Cell Adhesion,Pathway
+REAC:R-HSA-9764260,Regulation of Expression and Function of Type II Classical Cadherins,Pathway
+REAC:R-HSA-9671555,Signaling by PDGFR in disease,Pathway
+REAC:R-HSA-112314,Neurotransmitter receptors and postsynaptic signal transmission,Pathway
+REAC:R-HSA-9762293,Regulation of CDH11 gene transcription,Pathway
+REAC:R-HSA-8948747,Regulation of PTEN localization,Pathway
+REAC:R-HSA-442755,Activation of NMDA receptors and postsynaptic events,Pathway
+REAC:R-HSA-2219530,Constitutive Signaling by Aberrant PI3K in Cancer,Pathway
+REAC:R-HSA-9607240,FLT3 Signaling,Pathway
+REAC:R-HSA-139910,Activation of BMF and translocation to mitochondria,Pathway
+REAC:R-HSA-418990,Adherens junctions interactions,Pathway
+REAC:R-HSA-4420097,VEGFA-VEGFR2 Pathway,Pathway
+REAC:R-HSA-8940973,RUNX2 regulates osteoblast differentiation,Pathway
+REAC:R-HSA-438064,Post NMDA receptor activation events,Pathway
+REAC:R-HSA-1280215,Cytokine Signaling in Immune system,Pathway
+REAC:R-HSA-6811558,"PI5P, PP2A and IER3 Regulate PI3K/AKT Signaling",Pathway
+REAC:R-HSA-8939211,ESR-mediated signaling,Pathway
+REAC:R-HSA-1266738,Developmental Biology,Pathway
+REAC:R-HSA-442742,CREB1 phosphorylation through NMDA receptor-mediated activation of RAS signaling,Pathway
+REAC:R-HSA-2173788,Downregulation of TGF-beta receptor signaling,Pathway
+REAC:R-HSA-4086398,Ca2+ pathway,Pathway
+REAC:R-HSA-5663202,Diseases of signal transduction by growth factor receptors and second messengers,Pathway
+REAC:R-HSA-194306,Neurophilin interactions with VEGF and VEGFR,Pathway
+REAC:R-HSA-8941237,Invadopodia formation,Pathway
+REAC:R-HSA-211163,AKT-mediated inactivation of FOXO1A,Pathway

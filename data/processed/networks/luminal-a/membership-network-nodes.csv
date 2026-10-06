@@ -1,35 +1,108 @@
 id,label,type
-FLNC,FLNC,Messenger RNA
+SERPINH1,SERPINH1,Messenger RNA
 LAMA2,LAMA2,Messenger RNA
-PDGFRA,PDGFRA,Messenger RNA
+ADGRL3,ADGRL3,Messenger RNA
+CELF2,CELF2,Messenger RNA
+PPP2R2B,PPP2R2B,Messenger RNA
 PRKG1,PRKG1,Messenger RNA
-GATA6,GATA6,Messenger RNA
-TCF4,TCF4,Messenger RNA
-DIO2,DIO2,Messenger RNA
-PRRX1,PRRX1,Messenger RNA
+IGSF11,IGSF11,Messenger RNA
 TRPM3,TRPM3,Messenger RNA
 CROT,CROT,Messenger RNA
+PPP1R9A,PPP1R9A,Messenger RNA
+LMOD1,LMOD1,Messenger RNA
+LRMDA,LRMDA,Messenger RNA
+NEDD4,NEDD4,Messenger RNA
+ATOH8,ATOH8,Messenger RNA
+PCSK5,PCSK5,Messenger RNA
+KIT,KIT,Messenger RNA
+PDGFRA,PDGFRA,Messenger RNA
+AR,AR,Messenger RNA
+COL6A3,COL6A3,Messenger RNA
+EDA,EDA,Messenger RNA
+ETS1,ETS1,Messenger RNA
+CASP10,CASP10,Messenger RNA
+KCNB1,KCNB1,Messenger RNA
+SGCE,SGCE,Messenger RNA
+NEDD4L,NEDD4L,Messenger RNA
+TBX3,TBX3,Messenger RNA
+PLPP3,PLPP3,Messenger RNA
+SEMA5A,SEMA5A,Messenger RNA
+MEF2D,MEF2D,Messenger RNA
 WWTR1,WWTR1,Messenger RNA
-FRMD6,FRMD6,Messenger RNA
-MAF,MAF,Messenger RNA
+SOX17,SOX17,Messenger RNA
+WIPF1,WIPF1,Messenger RNA
+ARL4C,ARL4C,Messenger RNA
+SRGAP1,SRGAP1,Messenger RNA
+RARB,RARB,Messenger RNA
+CRTAP,CRTAP,Messenger RNA
+JCAD,JCAD,Messenger RNA
+HMCN1,HMCN1,Messenger RNA
+FOXO1,FOXO1,Messenger RNA
+TSHZ2,TSHZ2,Messenger RNA
+SCN7A,SCN7A,Messenger RNA
+NHS,NHS,Messenger RNA
+GATA6,GATA6,Messenger RNA
+MYLK,MYLK,Messenger RNA
+ATP11C,ATP11C,Messenger RNA
+JADE2,JADE2,Messenger RNA
+CBX7,CBX7,Messenger RNA
+DIO2,DIO2,Messenger RNA
+PRRX1,PRRX1,Messenger RNA
+SAR1B,SAR1B,Messenger RNA
+MSRB3,MSRB3,Messenger RNA
 TNS1,TNS1,Messenger RNA
 ITGA9,ITGA9,Messenger RNA
-TBX3,TBX3,Messenger RNA
-TBCEL,TBCEL,Messenger RNA
-RUNX1T1,RUNX1T1,Messenger RNA
-FLI1,FLI1,Messenger RNA
-RGMA,RGMA,Messenger RNA
-HMCN1,HMCN1,Messenger RNA
-DZIP1,DZIP1,Messenger RNA
-FRZB,FRZB,Messenger RNA
-RASGRF2,RASGRF2,Messenger RNA
-KIT,KIT,Messenger RNA
-EIF4E2,EIF4E2,Messenger RNA
-ETS1,ETS1,Messenger RNA
-SLC2A3,SLC2A3,Messenger RNA
+TGFBR2,TGFBR2,Messenger RNA
+SEPTIN11,SEPTIN11,Messenger RNA
+B3GALT1,B3GALT1,Messenger RNA
 TBC1D12,TBC1D12,Messenger RNA
-KEGG:04510,Focal adhesion,Pathway
-KEGG:04390,Hippo signaling pathway,Pathway
-KEGG:05202,Transcriptional misregulation in cancer,Pathway
-KEGG:04151,PI3K-Akt signaling pathway,Pathway
-KEGG:05165,Human papillomavirus infection,Pathway
+TBCEL,TBCEL,Messenger RNA
+HIF3A,HIF3A,Messenger RNA
+PRDM16,PRDM16,Messenger RNA
+ADAM23,ADAM23,Messenger RNA
+FLI1,FLI1,Messenger RNA
+NRP1,NRP1,Messenger RNA
+GALNT7,GALNT7,Messenger RNA
+CCNJL,CCNJL,Messenger RNA
+C2CD2,C2CD2,Messenger RNA
+MSN,MSN,Messenger RNA
+PLPPR4,PLPPR4,Messenger RNA
+KIAA1217,KIAA1217,Messenger RNA
+CALU,CALU,Messenger RNA
+IGDCC4,IGDCC4,Messenger RNA
+TPD52,TPD52,Messenger RNA
+DZIP1,DZIP1,Messenger RNA
+PARD6B,PARD6B,Messenger RNA
+TCF4,TCF4,Messenger RNA
+SLC2A3,SLC2A3,Messenger RNA
+CHIC2,CHIC2,Messenger RNA
+QKI,QKI,Messenger RNA
+BHLHE22,BHLHE22,Messenger RNA
+REAC:R-HSA-1474244,Extracellular matrix organization,Pathway
+REAC:R-HSA-9006934,Signaling by Receptor Tyrosine Kinases,Pathway
+REAC:R-HSA-162582,Signal Transduction,Pathway
+REAC:R-HSA-1474290,Collagen formation,Pathway
+REAC:R-HSA-9006936,Signaling by TGFB family members,Pathway
+REAC:R-HSA-1266738,Developmental Biology,Pathway
+REAC:R-HSA-1650814,Collagen biosynthesis and modifying enzymes,Pathway
+REAC:R-HSA-8940973,RUNX2 regulates osteoblast differentiation,Pathway
+REAC:R-HSA-9839373,Signaling by TGFBR3,Pathway
+REAC:R-HSA-216083,Integrin cell surface interactions,Pathway
+REAC:R-HSA-8941326,RUNX2 regulates bone development,Pathway
+REAC:R-HSA-2022090,Assembly of collagen fibrils and other multimeric structures,Pathway
+REAC:R-HSA-9839406,TGFBR3 regulates activin signaling,Pathway
+REAC:R-HSA-1474228,Degradation of the extracellular matrix,Pathway
+REAC:R-HSA-383280,Nuclear Receptor transcription pathway,Pathway
+REAC:R-HSA-9754119,Drug-mediated inhibition of CDK4/CDK6 activity,Pathway
+REAC:R-HSA-3000178,ECM proteoglycans,Pathway
+REAC:R-HSA-2173789,TGF-beta receptor signaling activates SMADs,Pathway
+REAC:R-HSA-4090294,SUMOylation of intracellular receptors,Pathway
+REAC:R-HSA-166520,Signaling by NTRKs,Pathway
+REAC:R-HSA-9839389,TGFBR3 regulates TGF-beta signaling,Pathway
+REAC:R-HSA-5663202,Diseases of signal transduction by growth factor receptors and second messengers,Pathway
+REAC:R-HSA-9675108,Nervous system development,Pathway
+REAC:R-HSA-198725,Nuclear Events (kinase and transcription factor activation),Pathway
+REAC:R-HSA-6811558,"PI5P, PP2A and IER3 Regulate PI3K/AKT Signaling",Pathway
+REAC:R-HSA-2219528,PI3K/AKT Signaling in Cancer,Pathway
+REAC:R-HSA-170834,Signaling by TGF-beta Receptor Complex,Pathway
+REAC:R-HSA-9762293,Regulation of CDH11 gene transcription,Pathway

@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quadripartite Network Viewer</title>
+<style>
+  :root {
+    --bg: #f7f7f8;
+    --panel-bg: #ffffff;
+    --border: #e0e0e3;
+    --text: #1c1c1f;
+    --text-muted: #6b6b73;
+    --accent: #3457d5;
+    --accent-text: #ffffff;
+    --warning-bg: #fff4e5;
+    --warning-text: #7a4a00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16171a;
+      --panel-bg: #1f2023;
+      --border: #33343a;
+      --text: #e8e8ea;
+      --text-muted: #9a9aa2;
+      --accent: #6b8afd;
+      --accent-text: #10131c;
+      --warning-bg: #3a2c0f;
+      --warning-text: #f0c674;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  .app { display: flex; height: 100vh; width: 100vw; overflow: hidden; }
+
+  .sidebar {
+    width: 320px;
+    flex-shrink: 0;
+    background: var(--panel-bg);
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 16px;
+    transition: width .2s ease, padding .2s ease;
+  }
+  .sidebar.collapsed {
+    width: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-right: none;
+  }
+  .sidebar h1 { font-size: 16px; margin: 0 0 16px; white-space: nowrap; }
+
+  .sidebar-toggle {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 20;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--panel-bg);
+    color: var(--text);
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sidebar-toggle:hover { border-color: var(--accent); color: var(--accent); }
+  .panel { border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-bottom: 12px; }
+  .panel h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--text-muted); margin: 0 0 10px; }
+
+  .dropzone {
+    border: 2px dashed var(--border);
+    border-radius: 8px;
+    padding: 18px 10px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    transition: border-color .15s, background .15s;
+  }
+  .dropzone.dragover { border-color: var(--accent); background: rgba(52,87,213,0.08); color: var(--text); }
+
+  .file-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 13px; }
+  .file-btn {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: var(--accent);
+    color: var(--accent-text);
+    cursor: pointer;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .file-btn:hover { opacity: .9; }
+  .file-status { color: var(--text-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .file-status.ok { color: #2ca02c; }
+
+  .warning {
+    background: var(--warning-bg);
+    color: var(--warning-text);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 12px;
+    margin-top: 8px;
+  }
+
+  .hint { font-size: 11px; color: var(--text-muted); line-height: 1.5; margin-top: 4px; }
+  .hint code { background: var(--bg); border: 1px solid var(--border); border-radius: 3px; padding: 0 3px; font-size: 10px; }
+
+  .legend { list-style: none; margin: 0; padding: 0; font-size: 13px; }
+  .legend li { display: flex; align-items: center; gap: 8px; padding: 3px 0; }
+  .swatch { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+  .shape-icon { display: block; flex-shrink: 0; }
+  .edge-swatch { width: 16px; height: 0; border-top: 2px solid #404040; flex-shrink: 0; }
+  .legend .count { margin-left: auto; color: var(--text-muted); }
+
+  .hop-scale { display: flex; flex-direction: column; gap: 3px; margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--border); }
+  .hop-row { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-muted); }
+  .hop-dot { width: 10px; height: 10px; border-radius: 50%; background: #888780; flex-shrink: 0; }
+
+  .btn-row { display: flex; gap: 6px; margin-bottom: 10px; }
+  .btn-row button, .btn-full {
+    flex: 1;
+    padding: 6px 4px;
+    font-size: 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--panel-bg);
+    color: var(--text);
+    cursor: pointer;
+  }
+  .btn-row button:hover, .btn-full:hover { border-color: var(--accent); color: var(--accent); }
+  .btn-full { width: 100%; margin-top: 4px; }
+  .btn-row button:disabled { opacity: .5; cursor: default; border-color: var(--border); color: var(--text); }
+  .subtype-ctrl { margin-bottom: 8px; }
+  .or-divider { font-size: 11px; color: var(--text-muted); text-align: center; margin: 10px 0 8px; }
+  .checkbox-row { display: flex; align-items: center; gap: 6px; font-size: 13px; margin-bottom: 4px; }
+
+  .combine-heading { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .03em; margin-top: 10px; }
+  .combine-row { margin: 8px 0; }
+  .combine-label { display: block; font-size: 12px; color: var(--text-muted); margin-bottom: 4px; }
+  .seg-ctrl { display: flex; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+  .seg-ctrl .seg-btn {
+    flex: 1; padding: 5px 8px; font-size: 12px; border: none; cursor: pointer;
+    background: var(--panel-bg); color: var(--text-muted);
+  }
+  .seg-ctrl .seg-btn + .seg-btn { border-left: 1px solid var(--border); }
+  .seg-ctrl .seg-btn.active { background: var(--accent); color: var(--accent-text); }
+
+  .sel-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+  .sel-chip {
+    display: inline-flex; align-items: center; gap: 5px;
+    border: 1px solid var(--border); border-radius: 20px;
+    padding: 2px 4px 2px 8px; font-size: 12px; max-width: 100%;
+  }
+  .sel-chip .chip-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 150px; }
+  .chip-remove {
+    border: none; background: none; color: var(--text-muted); cursor: pointer;
+    font-size: 14px; line-height: 1; padding: 2px 4px; border-radius: 50%;
+  }
+  .chip-remove:hover { background: var(--bg); color: var(--text); }
+  .mode-note { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
+  .mode-note strong { color: var(--text); }
+
+  #infoContent { font-size: 13px; line-height: 1.5; }
+  #infoContent .label { font-weight: 600; word-break: break-word; }
+  #infoContent .type-badge { display: inline-block; padding: 1px 6px; border-radius: 10px; font-size: 11px; color: #fff; margin-top: 4px; }
+  #infoContent .breakdown { margin-top: 8px; border-top: 1px solid var(--border); padding-top: 8px; }
+  #infoContent .breakdown div { display: flex; justify-content: space-between; }
+  #infoContent .breakdown-title { font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: .03em; margin-bottom: 4px; }
+  #infoContent .empty-row span { color: var(--text-muted); font-style: italic; }
+
+  .graph-area { flex: 1; position: relative; }
+  #network { width: 100%; height: 100%; }
+  .placeholder {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-muted); font-size: 14px; text-align: center; padding: 20px;
+  }
+  .placeholder[hidden] { display: none; }
+
+  .zoom-hint {
+    position: absolute; bottom: 10px; right: 14px;
+    font-size: 11px; color: var(--text-muted);
+    background: var(--panel-bg); border: 1px solid var(--border);
+    border-radius: 6px; padding: 4px 8px; pointer-events: none;
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <h1>Quadripartite Network Viewer</h1>
+
+    <section class="panel">
+      <h2>1. Load data</h2>
+      <span class="combine-label">Subtype</span>
+      <div id="subtypeCtrl" class="seg-ctrl subtype-ctrl"></div>
+      <div class="or-divider">or load your own CSVs</div>
+      <div id="dropzone" class="dropzone">Drag &amp; drop the nodes and/or edges CSV here</div>
+      <div class="file-row">
+        <label class="file-btn">Browse nodes CSV<input type="file" id="nodesInput" accept=".csv" hidden></label>
+        <span id="nodesStatus" class="file-status">not loaded</span>
+      </div>
+      <div class="file-row">
+        <label class="file-btn">Browse edges CSV<input type="file" id="edgesInput" accept=".csv" hidden></label>
+        <span id="edgesStatus" class="file-status">not loaded</span>
+      </div>
+      <div id="loadWarning" class="warning" hidden></div>
+    </section>
+
+    <section class="panel" id="legendPanel" hidden>
+      <h2>Layers</h2>
+      <ul id="legendList" class="legend"></ul>
+    </section>
+
+    <section class="panel" id="highlightLegendPanel" hidden>
+      <h2>Highlight (on click)</h2>
+      <ul class="legend">
+        <li><span class="swatch" style="background:#ffffff;border:2.5px solid #000000"></span>Selected node (black outline)</li>
+        <li><span class="edge-swatch"></span>Traced edges (arrow = direction)</li>
+      </ul>
+      <div class="hint">Traced nodes keep their layer color and shape: precursors (upstream) sit to the left of the selection, successors (downstream) to the right.</div>
+      <div class="hop-scale">
+        <div class="hop-row"><span class="hop-dot" style="opacity:1"></span>1st hop</div>
+        <div class="hop-row"><span class="hop-dot" style="opacity:0.55"></span>2nd hop</div>
+        <div class="hop-row"><span class="hop-dot" style="opacity:0.28"></span>3rd hop</div>
+      </div>
+      <div class="hint">Shift+click to add/remove nodes from the selection.</div>
+    </section>
+
+    <section class="panel" id="controlsPanel" hidden>
+      <h2>View controls</h2>
+      <div class="btn-row">
+        <button id="zoomInBtn" title="Zoom in">+</button>
+        <button id="zoomOutBtn" title="Zoom out">&minus;</button>
+        <button id="fitBtn" title="Fit graph to view">Fit</button>
+      </div>
+      <label class="checkbox-row"><input type="checkbox" id="labelsToggle">Show all labels (incl. Pathway Location)</label>
+      <div class="combine-heading">Combine mode per gap (Shift+click to multi-select)</div>
+      <div class="combine-row">
+        <span class="combine-label">MicroRNA &harr; Messenger RNA</span>
+        <div class="seg-ctrl gap-combine-ctrl" data-gap="0">
+          <button type="button" class="seg-btn active" data-mode="union">Union</button>
+          <button type="button" class="seg-btn" data-mode="intersection">Intersection</button>
+        </div>
+      </div>
+      <div class="combine-row">
+        <span class="combine-label">Messenger RNA &harr; Pathway Location</span>
+        <div class="seg-ctrl gap-combine-ctrl" data-gap="1">
+          <button type="button" class="seg-btn active" data-mode="union">Union</button>
+          <button type="button" class="seg-btn" data-mode="intersection">Intersection</button>
+        </div>
+      </div>
+      <div class="combine-row">
+        <span class="combine-label">Pathway Location &harr; Pathway</span>
+        <div class="seg-ctrl gap-combine-ctrl" data-gap="2">
+          <button type="button" class="seg-btn active" data-mode="union">Union</button>
+          <button type="button" class="seg-btn" data-mode="intersection">Intersection</button>
+        </div>
+      </div>
+      <button id="clearBtn" class="btn-full">Clear selection</button>
+    </section>
+
+    <section class="panel" id="exportPanel" hidden>
+      <h2>Export image</h2>
+      <div class="btn-row">
+        <button id="exportSvgBtn" title="Download the whole graph as a vector image">SVG</button>
+        <button id="exportPngBtn" title="Download the whole graph as a high-resolution PNG">PNG</button>
+      </div>
+      <div class="hint">Exports the whole graph (not just the visible area) with the current highlight and labels, on a white background.</div>
+    </section>
+
+    <section class="panel" id="infoPanel" hidden>
+      <h2>Selection</h2>
+      <div id="infoContent"></div>
+    </section>
+  </aside>
+
+  <main class="graph-area">
+    <button id="sidebarToggleBtn" class="sidebar-toggle" title="Collapse sidebar" aria-label="Collapse sidebar" aria-expanded="true">&#10094;</button>
+    <div id="network"></div>
+    <div id="placeholder" class="placeholder">Pick a subtype, or load a nodes CSV and an edges CSV (browse or drag &amp; drop), to render the graph.</div>
+    <div id="zoomHint" class="zoom-hint" hidden>Scroll / pinch to zoom &middot; drag to pan &middot; click a node to trace precursors/successors</div>
+  </main>
+</div>
+
+<script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  // ------------------------------------------------------------
+  // Domain config (mirrors the Python multipartite plotting code)
+  // ------------------------------------------------------------
+  const LAYER_ORDER = ['MicroRNA', 'Messenger RNA', 'Semantics', 'Pathway'];
+  const LAYER_INDEX = Object.fromEntries(LAYER_ORDER.map((t, i) => [t, i]));
+  // Color + shape are redundant (as in semantic-box), so the graph still
+  // reads in grayscale print or for color-blind viewers.
+  const LAYER_COLOR = {
+    'MicroRNA': '#EF3B2C',
+    'Messenger RNA': '#6BAED6',
+    'Semantics': '#66CC00',
+    'Pathway': '#FF8000',
+  };
+  const LAYER_SHAPE = {
+    'MicroRNA': 'diamond',
+    'Messenger RNA': 'circle',
+    'Semantics': 'triangle',
+    'Pathway': 'square',
+  };
+  // Display-only relabeling: the CSVs, node.type, and all internal logic
+  // keep using 'Semantics' (matching the data files) -- this only swaps
+  // what's shown to the user in the legend, tooltips, and info panel.
+  const LAYER_DISPLAY = {
+    'MicroRNA': 'MicroRNA',
+    'Messenger RNA': 'Messenger RNA',
+    'Semantics': 'Pathway Location',
+    'Pathway': 'Pathway',
+  };
+  function displayType(type) { return LAYER_DISPLAY[type] || type; }
+  const EDGE_COLOR = '#8a8a93';
+  const NODE_FADED_ALPHA = 0.08;
+  const EDGE_FADED_ALPHA = 0.035;
+  const MIN_NODE_SIZE = 8;
+  const MAX_NODE_SIZE = 22;
+  const DEFAULT_LABEL_SIZE = 11;
+  const LABEL_FONT = 'Helvetica, Arial, sans-serif';
+  const LABEL_GAP = 4;
+  // White halo behind label text: labels sit right of the node, where
+  // its outgoing edges leave, so the halo keeps them legible.
+  const LABEL_HALO_WIDTH = 3;
+  const LABEL_HALO_ALPHA = 0.9;
+
+  // Click-to-trace highlight: traced nodes keep their layer color/shape
+  // and traced edges are drawn in a single dark gray (direction is given
+  // by the arrowheads and by the left-to-right layer order); opacity
+  // decays per hop (1st hop full, 2nd 55%, 3rd 28%).
+  const TRACE_EDGE_COLOR = '#404040';
+  const SELECTED_BORDER = '#000000';
+  const HOP_ALPHA = [1, 1, 0.55, 0.28];
+
+  // Built-in subtype networks: <key>_nodes.csv / <key>_edges.csv next to
+  // this page.
+  const SUBTYPES = [
+    { key: 'basal-like', label: 'Basal-like' },
+    { key: 'luminal-a', label: 'Luminal A' },
+    { key: 'luminal-b', label: 'Luminal B' },
+  ];
+  // Layers small enough to label by default; dense layers (e.g. Semantics)
+  // stay unlabeled until the user opts in, to avoid clutter.
+  const DEFAULT_LABELED_LAYERS = new Set(['MicroRNA', 'Messenger RNA', 'Pathway']);
+
+  // ------------------------------------------------------------
+  // Tiny RFC4180-ish CSV parser (handles quoted fields containing
+  // commas / escaped quotes / newlines, which the Semantics labels do)
+  // ------------------------------------------------------------
+  function parseCSV(text) {
+    const rows = [];
+    let row = [], field = '', inQuotes = false;
+    for (let i = 0; i < text.length; i++) {
+      const c = text[i];
+      if (inQuotes) {
+        if (c === '"') {
+          if (text[i + 1] === '"') { field += '"'; i++; }
+          else { inQuotes = false; }
+        } else {
+          field += c;
+        }
+      } else if (c === '"') {
+        inQuotes = true;
+      } else if (c === ',') {
+        row.push(field); field = '';
+      } else if (c === '\r') {
+        // skip; \n (or EOF) below terminates the row
+      } else if (c === '\n') {
+        row.push(field); field = '';
+        rows.push(row); row = [];
+      } else {
+        field += c;
+      }
+    }
+    if (field.length > 0 || row.length > 0) { row.push(field); rows.push(row); }
+    return rows.filter(r => !(r.length === 1 && r[0] === ''));
+  }
+
+  function csvToObjects(text) {
+    const rows = parseCSV(text);
+    if (rows.length === 0) return { header: [], records: [] };
+    const header = rows[0].map(h => h.trim());
+    const records = rows.slice(1).map(r => {
+      const obj = {};
+      header.forEach((h, i) => { obj[h] = r[i] !== undefined ? r[i].trim() : ''; });
+      return obj;
+    });
+    return { header, records };
+  }
+
+  function isNodesHeader(header) {
+    const h = header.map(x => x.toLowerCase());
+    return h.includes('id') && h.includes('type');
+  }
+  function isEdgesHeader(header) {
+    const h = header.map(x => x.toLowerCase());
+    return h.includes('source') && h.includes('target');
+  }
+  function classifyHeader(header) {
+    if (isNodesHeader(header)) return 'nodes';
+    if (isEdgesHeader(header)) return 'edges';
+    return null;
+  }
+
+  function hexToRgb(hex) {
+    const m = hex.replace('#', '');
+    return [parseInt(m.substring(0, 2), 16), parseInt(m.substring(2, 4), 16), parseInt(m.substring(4, 6), 16)];
+  }
+  function rgba(hex, a) {
+    const [r, g, b] = hexToRgb(hex);
+    return `rgba(${r},${g},${b},${a})`;
+  }
+
+  // ------------------------------------------------------------
+  // Node shapes as SVG path data, shared by the canvas renderer
+  // (via Path2D), the SVG export, and the legend icons, so all three
+  // always match. `r` is the degree-scaled node size; the factors keep
+  // the four shapes at a roughly similar visual weight.
+  // ------------------------------------------------------------
+  function shapeHalfWidth(shape, r) {
+    switch (shape) {
+      case 'diamond': return r * 1.25;
+      case 'square': return r * 0.9;
+      case 'triangle': return r * 1.3 * 0.866;
+      default: return r;
+    }
+  }
+
+  function shapePath(shape, x, y, r) {
+    const f = (v) => +v.toFixed(2);
+    switch (shape) {
+      case 'diamond': {
+        const d = r * 1.25;
+        return `M${f(x)} ${f(y - d)}L${f(x + d)} ${f(y)}L${f(x)} ${f(y + d)}L${f(x - d)} ${f(y)}Z`;
+      }
+      case 'square': {
+        const h = r * 0.9;
+        return `M${f(x - h)} ${f(y - h)}H${f(x + h)}V${f(y + h)}H${f(x - h)}Z`;
+      }
+      case 'triangle': {
+        const R = r * 1.3;
+        return `M${f(x)} ${f(y - R)}L${f(x + R * 0.866)} ${f(y + R * 0.5)}L${f(x - R * 0.866)} ${f(y + R * 0.5)}Z`;
+      }
+      default:
+        return `M${f(x - r)} ${f(y)}a${f(r)} ${f(r)} 0 1 0 ${f(2 * r)} 0a${f(r)} ${f(r)} 0 1 0 ${f(-2 * r)} 0Z`;
+    }
+  }
+
+  function shapeIcon(type, px = 14) {
+    const c = px / 2;
+    return `<svg class="shape-icon" width="${px}" height="${px}" viewBox="0 0 ${px} ${px}"><path d="${shapePath(LAYER_SHAPE[type], c, c, px * 0.36)}" fill="${LAYER_COLOR[type]}"/></svg>`;
+  }
+
+  function escapeXml(str) {
+    return String(str).replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' }[ch]));
+  }
+
+  // vis-network repaints any edge touching its internally-selected node
+  // (any prior click), or under the mouse, with its default edge
+  // highlight/hover color unless told otherwise -- so mirror the color.
+  function edgeColorObj(color, opacity) {
+    return { color, opacity, highlight: color, hover: color };
+  }
+
+  // ------------------------------------------------------------
+  // App state
+  // ------------------------------------------------------------
+  let nodesRaw = null;   // [{id, label, type}]
+  let edgesRaw = null;   // [{source, target}]
+  let network = null;
+  let nodesDataset = null;
+  let edgesDataset = null;
+  let predsMap = new Map();    // id -> [predecessor ids] (previous layer)
+  let succsMap = new Map();    // id -> [successor ids] (next layer)
+  let typeById = new Map();
+  let baseLabelSize = new Map(); // id -> default font size (0 or DEFAULT_LABEL_SIZE)
+  let nodeSize = new Map();      // id -> degree-scaled size
+  let labelById = new Map();
+  // id -> current look {fill, fillOpacity, stroke, strokeOpacity,
+  // strokeWidth, labelSize, labelOpacity, emph}. Read by the canvas
+  // renderer and the SVG export; refreshHighlight() rewrites it.
+  let nodeStyle = new Map();
+  let currentSource = null;      // subtype key, or 'custom' for browsed/dropped files
+  let loadToken = 0;             // ignores stale fetches when switching subtypes quickly
+  let selectedIds = new Set();   // 0, 1, or several nodes (Shift+click adds/removes)
+  // gapModes[g] = 'union' | 'intersection' for the gap between partition g
+  // and partition g+1 (0: MicroRNA<->mRNA, 1: mRNA<->Semantics, 2: Semantics<->Pathway).
+  // Applied whenever multiple nodes reach the same gap at once -- which can
+  // happen either from multi-select or from a single node fanning out to
+  // several neighbors a few hops away.
+  let gapModes = new Array(LAYER_ORDER.length - 1).fill('union');
+  let allLabelsShown = false;
+  let currentAncestors = new Map();   // Map(id -> hop), combined across the selection
+  let currentDescendants = new Map(); // Map(id -> hop), combined across the selection
+
+  const dropzone = document.getElementById('dropzone');
+  const nodesInput = document.getElementById('nodesInput');
+  const edgesInput = document.getElementById('edgesInput');
+  const nodesStatus = document.getElementById('nodesStatus');
+  const edgesStatus = document.getElementById('edgesStatus');
+  const loadWarning = document.getElementById('loadWarning');
+  const legendPanel = document.getElementById('legendPanel');
+  const legendList = document.getElementById('legendList');
+  const highlightLegendPanel = document.getElementById('highlightLegendPanel');
+  const controlsPanel = document.getElementById('controlsPanel');
+  const infoPanel = document.getElementById('infoPanel');
+  const infoContent = document.getElementById('infoContent');
+  const placeholder = document.getElementById('placeholder');
+  const zoomHint = document.getElementById('zoomHint');
+  const sidebar = document.querySelector('.sidebar');
+  const sidebarToggleBtn = document.getElementById('sidebarToggleBtn');
+  const subtypeCtrl = document.getElementById('subtypeCtrl');
+  const exportPanel = document.getElementById('exportPanel');
+
+  function showWarning(msg) {
+    loadWarning.textContent = msg;
+    loadWarning.hidden = false;
+  }
+  function clearWarning() {
+    loadWarning.hidden = true;
+    loadWarning.textContent = '';
+  }
+
+  // ------------------------------------------------------------
+  // File loading (browse + drag & drop)
+  // ------------------------------------------------------------
+  function readFile(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = reject;
+      reader.readAsText(file);
+    });
+  }
+
+  // Shared by file-upload, drag & drop, and the ?file= URL loader below:
+  // parse + validate CSV text and, if it matches, store it as the
+  // current nodes/edges data. Returns whether it was accepted.
+  function applyNodesRecords(text, sourceName) {
+    const { header, records } = csvToObjects(text);
+    if (!isNodesHeader(header)) {
+      showWarning(`"${sourceName}" doesn't look like a nodes CSV (expected columns "id" and "type").`);
+      return false;
+    }
+    nodesRaw = records;
+    nodesStatus.textContent = `${sourceName} (${records.length} rows)`;
+    nodesStatus.classList.add('ok');
+    return true;
+  }
+
+  function applyEdgesRecords(text, sourceName) {
+    const { header, records } = csvToObjects(text);
+    if (!isEdgesHeader(header)) {
+      showWarning(`"${sourceName}" doesn't look like an edges CSV (expected columns "source" and "target").`);
+      return false;
+    }
+    edgesRaw = records;
+    edgesStatus.textContent = `${sourceName} (${records.length} rows)`;
+    edgesStatus.classList.add('ok');
+    return true;
+  }
+
+  // A browsed/dropped file replaces whichever subtype was showing.
+  function markCustomSource() {
+    loadToken++;
+    currentSource = 'custom';
+    setActiveSubtype(null);
+  }
+
+  async function handleNodesFile(file) {
+    const text = await readFile(file);
+    if (applyNodesRecords(text, file.name)) { markCustomSource(); tryRender(); }
+  }
+
+  async function handleEdgesFile(file) {
+    const text = await readFile(file);
+    if (applyEdgesRecords(text, file.name)) { markCustomSource(); tryRender(); }
+  }
+
+  async function handleDroppedFiles(fileList) {
+    clearWarning();
+    for (const file of Array.from(fileList)) {
+      const text = await readFile(file);
+      const { header } = csvToObjects(text);
+      const kind = classifyHeader(header);
+      if (kind === 'nodes') await handleNodesFile(file);
+      else if (kind === 'edges') await handleEdgesFile(file);
+      else showWarning(`Couldn't tell if "${file.name}" is a nodes or edges CSV (checked for id/type or source/target columns).`);
+    }
+  }
+
+  nodesInput.addEventListener('change', (e) => { if (e.target.files[0]) handleNodesFile(e.target.files[0]); });
+  edgesInput.addEventListener('change', (e) => { if (e.target.files[0]) handleEdgesFile(e.target.files[0]); });
+
+  ['dragenter', 'dragover'].forEach(evt =>
+    dropzone.addEventListener(evt, (e) => { e.preventDefault(); dropzone.classList.add('dragover'); })
+  );
+  ['dragleave', 'drop'].forEach(evt =>
+    dropzone.addEventListener(evt, (e) => { e.preventDefault(); dropzone.classList.remove('dragover'); })
+  );
+  dropzone.addEventListener('drop', (e) => {
+    if (e.dataTransfer.files && e.dataTransfer.files.length) handleDroppedFiles(e.dataTransfer.files);
+  });
+
+  function tryRender() {
+    if (nodesRaw && edgesRaw) renderGraph();
+  }
+
+  // ------------------------------------------------------------
+  // Subtype networks: each button fetches <key>_nodes.csv and
+  // <key>_edges.csv from the same directory as this page and renders
+  // them. The page starts on ?file=<prefix> if given, else the first
+  // subtype. fetch() only works when the page is served over http(s) --
+  // browsers block it from a file:// page, so that case falls back to a
+  // warning pointing at a local web server.
+  // ------------------------------------------------------------
+  function setActiveSubtype(key) {
+    subtypeCtrl.querySelectorAll('.seg-btn').forEach(b => b.classList.toggle('active', b.dataset.key === key));
+  }
+
+  SUBTYPES.forEach(({ key, label }) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'seg-btn';
+    btn.dataset.key = key;
+    btn.textContent = label;
+    btn.addEventListener('click', () => { if (key !== currentSource) loadSubtype(key); });
+    subtypeCtrl.appendChild(btn);
+  });
+
+  async function loadSubtype(prefix) {
+    const token = ++loadToken;
+    setActiveSubtype(prefix);
+    clearWarning();
+
+    const nodesUrl = `${prefix}_nodes.csv`;
+    const edgesUrl = `${prefix}_edges.csv`;
+
+    try {
+      const [nodesResp, edgesResp] = await Promise.all([fetch(nodesUrl), fetch(edgesUrl)]);
+      if (!nodesResp.ok) throw new Error(`HTTP ${nodesResp.status} fetching ${nodesUrl}`);
+      if (!edgesResp.ok) throw new Error(`HTTP ${edgesResp.status} fetching ${edgesUrl}`);
+      const [nodesText, edgesText] = await Promise.all([nodesResp.text(), edgesResp.text()]);
+      if (token !== loadToken) return; // superseded by a later click or file load
+
+      const nodesOk = applyNodesRecords(nodesText, nodesUrl);
+      const edgesOk = applyEdgesRecords(edgesText, edgesUrl);
+      if (nodesOk && edgesOk) {
+        currentSource = prefix;
+        try { history.replaceState(null, '', `?file=${encodeURIComponent(prefix)}`); } catch (e) { /* file:// may refuse */ }
+        renderGraph();
+      }
+    } catch (err) {
+      if (token !== loadToken) return;
+      setActiveSubtype(currentSource);
+      showWarning(
+        `Couldn't load "${prefix}": ${err.message}. ` +
+        `If you opened this page directly as a local file, browsers block fetching other local ` +
+        `files that way -- serve this folder with a local web server (e.g. "python3 -m http.server") ` +
+        `and reload, or use Browse / drag & drop below.`
+      );
+    }
+  }
+
+  // ------------------------------------------------------------
+  // Layered layout (ported from the barycenter heuristic in
+  // plot_multipartite_network_static.py): order nodes within each
+  // layer by the average position of their neighbors in adjacent
+  // layers, over a few forward/backward sweeps, to reduce edge
+  // crossings. Edges only ever go layer i -> layer i+1, so a node's
+  // predecessors are guaranteed to sit in the previous layer and its
+  // successors in the next.
+  // ------------------------------------------------------------
+  function orderLayers(layersSorted, layerNodes, preds, succs, degree, nSweeps) {
+    const order = {};
+    layersSorted.forEach(l => {
+      order[l] = layerNodes[l].slice().sort((a, b) => degree.get(b) - degree.get(a));
+    });
+
+    const posIndex = {};
+    layersSorted.forEach(l => {
+      posIndex[l] = new Map(order[l].map((n, i) => [n, i]));
+    });
+
+    function bary(node, neighborMap, refIndex, ownIndex) {
+      const nbrs = neighborMap.get(node) || [];
+      if (!nbrs.length) return ownIndex.get(node);
+      let sum = 0;
+      for (const nb of nbrs) sum += refIndex.get(nb);
+      return sum / nbrs.length;
+    }
+
+    for (let s = 0; s < nSweeps; s++) {
+      for (let li = 1; li < layersSorted.length; li++) {
+        const layer = layersSorted[li], prevLayer = layersSorted[li - 1];
+        order[layer].sort((a, b) => bary(a, preds, posIndex[prevLayer], posIndex[layer]) - bary(b, preds, posIndex[prevLayer], posIndex[layer]));
+        posIndex[layer] = new Map(order[layer].map((n, i) => [n, i]));
+      }
+      for (let li = layersSorted.length - 2; li >= 0; li--) {
+        const layer = layersSorted[li], nextLayer = layersSorted[li + 1];
+        order[layer].sort((a, b) => bary(a, succs, posIndex[nextLayer], posIndex[layer]) - bary(b, succs, posIndex[nextLayer], posIndex[layer]));
+        posIndex[layer] = new Map(order[layer].map((n, i) => [n, i]));
+      }
+    }
+    return order;
+  }
+
+  // Semantics labels are a '>'-separated path (e.g. "Signaling by ERBB4 >
+  // Nuclear signaling by ERBB4 > ..."); stack each segment on its own
+  // line in the hover tooltip instead of one long run-on string. Built
+  // as a real DOM element (vis-network accepts one as `title`) so line
+  // breaks don't depend on the library's tooltip white-space handling.
+  function buildTooltip(label, type, deg) {
+    const container = document.createElement('div');
+    const lines = type === 'Semantics'
+      ? label.split('>').map(s => s.trim()).filter(Boolean)
+      : [label];
+    lines.forEach(line => {
+      const lineEl = document.createElement('div');
+      lineEl.textContent = line;
+      container.appendChild(lineEl);
+    });
+    const meta = document.createElement('div');
+    meta.textContent = `${displayType(type)} · degree ${deg}`;
+    meta.style.opacity = '0.75';
+    meta.style.marginTop = '4px';
+    container.appendChild(meta);
+    return container;
+  }
+
+  // ------------------------------------------------------------
+  // Graph construction
+  // ------------------------------------------------------------
+  function renderGraph() {
+    clearWarning();
+
+    // Validate node types
+    const unknownTypes = new Set();
+    for (const n of nodesRaw) {
+      if (!(n.type in LAYER_INDEX)) unknownTypes.add(n.type);
+    }
+    if (unknownTypes.size) {
+      showWarning(`Unknown node type(s): ${Array.from(unknownTypes).join(', ')}. Expected one of ${LAYER_ORDER.join(', ')}.`);
+      return;
+    }
+
+    const nodeIds = new Set(nodesRaw.map(n => n.id));
+    typeById = new Map(nodesRaw.map(n => [n.id, n.type]));
+
+    // Drop edges referencing missing nodes, and edges that skip/reverse
+    // layers (only adjacent-layer edges are expected: miRNA->mRNA->Semantics->Pathway)
+    const missing = new Set();
+    const nonAdjacent = [];
+    const validEdges = [];
+    for (const e of edgesRaw) {
+      if (!nodeIds.has(e.source) || !nodeIds.has(e.target)) {
+        missing.add(!nodeIds.has(e.source) ? e.source : e.target);
+        continue;
+      }
+      const diff = LAYER_INDEX[typeById.get(e.target)] - LAYER_INDEX[typeById.get(e.source)];
+      if (diff !== 1) { nonAdjacent.push(e); continue; }
+      validEdges.push(e);
+    }
+    const warnings = [];
+    if (missing.size) warnings.push(`${missing.size} edge endpoint(s) not found in nodes file (skipped).`);
+    if (nonAdjacent.length) warnings.push(`${nonAdjacent.length} edge(s) skip/reverse layers (skipped).`);
+    if (warnings.length) showWarning(warnings.join(' '));
+
+    // Degree (for node sizing) + directed predecessor/successor maps
+    // (for the barycenter layout, and for the click-to-trace highlight)
+    const degree = new Map();
+    const preds = new Map();
+    const succs = new Map();
+    nodeIds.forEach(id => { degree.set(id, 0); preds.set(id, []); succs.set(id, []); });
+    for (const e of validEdges) {
+      degree.set(e.source, (degree.get(e.source) || 0) + 1);
+      degree.set(e.target, (degree.get(e.target) || 0) + 1);
+      succs.get(e.source).push(e.target);
+      preds.get(e.target).push(e.source);
+    }
+    predsMap = preds;
+    succsMap = succs;
+    const maxDegree = Math.max(1, ...degree.values());
+
+    // Layered layout: order within each layer via barycenter sweeps,
+    // then lay out on a fixed grid (level -> x, order -> y).
+    const layersSorted = LAYER_ORDER.map((_, i) => i);
+    const layerNodes = {};
+    layersSorted.forEach(l => { layerNodes[l] = []; });
+    nodesRaw.forEach(n => layerNodes[LAYER_INDEX[n.type]].push(n.id));
+    const order = orderLayers(layersSorted, layerNodes, preds, succs, degree, 4);
+
+    // A layer with hundreds of nodes in one column vs. a layer with a
+    // handful makes the whole graph an unusable sliver. Wrap dense
+    // layers into a grid of sub-columns (column-major, so consecutive
+    // barycenter-sorted nodes stay adjacent) to keep the overall shape
+    // closer to the width/height of the sparser layers.
+    const LEVEL_GAP = 600;
+    const NODE_GAP = 40;
+    const SUBCOL_GAP = 50;
+    const ROWS_TARGET = 25;
+    const positions = new Map();
+    layersSorted.forEach(layer => {
+      const list = order[layer];
+      const n = list.length;
+      const cols = Math.max(1, Math.ceil(n / ROWS_TARGET));
+      const rows = Math.ceil(n / cols);
+      list.forEach((id, i) => {
+        const col = Math.floor(i / rows);
+        const row = i % rows;
+        const x = layer * LEVEL_GAP + (col - (cols - 1) / 2) * SUBCOL_GAP;
+        const y = (row - (rows - 1) / 2) * NODE_GAP;
+        positions.set(id, { x, y });
+      });
+    });
+
+    // Build vis nodes. vis-network's built-in shapes always put the
+    // label below the node, so nodes use a custom renderer (drawNode)
+    // that draws the layer shape and puts the label on its right.
+    baseLabelSize = new Map();
+    nodeSize = new Map();
+    labelById = new Map();
+    nodeStyle = new Map();
+    const visNodes = nodesRaw.map(n => {
+      const deg = degree.get(n.id) || 0;
+      const size = MIN_NODE_SIZE + (MAX_NODE_SIZE - MIN_NODE_SIZE) * (deg / maxDegree);
+      const labelSize = DEFAULT_LABELED_LAYERS.has(n.type) ? DEFAULT_LABEL_SIZE : 0;
+      baseLabelSize.set(n.id, labelSize);
+      nodeSize.set(n.id, size);
+      labelById.set(n.id, n.label || n.id);
+      const pos = positions.get(n.id);
+      return {
+        id: n.id,
+        label: n.label || n.id,
+        title: buildTooltip(n.label || n.id, n.type, deg),
+        x: pos.x,
+        y: pos.y,
+        shape: 'custom',
+        ctxRenderer: drawNode,
+        size,
+      };
+    });
+
+    const visEdges = validEdges.map((e, i) => ({
+      id: 'e' + i,
+      from: e.source,
+      to: e.target,
+      color: edgeColorObj(EDGE_COLOR, 0.35),
+      width: 1,
+      smooth: { type: 'cubicBezier', forceDirection: 'horizontal', roundness: 0.45 },
+      arrows: { to: { enabled: false } },
+    }));
+
+    if (network) { network.destroy(); network = null; }
+
+    nodesDataset = new vis.DataSet(visNodes);
+    edgesDataset = new vis.DataSet(visEdges);
+
+    const container = document.getElementById('network');
+    const data = { nodes: nodesDataset, edges: edgesDataset };
+    const options = {
+      // Positions come from the barycenter layout computed above, so
+      // physics stays off entirely -- deterministic, matches the
+      // static/interactive Python reference, and scales cleanly to a
+      // very uneven partition (6 Pathway nodes vs. hundreds of
+      // Semantics nodes) without nodes drifting apart.
+      physics: { enabled: false },
+      interaction: {
+        hover: true,
+        dragNodes: true,
+        dragView: true,
+        zoomView: true,
+        tooltipDelay: 150,
+        multiselect: false,
+      },
+    };
+
+    network = new vis.Network(container, data, options);
+    network.fit({ animation: false });
+
+    network.on('click', (params) => {
+      const shiftHeld = !!(params.event && params.event.srcEvent && params.event.srcEvent.shiftKey);
+      if (params.nodes.length > 0) {
+        const clickedId = params.nodes[0];
+        if (shiftHeld) {
+          if (selectedIds.has(clickedId)) selectedIds.delete(clickedId);
+          else selectedIds.add(clickedId);
+        } else {
+          selectedIds = new Set([clickedId]);
+        }
+        refreshHighlight();
+      } else if (!shiftHeld) {
+        clearSelection();
+      }
+    });
+
+    // UI: reveal panels
+    placeholder.hidden = true;
+    zoomHint.hidden = false;
+    legendPanel.hidden = false;
+    highlightLegendPanel.hidden = false;
+    controlsPanel.hidden = false;
+    exportPanel.hidden = false;
+    renderLegend(nodesRaw);
+    clearSelection();
+  }
+
+  function drawNode({ ctx, id, x, y }) {
+    const st = nodeStyle.get(id);
+    const shape = LAYER_SHAPE[typeById.get(id)];
+    const r = nodeSize.get(id);
+    const half = shapeHalfWidth(shape, r);
+    return {
+      drawNode() {
+        if (!st) return;
+        const path = new Path2D(shapePath(shape, x, y, r));
+        ctx.fillStyle = rgba(st.fill, st.fillOpacity);
+        ctx.fill(path);
+        if (st.strokeWidth > 0) {
+          ctx.lineJoin = 'round';
+          ctx.lineWidth = st.strokeWidth;
+          ctx.strokeStyle = rgba(st.stroke, st.strokeOpacity);
+          ctx.stroke(path);
+        }
+      },
+      drawExternalLabel() {
+        if (!st || !st.labelSize) return;
+        const lx = x + half + LABEL_GAP;
+        ctx.font = `${st.labelSize}px ${LABEL_FONT}`;
+        ctx.textAlign = 'left';
+        ctx.textBaseline = 'middle';
+        ctx.lineJoin = 'round';
+        ctx.lineWidth = LABEL_HALO_WIDTH;
+        ctx.strokeStyle = rgba('#ffffff', LABEL_HALO_ALPHA * st.labelOpacity);
+        ctx.strokeText(labelById.get(id), lx, y);
+        ctx.fillStyle = rgba('#222222', st.labelOpacity);
+        ctx.fillText(labelById.get(id), lx, y);
+      },
+      nodeDimensions: { width: 2 * half, height: 2 * half },
+    };
+  }
+
+  function renderLegend(nodes) {
+    const counts = Object.fromEntries(LAYER_ORDER.map(t => [t, 0]));
+    nodes.forEach(n => { if (n.type in counts) counts[n.type]++; });
+    legendList.innerHTML = '';
+    LAYER_ORDER.forEach(type => {
+      const li = document.createElement('li');
+      li.innerHTML = `${shapeIcon(type)}${displayType(type)}<span class="count">${counts[type]}</span>`;
+      legendList.appendChild(li);
+    });
+  }
+
+  // ------------------------------------------------------------
+  // Click-to-trace, with a per-gap union/intersection mode.
+  //
+  // Rather than tracing each selected node's full reachable set and
+  // merging once at the end, propagation moves one partition at a time.
+  // At every gap crossing, the "frontier" sitting at the near side of
+  // the gap (which may already be several nodes -- from multi-select,
+  // or just from one node fanning out to several neighbors) is combined
+  // via that gap's own mode before continuing to the far side. This is
+  // what lets "union between miRNA/mRNA, intersection between
+  // mRNA/Semantics, union between Semantics/Pathway" mean what it says:
+  // each gap's operation applies to whatever survived the previous gap,
+  // not to the original selection directly.
+  //
+  // A node already selected in a partition always joins that partition's
+  // frontier at hop 0 (regardless of gap mode), so propagation resumes
+  // from it too -- e.g. selecting one node in miRNA and one in Semantics
+  // lets the Semantics seed's own downstream trace continue independently
+  // of whatever arrived there from the miRNA seed.
+  // ------------------------------------------------------------
+  const PARTITION_COUNT = LAYER_ORDER.length;
+
+  function seedsByPartition(ids) {
+    const byPartition = Array.from({ length: PARTITION_COUNT }, () => []);
+    ids.forEach(id => { byPartition[LAYER_INDEX[typeById.get(id)]].push(id); });
+    return byPartition;
+  }
+
+  // Combine several Map(id -> hop) neighbor-contributions per the given
+  // gap mode. Union = union of all; intersection = only ids present in
+  // every map (hop = the smallest hop seen for that id, same convention
+  // both ways -- it only affects opacity, not which ids qualify).
+  function combineNeighborMaps(maps, mode) {
+    if (maps.length === 0) return new Map();
+    if (maps.length === 1) return maps[0];
+    if (mode === 'intersection') {
+      const [first, ...rest] = maps;
+      const merged = new Map();
+      for (const [id, hop] of first) {
+        if (rest.every(m => m.has(id))) {
+          merged.set(id, rest.reduce((minHop, m) => Math.min(minHop, m.get(id)), hop));
+        }
+      }
+      return merged;
+    }
+    const merged = new Map();
+    for (const m of maps) {
+      for (const [id, hop] of m) {
+        if (!merged.has(id) || hop < merged.get(id)) merged.set(id, hop);
+      }
+    }
+    return merged;
+  }
+
+  // Propagate outward from the seeds, one partition at a time, in a
+  // single direction. direction=1 walks partitions 0->3 via succsMap
+  // (successors); direction=-1 walks 3->0 via predsMap (precursors).
+  // Returns an array indexed by partition of Map(id -> hop), each
+  // including that partition's own seeds at hop 0.
+  function propagateAcrossGaps(seedsByP, direction) {
+    const order = direction === 1
+      ? Array.from({ length: PARTITION_COUNT }, (_, i) => i)
+      : Array.from({ length: PARTITION_COUNT }, (_, i) => PARTITION_COUNT - 1 - i);
+    const neighborMap = direction === 1 ? succsMap : predsMap;
+    const frontier = new Array(PARTITION_COUNT);
+
+    order.forEach((p, idx) => {
+      const seedMap = new Map(seedsByP[p].map(id => [id, 0]));
+      if (idx === 0) {
+        frontier[p] = seedMap;
+        return;
+      }
+      const prevP = order[idx - 1];
+      const gapIdx = Math.min(prevP, p);
+      const prev = frontier[prevP];
+      const neighborMaps = [...prev.keys()].map(id => {
+        const hop = prev.get(id) + 1;
+        const nbrs = neighborMap.get(id) || [];
+        return new Map(nbrs.map(nb => [nb, hop]));
+      });
+      const propagated = combineNeighborMaps(neighborMaps, gapModes[gapIdx]);
+      const merged = new Map(propagated);
+      for (const id of seedMap.keys()) merged.set(id, 0);
+      frontier[p] = merged;
+    });
+
+    return frontier;
+  }
+
+  // Merge the per-partition frontiers into one Map(id -> hop) for node
+  // coloring/labels, excluding the seeds themselves (rendered specially).
+  function stripSeedsAndMerge(frontierByPartition, seedSet) {
+    const result = new Map();
+    frontierByPartition.forEach(m => {
+      if (!m) return;
+      m.forEach((hop, id) => { if (!seedSet.has(id)) result.set(id, hop); });
+    });
+    return result;
+  }
+
+  // Label size for a node given the current selection + "show all
+  // labels" state: when labels are toggled on AND at least one node is
+  // selected, only the highlighted (precursor/successor/selected) nodes
+  // keep their labels, to avoid drowning the trace in unrelated text.
+  function fontSizeFor(id) {
+    if (allLabelsShown) {
+      if (selectedIds.size > 0) {
+        const inSet = selectedIds.has(id) || currentAncestors.has(id) || currentDescendants.has(id);
+        return inSet ? DEFAULT_LABEL_SIZE : 0;
+      }
+      return DEFAULT_LABEL_SIZE;
+    }
+    return baseLabelSize.get(id);
+  }
+
+  // Recompute + repaint everything from the current selectedIds /
+  // gapModes. Called after every click, chip removal, or gap mode switch.
+  function refreshHighlight() {
+    if (!nodesDataset) return;
+
+    if (selectedIds.size === 0) {
+      currentAncestors = new Map();
+      currentDescendants = new Map();
+      nodesDataset.getIds().forEach(id => {
+        nodeStyle.set(id, {
+          fill: LAYER_COLOR[typeById.get(id)], fillOpacity: 1,
+          stroke: '#ffffff', strokeOpacity: 1, strokeWidth: 1,
+          labelSize: fontSizeFor(id), labelOpacity: 1, emph: false,
+        });
+      });
+      const edgeUpdates = edgesDataset.get().map(e => ({
+        id: e.id,
+        color: edgeColorObj(EDGE_COLOR, 0.35),
+        width: 1,
+        arrows: { to: { enabled: false } },
+      }));
+      edgesDataset.update(edgeUpdates);
+      network.redraw();
+      infoPanel.hidden = true;
+      infoContent.innerHTML = '';
+      return;
+    }
+
+    const ids = [...selectedIds];
+    const seedsByP = seedsByPartition(ids);
+    const successorFrontier = propagateAcrossGaps(seedsByP, 1);   // per partition, includes seeds
+    const precursorFrontier = propagateAcrossGaps(seedsByP, -1);  // per partition, includes seeds
+    const ancestorDist = stripSeedsAndMerge(precursorFrontier, selectedIds);
+    const descendantDist = stripSeedsAndMerge(successorFrontier, selectedIds);
+    currentAncestors = ancestorDist;
+    currentDescendants = descendantDist;
+
+    nodesDataset.getIds().forEach(id => {
+      const isSelected = selectedIds.has(id);
+      const aHop = ancestorDist.get(id);
+      const dHop = descendantDist.get(id);
+      const hop = aHop !== undefined ? aHop : dHop;
+      const related = isSelected || hop !== undefined;
+
+      let alpha, stroke, strokeWidth;
+      if (isSelected) {
+        alpha = 1; stroke = SELECTED_BORDER; strokeWidth = 3;
+      } else if (hop !== undefined) {
+        alpha = HOP_ALPHA[Math.min(hop, 3)]; stroke = '#ffffff'; strokeWidth = hop <= 1 ? 1.5 : 1;
+      } else {
+        alpha = NODE_FADED_ALPHA; stroke = '#ffffff'; strokeWidth = 1;
+      }
+
+      nodeStyle.set(id, {
+        fill: LAYER_COLOR[typeById.get(id)], fillOpacity: alpha,
+        stroke, strokeOpacity: isSelected ? 1 : alpha, strokeWidth,
+        labelSize: fontSizeFor(id), labelOpacity: related ? 1 : Math.min(1, NODE_FADED_ALPHA * 3),
+        emph: related,
+      });
+    });
+
+    const edgeUpdates = edgesDataset.get().map(e => {
+      const pFrom = LAYER_INDEX[typeById.get(e.from)];
+      const pTo = pFrom + 1; // edges always connect partition p -> p+1
+      const precFrom = precursorFrontier[pFrom], precTo = precursorFrontier[pTo];
+      const succFrom = successorFrontier[pFrom], succTo = successorFrontier[pTo];
+
+      const isAncestorEdge = precFrom.has(e.from) && precTo.has(e.to);
+      const isDescendantEdge = !isAncestorEdge && succFrom.has(e.from) && succTo.has(e.to);
+
+      let color, alpha, width, arrowsOn;
+      if (isAncestorEdge) {
+        const hop = Math.max(precFrom.get(e.from), precTo.get(e.to));
+        color = TRACE_EDGE_COLOR; alpha = HOP_ALPHA[Math.min(hop, 3)]; width = hop <= 1 ? 2.4 : 1.4; arrowsOn = true;
+      } else if (isDescendantEdge) {
+        const hop = Math.max(succFrom.get(e.from), succTo.get(e.to));
+        color = TRACE_EDGE_COLOR; alpha = HOP_ALPHA[Math.min(hop, 3)]; width = hop <= 1 ? 2.4 : 1.4; arrowsOn = true;
+      } else {
+        color = EDGE_COLOR; alpha = EDGE_FADED_ALPHA; width = 1; arrowsOn = false;
+      }
+
+      return {
+        id: e.id,
+        color: edgeColorObj(color, alpha),
+        width,
+        arrows: { to: { enabled: arrowsOn, scaleFactor: 0.45 } },
+      };
+    });
+    edgesDataset.update(edgeUpdates);
+    network.redraw();
+
+    updateInfoPanel(ancestorDist, descendantDist);
+  }
+
+  function clearSelection() {
+    selectedIds = new Set();
+    refreshHighlight();
+  }
+
+  function updateInfoPanel(ancestorDist, descendantDist) {
+    const ids = [...selectedIds];
+
+    const chips = ids.map(id => {
+      const node = nodesDataset.get(id);
+      const type = typeById.get(id);
+      return `<span class="sel-chip">
+        ${shapeIcon(type, 12)}
+        <span class="chip-label" title="${node.label}">${node.label}</span>
+        <button class="chip-remove" data-id="${id}" title="Remove from selection">&times;</button>
+      </span>`;
+    }).join('');
+
+    const precBreakdown = Object.fromEntries(LAYER_ORDER.map(t => [t, 0]));
+    let precTotal = 0;
+    ancestorDist.forEach((hop, id) => { precBreakdown[typeById.get(id)]++; precTotal++; });
+
+    const succBreakdown = Object.fromEntries(LAYER_ORDER.map(t => [t, 0]));
+    let succTotal = 0;
+    descendantDist.forEach((hop, id) => { succBreakdown[typeById.get(id)]++; succTotal++; });
+
+    const rows = (breakdown) => LAYER_ORDER
+      .filter(t => breakdown[t] > 0)
+      .map(t => `<div><span>${displayType(t)}</span><span>${breakdown[t]}</span></div>`)
+      .join('') || '<div class="empty-row"><span>none</span></div>';
+
+    const intersectionGaps = gapModes
+      .map((mode, i) => (mode === 'intersection' ? `${displayType(LAYER_ORDER[i])} &harr; ${displayType(LAYER_ORDER[i + 1])}` : null))
+      .filter(Boolean);
+    const modeNote = intersectionGaps.length
+      ? `<div class="mode-note">Intersection active: <strong>${intersectionGaps.join(', ')}</strong></div>`
+      : '';
+
+    infoPanel.hidden = false;
+    infoContent.innerHTML = `
+      <div class="sel-chips">${chips}</div>
+      ${modeNote}
+      <div class="breakdown">
+        <div class="breakdown-title">Precursors (upstream)</div>
+        <div><span>Total</span><span>${precTotal}</span></div>
+        ${rows(precBreakdown)}
+      </div>
+      <div class="breakdown">
+        <div class="breakdown-title">Successors (downstream)</div>
+        <div><span>Total</span><span>${succTotal}</span></div>
+        ${rows(succBreakdown)}
+      </div>
+    `;
+
+    infoContent.querySelectorAll('.chip-remove').forEach(btn => {
+      btn.addEventListener('click', () => {
+        selectedIds.delete(btn.dataset.id);
+        refreshHighlight();
+      });
+    });
+  }
+
+  // ------------------------------------------------------------
+  // Sidebar collapse: lets the graph reclaim the sidebar's width. The
+  // toggle button lives in .graph-area (not .sidebar itself) so it stays
+  // reachable to re-expand even while the sidebar is collapsed to 0.
+  // vis-network sizes its canvas from the container's pixel size, so it
+  // needs an explicit redraw once the width transition actually changes
+  // that size -- rAF catches the first layout tick, transitionend catches
+  // the final one.
+  // ------------------------------------------------------------
+  sidebarToggleBtn.addEventListener('click', () => {
+    const collapsed = sidebar.classList.toggle('collapsed');
+    sidebarToggleBtn.textContent = collapsed ? '❯' : '❮';
+    sidebarToggleBtn.title = collapsed ? 'Expand sidebar' : 'Collapse sidebar';
+    sidebarToggleBtn.setAttribute('aria-label', sidebarToggleBtn.title);
+    sidebarToggleBtn.setAttribute('aria-expanded', String(!collapsed));
+    if (network) {
+      requestAnimationFrame(() => network.redraw());
+      sidebar.addEventListener('transitionend', () => network.redraw(), { once: true });
+    }
+  });
+
+  // ------------------------------------------------------------
+  // View controls
+  // ------------------------------------------------------------
+  document.getElementById('zoomInBtn').addEventListener('click', () => zoomBy(1.25));
+  document.getElementById('zoomOutBtn').addEventListener('click', () => zoomBy(1 / 1.25));
+  document.getElementById('fitBtn').addEventListener('click', () => network && network.fit({ animation: true }));
+  document.getElementById('clearBtn').addEventListener('click', () => clearSelection());
+  document.getElementById('labelsToggle').addEventListener('change', (e) => {
+    allLabelsShown = e.target.checked;
+    if (!nodesDataset) return;
+    nodeStyle.forEach((st, id) => { st.labelSize = fontSizeFor(id); });
+    network.redraw();
+  });
+
+  // Per-gap union/intersection switches. A gap's mode can matter even
+  // with a single selected node (if it fans out to several neighbors a
+  // few hops away), so any change just re-runs the current trace.
+  document.querySelectorAll('.gap-combine-ctrl').forEach(ctrl => {
+    const gapIdx = Number(ctrl.dataset.gap);
+    ctrl.querySelectorAll('.seg-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        gapModes[gapIdx] = btn.dataset.mode;
+        ctrl.querySelectorAll('.seg-btn').forEach(b => b.classList.toggle('active', b === btn));
+        if (selectedIds.size > 0) refreshHighlight();
+      });
+    });
+  });
+
+  // ------------------------------------------------------------
+  // Image export. vis-network draws on a <canvas>, so the SVG is rebuilt
+  // from the graph itself: current node positions (including any manual
+  // drags), the nodeStyle map, and the edge dataset. Edges use the same
+  // horizontal cubic Bezier as vis (smooth.cubicBezier, roundness 0.45),
+  // and nodes use the same shapePath() as the canvas. Covers the whole
+  // graph, not only the visible viewport. PNG = that SVG rasterized.
+  // ------------------------------------------------------------
+  const EDGE_ROUNDNESS = 0.45;
+  const EXPORT_PAD = 20;
+  let measureCtx = null;
+  function labelWidth(text, size) {
+    if (!measureCtx) measureCtx = document.createElement('canvas').getContext('2d');
+    measureCtx.font = `${size}px ${LABEL_FONT}`;
+    return measureCtx.measureText(text).width;
+  }
+
+  function buildExportSVG() {
+    const pos = network.getPositions();
+    const ids = nodesDataset.getIds();
+    const f = (v) => +v.toFixed(2);
+
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+    ids.forEach(id => {
+      const { x, y } = pos[id];
+      const half = shapeHalfWidth(LAYER_SHAPE[typeById.get(id)], nodeSize.get(id)) + 3;
+      const st = nodeStyle.get(id);
+      const right = st.labelSize ? x + half + LABEL_GAP + labelWidth(labelById.get(id), st.labelSize) : x + half;
+      minX = Math.min(minX, x - half); maxX = Math.max(maxX, right);
+      minY = Math.min(minY, y - half); maxY = Math.max(maxY, y + half);
+    });
+    const width = Math.ceil(maxX - minX + 2 * EXPORT_PAD);
+    const height = Math.ceil(maxY - minY + 2 * EXPORT_PAD);
+    const ox = EXPORT_PAD - minX, oy = EXPORT_PAD - minY;
+
+    const edgeParts = [], arrowParts = [];
+    edgesDataset.get().forEach(e => {
+      const a = pos[e.from], b = pos[e.to];
+      const fx = a.x + ox, fy = a.y + oy, tx = b.x + ox, ty = b.y + oy;
+      const dx = fx - tx;
+      const c1x = fx - EDGE_ROUNDNESS * dx, c2x = tx + EDGE_ROUNDNESS * dx;
+      const color = e.color.color, opacity = e.color.opacity;
+      edgeParts.push(`<path d="M${f(fx)} ${f(fy)}C${f(c1x)} ${f(fy)} ${f(c2x)} ${f(ty)} ${f(tx)} ${f(ty)}" stroke="${color}" stroke-opacity="${opacity}" stroke-width="${e.width}"/>`);
+      if (e.arrows && e.arrows.to && e.arrows.to.enabled) {
+        // Arrow tip at the target's border, pointing along the curve's
+        // (horizontal) end tangent.
+        const dir = tx >= fx ? 1 : -1;
+        const half = shapeHalfWidth(LAYER_SHAPE[typeById.get(e.to)], nodeSize.get(e.to));
+        const tipX = tx - dir * (half + 1);
+        const len = 15 * (e.arrows.to.scaleFactor || 1) + 3 * e.width;
+        const baseX = tipX - dir * len, w = len * 0.45;
+        arrowParts.push(`<path d="M${f(tipX)} ${f(ty)}L${f(baseX)} ${f(ty - w)}L${f(baseX)} ${f(ty + w)}Z" fill="${color}" fill-opacity="${opacity}"/>`);
+      }
+    });
+
+    // Faded nodes first, so the traced ones are painted on top.
+    const ordered = ids.slice().sort((p, q) => nodeStyle.get(p).emph - nodeStyle.get(q).emph);
+    const nodeParts = [], labelParts = [];
+    ordered.forEach(id => {
+      const st = nodeStyle.get(id);
+      const shape = LAYER_SHAPE[typeById.get(id)];
+      const r = nodeSize.get(id);
+      const x = pos[id].x + ox, y = pos[id].y + oy;
+      nodeParts.push(`<path d="${shapePath(shape, x, y, r)}" fill="${st.fill}" fill-opacity="${st.fillOpacity}" stroke="${st.stroke}" stroke-opacity="${st.strokeOpacity}" stroke-width="${st.strokeWidth}"/>`);
+      if (st.labelSize) {
+        labelParts.push(`<text x="${f(x + shapeHalfWidth(shape, r) + LABEL_GAP)}" y="${f(y)}" dy="0.35em" font-size="${st.labelSize}" fill-opacity="${st.labelOpacity}" stroke-opacity="${f(LABEL_HALO_ALPHA * st.labelOpacity)}">${escapeXml(labelById.get(id))}</text>`);
+      }
+    });
+
+    return '<?xml version="1.0" encoding="UTF-8"?>\n' +
+      `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">\n` +
+      `<rect x="0" y="0" width="${width}" height="${height}" fill="#ffffff"/>\n` +
+      `<g fill="none" stroke-linecap="round">\n${edgeParts.join('\n')}\n</g>\n` +
+      `<g>\n${arrowParts.join('\n')}\n</g>\n` +
+      `<g stroke-linejoin="round">\n${nodeParts.join('\n')}\n</g>\n` +
+      `<g font-family="${LABEL_FONT}" fill="#222222" stroke="#ffffff" stroke-width="${LABEL_HALO_WIDTH}" stroke-linejoin="round" paint-order="stroke">\n${labelParts.join('\n')}\n</g>\n` +
+      '</svg>\n';
+  }
+
+  // Draw the SVG onto an offscreen canvas at `scale`x and return a PNG blob.
+  function rasterize(svgString, width, height, scale) {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        canvas.width = Math.round(width * scale);
+        canvas.height = Math.round(height * scale);
+        const ctx = canvas.getContext('2d');
+        ctx.setTransform(scale, 0, 0, scale, 0, 0);
+        ctx.drawImage(img, 0, 0, width, height);
+        canvas.toBlob(b => (b ? resolve(b) : reject(new Error('canvas.toBlob returned null'))), 'image/png');
+      };
+      img.onerror = () => reject(new Error('the SVG failed to load for rasterization'));
+      img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgString);
+    });
+  }
+
+  function triggerDownload(blob, filename) {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+
+  function exportFilename(ext) {
+    const d = new Date();
+    const p = n => String(n).padStart(2, '0');
+    const stamp = `${d.getFullYear()}${p(d.getMonth() + 1)}${p(d.getDate())}-${p(d.getHours())}${p(d.getMinutes())}`;
+    return `quadripartite_${currentSource || 'graph'}_${stamp}.${ext}`;
+  }
+
+  document.getElementById('exportSvgBtn').addEventListener('click', () => {
+    if (!network) return;
+    triggerDownload(new Blob([buildExportSVG()], { type: 'image/svg+xml' }), exportFilename('svg'));
+  });
+
+  document.getElementById('exportPngBtn').addEventListener('click', async (e) => {
+    if (!network) return;
+    const btn = e.currentTarget;
+    btn.disabled = true;
+    try {
+      const svg = buildExportSVG();
+      const [, w, h] = svg.match(/<svg[^>]* width="(\d+)" height="(\d+)"/).map(Number);
+      // 3x for print quality, capped so very large graphs stay under
+      // browser canvas size limits.
+      const scale = Math.min(3, 12000 / Math.max(w, h));
+      triggerDownload(await rasterize(svg, w, h, scale), exportFilename('png'));
+    } catch (err) {
+      showWarning(`PNG export failed: ${err.message}`);
+    } finally {
+      btn.disabled = false;
+    }
+  });
+
+  function zoomBy(factor) {
+    if (!network) return;
+    const scale = network.getScale();
+    const pos = network.getViewPosition();
+    network.moveTo({ position: pos, scale: scale * factor, animation: { duration: 150, easingFunction: 'easeInOutQuad' } });
+  }
+
+  loadSubtype(new URLSearchParams(window.location.search).get('file') || SUBTYPES[0].key);
+})();
+</script>
+</body>
+</html>
