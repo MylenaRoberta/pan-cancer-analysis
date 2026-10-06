@@ -1,8 +1,8 @@
-# Towards an automated pipeline to model a complex-network-driven analysis of microRNAs in cancer: a TCGA-BRCA case study
+# A layered quadripartite network architecture for pathway-contextualized microRNA regulation analysis
 
 ## Abstract
 
-We present the Transparent Reproducible Pipeline (TRP), a core component of our framework for systematizing the comparative analysis of cancer microRNA networks. The TRP is an open, stepwise pipeline for modeling these networks. It provides transparency in materializing intermediary artifacts as tables with schemas, affording explicit semantics and annotation-based provenance. It also offers reproducibility through its open-source code and comprehensive documentation, all accessible without restrictions. To apply and validate the TRP, we conducted a controlled study on breast cancer based on the Breast Invasive Carcinoma (BRCA) project of The Cancer Genome Atlas (TCGA), achieving promising results.
+A challenge in studying microRNA (miR) regulation is determining how miRs relate to biological pathways. Network-based approaches commonly overlook the internal structure of pathways, representing them as monolithic entities. We propose a layered quadripartite network (LQN) architecture comprising miRs, messenger RNAs (mRNAs), pathway locations, and pathways to enable pathway-contextualized analysis of miR regulation. The proposed architecture extends our Transparent Reproducible Pipeline (TRP) for modeling miR networks in cancer. Using breast cancer data from The Cancer Genome Atlas (TCGA), we show that the pathway location layer reveals regulatory information that is not captured by mRNA--pathway associations alone.
 
 ## Repository Structure
 
