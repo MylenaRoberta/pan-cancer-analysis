@@ -17,5 +17,9 @@ data/processed/tcga-brca/*/rna-seq_*
 data/external/mirwalk/
 data/processed/mirwalk/MIMAT*
 
+# g:Profiler-related files
+data/external/gprofiler/
+data/processed/gprofiler/
+
 # Reactome Homo sapiens file
 data/external/reactome/
