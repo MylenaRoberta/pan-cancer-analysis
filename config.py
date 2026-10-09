@@ -168,6 +168,9 @@ GP_API_ENDPOINTS = {
 # g:Profiler (GP) file suffix name
 GP_FILE_SUFFIX = '_pathway-enrichment.csv'
 
+# Reactome Homo sapiens BioPAX Level 3 file name
+REACTOME_BIOPAX_HSA_FILE = 'Homo-sapiens_v96.owl'
+
 # ======================================================================
 # DIRECTORY PATHS
 # ======================================================================
@@ -217,6 +220,12 @@ NETWORK_DATA_DIRS = {
 # g:Profiler (GP)-related data directories paths
 GP_DATA_DIRS = {
     dir: os.path.join(DATA_DIRS[dir], 'gprofiler')
+    for dir in ['external', 'processed']
+}
+
+# Reactome-related data directory path
+REACTOME_DATA_DIRS = {
+    dir: os.path.join(DATA_DIRS[dir], 'reactome')
     for dir in ['external', 'processed']
 }
 
@@ -280,6 +289,7 @@ ensure_directories(
     MIRWALK_DATA_DIRS,
     NETWORK_DATA_DIRS,
     GP_DATA_DIRS,
+    REACTOME_DATA_DIRS,
 )
 
 # ======================================================================
@@ -322,4 +332,8 @@ NETWORK_FILES = {
     'membership-nodes': 'membership-network-nodes.csv',
     'tripartite-edges': 'tripartite-network-edges.csv',
     'tripartite-nodes': 'tripartite-network-nodes.csv',
+    'pathway-edges': '_pathway-network-edges.csv',
+    'pathway-nodes': '_pathway-network-nodes.csv',
+    'quadripartite-edges': 'lqn-network-edges.csv',
+    'quadripartite-nodes': 'lqn-network-nodes.csv',
 }

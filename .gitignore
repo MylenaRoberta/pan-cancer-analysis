@@ -21,5 +21,6 @@ data/processed/mirwalk/MIMAT*
 data/external/gprofiler/
 data/processed/gprofiler/
 
-# Reactome Homo sapiens file
+# Reactome-related files
 data/external/reactome/
+data/processed/reactome/
