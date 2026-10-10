@@ -1,0 +1,16 @@
+id,label,type,qvalue
+hsa-let-7d-5p,hsa-let-7d-5p,MicroRNA,
+hsa-miR-106b-5p,hsa-miR-106b-5p,MicroRNA,
+hsa-miR-155-5p,hsa-miR-155-5p,MicroRNA,
+MEF2D,MEF2D,Messenger RNA,
+SALL1,SALL1,Messenger RNA,
+PRKAR2A,PRKAR2A,Messenger RNA,
+VAV3,VAV3,Messenger RNA,
+R-HSA-1266738,Developmental Biology,Pathway,0.0759171762925037
+PL16682,Myogenesis > Phosphorylation of MEF2 proteins by p38 [ACTIVATION],Pathway Location,
+PL16692,Myogenesis > Interaction of MyoD:E protein with MEF2,Pathway Location,
+PL16950,"Transcriptional regulation of pluripotent stem cells > POU5F1 (OCT4), SOX2, NANOG activate genes related to proliferation > Expression of SALL1 [INHIBITION]",Pathway Location,
+PL17209,Kidney development > Formation of the ureteric bud > Expression of SALL1 in metanephric mesenchyme,Pathway Location,
+PL17498,"Nervous system development > Axon guidance > EPH-Ephrin signaling > EPH-ephrin mediated repulsion of cells > p-EPHs bind VAV2,3",Pathway Location,
+PL17500,"Nervous system development > Axon guidance > EPH-Ephrin signaling > EPH-ephrin mediated repulsion of cells > SFKs phosphorylate VAV2,3 [ACTIVATION]",Pathway Location,
+PL17627,Nervous system development > Axon guidance > Signaling by ROBO receptors > ROBO receptors bind AKAP5 > AKAP5 recruits PKA to ROBO2,Pathway Location,

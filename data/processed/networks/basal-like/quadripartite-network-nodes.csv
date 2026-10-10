@@ -1,0 +1,6 @@
+id,label,type,qvalue
+hsa-miR-23a-3p,hsa-miR-23a-3p,MicroRNA,
+RXRG,RXRG,Messenger RNA,
+R-HSA-383280,Nuclear Receptor transcription pathway,Pathway,0.0644880759569302
+PL09093,Formation of NR-NCOR Corepressor Complex,Pathway Location,
+PL09094,Formation of NR-MED1 Coactivator Complex,Pathway Location,

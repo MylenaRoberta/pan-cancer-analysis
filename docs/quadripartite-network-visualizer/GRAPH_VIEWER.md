@@ -2,55 +2,59 @@
 
 `graph_viewer.html` is a self-contained HTML/JS page (no Python, no build
 step) for exploring the four-layer transcriptomics network — MicroRNA →
-Messenger RNA → Semantics → Pathway — described by a nodes CSV and an
+Messenger RNA → Pathway Location → Pathway — described by a nodes CSV and an
 edges CSV. Open the file directly in a browser; it loads
 [vis-network](https://visjs.github.io/vis-network/) from a CDN and does
 everything else client-side.
 
 ## Loading data
 
-- **Subtype picker**: the **Basal-like / Luminal A / Luminal B** buttons
-  at the top of the sidebar load `basal-like_*`, `luminal-a_*` or
-  `luminal-b_*` (nodes + edges CSVs from the same directory) and switch
-  the graph straight away, clearing any selection. On startup the page
-  loads the subtype named by `?file=` (see below) or Basal-like. Picking
-  a subtype also updates the URL to `?file=<subtype>`, so a reload keeps
-  it. Like `?file=`, this uses `fetch()` and needs the page to be served
-  over http (see below).
-- **Browse**: use the "Browse nodes CSV" / "Browse edges CSV" buttons.
-- **Drag & drop**: drop one or both CSVs onto the dropzone. Each file is
-  classified automatically by its header row (`id`+`type` → nodes,
-  `source`+`target` → edges), so the two files can be dropped together
-  in any order.
-- Loading your own files (Browse or drag & drop) deselects the subtype
-  buttons.
-- **URL parameter**: open the page as `graph_viewer.html?file=<prefix>`
-  to auto-load `<prefix>_nodes.csv` and `<prefix>_edges.csv` from the
-  same directory and render immediately — e.g. `?file=luminal-b` loads
-  `luminal-b_nodes.csv` / `luminal-b_edges.csv`. This uses `fetch()`,
-  which browsers block when the page itself was opened as a local
-  `file://` link; serve the folder with a local web server instead
-  (e.g. `python3 -m http.server` from this directory, then open
-  `http://localhost:8000/graph_viewer.html?file=luminal-b`). If the
-  fetch fails for any reason (wrong prefix, missing file, `file://`
-  restriction), a warning explains why and the normal Browse/drag-and-
-  drop controls remain available as a fallback. If `<prefix>` is one of
-  the three subtypes, its button is highlighted.
-- The graph renders as soon as both files are loaded (however they got
-  loaded). A warning banner reports (without blocking rendering) any
-  edges whose endpoints are missing from the nodes file, or that don't
-  connect two consecutive layers (e.g. a MicroRNA → Semantics edge,
-  skipping Messenger RNA).
+Keep the HTML and a `data/` folder in the same directory:
 
-Expected columns: nodes = `id, label, type` (type ∈ `MicroRNA`,
-`Messenger RNA`, `Semantics`, `Pathway`); edges = `source, target`.
+```text
+graph_viewer.html
+data/
+    basal-like_nodes.csv
+    basal-like_edges.csv
+    luminal-a_nodes.csv
+    luminal-a_edges.csv
+    luminal-b_nodes.csv
+    luminal-b_edges.csv
+    her2-enriched_nodes.csv
+    her2-enriched_edges.csv
+```
 
-**Display note:** the CSVs and the `type` column always use `Semantics`
-— that's the data format and isn't something you change. The UI,
-however, shows that layer as **"Pathway Location"** everywhere (legend,
-tooltips, info panel, sidebar labels). This doc uses "Semantics" when
-talking about the data/CSV and "Pathway Location" when describing what
-you actually see on screen.
+- **Subtype picker**: the **Basal-like / Luminal A / Luminal B /
+  HER2-enriched** buttons automatically fetch the corresponding files
+  from `data/<subtype>_nodes.csv` and `data/<subtype>_edges.csv`.
+  Clicking a subtype switches the graph and clears its selection. On
+  startup, Basal-like is loaded unless a subtype is specified with
+  `?file=`. The URL parameter is updated when you pick a subtype.
+- **Browse**: the "Browse nodes CSV" and "Browse edges CSV" buttons
+  continue to accept manually selected files from any folder.
+- **Drag & drop**: drop one or both CSVs onto the dropzone. Each is
+  classified by its header (`id`+`type` for nodes, `source`+`target`
+  for edges). Loading custom files deselects the subtype buttons.
+- **URL parameter**: for example, `graph_viewer.html?file=her2-enriched`
+  loads `data/her2-enriched_nodes.csv` and
+  `data/her2-enriched_edges.csv`.
+- **Local serving**: automatic fetching of CSVs requires an HTTP server;
+  browsers typically block `fetch()` from a local `file://` page.
+  From the HTML directory, run `python3 -m http.server` and open
+  `http://localhost:8000/graph_viewer.html`. Direct Browse and drag &
+  drop remain available when opening the HTML directly.
+- The graph renders when both CSVs are loaded. Warnings report missing
+  edge endpoints or edges connecting nonconsecutive layers.
+
+Expected columns: nodes = `id, label, type` (`MicroRNA`, `Messenger RNA`,
+`Pathway Location`, `Pathway`); edges = `source, target`. The original
+node type `Semantics` is still accepted as an alias for `Pathway Location`.
+
+The updated pipeline may also export a node-level `qvalue` column and
+edge-level `mirtarbase`, `correlation`, and `qvalue` columns. These
+additional attributes are parsed without changing the display or
+highlighting. Pathway Location node IDs may start with `S` (legacy) or
+`PL` (updated); no identifier prefix is required.
 
 ## Layout
 
@@ -71,7 +75,7 @@ barycenter heuristic as `plot_multipartite_network_static.py` (a few
 forward/backward sweeps that order each layer by the average position
 of its neighbors in the adjacent layer), which keeps edge crossings low.
 
-Layers with hundreds of nodes (e.g. Semantics) are wrapped into a grid
+Layers with hundreds of nodes (e.g. Pathway Location) are wrapped into a grid
 of sub-columns rather than one very long column — otherwise the whole
 graph would render as an unusably thin sliver. Node size scales with
 degree (number of connected edges), so hub nodes stand out.
@@ -187,7 +191,7 @@ show labels; Pathway Location (hundreds of nodes) stays unlabeled to
 avoid clutter — hover any node to see its full label and degree in a
 tooltip regardless.
 
-Pathway Location labels (`Semantics` in the CSV) are a `>`-separated
+Pathway Location labels are a `>`-separated
 path (e.g. `Signaling by ERBB4 > Nuclear signaling by ERBB4 > CXCL12
 gene expression is stimulated by ERBB4s80:ESR1:estrogen [ACTIVATION]`).
 The hover tooltip splits these on `>` and stacks each segment on its

@@ -1,13 +1,13 @@
-id,label,type
-HAS2,HAS2,Messenger RNA
-ZNF423,ZNF423,Messenger RNA
-NMT1,NMT1,Messenger RNA
-TIA1,TIA1,Messenger RNA
-SYT11,SYT11,Messenger RNA
-RXRG,RXRG,Messenger RNA
-TP53INP2,TP53INP2,Messenger RNA
-ARHGEF3,ARHGEF3,Messenger RNA
-SMARCD1,SMARCD1,Messenger RNA
-ELFN2,ELFN2,Messenger RNA
-REAC:R-HSA-5576892,Phase 0 - rapid depolarisation,Pathway
-REAC:R-HSA-383280,Nuclear Receptor transcription pathway,Pathway
+id,label,type,qvalue
+HAS2,HAS2,Messenger RNA,
+ZNF423,ZNF423,Messenger RNA,
+NMT1,NMT1,Messenger RNA,
+TIA1,TIA1,Messenger RNA,
+SYT11,SYT11,Messenger RNA,
+RXRG,RXRG,Messenger RNA,
+TP53INP2,TP53INP2,Messenger RNA,
+ARHGEF3,ARHGEF3,Messenger RNA,
+SMARCD1,SMARCD1,Messenger RNA,
+ELFN2,ELFN2,Messenger RNA,
+REAC:R-HSA-5576892,Phase 0 - rapid depolarisation,Pathway,0.0380790566714662
+REAC:R-HSA-383280,Nuclear Receptor transcription pathway,Pathway,0.0644880759569302
