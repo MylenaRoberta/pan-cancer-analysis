@@ -156,6 +156,11 @@
   }
   .seg-ctrl .seg-btn + .seg-btn { border-left: 1px solid var(--border); }
   .seg-ctrl .seg-btn.active { background: var(--accent); color: var(--accent-text); }
+  /* Keep the existing subtype selector legible with four groups. */
+  .seg-ctrl.subtype-ctrl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #subtypeCtrl .seg-btn { min-width: 0; }
+  #subtypeCtrl .seg-btn:nth-child(3) { border-left: 0; }
+  #subtypeCtrl .seg-btn:nth-child(n+3) { border-top: 1px solid var(--border); }
 
   .sel-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
   .sel-chip {
@@ -303,32 +308,28 @@
   // ------------------------------------------------------------
   // Domain config (mirrors the Python multipartite plotting code)
   // ------------------------------------------------------------
-  const LAYER_ORDER = ['MicroRNA', 'Messenger RNA', 'Semantics', 'Pathway'];
+  const LAYER_ORDER = ['MicroRNA', 'Messenger RNA', 'Pathway Location', 'Pathway'];
   const LAYER_INDEX = Object.fromEntries(LAYER_ORDER.map((t, i) => [t, i]));
   // Color + shape are redundant (as in semantic-box), so the graph still
   // reads in grayscale print or for color-blind viewers.
   const LAYER_COLOR = {
     'MicroRNA': '#EF3B2C',
     'Messenger RNA': '#6BAED6',
-    'Semantics': '#66CC00',
+    'Pathway Location': '#66CC00',
     'Pathway': '#FF8000',
   };
   const LAYER_SHAPE = {
     'MicroRNA': 'diamond',
     'Messenger RNA': 'circle',
-    'Semantics': 'triangle',
+    'Pathway Location': 'triangle',
     'Pathway': 'square',
   };
-  // Display-only relabeling: the CSVs, node.type, and all internal logic
-  // keep using 'Semantics' (matching the data files) -- this only swaps
-  // what's shown to the user in the legend, tooltips, and info panel.
-  const LAYER_DISPLAY = {
-    'MicroRNA': 'MicroRNA',
-    'Messenger RNA': 'Messenger RNA',
-    'Semantics': 'Pathway Location',
-    'Pathway': 'Pathway',
-  };
-  function displayType(type) { return LAYER_DISPLAY[type] || type; }
+  // The new node CSVs use 'Pathway Location'. Continue accepting the
+  // original 'Semantics' type without changing its appearance.
+  function normalizeNodeType(type) {
+    return type === 'Semantics' ? 'Pathway Location' : type;
+  }
+  function displayType(type) { return type; }
   const EDGE_COLOR = '#8a8a93';
   const NODE_FADED_ALPHA = 0.08;
   const EDGE_FADED_ALPHA = 0.035;
@@ -350,20 +351,21 @@
   const SELECTED_BORDER = '#000000';
   const HOP_ALPHA = [1, 1, 0.55, 0.28];
 
-  // Built-in subtype networks: <key>_nodes.csv / <key>_edges.csv next to
-  // this page.
+  // Built-in subtype networks: each CSV pair is stored in data/ using
+  // <subtype>_nodes.csv and <subtype>_edges.csv filenames.
   const SUBTYPES = [
     { key: 'basal-like', label: 'Basal-like' },
+    { key: 'her2-enriched', label: 'HER2-enriched' },
     { key: 'luminal-a', label: 'Luminal A' },
     { key: 'luminal-b', label: 'Luminal B' },
   ];
-  // Layers small enough to label by default; dense layers (e.g. Semantics)
+  // Layers small enough to label by default; dense layers (e.g. Pathway Location)
   // stay unlabeled until the user opts in, to avoid clutter.
   const DEFAULT_LABELED_LAYERS = new Set(['MicroRNA', 'Messenger RNA', 'Pathway']);
 
   // ------------------------------------------------------------
   // Tiny RFC4180-ish CSV parser (handles quoted fields containing
-  // commas / escaped quotes / newlines, which the Semantics labels do)
+  // commas / escaped quotes / newlines, which Pathway Location labels do)
   // ------------------------------------------------------------
   function parseCSV(text) {
     const rows = [];
@@ -502,7 +504,7 @@
   let loadToken = 0;             // ignores stale fetches when switching subtypes quickly
   let selectedIds = new Set();   // 0, 1, or several nodes (Shift+click adds/removes)
   // gapModes[g] = 'union' | 'intersection' for the gap between partition g
-  // and partition g+1 (0: MicroRNA<->mRNA, 1: mRNA<->Semantics, 2: Semantics<->Pathway).
+  // and partition g+1 (0: MicroRNA<->mRNA, 1: mRNA<->Pathway Location, 2: Pathway Location<->Pathway).
   // Applied whenever multiple nodes reach the same gap at once -- which can
   // happen either from multi-select or from a single node fanning out to
   // several neighbors a few hops away.
@@ -560,7 +562,7 @@
       showWarning(`"${sourceName}" doesn't look like a nodes CSV (expected columns "id" and "type").`);
       return false;
     }
-    nodesRaw = records;
+    nodesRaw = records.map(n => ({ ...n, type: normalizeNodeType(n.type) }));
     nodesStatus.textContent = `${sourceName} (${records.length} rows)`;
     nodesStatus.classList.add('ok');
     return true;
@@ -625,12 +627,9 @@
   }
 
   // ------------------------------------------------------------
-  // Subtype networks: each button fetches <key>_nodes.csv and
-  // <key>_edges.csv from the same directory as this page and renders
-  // them. The page starts on ?file=<prefix> if given, else the first
-  // subtype. fetch() only works when the page is served over http(s) --
-  // browsers block it from a file:// page, so that case falls back to a
-  // warning pointing at a local web server.
+  // Subtype networks: load data/<key>_nodes.csv and data/<key>_edges.csv
+  // from the directory containing this page. ?file=<key> chooses a subtype.
+  // Automatic fetches require http(s); local CSV uploads still work on file://.
   // ------------------------------------------------------------
   function setActiveSubtype(key) {
     subtypeCtrl.querySelectorAll('.seg-btn').forEach(b => b.classList.toggle('active', b.dataset.key === key));
@@ -646,38 +645,50 @@
     subtypeCtrl.appendChild(btn);
   });
 
+  function subtypeFilePairs(prefix) {
+    return [
+      { nodes: `data/${prefix}_nodes.csv`, edges: `data/${prefix}_edges.csv` },
+    ];
+  }
+
   async function loadSubtype(prefix) {
     const token = ++loadToken;
     setActiveSubtype(prefix);
     clearWarning();
+    const candidates = subtypeFilePairs(prefix);
 
-    const nodesUrl = `${prefix}_nodes.csv`;
-    const edgesUrl = `${prefix}_edges.csv`;
+    for (const pair of candidates) {
+      try {
+        const [nodesResp, edgesResp] = await Promise.all([fetch(pair.nodes), fetch(pair.edges)]);
+        if (token !== loadToken) return;
+        if (!nodesResp.ok || !edgesResp.ok) continue;
 
-    try {
-      const [nodesResp, edgesResp] = await Promise.all([fetch(nodesUrl), fetch(edgesUrl)]);
-      if (!nodesResp.ok) throw new Error(`HTTP ${nodesResp.status} fetching ${nodesUrl}`);
-      if (!edgesResp.ok) throw new Error(`HTTP ${edgesResp.status} fetching ${edgesUrl}`);
-      const [nodesText, edgesText] = await Promise.all([nodesResp.text(), edgesResp.text()]);
-      if (token !== loadToken) return; // superseded by a later click or file load
+        const [nodesText, edgesText] = await Promise.all([nodesResp.text(), edgesResp.text()]);
+        if (token !== loadToken) return;
 
-      const nodesOk = applyNodesRecords(nodesText, nodesUrl);
-      const edgesOk = applyEdgesRecords(edgesText, edgesUrl);
-      if (nodesOk && edgesOk) {
+        // Only load a matching nodes/edges pair with valid CSV headers.
+        if (!isNodesHeader(csvToObjects(nodesText).header) ||
+            !isEdgesHeader(csvToObjects(edgesText).header)) continue;
+
+        applyNodesRecords(nodesText, pair.nodes);
+        applyEdgesRecords(edgesText, pair.edges);
         currentSource = prefix;
         try { history.replaceState(null, '', `?file=${encodeURIComponent(prefix)}`); } catch (e) { /* file:// may refuse */ }
         renderGraph();
+        return;
+      } catch (err) {
+        if (token !== loadToken) return;
+        // Try the next supported filename convention.
       }
-    } catch (err) {
-      if (token !== loadToken) return;
-      setActiveSubtype(currentSource);
-      showWarning(
-        `Couldn't load "${prefix}": ${err.message}. ` +
-        `If you opened this page directly as a local file, browsers block fetching other local ` +
-        `files that way -- serve this folder with a local web server (e.g. "python3 -m http.server") ` +
-        `and reload, or use Browse / drag & drop below.`
-      );
     }
+
+    if (token !== loadToken) return;
+    setActiveSubtype(currentSource);
+    showWarning(
+      `Couldn't load "${prefix}". Place both CSVs at "${candidates[0].nodes}" and "${candidates[0].edges}". ` +
+      `For automatic loading, serve this folder over HTTP (e.g. "python3 -m http.server"); ` +
+      `otherwise use Browse / drag & drop.`
+    );
   }
 
   // ------------------------------------------------------------
@@ -723,14 +734,14 @@
     return order;
   }
 
-  // Semantics labels are a '>'-separated path (e.g. "Signaling by ERBB4 >
+  // Pathway Location labels are a '>'-separated path (e.g. "Signaling by ERBB4 >
   // Nuclear signaling by ERBB4 > ..."); stack each segment on its own
   // line in the hover tooltip instead of one long run-on string. Built
   // as a real DOM element (vis-network accepts one as `title`) so line
   // breaks don't depend on the library's tooltip white-space handling.
   function buildTooltip(label, type, deg) {
     const container = document.createElement('div');
-    const lines = type === 'Semantics'
+    const lines = type === 'Pathway Location'
       ? label.split('>').map(s => s.trim()).filter(Boolean)
       : [label];
     lines.forEach(line => {
@@ -766,7 +777,7 @@
     typeById = new Map(nodesRaw.map(n => [n.id, n.type]));
 
     // Drop edges referencing missing nodes, and edges that skip/reverse
-    // layers (only adjacent-layer edges are expected: miRNA->mRNA->Semantics->Pathway)
+    // layers (only adjacent-layer edges are expected: miRNA->mRNA->Pathway Location->Pathway)
     const missing = new Set();
     const nonAdjacent = [];
     const validEdges = [];
@@ -881,7 +892,7 @@
       // physics stays off entirely -- deterministic, matches the
       // static/interactive Python reference, and scales cleanly to a
       // very uneven partition (6 Pathway nodes vs. hundreds of
-      // Semantics nodes) without nodes drifting apart.
+      // Pathway Location nodes) without nodes drifting apart.
       physics: { enabled: false },
       interaction: {
         hover: true,
@@ -979,14 +990,14 @@
   // or just from one node fanning out to several neighbors) is combined
   // via that gap's own mode before continuing to the far side. This is
   // what lets "union between miRNA/mRNA, intersection between
-  // mRNA/Semantics, union between Semantics/Pathway" mean what it says:
+  // mRNA/Pathway Location, union between Pathway Location/Pathway" mean what it says:
   // each gap's operation applies to whatever survived the previous gap,
   // not to the original selection directly.
   //
   // A node already selected in a partition always joins that partition's
   // frontier at hop 0 (regardless of gap mode), so propagation resumes
-  // from it too -- e.g. selecting one node in miRNA and one in Semantics
-  // lets the Semantics seed's own downstream trace continue independently
+  // from it too -- e.g. selecting one node in miRNA and one in Pathway Location
+  // lets the Pathway Location seed's own downstream trace continue independently
   // of whatever arrived there from the miRNA seed.
   // ------------------------------------------------------------
   const PARTITION_COUNT = LAYER_ORDER.length;
