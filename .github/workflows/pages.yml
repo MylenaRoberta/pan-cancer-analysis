@@ -1,3 +1,4 @@
+
 name: Deploy quadripartite network viewer
 
 on:
@@ -5,6 +6,8 @@ on:
     branches:
       - main
       - feature/quadripartite-network
+    tags:
+      - 'v[0-9]*'
     paths:
       - "docs/quadripartite-network-visualizer/graph_viewer.html"
       - "docs/quadripartite-network-visualizer/data/*_nodes.csv"
@@ -32,16 +35,49 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repository and tags
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Prepare site
+      - name: Prepare current and versioned sites
+        shell: bash
         run: |
-          mkdir -p _site/data
+          set -euo pipefail
+          SOURCE_DIR="docs/quadripartite-network-visualizer"
+          mkdir -p _site
 
-          cp docs/quadripartite-network-visualizer/graph_viewer.html _site/index.html
-          cp docs/quadripartite-network-visualizer/data/*_nodes.csv _site/data/
-          cp docs/quadripartite-network-visualizer/data/*_edges.csv _site/data/
+          # Preserve normal branch deployment behavior
+          if [[ "${GITHUB_REF_TYPE}" == "tag" ]]; then
+            ROOT_REF="origin/main"
+          else
+            ROOT_REF="HEAD"
+          fi
+
+          # Publish the current viewer
+          git archive "${ROOT_REF}:${SOURCE_DIR}" | tar -xf - -C _site
+          mv _site/graph_viewer.html _site/index.html
+
+          # Publish the viewer associated with each version tag
+          while IFS= read -r tag; do
+            [[ "$tag" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] || continue
+
+            if ! git cat-file -e "${tag}:${SOURCE_DIR}/graph_viewer.html" 2>/dev/null || \
+               ! git cat-file -e "${tag}:${SOURCE_DIR}/data" 2>/dev/null; then
+              echo "Skipping ${tag}: missing viewer or data directory"
+              continue
+            fi
+
+            mkdir -p "_site/${tag}"
+
+            git archive "${tag}:${SOURCE_DIR}" |
+              tar -xf - -C "_site/${tag}"
+
+            mv "_site/${tag}/graph_viewer.html" \
+               "_site/${tag}/index.html"
+
+            echo "Published archived viewer: /${tag}/"
+          done < <(git tag --list 'v*')
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
