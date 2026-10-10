@@ -6,9 +6,9 @@ on:
       - main
       - feature/quadripartite-network
     paths:
-      - "external/quadripartite-network-visualizer/graph_viewer.html"
-      - "external/quadripartite-network-visualizer/data/*_nodes.csv"
-      - "external/quadripartite-network-visualizer/data/*_edges.csv"
+      - "docs/quadripartite-network-visualizer/graph_viewer.html"
+      - "docs/quadripartite-network-visualizer/data/*_nodes.csv"
+      - "docs/quadripartite-network-visualizer/data/*_edges.csv"
       - ".github/workflows/pages.yml"
 
   workflow_dispatch:
@@ -39,9 +39,9 @@ jobs:
         run: |
           mkdir -p _site/data
 
-          cp external/quadripartite-network-visualizer/graph_viewer.html _site/index.html
-          cp external/quadripartite-network-visualizer/data/*_nodes.csv _site/data/
-          cp external/quadripartite-network-visualizer/data/*_edges.csv _site/data/
+          cp docs/quadripartite-network-visualizer/graph_viewer.html _site/index.html
+          cp docs/quadripartite-network-visualizer/data/*_nodes.csv _site/data/
+          cp docs/quadripartite-network-visualizer/data/*_edges.csv _site/data/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
