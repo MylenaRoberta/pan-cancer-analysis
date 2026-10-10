@@ -129,6 +129,15 @@ NETWORK_CONSTRUCTION_SETUP = {
     'min-association': 0.1,
 }
 
+# Parameter setup of the [6a] pathway enrichment step
+PATHWAY_ENRICHMENT_SETUP = {
+    'all-results': True, 
+    'organism': 'hsapiens',
+    'significance-threshold-method': 'fdr',
+    'sources': ['REAC'],
+    'user-threshold': 0.1,
+}
+
 # ======================================================================
 # CONSTANTS
 # ======================================================================
@@ -148,6 +157,19 @@ TCGA_BRCA_PAPER_FILE = 'tcga-brca-paper-supplementary-tables-1-to-4.xls'
 
 # miRWalk base URL
 MIRWALK_BASE_URL = 'http://mirwalk.umm.uni-heidelberg.de'
+
+# g:Profiler (GP) API endpoints of interest
+GP_API_BASE_URL = 'https://biit.cs.ut.ee/gprofiler/api/'
+GP_API_ENDPOINTS = {
+    'data_versions': urljoin(GP_API_BASE_URL, 'util/data_versions'),
+    'GOSt': urljoin(GP_API_BASE_URL, 'gost/profile'),
+}
+
+# g:Profiler (GP) file suffix name
+GP_FILE_SUFFIX = '_pathway-enrichment.csv'
+
+# Reactome Homo sapiens BioPAX Level 3 file name
+REACTOME_BIOPAX_HSA_FILE = 'Homo-sapiens_v96.owl'
 
 # ======================================================================
 # DIRECTORY PATHS
@@ -193,6 +215,18 @@ NETWORK_DATA_DIRS = {
         for subdir in DATA_SUBDIRS
     }
     for dir in ['interim', 'processed']
+}
+
+# g:Profiler (GP)-related data directories paths
+GP_DATA_DIRS = {
+    dir: os.path.join(DATA_DIRS[dir], 'gprofiler')
+    for dir in ['external', 'processed']
+}
+
+# Reactome-related data directory path
+REACTOME_DATA_DIRS = {
+    dir: os.path.join(DATA_DIRS[dir], 'reactome')
+    for dir in ['external', 'processed']
 }
 
 # ======================================================================
@@ -254,6 +288,8 @@ ensure_directories(
     TCGA_DATA_DIRS,
     MIRWALK_DATA_DIRS,
     NETWORK_DATA_DIRS,
+    GP_DATA_DIRS,
+    REACTOME_DATA_DIRS,
 )
 
 # ======================================================================
@@ -292,4 +328,12 @@ NETWORK_FILES = {
     'inferred-interactions': 'inferred-interactions.csv',
     'interaction-edges': 'interaction-network-edges.csv',
     'interaction-nodes': 'interaction-network-nodes.csv',
+    'membership-edges': 'membership-network-edges.csv',
+    'membership-nodes': 'membership-network-nodes.csv',
+    'tripartite-edges': 'tripartite-network-edges.csv',
+    'tripartite-nodes': 'tripartite-network-nodes.csv',
+    'pathway-edges': '_pathway-network-edges.csv',
+    'pathway-nodes': '_pathway-network-nodes.csv',
+    'quadripartite-edges': 'quadripartite-network-edges.csv',
+    'quadripartite-nodes': 'quadripartite-network-nodes.csv',
 }
