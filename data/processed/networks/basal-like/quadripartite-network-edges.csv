@@ -1,0 +1,6 @@
+source,target,mirtarbase,correlation,qvalue
+hsa-miR-23a-3p,RXRG,,-0.467,0.007
+PL09093,R-HSA-383280,,,
+PL09094,R-HSA-383280,,,
+RXRG,PL09093,,,
+RXRG,PL09094,,,

@@ -334,6 +334,6 @@ NETWORK_FILES = {
     'tripartite-nodes': 'tripartite-network-nodes.csv',
     'pathway-edges': '_pathway-network-edges.csv',
     'pathway-nodes': '_pathway-network-nodes.csv',
-    'quadripartite-edges': 'lqn-network-edges.csv',
-    'quadripartite-nodes': 'lqn-network-nodes.csv',
+    'quadripartite-edges': 'quadripartite-network-edges.csv',
+    'quadripartite-nodes': 'quadripartite-network-nodes.csv',
 }
