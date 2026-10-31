@@ -1,0 +1,92 @@
+id,label,type
+R-HSA-69231,Cyclin D associated events in G1,Pathway
+"p-Y226,Y393-ABL1","p-Y226,Y393-ABL1",Messenger RNA
+PL16339,Tyrosine kinases phosphorylate Cip/Kip inhibitors bound to CDK4/6:CCND complexes [ACTIVATION],Pathway Location
+p-Y397-LYN,p-Y397-LYN,Messenger RNA
+p-Y419-SRC,p-Y419-SRC,Messenger RNA
+p-Y342-BRK,p-Y342-BRK,Messenger RNA
+JAK2,JAK2,Messenger RNA
+p-Y77-CDKN1A,p-Y77-CDKN1A,Messenger RNA
+p-Y88-CDKN1B,p-Y88-CDKN1B,Messenger RNA
+p-Y91-CDKN1C,p-Y91-CDKN1C,Messenger RNA
+p36,p36,Messenger RNA
+PL16340,CDK4/6:CCND complexes are activated by T-loop phosphorylation of CDK4/6 [ACTIVATION],Pathway Location
+p37,p37,Messenger RNA
+CAK,CAK,Messenger RNA
+p-T160-CDK2,p-T160-CDK2,Messenger RNA
+PL00017,INHIBITION,Pathway Location
+CCNE1,CCNE1,Messenger RNA
+CCNE2,CCNE2,Messenger RNA
+E2F2,E2F2,Messenger RNA
+PL16341,RB1 binds and inhibits E2F1/2/3:DP1/2 complexes [INHIBITION],Pathway Location
+E2F3,E2F3,Messenger RNA
+E2F1,E2F1,Messenger RNA
+DP2,DP2,Messenger RNA
+PL16342,Cyclin D:CDK4/6 mediated phosphorylation of p107 (RBL1) and dissociation of phosphorylated p107 (p-RBL1) from DP1:E2F4 complex [ACTIVATION],Pathway Location
+PL16343,Cyclin D:Cdk4/6 mediated phosphorylation of p130 (RBL2) and dissociation of phosphorylated p130 (RBL2) from DP1:E2F4/5 complex [ACTIVATION],Pathway Location
+E2F4,E2F4,Messenger RNA
+DP-1,DP-1,Messenger RNA
+E2F5,E2F5,Messenger RNA
+RBL1,RBL1,Messenger RNA
+PL16344,Dephosphorylation of p107 by PP2A [ACTIVATION],Pathway Location
+p-p107,p-p107,Messenger RNA
+p21,p21,Messenger RNA
+PL16345,Cip/Kip CDK inhibitors bind CDK4/6:CCND complexes,Pathway Location
+CCND2,CCND2,Messenger RNA
+PL16346,Formation of CDK4/6:CCND complexes [INHIBITION],Pathway Location
+CCND3,CCND3,Messenger RNA
+CCND1,CCND1,Messenger RNA
+glnA,glnA,Messenger RNA
+KIP2,KIP2,Messenger RNA
+RPS27A(1-76),RPS27A(1-76),Messenger RNA
+PL16347,Ubiquitination of p130 (RBL2) by SCF (Skp2) [ACTIVATION],Pathway Location
+UBC(609-684),UBC(609-684),Messenger RNA
+UBC(533-608),UBC(533-608),Messenger RNA
+UBC(457-532),UBC(457-532),Messenger RNA
+UBC(381-456),UBC(381-456),Messenger RNA
+UBC(305-380),UBC(305-380),Messenger RNA
+UBC(229-304),UBC(229-304),Messenger RNA
+UBC(153-228),UBC(153-228),Messenger RNA
+UBC(77-152),UBC(77-152),Messenger RNA
+UBB(77-152),UBB(77-152),Messenger RNA
+UBB,UBB,Messenger RNA
+UBC,UBC,Messenger RNA
+UBB(153-228),UBB(153-228),Messenger RNA
+UBA52(1-76),UBA52(1-76),Messenger RNA
+MTS2,MTS2,Messenger RNA
+PL14240,Association of INK4 family proteins with CDK4/6,Pathway Location
+CDK4,CDK4,Messenger RNA
+CDKN2D,CDKN2D,Messenger RNA
+CDKN6,CDKN6,Messenger RNA
+MTS1,MTS1,Messenger RNA
+CDK6,CDK6,Messenger RNA
+p-T821-RB1,p-T821-RB1,Messenger RNA
+PL16348,Cyclin D:CDK4/6 phosphorylates RB1 and prevents RB1 binding to E2F1/2/3:DP1/2 complexes [ACTIVATION],Pathway Location
+p-S608-RB1,p-S608-RB1,Messenger RNA
+p-S780-RB1,p-S780-RB1,Messenger RNA
+p-S795-RB1,p-S795-RB1,Messenger RNA
+p-T252-RB1,p-T252-RB1,Messenger RNA
+p-S811-RB1,p-S811-RB1,Messenger RNA
+p-T373-RB1,p-T373-RB1,Messenger RNA
+p-T826-RB1,p-T826-RB1,Messenger RNA
+p-S249-RB1,p-S249-RB1,Messenger RNA
+p-S612-RB1,p-S612-RB1,Messenger RNA
+p-S230-RB1,p-S230-RB1,Messenger RNA
+p-S788-RB1,p-S788-RB1,Messenger RNA
+p-S807-RB1,p-S807-RB1,Messenger RNA
+p-T356-RB1,p-T356-RB1,Messenger RNA
+SKP1,SKP1,Messenger RNA
+PL16349,Phosphorylated p130 (RBL2) binds SCF(Skp2):Cks1 complex,Pathway Location
+SKP2,SKP2,Messenger RNA
+CUL1,CUL1,Messenger RNA
+Cks1,Cks1,Messenger RNA
+PPP2CA,PPP2CA,Messenger RNA
+PPP2CB,PPP2CB,Messenger RNA
+PR70,PR70,Messenger RNA
+PPP2R1A,PPP2R1A,Messenger RNA
+PPP2R1B,PPP2R1B,Messenger RNA
+PPP2R2A,PPP2R2A,Messenger RNA
+RBL2,RBL2,Messenger RNA
+p-p130,p-p130,Messenger RNA
+RB1,RB1,Messenger RNA
+PL16350,RB1 translocates to the nucleus,Pathway Location
