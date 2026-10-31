@@ -193,7 +193,7 @@ Each ontology is referenced by a prefix in the schema.
 |------------|-------------|-----------|----------------|-----------|------|-----|
 | complete_tcga_id | TCGA barcode identifying the specific case/sample | trp:FORFPC01 | trp:FORPC01 | string | edam:Identifier | <http://edamontology.org/data_0842> |
 | gender | Biological sex of the individual | trp:FORFPC02 | trp:FORPC02 | string | ncit:Sex | <http://purl.obolibrary.org/obo/NCIT_C28421> |
-| age_at_initial_pathologic_diagnosis | Age of the patient at diagnosis time (in years) | trp:FORFPC003 | trp:FORPC03 | integer | ncit:Age | <http://purl.obolibrary.org/obo/NCIT_C25150> |
+| age_at_initial_pathologic_diagnosis | Age of the patient at diagnosis time (in years) | trp:FORFPC03 | trp:FORPC03 | integer | ncit:Age | <http://purl.obolibrary.org/obo/NCIT_C25150> |
 | er_status | Estrogen receptor status (Positive/Negative) | trp:FORFPC04 | trp:FORPC04 | string | ncit:ReceptorStatus | <http://purl.obolibrary.org/obo/NCIT_C94299> |
 | pr_status | Progesterone receptor status (Positive/Negative) | trp:FORFPC05 | trp:FORPC05 | string | ncit:ReceptorStatus | <http://purl.obolibrary.org/obo/NCIT_C94299> |
 | her2_final_status | HER2 receptor status (Positive/Negative) | trp:FORFPC06 | trp:FORPC06 | string | ncit:ReceptorStatus | <http://purl.obolibrary.org/obo/NCIT_C94299> |
@@ -254,7 +254,7 @@ Each ontology is referenced by a prefix in the schema.
 | data_format | Format of the file content (e.g., TXT, TSV, BEDPE) | trp:FORFM07 | trp:ORFM07 | string | edam:Format | <http://edamontology.org/format_1915> |
 | samples | JSON array containing sample metadata, including sample type and tissue type | trp:FORFM08 | trp:ORFM08 | string | obi:Specimen | <http://purl.obolibrary.org/obo/OBI_0100051> |
 | is_tumor_file_of_interest | Indicates if the file corresponds to a tumor sample relevant to the analysis (1: yes, 0: no) | trp:FORFM09 | - | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
-| is_normal_file_of_interest | Indicates if the file corresponds to a normal sample relevant to the analysis (1: yes, 0: no) | trp:FORFM11 | - | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
+| is_normal_file_of_interest | Indicates if the file corresponds to a normal sample relevant to the analysis (1: yes, 0: no) | trp:FORFM10 | - | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
 | is_file_of_interest | Indicates if the file meets criteria for inclusion in the study (1: yes, 0: no) | trp:FORFM11 | - | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
 
 ## Family of Artifacts AT_EF
@@ -278,7 +278,7 @@ Each ontology is referenced by a prefix in the schema.
 ### Artifact AT_EF/MPR
 
 - Name: MicroRNA-Seq Processed Read Counts
-- Example file: [mirna-seq-processed-file.csv](examples/mirna-seq-processed-file.txt)
+- Example file: [mirna-seq-processed-file.txt](examples/mirna-seq-processed-file.txt)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -334,7 +334,7 @@ Each ontology is referenced by a prefix in the schema.
 ### Artifact AT_EF/RPR
 
 - Name: RNA-Seq Processed Read Counts
-- Example file: [rna-seq-processed-file.csv](examples/rna-seq-processed-file.tsv)
+- Example file: [rna-seq-processed-file.tsv](examples/rna-seq-processed-file.tsv)
 
 | field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
@@ -524,7 +524,7 @@ Each ontology is referenced by a prefix in the schema.
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
 | accession_id | Accession identifier for mature miRNAs from miRBase | trp:IIIS01 | trp:MFAMN01 | string | edam:Identifier | <http://edamontology.org/data_0842> |
 | mirna_name | Name of the microRNA according to miRBase nomenclature | trp:IIIS02 | trp:IIMNP02 | string | so:MicroRNA | <http://purl.obolibrary.org/obo/SO_0000276> |
-| gene_name | Name of the target gene tested for correlation with the microRNA | trp:IIIS03 | trp:MFARN02 | string | gro:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
+| gene_name | Name of the target gene tested for correlation with the microRNA | trp:IIIS03 | trp:MFARN02 | string | so:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
 | mirtarbase | Indicates if the interaction is supported by experimental evidence in miRTarBase | trp:IIIS04 | trp:IIMPT19 | boolean | edam:Identifier | <http://edamontology.org/data_0842> |
 | correlation  | Correlation coefficient between microRNA and gene expression | trp:IIIS05 | - | real | stato:CorrelationCoefficient | <http://purl.obolibrary.org/obo/STATO_0000142> |
 | pvalue | Nominal p-value for the correlation significance test | trp:IIIS06 | - | real | stato:PValue | <http://purl.obolibrary.org/obo/STATO_0000700> |
@@ -543,7 +543,7 @@ Each ontology is referenced by a prefix in the schema.
 | ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
 | accession_id | Accession identifier for mature miRNAs from miRBase | trp:MNIS01 | trp:IIIS01 | string | edam:Identifier | <http://edamontology.org/data_0842> |
 | mirna_name | Name of the microRNA according to miRBase nomenclature | trp:MNIS02 | trp:IIIS02 | string | so:MicroRNA | <http://purl.obolibrary.org/obo/SO_0000276> |
-| gene_name | Name of the target gene tested for correlation with the microRNA | trp:MNIS03 | trp:IIIS03 | string | gro:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
+| gene_name | Name of the target gene tested for correlation with the microRNA | trp:MNIS03 | trp:IIIS03 | string | so:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
 | mirtarbase | Indicates if the interaction is supported by experimental evidence in miRTarBase | trp:MNIS04 | trp:IIIS04 | boolean | edam:Identifier | <http://edamontology.org/data_0842> |
 | correlation  | Correlation coefficient between microRNA and gene expression | trp:MNIS05 | trp:IIIS05 | real | stato:CorrelationCoefficient | <http://purl.obolibrary.org/obo/STATO_0000142> |
 | pvalue | Nominal p-value for the correlation significance test | trp:MNIS06 | trp:IIIS06 | real | stato:PValue | <http://purl.obolibrary.org/obo/STATO_0000700> |
@@ -555,10 +555,10 @@ Each ontology is referenced by a prefix in the schema.
 - Name: MicroRNA-Messenger RNA Interaction Network Edges
 - Example file: [interaction-network-edges.csv](processed/networks/basal-like/interaction-network-edges.csv)
 
-| field name | description | unique id | descendant_of | data type | role | URI |
+| field name | description | unique id | descendant of | data type | role | URI |
 | ---------- | ----------- | --------- | --------------| --------- | ---- | --- |
 | source | Name of the microRNA according to miRBase nomenclature | trp:MNINE01 | trp:MNIS02 | string | so:MicroRNA | <http://purl.obolibrary.org/obo/SO_0000276> |
-| target | Name of the target gene tested for correlation with the microRNA | trp:MNINE02 | trp:MNIS03 | string | gro:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
+| target | Name of the target gene tested for correlation with the microRNA | trp:MNINE02 | trp:MNIS03 | string | so:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
 | mirtarbase | Indicates if the interaction is supported by experimental evidence in miRTarBase | trp:MNINE03 | trp:MNIS04 | boolean | edam:Identifier | <http://edamontology.org/data_0842> |
 | correlation  | Correlation coefficient between microRNA and gene expression | trp:MNINE04 | trp:MNIS05 | real | stato:CorrelationCoefficient | <http://purl.obolibrary.org/obo/STATO_0000142> |
 | qvalue | Adjusted p-value for multiple hypothesis testing | trp:MNINE05 | trp:MNIS07 | real | obi:QValue | <http://purl.obolibrary.org/obo/OBI_0001442> |
@@ -618,3 +618,173 @@ Each ontology is referenced by a prefix in the schema.
 | id | Unique identifier for the microRNA node | trp:MNANN01 | trp:MNANE01 and trp:MNANE02 | string | so:MicroRNA | <http://purl.obolibrary.org/obo/SO_0000276> |
 | label | Display label for the microRNA | trp:MNANN02 | trp:MNANE01 and trp:MNANE02 | string | so:MicroRNA | <http://purl.obolibrary.org/obo/SO_0000276> |
 | type | Type of biological entity represented by the node | trp:MNANN03 | - | string | edam:Classification | <http://edamontology.org/operation_2990> |
+
+### Artifact AT_MN/PE
+
+- Name: g:Profiler Origin Pathway Enrichment Analysis
+- Example file: [gprofiler-origin-pathway-enrichment-file.csv](examples/gprofiler-origin-pathway-enrichment-file.csv)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| description | Description of the enriched pathway, when available | trp:MNGPE01 | - | string | - | - |
+| effective_domain_size | Number of genes in the statistical background used for enrichment analysis | trp:MNGPE02 | - | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| goshv | Internal numeric identifier assigned to the pathway by g:Profiler | trp:MNGPE03 | - | integer | edam:Identifier | <http://edamontology.org/data_0842> |
+| intersection_size | Number of query genes annotated to the pathway | trp:MNGPE04 | - | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| intersections | Nested list indicating intersections between query genes and pathway annotations | trp:MNGPE05 | - | string | - | - |
+| name | Name of the enriched pathway | trp:MNGPE06 | - | string | - | - |
+| native | Native identifier of the pathway in its source database | trp:MNGPE07 | - | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| p_value | Adjusted p-value for pathway enrichment significance | trp:MNGPE08 | - | real | stato:PValue | <http://purl.obolibrary.org/obo/STATO_0000700> |
+| parents | List of identifiers of the pathway's parent terms | trp:MNGPE09 | - | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| precision | Proportion of query genes annotated to the pathway | trp:MNGPE10 | - | real | stato:Proportion | <http://purl.obolibrary.org/obo/STATO_0000607> |
+| query | Identifier of the input gene query used for enrichment analysis | trp:MNGPE11 | - | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| query_size | Number of genes included in the enrichment query after processing | trp:MNGPE12 | - | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| recall | Proportion of pathway-annotated genes represented in the query | trp:MNGPE13 | - | real | stato:Proportion | <http://purl.obolibrary.org/obo/STATO_0000607> |
+| significant | Indicates whether the pathway meets the configured significance criterion (1: yes, 0: no) | trp:MNGPE14 | - | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
+| source | Abbreviation of the pathway annotation database (e.g., REAC) | trp:MNGPE15 | - | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| term_size | Number of genes annotated to the pathway | trp:MNGPE16 | - | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| source_order | Numerical order assigned to the pathway within its source database | trp:MNGPE17 | - | integer | - | - |
+| group_id | Identifier of the group of related enriched terms | trp:MNGPE18 | - | integer | edam:Identifier | <http://edamontology.org/data_0842> |
+| genes | List of query gene symbols associated with the enriched pathway | trp:MNGPE19 | - | string | so:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
+
+### Artifact AT_MN/PPE
+
+- Name: g:Profiler Processed Pathway Enrichment Analysis
+- Example file: [gprofiler-processed-pathway-enrichment-file.csv](examples/gprofiler-processed-pathway-enrichment-file.csv)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| description | Description of the enriched pathway, when available | trp:MNPPE01 | trp:MNPE01 | string | - | - |
+| effective_domain_size | Number of genes in the statistical background used for enrichment analysis | trp:MNPPE02 | trp:MNPE02 | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| goshv | Internal numeric identifier assigned to the pathway by g:Profiler | trp:MNPPE03 | trp:MNPE03 | integer | edam:Identifier | <http://edamontology.org/data_0842> |
+| intersection_size | Number of query genes annotated to the pathway | trp:MNPPE04 | trp:MNPE04 | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| intersections | Nested list indicating intersections between query genes and pathway annotations | trp:MNPPE05 | trp:MNPE05 | string | - | - |
+| name | Name of the enriched pathway | trp:MNPPE06 | trp:MNPE06 | string | edam:PathwayOrNetworkName | <http://edamontology.org/data_2342> |
+| native | Native identifier of the pathway in its source database | trp:MNPPE07 | trp:MNPE07 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| p_value | Adjusted p-value for pathway enrichment significance | trp:MNPPE08 | trp:MNPE08 | real | stato:P-value | <http://purl.obolibrary.org/obo/STATO_0000700> |
+| parents | List of identifiers of the pathway's parent terms | trp:MNPPE09 | trp:MNPE09 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| precision | Proportion of query genes annotated to the pathway | trp:MNPPE10 | trp:MNPE10 | real | stato:Proportion | <http://purl.obolibrary.org/obo/STATO_0000607> |
+| query | Identifier of the input gene query used for enrichment analysis | trp:MNPPE11 | trp:MNPE11 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| query_size | Number of genes included in the enrichment query after processing | trp:MNPPE12 | trp:MNPE12 | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| recall | Proportion of pathway-annotated genes represented in the query | trp:MNPPE13 | trp:MNPE13 | real | stato:Proportion | <http://purl.obolibrary.org/obo/STATO_0000607> |
+| significant | Indicates whether the pathway meets the configured significance criterion (1: yes, 0: no) | trp:MNPPE14 | trp:MNPE14 | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
+| source | Abbreviation of the pathway annotation database (e.g., REAC) | trp:MNPPE15 | trp:MNPE15 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| term_size | Number of genes annotated to the pathway | trp:MNPPE16 | trp:MNPE16 | integer | stato:Count | <http://purl.obolibrary.org/obo/STATO_0000047> |
+| source_order | Numerical order assigned to the pathway within its source database | trp:MNPPE17 | trp:MNPE17 | integer | - | - |
+| group_id | Identifier of the group of related enriched terms | trp:MNPPE18 | trp:MNPE18 | integer | edam:Identifier | <http://edamontology.org/data_0842> |
+| genes | List of query gene symbols associated with the enriched pathway | trp:MNPPE19 | trp:MNPE19 | string | so:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
+| is_pathway_of_interest | Indicates whether the pathway meets the selection criteria for subsequent analysis (1: yes, 0: no) | trp:MNPPE20 | - | boolean | edam:DataFiltering | <http://edamontology.org/operation_3695> |
+
+### Artifact AT_MN/MNE
+
+- Name: Messenger RNA-Pathway Membership Network Edges
+- Example file: [membership-network-edges.csv](processed/networks/basal-like/membership-network-edges.csv)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| source | Gene symbol of the messenger RNA associated with the pathway | trp:MNMNE01 | trp:MNPPE19 | string | so:Gene | <http://purl.obolibrary.org/obo/SO_0000704> |
+| target | Native identifier of the pathway to which the messenger RNA belongs | trp:MNMNE02 | trp:MNPPE07 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+
+### Artifact AT_MN/MNN
+
+- Name: Messenger RNA-Pathway Membership Network Nodes
+- Example file: [membership-network-nodes.csv](processed/networks/basal-like/membership-network-nodes.csv)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| id | Unique identifier of the node, represented by a gene symbol or pathway identifier | trp:MNMNN01 | trp:MNPPE19 and trp:MNPPE07 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| label | Display label of the node, represented by a gene symbol or pathway name | trp:MNMNN02 | trp:MNPPE19 and trp:MNPPE06 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| type | Biological entity type represented by the node (Messenger RNA/Pathway) | trp:MNMNN03 | - | string | edam:Classification | <http://edamontology.org/operation_2990> |
+| qvalue | Adjusted p-value for pathway enrichment significance (not applicable to messenger RNA nodes) | trp:MNMNN04 | trp:MNPPE08 | real | obi:QValue | <http://purl.obolibrary.org/obo/OBI_0001442> |
+
+### Artifact AT_MN/TNE
+
+- Name: MicroRNA-Messenger RNA-Pathway Layered Tripartite Network Edges
+- Example file: [tripartite-network-edges.csv](processed/networks/basal-like/tripartite-network-edges.csv)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| source | Identifier of the source node, representing a microRNA or messenger RNA | trp:MNTNE01 | trp:MNINE01 and trp:MNMNE01 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| target | Identifier of the target node, representing a messenger RNA or pathway | trp:MNTNE02 | trp:MNINE02 and trp:MNMNE02 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| mirtarbase | miRTarBase identifier providing experimental evidence for the microRNA–messenger RNA interaction, when available | trp:MNTNE03 | trp:MNINE03 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| correlation | Correlation coefficient between microRNA and messenger RNA expression | trp:MNTNE04 | trp:MNINE04 | real | stato:CorrelationCoefficient | <http://purl.obolibrary.org/obo/STATO_0000142> |
+| qvalue | Adjusted p-value for the microRNA–messenger RNA interaction significance test | trp:MNTNE05 | trp:MNINE05 | real | obi:QValue | <http://purl.obolibrary.org/obo/OBI_0001442> |
+
+### Artifact AT_MN/TNN
+
+- Name: MicroRNA-Messenger RNA-Pathway Layered Tripartite Network Nodes
+- Example file: [tripartite-network-nodes.csv](processed/networks/basal-like/tripartite-network-nodes.csv)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| id | Unique identifier of the node, representing a microRNA, messenger RNA, or pathway | trp:MNTNN01 | trp:MNINN01 and trp:MNMNN01 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| label | Display label of the node, representing a microRNA name, gene symbol, or pathway name | trp:MNTNN02 | trp:MNINN02 and trp:MNMNN02 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| type | Biological entity type represented by the node (MicroRNA/Messenger RNA/Pathway) | trp:MNTNN03 | trp:MNINN03 and trp:MNMNN03 | string | edam:Classification | <http://edamontology.org/operation_2990> |
+| qvalue | Adjusted p-value for pathway enrichment significance (not applicable to microRNA or messenger RNA nodes) | trp:MNTNN04 | trp:MNMNN04 | real | obi:QValue | <http://purl.obolibrary.org/obo/OBI_0001442> |
+
+### Artifact AT_MN/BPE
+
+- Name: BioPAX Pathway Projected Network Edges
+- Example file: [biopax-pathway-projected-network-edges-file.csv](examples/biopax-pathway-projected-network-edges-file.csv)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| source | Identifier of the source BioPAX entity in the projected pathway network | trp:MNBPE01 | - | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| target | Identifier of the target BioPAX entity in the projected pathway network | trp:MNBPE02 | - | string | edam:Identifier | <http://edamontology.org/data_0842> |
+
+### Artifact AT_MN/BPN
+
+- Name: BioPAX Pathway Projected Network Nodes
+- Example file: [biopax-pathway-projected-network-nodes-file.csv](examples/biopax-pathway-projected-network-nodes-file.csv)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| id | Unique identifier of the BioPAX entity represented by the node | trp:MNBPN01 | trp:MNBPE01 and trp:MNBPE02 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| name | Name or display label of the BioPAX entity | trp:MNBPN02 | - | string | - | - |
+| type | BioPAX entity class represented by the node (e.g., Pathway, PathwayStep, BiochemicalReaction, Protein, Control, Catalysis) | trp:MNBPN03 | - | string | edam:Classification | <http://edamontology.org/operation_2990> |
+| controlled | Identifier of the BioPAX entity controlled by a Control or Catalysis node, when applicable | trp:MNBPN04 | - | string | edam:Identifier | <http://edamontology.org/data_0842> |
+
+### Artifact AT_MN/BFE
+
+- Name: BioPAX Pathway Flattened Network Edges
+- Example file: [biopax-pathway-flattened-network-edges-file.csv](examples/biopax-pathway-flattened-network-edges-file.csv)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| source | Identifier of the source node, representing a pathway or pathway location | trp:MNBFE01 | trp:MNBPE01 and trp:MNBPE02 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| target | Identifier of the target node, representing a pathway location or messenger RNA | trp:MNBFE02 | trp:MNBPE01 and trp:MNBPE02 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+
+### Artifact AT_MN/BFN
+
+- Name: BioPAX Pathway Flattened Network Nodes
+- Example file: [biopax-pathway-flattened-network-nodes-file.csv](examples/biopax-pathway-flattened-network-nodes-file.csv)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| id | Unique identifier of the node, representing a pathway, pathway location, or messenger RNA | trp:MNBFN01 | trp:MNBFE01 and trp:MNBFE02 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| label | Display label of the node, representing a pathway name, pathway location description, or molecular entity name | trp:MNBFN02 | trp:MNBPN02 | string | - | - |
+| type | Entity type represented by the node (Pathway/Pathway Location/Messenger RNA) | trp:MNBFN03 | trp:MNBPN03 | string | edam:Classification | <http://edamontology.org/operation_2990> |
+
+### Artifact AT_MN/QNE
+
+- Name: MicroRNA-Messenger RNA-Pathway Location-Pathway Layered Quadripartite Network Edges
+- Example file: [quadripartite-network-edges.csv](processed/networks/basal-like/quadripartite-network-edges.csv)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| source | Identifier of the source node, representing a microRNA, messenger RNA, or pathway location | trp:MNQNE01 | trp:MNTNE01 and trp:MNTNE02 and trp:MNBFE01 and trp:MNBFE02 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| target | Identifier of the target node, representing a messenger RNA, pathway location, or pathway | trp:MNQNE02 | trp:MNTNE02 and trp:MNBFE01 and trp:MNBFE02 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| mirtarbase | miRTarBase identifier providing experimental evidence for the microRNA–messenger RNA interaction, when available | trp:MNQNE03 | trp:MNTNE03 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| correlation | Correlation coefficient between microRNA and messenger RNA expression | trp:MNQNE04 | trp:MNTNE04 | real | stato:CorrelationCoefficient | <http://purl.obolibrary.org/obo/STATO_0000142> |
+| qvalue | Adjusted p-value for the microRNA–messenger RNA interaction significance test | trp:MNQNE05 | trp:MNTNE05 | real | obi:QValue | <http://purl.obolibrary.org/obo/OBI_0001442> |
+
+### Artifact AT_MN/QNN
+
+- Name: MicroRNA-Messenger RNA-Pathway Location-Pathway Layered Quadripartite Network Nodes
+- Example file: [quadripartite-network-nodes.csv](processed/networks/basal-like/quadripartite-network-nodes.csv)
+
+| field name | description | unique id | descendant of | data type | role | URI |
+| ---------- | ----------- | --------- | ------------- | --------- | ---- | --- |
+| id | Unique identifier of the node, representing a microRNA, messenger RNA, pathway location, or pathway | trp:MNQNN01 | trp:MNTNN01 and trp:MNBFN01 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| label | Display label of the node, representing a microRNA name, gene symbol, pathway location description, or pathway name | trp:MNQNN02 | trp:MNTNN02 and trp:MNBFN02 | string | edam:Identifier | <http://edamontology.org/data_0842> |
+| type | Entity type represented by the node (MicroRNA/Messenger RNA/Pathway Location/Pathway) | trp:MNQNN03 | trp:MNTNN03 and trp:MNBFN03 | string | edam:Classification | <http://edamontology.org/operation_2990> |
+| qvalue | Adjusted p-value for pathway enrichment significance (not applicable to other node types) | trp:MNQNN04 | trp:MNTNN04 | real | obi:QValue | <http://purl.obolibrary.org/obo/OBI_0001442> |

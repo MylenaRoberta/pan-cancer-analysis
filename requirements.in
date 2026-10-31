@@ -1,0 +1,13 @@
+# Direct Python dependencies for the TRP
+
+ipykernel==6.29.5
+joblib==1.5.1
+matplotlib==3.10.5
+numpy==2.3.1
+pandas==2.3.1
+pybiopax==0.1.5
+requests==2.32.4
+rpy2==3.6.1
+scipy==1.16.0
+selenium==4.34.2
+xlrd==2.0.2
